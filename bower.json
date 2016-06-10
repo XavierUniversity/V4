@@ -1,0 +1,27 @@
+{
+  "name": "xavier-template",
+  "version": "0.1.0",
+  "homepage": "https://bitbucket.org/XavierUniv/v4-template/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/vendor"
+  ],
+  "dependencies": {
+    "modernizr": "^3.0.0",
+    "jquery": "^1.10.2",
+    "bootstrap-sass": "^3.3.5",
+    "normalize.scss": "^3.0.2",
+    "owl.carousel": "owl-carousel2#~2.0.0-beta.3",
+    "fontawesome": "^4.3.0",
+    "devbridge-autocomplete": "~1.2.24",
+    "wow": "WOW#~1.1.2",
+    "mediaelement": "~2.18.2",
+    "fancybox": "~2.1.5",
+    "jquery-ui": "jquery.ui#~1.11.4",
+    "animate.scss": "animate-scss#~1.2.1",
+  },
+  "devDependencies": {
+  }
+}
