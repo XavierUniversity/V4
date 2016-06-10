@@ -20,8 +20,7 @@
     "mediaelement": "~2.18.2",
     "fancybox": "~2.1.5",
     "jquery-ui": "jquery.ui#~1.11.4",
-    "animate.scss": "animate-scss#~1.2.1",
+    "animate.scss": "animate-scss#~1.2.1"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
