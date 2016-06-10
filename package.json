@@ -22,7 +22,6 @@
     "grunt-processhtml": "^0.3.8",
     "grunt-uncss": "^0.4.3",
     "jshint-stylish": "latest",
-    "load-grunt-tasks": "latest",
     "time-grunt": "latest"
   },
   "repository": {
