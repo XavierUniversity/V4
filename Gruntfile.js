@@ -30,6 +30,11 @@ module.exports = function (grunt){
 					outputStyle: 'compressed',
 					sourcemap: 'true'
 				}
+			},
+			clean: {
+				options: {
+					clean: true
+				}
 			}
 		},
 		postcss: {
@@ -43,6 +48,13 @@ module.exports = function (grunt){
 			dist: {
 				src: 'css/**/*.css'
 			}
+		},
+		// Watch should always be the last task.
+		watch: {
+			css: {
+				files: ['src/css/**/*.{scss,sass}'],
+				tasks: ['compass:dev', 'postcss']
+			}
 		}
 	});
 	
@@ -50,6 +62,7 @@ module.exports = function (grunt){
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-postcss');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	
 	// Register Tasks
 	grunt.registerTask('check', ['jshint']);
