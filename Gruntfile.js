@@ -31,12 +31,25 @@ module.exports = function (grunt){
 					sourcemap: 'true'
 				}
 			}
+		},
+		postcss: {
+			options: {
+				processors: [
+					require('autoprefixer')({
+						browsers: ['last 2 versions']
+					})
+				]
+			},
+			dist: {
+				src: 'css/**/*.css'
+			}
 		}
 	});
 	
 	// Load tasks
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-compass');
+	grunt.loadNpmTasks('grunt-postcss');
 	
 	// Register Tasks
 	grunt.registerTask('check', ['jshint']);
