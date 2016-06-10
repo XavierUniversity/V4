@@ -1,0 +1,36 @@
+{
+  "name": "Xavier",
+  "version": "0.1.0",
+  "description": "CMS Template for Xavier University",
+  "private": true,
+  "author": {
+	"name": "Greg McMullen",
+	"url": "http://gregoryamcmullen.com"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "grunt": "^0.4.5",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-modernizr": "^1.0.1",
+    "grunt-postcss": "^0.6.0",
+    "grunt-processhtml": "^0.3.8",
+    "grunt-uncss": "^0.4.3",
+    "jshint-stylish": "latest",
+    "load-grunt-tasks": "latest",
+    "time-grunt": "latest"
+  },
+  "repository": {
+	"type": "git",
+	"url" : "https://bitbucket.org/XavierUniv/v4-template-redevelopment/"
+  },
+  "bugs": {
+    "url": "https://bitbucket.org/XavierUniv/v4-template/issues"
+  },
+  "homepage": "https://bitbucket.org/XavierUniv/v4-template/"
+}
