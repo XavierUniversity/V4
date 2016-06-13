@@ -33,7 +33,22 @@ module.exports = function (grunt){
 				dest: 'js/vendor.js'
 			}
 		},
-		
+		uglify: {
+			options: {
+				banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+					'<%= grunt.template.today("yyyy-mm-dd") %> */\n',
+				sourceMap: true
+			},
+			prod: {
+				files: [{
+					expand: true,
+					cwd: 'js',
+					src: '**/*.js',
+					dest: 'js',
+					ext: '.min.js'	
+				}]
+			}	
+		},
 		// CSS tasks
 		compass: {
 			dev: {
@@ -88,7 +103,7 @@ module.exports = function (grunt){
 	// Load tasks
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-concat');
-	
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-watch');
