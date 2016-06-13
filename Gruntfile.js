@@ -5,13 +5,36 @@ module.exports = function (grunt){
 	
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		// JS tasks
 		jshint: {
-			files:['Gruntfile.js'], // Add more files to array
+			files:['Gruntfile.js', '_src/js/**/*.js'], // Add more files to array
 			options: {
 				reporter: require('jshint-stylish')
 			}
 		},
-		// Other tasks
+		concat: {
+			options: {
+				banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+					'<%= grunt.template.today("yyyy-mm-dd") %> */\n',
+				separator: ';\n',
+				sourceMap: true
+				
+			},
+			main: {
+				src: ['_src/js/**/*.js'],
+				dest: 'js/main.js'
+			},
+			vendor: {
+				// combine some vendor scripts for production, to reduce requests
+				src: [
+					'bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js',
+					'bower_components/owl.carousel/dist/owl.carousel.js'
+				],
+				dest: 'js/vendor.js'
+			}
+		},
+		
+		// CSS tasks
 		compass: {
 			dev: {
 				options: {
@@ -52,19 +75,26 @@ module.exports = function (grunt){
 		// Watch should always be the last task.
 		watch: {
 			css: {
-				files: ['src/css/**/*.{scss,sass}'],
+				files: ['_src/css/**/*.{scss,sass}'],
 				tasks: ['compass:dev', 'postcss']
+			},
+			js: {
+				files: ['_src/js/**/*.js'],
+				tasks: ['jshint', 'concat:main']
 			}
 		}
 	});
 	
 	// Load tasks
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	
 	// Register Tasks
+	grunt.registerTask('init', ['concat:vendor']);
 	grunt.registerTask('check', ['jshint']);
 	
 };
