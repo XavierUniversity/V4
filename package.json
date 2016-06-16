@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "CMS Template for Xavier University",
   "private": true,
+  "scripts": {
+	  "test": "grunt check"
+  }
   "author": {
 	"name": "Greg McMullen",
 	"url": "http://gregoryamcmullen.com"
