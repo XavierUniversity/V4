@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "CMS Template for Xavier University",
   "private": true,
+  "scripts": {
+	  "test": "grunt check"
+  },
   "author": {
 	"name": "Greg McMullen",
 	"url": "http://gregoryamcmullen.com"
@@ -22,7 +25,6 @@
     "grunt-processhtml": "^0.3.8",
     "grunt-uncss": "^0.4.3",
     "jshint-stylish": "latest",
-    "load-grunt-tasks": "latest",
     "time-grunt": "latest"
   },
   "repository": {
