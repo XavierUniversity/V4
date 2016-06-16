@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
 	  "test": "grunt check"
-  }
+  },
   "author": {
 	"name": "Greg McMullen",
 	"url": "http://gregoryamcmullen.com"
