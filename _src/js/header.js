@@ -8,10 +8,10 @@ var $firstNavItem		= $(".navigation.main-navigation:first-child a").focus();
 
 function headerToggle(hash){
 	if (hash == "#search"){
-		$searchContainer.toggle();
+		$searchContainer.slideToggle();
 		$searchInput.focus();
 	} else if (hash == "#nav"){
-		$navContainer.toggle();
+		$navContainer.slideToggle();
 		$firstNavItem.focus();
 	}
 	
