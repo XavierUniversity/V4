@@ -90,7 +90,7 @@ module.exports = function (grunt){
 		// Watch should always be the last task.
 		watch: {
 			css: {
-				files: ['_src/css/**/*.{scss,sass}'],
+				files: ['_src/sass/**/*.{scss,sass}'],
 				tasks: ['compass:dev', 'postcss']
 			},
 			js: {
