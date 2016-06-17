@@ -95,7 +95,7 @@ module.exports = function (grunt){
 			},
 			js: {
 				files: ['_src/js/**/*.js'],
-				tasks: ['jshint', 'concat:main']
+				tasks: ['jshint', 'concat:main', 'uglify']
 			}
 		}
 	});
