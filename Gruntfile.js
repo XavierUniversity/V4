@@ -40,13 +40,11 @@ module.exports = function (grunt){
 				sourceMap: true
 			},
 			prod: {
-				files: [{
-					expand: true,
-					cwd: 'js',
-					src: '**/*.js',
-					dest: 'js',
-					ext: '.min.js'	
-				}]
+				files: {
+					'js/main.min.js' : ['js/main.js'],
+					'js/vendor.min.js': ['js/vendor.js'],
+					'js/plugins.min.js' : ['js/plugins.js']	
+				}
 			}	
 		},
 		// CSS tasks
