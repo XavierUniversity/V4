@@ -1,8 +1,17 @@
 .search-container{
     background:#002857;
-    height: 84px;
+    height: 0px;
     position: relative;
-    display: none;
+	transition: height 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
+	overflow: hidden;
+    &.show{
+	    height:84px;
+	    visibility: visible;
+    }
+    &.hide{
+	    height:0px;
+    }
+    
 }
 
 #header-search-form {
