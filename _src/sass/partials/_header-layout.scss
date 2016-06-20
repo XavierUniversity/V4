@@ -1,0 +1,171 @@
+// Header navigation
+.site-header{
+	background: rgba($brand-color, 0.85);
+	color: $white;
+	display: table;
+	height: 84px;
+	position: absolute;
+	top:0;
+	width: 100%;
+}
+
+.show-nav, .site-logo, .search-icon{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.show-nav, .search-icon{
+	height: 84px;
+	width: 84px;
+}
+
+.show-nav{
+	@media screen and (min-width:1000px){
+		display: none;
+	}
+	
+	a{
+		color:$white;
+		font-size: 4rem;
+		
+		&:hover, &:focus, &:active{
+			color:$accent-color;
+			text-decoration: none;
+		}
+	}
+}
+
+.site-logo{
+	
+	a{
+		display: inline;
+	}
+	.mobile-logo{
+		width:50px;
+		height:50px;
+		
+		@media screen and (min-width:1000px){
+			display: none;
+		}
+	}
+	
+	.desktop-logo{
+		display: none;
+		width:210px;
+		height:55px;
+		margin: 0 0 0 2rem;
+		
+		
+		@media screen and (min-width:1000px){
+			display: block;
+		}
+	}
+}
+
+.navigation{
+	background:$brand-color;
+	border-top: 1px solid #395d84;
+	display: block;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top:84px;
+	width: 100%;
+	display: none;
+	ul{
+		margin:2rem 0;
+		padding:0;
+		
+		li{
+			margin:0;
+			padding:0;
+		}
+	}
+	
+	@media screen and (min-width:1000px){
+		border:none;
+		background: transparent;
+		display: block;
+		top:0;
+		left: 250px;
+		max-width: 74%;
+	}
+}
+
+.main-navigation {
+	font-size: 3rem;
+	margin: 0;
+	padding:0;
+	text-align: center;
+		
+	a{
+		border-bottom: solid 3px transparent;
+		color:$white;
+		display: inline-block;
+		line-height: 1.25;
+		padding:0.5rem;
+		
+		&:hover, &:focus, &:active{
+			border-bottom-color: $accent-color;
+			text-decoration: none;
+		}
+	}
+	
+	@media screen and (min-width:1000px){
+		font-size: 2.2rem;
+		ul li {
+			display: inline-block;
+			margin: 0 1rem;
+		}
+	}
+}
+
+.audience-navigation{
+	border-top: 1px solid #395d84;
+	display: table;
+	width: 100%;
+	ul{
+		display: table-cell;
+		padding:2rem;
+	}
+	
+	a{
+		color:$white; 
+		font-weight: 400;
+		text-transform: uppercase;
+		
+		&.audience{
+			color: $accent-color;
+		}
+	}
+	
+	@media screen and (min-width: 1000px){
+		display:none;
+	}
+}
+
+.header-cta{
+	background: $accent-color;
+	color:$brand-color;
+	text-align: center;
+	font-weight: 600;
+	font-size: 2.1rem;
+	padding:1rem;
+	li{
+		display: inline-block;
+		
+		&:not(:last-child):after{
+			content: " / "
+		}
+	}
+	
+	a{
+		color:$brand-color;
+		text-transform: uppercase;
+	}
+	
+	@media screen and (min-width:1000px){
+		display: none;	
+	}
+}

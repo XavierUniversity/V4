@@ -1,4 +1,3 @@
-/*! Xavier - v0.1.0 - 2016-06-17 */
 // Show search
 
 var $searchContainer 	= $(".search-container");
@@ -30,4 +29,3 @@ $(document).ready(function(){
 		$searchInput.focus();
 	}	
 });
-//# sourceMappingURL=main.js.map

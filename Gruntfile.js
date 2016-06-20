@@ -40,13 +40,11 @@ module.exports = function (grunt){
 				sourceMap: true
 			},
 			prod: {
-				files: [{
-					expand: true,
-					cwd: 'js',
-					src: '**/*.js',
-					dest: 'js',
-					ext: '.min.js'	
-				}]
+				files: {
+					'js/main.min.js' : ['js/main.js'],
+					'js/vendor.min.js': ['js/vendor.js'],
+					'js/plugins.min.js' : ['js/plugins.js']	
+				}
 			}	
 		},
 		// CSS tasks
@@ -90,12 +88,12 @@ module.exports = function (grunt){
 		// Watch should always be the last task.
 		watch: {
 			css: {
-				files: ['_src/css/**/*.{scss,sass}'],
+				files: ['_src/sass/**/*.{scss,sass}'],
 				tasks: ['compass:dev', 'postcss']
 			},
 			js: {
 				files: ['_src/js/**/*.js'],
-				tasks: ['jshint', 'concat:main']
+				tasks: ['jshint', 'concat:main', 'uglify']
 			}
 		}
 	});

@@ -1,2 +1,18 @@
 // Import base utilities and configuration
-@import 'base/config';
+@import 'config';
+
+// Import all of Bootstrap until we get a better idea of what we actually NEED
+@import 'partials/bootstrap';
+
+// Header (in order of page load)
+@import 
+	'partials/accessibility-skip',
+	'partials/header-search',
+	'partials/header-layout'
+;
+
+.page{
+	position: relative;
+	margin:0;
+	padding:0;
+}
