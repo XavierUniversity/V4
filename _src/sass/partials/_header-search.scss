@@ -30,7 +30,7 @@
 		position: absolute;
 			top:25px;
 			
-		@media screen and (min-width:768px){
+		@media screen and (min-width:1070px){
 			font-size: 3.6rem;
 		}
 	}
@@ -51,7 +51,7 @@
 		transition: .5s;
 		width: 84px;
 		
-		@media screen and (min-width:768px){
+		@media screen and (min-width:1070px){
 			font-size: 2.4rem;
 			width: 180px;
 		}
@@ -66,7 +66,7 @@
 	position: relative;
 	width: calc( 100vw - 84px);
 	
-	@media screen and (min-width:768px){
+	@media screen and (min-width:1070px){
 		width: calc( 100vw - 200px);
 	}
 	
