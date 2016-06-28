@@ -13,7 +13,7 @@
 	width:1px; 
 	height:1px; 
  	overflow:hidden;
-	z-index: 100;
+	z-index: 1000;
 	
 	&:focus, &:hover, &:active{
 		position: absolute;

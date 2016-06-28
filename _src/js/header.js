@@ -5,6 +5,7 @@ var $searchInput		= $("#header-search-box");
 
 var $navContainer		= $(".navigation");
 var $firstNavItem		= $(".navigation.main-navigation:first-child a").focus();
+var $searchIcon			= $(".show-nav a");
 
 function headerToggle(hash){
 	if (hash == "#search"){
@@ -21,6 +22,7 @@ function headerToggle(hash){
 			$navContainer.removeClass("hide").addClass("show");
 			$firstNavItem.focus();
 		}
+		$searchIcon.toggleClass("open");
 	}
 	
 }

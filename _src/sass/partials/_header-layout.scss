@@ -7,7 +7,7 @@
 	position: absolute;
 	top:0;
 	width: 100%;
-	z-index: 1000;
+	z-index: 998;
 }
 
 .show-nav, .site-logo, .search-icon{
@@ -24,16 +24,6 @@
 .show-nav{
 	@media screen and (min-width:1070px){
 		display: none;
-	}
-	
-	a{
-		color:$white;
-		font-size: 4rem;
-		
-		&:hover, &:focus, &:active{
-			color:$accent-color;
-			text-decoration: none;
-		}
 	}
 }
 
@@ -92,7 +82,7 @@
 		top:0;
 		left: 250px;
 		max-width: 74%;
-		z-index: 1001;
+		z-index: 999;
 	}
 	
     &.show{
@@ -181,3 +171,55 @@
 		display: none;	
 	}
 }
+#nav-icon {
+	display: block;
+	width: 30px;
+	height: 40px;
+	position: relative;
+	margin: 25px auto;
+	transform: rotate(0deg);
+	transition: .5s ease-in-out;
+	cursor: pointer;
+	span {
+	    display: inline-block;
+	    position: absolute;
+	    height: 4px;
+	    width: 100%;
+	    background: white;
+	    border-radius: 9px;
+	    opacity: 1;
+	    left: 0;
+	    transform: rotate(0deg);
+	    transition: .25s ease-in-out;
+
+		&:nth-child(1) {
+			top: 8px;
+		}
+
+	    &:nth-child(2), &:nth-child(3) {
+			top: 16px;
+	    }
+
+	    &:nth-child(4) {
+	    	top: 24px;
+		}
+	}
+
+	&.open span {
+    	&:nth-child(1), &:nth-child(4) {
+			top: 16px;
+			width: 0%;
+			left: 50%;
+		}
+
+		&:nth-child(2) {
+			transform: rotate(45deg);
+		}
+
+		&:nth-child(3) {
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+/* Icon 3 */
