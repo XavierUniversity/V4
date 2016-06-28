@@ -1,4 +1,91 @@
 @charset "UTF-8";
+/*
+This CSS resource incorporates links to font software which is the valuable copyrighted
+property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+Imaging with any questions regarding Web Fonts:  http://webfonts.fonts.com
+*/
+@font-face {
+  font-family: "Frutiger W01_n1";
+  src: url("../fonts/7d3671fc-8c26-459c-98e1-997c4f6c8c93.eot?#iefix") format("eot"); }
+@font-face {
+  font-family: "Frutiger W01";
+  src: url("../fonts/7d3671fc-8c26-459c-98e1-997c4f6c8c93.eot?#iefix");
+  src: url("../fonts/7d3671fc-8c26-459c-98e1-997c4f6c8c93.eot?#iefix") format("eot"), url("../fonts/2a004a53-ac5c-43b3-9eeb-9f74ae4c1609.woff") format("woff"), url("../fonts/74d53f3b-1683-4d5a-a556-e13f6553cdf0.ttf") format("truetype"), url("../fonts/3f5a5b87-e71e-4544-be0c-da4daa132710.svg#3f5a5b87-e71e-4544-be0c-da4daa132710") format("svg");
+  font-weight: 100;
+  font-style: normal; }
+@font-face {
+  font-family: "Frutiger W01_i1";
+  src: url("../fonts/072713ba-cb3a-4522-8f3b-b120f8eae10f.eot?#iefix") format("eot"); }
+@font-face {
+  font-family: "Frutiger W01";
+  src: url("../fonts/072713ba-cb3a-4522-8f3b-b120f8eae10f.eot?#iefix");
+  src: url("../fonts/072713ba-cb3a-4522-8f3b-b120f8eae10f.eot?#iefix") format("eot"), url("../fonts/8259f047-a5d2-40a0-a98c-1c24f0316b08.woff") format("woff"), url("../fonts/1078a920-3def-4194-ba69-46751fb9af38.ttf") format("truetype"), url("../fonts/4c72fb1e-e1b0-4a18-91cc-5dbe2faaf2a3.svg#4c72fb1e-e1b0-4a18-91cc-5dbe2faaf2a3") format("svg");
+  font-weight: 100;
+  font-style: italic; }
+@font-face {
+  font-family: "Frutiger W01_n2";
+  src: url("../fonts/af97a512-f55a-4f61-b2ce-659c883930fc.eot?#iefix") format("eot"); }
+@font-face {
+  font-family: "Frutiger W01";
+  src: url("../fonts/af97a512-f55a-4f61-b2ce-659c883930fc.eot?#iefix");
+  src: url("../fonts/af97a512-f55a-4f61-b2ce-659c883930fc.eot?#iefix") format("eot"), url("../fonts/3fbbd6b1-cfa7-4ff0-97ea-af1b2c489f15.woff") format("woff"), url("../fonts/076311f8-a01b-4389-a5eb-334a62e62d45.ttf") format("truetype"), url("../fonts/c59a36ab-4ef8-4ee1-a2f8-48aa79d4f877.svg#c59a36ab-4ef8-4ee1-a2f8-48aa79d4f877") format("svg");
+  font-weight: 200;
+  font-style: normal; }
+@font-face {
+  font-family: "Frutiger W01_i2";
+  src: url("../fonts/fcbab1a3-9659-4b39-8479-cc1f50d18f55.eot?#iefix") format("eot"); }
+@font-face {
+  font-family: "Frutiger W01";
+  src: url("../fonts/fcbab1a3-9659-4b39-8479-cc1f50d18f55.eot?#iefix");
+  src: url("../fonts/fcbab1a3-9659-4b39-8479-cc1f50d18f55.eot?#iefix") format("eot"), url("../fonts/e2ade8a9-bd48-45e7-95e6-9dc917ba4f74.woff") format("woff"), url("../fonts/19fe9614-8825-4e7d-b8c3-230d2561e0e2.ttf") format("truetype"), url("../fonts/c2f8e3aa-1c1a-49ee-9ec7-30f61a5e96d3.svg#c2f8e3aa-1c1a-49ee-9ec7-30f61a5e96d3") format("svg");
+  font-weight: 200;
+  font-style: italic; }
+@font-face {
+  font-family: "Frutiger W01_n3";
+  src: url("../fonts/fbd7c0fb-f004-4e83-81d2-1d400413a873.eot?#iefix") format("eot"); }
+@font-face {
+  font-family: "Frutiger W01";
+  src: url("../fonts/fbd7c0fb-f004-4e83-81d2-1d400413a873.eot?#iefix");
+  src: url("../fonts/fbd7c0fb-f004-4e83-81d2-1d400413a873.eot?#iefix") format("eot"), url("../fonts/9aa32a81-1124-4c43-b3db-15bfb1f7aed2.woff") format("woff"), url("../fonts/6faffbf4-f8e8-4817-b24b-a390e166be7e.ttf") format("truetype"), url("../fonts/fc09de64-de25-425e-90dc-a0cae29b02c4.svg#fc09de64-de25-425e-90dc-a0cae29b02c4") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: "Frutiger W01_i3";
+  src: url("../fonts/f334dc11-1de8-4ae2-9c2a-a1cfa665263b.eot?#iefix") format("eot"); }
+@font-face {
+  font-family: "Frutiger W01";
+  src: url("../fonts/f334dc11-1de8-4ae2-9c2a-a1cfa665263b.eot?#iefix");
+  src: url("../fonts/f334dc11-1de8-4ae2-9c2a-a1cfa665263b.eot?#iefix") format("eot"), url("../fonts/f74530f5-a39c-47e3-97d9-6821fc4df8c0.woff") format("woff"), url("../fonts/aa626e7f-57dd-4084-9486-3eeb921333c0.ttf") format("truetype"), url("../fonts/8f91ebb0-2b00-4a50-baa9-865a6502384e.svg#8f91ebb0-2b00-4a50-baa9-865a6502384e") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+@font-face {
+  font-family: "Frutiger W01_n4";
+  src: url("../fonts/9b0d3be7-4ec5-4a72-8cc6-89b8b0f0b193.eot?#iefix") format("eot"); }
+@font-face {
+  font-family: "Frutiger W01";
+  src: url("../fonts/9b0d3be7-4ec5-4a72-8cc6-89b8b0f0b193.eot?#iefix");
+  src: url("../fonts/9b0d3be7-4ec5-4a72-8cc6-89b8b0f0b193.eot?#iefix") format("eot"), url("../fonts/70ad2f15-9e1e-4a42-8fdc-30327ef510c3.woff") format("woff"), url("../fonts/ed897ec7-c1b8-4bd4-9d2a-0a7b09661bdc.ttf") format("truetype"), url("../fonts/63e3258b-8e81-4153-ba11-ab8f4b2aa7a3.svg#63e3258b-8e81-4153-ba11-ab8f4b2aa7a3") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: "Frutiger W01_i4";
+  src: url("../fonts/e7f1c490-48bc-447b-ad11-6e85dd1429be.eot?#iefix") format("eot"); }
+@font-face {
+  font-family: "Frutiger W01";
+  src: url("../fonts/e7f1c490-48bc-447b-ad11-6e85dd1429be.eot?#iefix");
+  src: url("../fonts/e7f1c490-48bc-447b-ad11-6e85dd1429be.eot?#iefix") format("eot"), url("../fonts/eb21cbbe-83da-4d1d-bf54-e60fa03381e2.woff") format("woff"), url("../fonts/0a0bb96a-4e52-4940-9120-1cbfe63deb29.ttf") format("truetype"), url("../fonts/6ce161bf-e26e-4c38-b3d9-0abfcbfc2c6d.svg#6ce161bf-e26e-4c38-b3d9-0abfcbfc2c6d") format("svg");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: "Frutiger W01_n6";
+  src: url("../fonts/47e272a5-5523-490a-a689-1e4660531849.eot?#iefix") format("eot"); }
+@font-face {
+  font-family: "Frutiger W01";
+  src: url("../fonts/47e272a5-5523-490a-a689-1e4660531849.eot?#iefix");
+  src: url("../fonts/47e272a5-5523-490a-a689-1e4660531849.eot?#iefix") format("eot"), url("../fonts/3a6c4a0a-2e4b-472c-a995-1a2e93bd1da2.woff") format("woff"), url("../fonts/4a66b185-1957-4863-86a8-db4f99ff626e.ttf") format("truetype"), url("../fonts/e8e7f894-9084-43e9-b08a-5dcd346ea067.svg#e8e7f894-9084-43e9-b08a-5dcd346ea067") format("svg");
+  font-weight: 600;
+  font-style: normal; }
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -3731,6 +3818,297 @@ hr {
   overflow: visible;
   clip: auto; }
 
+/* line 1, ../_src/sass/partials/_global-typography.scss */
+body {
+  height: 100% !important;
+  line-height: 1.6875;
+  font-family: "Frutiger W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-style: normal; }
+
+/* line 9, ../_src/sass/partials/_global-typography.scss */
+a {
+  text-decoration: underline;
+  transition: color 0.25s ease; }
+
+/*
+.button {
+	border-width: 2px;
+	border-style: solid;
+	display: block;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.4rem;
+	line-height: 1.1;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none !important;
+	text-transform: uppercase;
+}
+*/
+/* line 32, ../_src/sass/partials/_global-typography.scss */
+h1 {
+  color: #002857;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 4.2rem;
+  text-transform: uppercase; }
+  /* line 39, ../_src/sass/partials/_global-typography.scss */
+  h1.subheader {
+    font-size: 3.12rem; }
+  @media (min-width: 768px) {
+    /* line 32, ../_src/sass/partials/_global-typography.scss */
+    h1 {
+      font-size: 4.8rem; } }
+
+/* line 46, ../_src/sass/partials/_global-typography.scss */
+h2 {
+  color: #002857;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.8rem; }
+  /* line 51, ../_src/sass/partials/_global-typography.scss */
+  h2.subheader {
+    font-size: 2.34rem; }
+  @media (min-width: 768px) {
+    /* line 46, ../_src/sass/partials/_global-typography.scss */
+    h2 {
+      font-size: 3.4rem; } }
+
+/* line 58, ../_src/sass/partials/_global-typography.scss */
+h3 {
+  color: #002857;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.0rem; }
+  /* line 63, ../_src/sass/partials/_global-typography.scss */
+  h3.subheader {
+    font-size: 2.34rem; }
+  @media (min-width: 768px) {
+    /* line 58, ../_src/sass/partials/_global-typography.scss */
+    h3 {
+      font-size: 3.6rem; } }
+
+/* line 70, ../_src/sass/partials/_global-typography.scss */
+h4 {
+  color: #002857;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2.2rem; }
+  /* line 75, ../_src/sass/partials/_global-typography.scss */
+  h4.subheader {
+    font-size: 1.95rem; }
+  @media (min-width: 768px) {
+    /* line 70, ../_src/sass/partials/_global-typography.scss */
+    h4 {
+      font-size: 3.0rem; } }
+
+/* line 82, ../_src/sass/partials/_global-typography.scss */
+h5 {
+  color: #002857;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.8rem; }
+  /* line 87, ../_src/sass/partials/_global-typography.scss */
+  h5.subheader {
+    font-size: 1.8rem; }
+  @media (min-width: 768px) {
+    /* line 82, ../_src/sass/partials/_global-typography.scss */
+    h5 {
+      font-size: 2.4rem; } }
+
+/* line 95, ../_src/sass/partials/_global-typography.scss */
+p, ul, ol {
+  font-size: 1.6rem; }
+
+/* line 99, ../_src/sass/partials/_global-typography.scss */
+ul.ua {
+  padding: 0 1rem;
+  margin: 1rem 0; }
+  /* line 102, ../_src/sass/partials/_global-typography.scss */
+  ul.ua li {
+    margin: 1rem 0;
+    list-style: none; }
+    /* line 105, ../_src/sass/partials/_global-typography.scss */
+    ul.ua li:before {
+      content: '\f111';
+      font-family: 'FontAwesome';
+      float: left;
+      margin-left: -1.5rem;
+      margin-top: 1.025rem;
+      color: #59bdde;
+      font-size: 0.55rem; }
+
+/* line 118, ../_src/sass/partials/_global-typography.scss */
+.text-white {
+  color: #fff !important; }
+
+/* line 121, ../_src/sass/partials/_global-typography.scss */
+.text-navy {
+  color: #002857 !important; }
+
+/* line 124, ../_src/sass/partials/_global-typography.scss */
+.text-blue {
+  color: #0099cc !important; }
+
+/* line 127, ../_src/sass/partials/_global-typography.scss */
+.text-lblue {
+  color: #59bdde !important; }
+
+/* line 130, ../_src/sass/partials/_global-typography.scss */
+.uppercase, .text-uppercase {
+  text-transform: uppercase; }
+
+/* line 133, ../_src/sass/partials/_global-typography.scss */
+.capitalize, .text-capitalize {
+  text-transform: capitalize; }
+
+/* line 136, ../_src/sass/partials/_global-typography.scss */
+.lowercase, .text-lowercase {
+  text-transform: lowercase; }
+
+/* line 139, ../_src/sass/partials/_global-typography.scss */
+.text-none {
+  text-transform: none; }
+
+/* line 142, ../_src/sass/partials/_global-typography.scss */
+.text-underline {
+  text-decoration: underline; }
+
+/* line 146, ../_src/sass/partials/_global-typography.scss */
+.block {
+  display: block; }
+
+/* line 147, ../_src/sass/partials/_global-typography.scss */
+.text-normal-100 {
+  font-weight: 100; }
+
+/* line 148, ../_src/sass/partials/_global-typography.scss */
+.text-normal-200 {
+  font-weight: 200; }
+
+/* line 149, ../_src/sass/partials/_global-typography.scss */
+.text-normal-300 {
+  font-weight: 300; }
+
+/* line 150, ../_src/sass/partials/_global-typography.scss */
+.text-normal-400 {
+  font-weight: 400; }
+
+/* line 151, ../_src/sass/partials/_global-typography.scss */
+.text-normal-600 {
+  font-weight: 600; }
+
+/* line 152, ../_src/sass/partials/_global-typography.scss */
+.text-italic-100 {
+  font-weight: 100;
+  font-style: italic; }
+
+/* line 153, ../_src/sass/partials/_global-typography.scss */
+.text-italic-200 {
+  font-weight: 200;
+  font-style: italic; }
+
+/* line 154, ../_src/sass/partials/_global-typography.scss */
+.text-italic-300 {
+  font-weight: 300;
+  font-style: italic; }
+
+/* line 155, ../_src/sass/partials/_global-typography.scss */
+.text-italic-400 {
+  font-weight: 400;
+  font-style: italic; }
+
+/* line 157, ../_src/sass/partials/_global-typography.scss */
+.xs-text-right {
+  text-align: right; }
+
+/* line 158, ../_src/sass/partials/_global-typography.scss */
+.xs-text-left {
+  text-align: left; }
+
+/* line 159, ../_src/sass/partials/_global-typography.scss */
+.xs-text-center {
+  text-align: center; }
+
+@media (min-width: 768px) {
+  /* line 162, ../_src/sass/partials/_global-typography.scss */
+  .sm-text-right {
+    text-align: right; }
+
+  /* line 163, ../_src/sass/partials/_global-typography.scss */
+  .sm-text-left {
+    text-align: left; }
+
+  /* line 164, ../_src/sass/partials/_global-typography.scss */
+  .sm-text-center {
+    text-align: center; } }
+@media (min-width: 992px) {
+  /* line 167, ../_src/sass/partials/_global-typography.scss */
+  .md-text-right {
+    text-align: right; }
+
+  /* line 168, ../_src/sass/partials/_global-typography.scss */
+  .md-text-left {
+    text-align: left; }
+
+  /* line 169, ../_src/sass/partials/_global-typography.scss */
+  .md-text-center {
+    text-align: center; } }
+@media (min-width: 1200px) {
+  /* line 172, ../_src/sass/partials/_global-typography.scss */
+  .lg-text-right {
+    text-align: right; }
+
+  /* line 173, ../_src/sass/partials/_global-typography.scss */
+  .lg-text-left {
+    text-align: left; }
+
+  /* line 174, ../_src/sass/partials/_global-typography.scss */
+  .lg-text-center {
+    text-align: center; } }
+/* line 178, ../_src/sass/partials/_global-typography.scss */
+blockquote footer {
+  color: inherit; }
+
+/*
+.error-placeholder{
+	@include placeholder(#850018);
+}
+*/
+/* line 189, ../_src/sass/partials/_global-typography.scss */
+.date {
+  border: solid 2px #59bdde;
+  text-align: center;
+  line-height: 1;
+  width: 50px;
+  height: 55px;
+  padding: 0.25em; }
+  /* line 196, ../_src/sass/partials/_global-typography.scss */
+  .date .day {
+    font-weight: 700;
+    font-size: 1.75rem;
+    display: block; }
+  /* line 201, ../_src/sass/partials/_global-typography.scss */
+  .date .month {
+    color: #59bdde;
+    font-weight: 400;
+    display: block;
+    text-transform: uppercase; }
+
+/* line 210, ../_src/sass/partials/_global-typography.scss */
+.important-dates p {
+  font-size: 1.4rem; }
+
+/* line 215, ../_src/sass/partials/_global-typography.scss */
+.all-for-one, .we-will, .we-are {
+  font-size: 2.1rem;
+  line-height: 1.2; }
+  @media (min-width: 768px) {
+    /* line 215, ../_src/sass/partials/_global-typography.scss */
+    .all-for-one, .we-will, .we-are {
+      font-size: 2.7rem; } }
+
 /* line 1, ../_src/sass/partials/_accessibility-skip.scss */
 .skip {
   background: white;
@@ -3762,7 +4140,7 @@ hr {
     /* line 31, ../_src/sass/partials/_accessibility-skip.scss */
     .skip:focus + .site-heading, .skip:hover + .site-heading, .skip:active + .site-heading {
       position: absolute;
-      top: calc(84px+42px); }
+      top: 126px; }
 
 /* line 1, ../_src/sass/partials/_header-search.scss */
 .search-container {
@@ -4042,39 +4420,42 @@ hr {
 /* Icon 3 */
 /* line 1, ../_src/sass/partials/_footer-layout.scss */
 footer {
+  margin-top: 84px;
   background-color: #dee5e9;
   color: #002857;
   padding: 40px 0 74px;
-  line-height: 1.4;
+  line-height: 1.5;
   text-align: center; }
-  /* line 7, ../_src/sass/partials/_footer-layout.scss */
+  /* line 8, ../_src/sass/partials/_footer-layout.scss */
   footer p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 300;
     margin: 0; }
 
-/* line 13, ../_src/sass/partials/_footer-layout.scss */
+/* line 15, ../_src/sass/partials/_footer-layout.scss */
 .org {
-  font-weight: 400; }
+  font-weight: 400;
+  text-transform: uppercase; }
 
-/* line 17, ../_src/sass/partials/_footer-layout.scss */
+/* line 20, ../_src/sass/partials/_footer-layout.scss */
 .address {
   margin: 0; }
-  /* line 19, ../_src/sass/partials/_footer-layout.scss */
+  /* line 22, ../_src/sass/partials/_footer-layout.scss */
   .address span {
     display: block; }
     @media screen and (min-width: 1070px) {
-      /* line 19, ../_src/sass/partials/_footer-layout.scss */
+      /* line 22, ../_src/sass/partials/_footer-layout.scss */
       .address span {
-        display: inline-block;
+        display: inline;
         padding: 0 1rem; }
-        /* line 25, ../_src/sass/partials/_footer-layout.scss */
+        /* line 28, ../_src/sass/partials/_footer-layout.scss */
         .address span:not(:last-child) {
           border-right: solid 1px #002857; } }
 
-/* line 33, ../_src/sass/partials/_footer-layout.scss */
+/* line 36, ../_src/sass/partials/_footer-layout.scss */
 .social-icons {
   padding-bottom: 2rem; }
-  /* line 35, ../_src/sass/partials/_footer-layout.scss */
+  /* line 38, ../_src/sass/partials/_footer-layout.scss */
   .social-icons a {
     border: solid 2px #002857;
     color: #002857;
@@ -4083,15 +4464,19 @@ footer {
     margin: 0 0.25rem;
     padding: 0.6rem;
     width: 42px; }
-    @media screen and (min-width: 1070px) {
-      /* line 35, ../_src/sass/partials/_footer-layout.scss */
+    @media screen and (min-width: 768px) {
+      /* line 38, ../_src/sass/partials/_footer-layout.scss */
       .social-icons a {
         height: 36px;
         width: 36px;
         padding: 0.4rem; } }
-  /* line 51, ../_src/sass/partials/_footer-layout.scss */
+  /* line 54, ../_src/sass/partials/_footer-layout.scss */
   .social-icons .fa {
     font-size: 2.75rem; }
+    @media screen and (min-width: 768px) {
+      /* line 54, ../_src/sass/partials/_footer-layout.scss */
+      .social-icons .fa {
+        font-size: 2.5rem; } }
 
 /* line 1, ../_src/sass/partials/_footer-sticky.scss */
 .backmatter {
@@ -4145,7 +4530,7 @@ footer {
   .cta-links a {
     color: #002857; }
 
-/* line 17, ../_src/sass/main.scss */
+/* line 19, ../_src/sass/main.scss */
 .page {
   position: relative;
   margin: 0;
