@@ -43,6 +43,7 @@ $(document).ready(function(){
 $(window).resize(function(){
     var winwidth = $(window).innerWidth();
     if(winwidth > 1024){
-        $navContainer.removeClass('show').removeClass('hide');    
+        $navContainer.removeClass('show').removeClass('hide');
+        $searchIcon.removeClass('open');
     }
 });
