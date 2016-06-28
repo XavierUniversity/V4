@@ -85,7 +85,21 @@ module.exports = function (grunt){
 				src: 'css/**/*.css'
 			}
 		},
-		// Watch should always be the last task.
+		copy: {
+			main: {
+				files: [
+					{
+						expand: true,
+						flatten: true,
+						src: ['bower_components/fontawesome/fonts/*'],
+						dest: 'fonts/',
+						filter: 'isFile'
+					}
+				]
+			}	
+		},
+		
+		// Watch should always be the last task, just because.
 		watch: {
 			css: {
 				files: ['_src/sass/**/*.{scss,sass}'],
@@ -104,6 +118,7 @@ module.exports = function (grunt){
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-postcss');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	
 	// Register Tasks
