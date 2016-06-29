@@ -4503,34 +4503,46 @@ footer {
 .sitemap, .cta-links {
   margin-top: 2.75rem;
   text-transform: uppercase; }
+  /* line 25, ../_src/sass/partials/_footer-sticky.scss */
+  .sitemap a, .cta-links a {
+    text-decoration: none; }
 
-/* line 26, ../_src/sass/partials/_footer-sticky.scss */
+/* line 30, ../_src/sass/partials/_footer-sticky.scss */
 .sitemap {
   font-weight: 300;
   margin-left: 7rem; }
-  /* line 29, ../_src/sass/partials/_footer-sticky.scss */
+  /* line 33, ../_src/sass/partials/_footer-sticky.scss */
   .sitemap a {
     color: #0099cc;
     display: inline-block;
     margin: 0 0.5rem; }
-    /* line 33, ../_src/sass/partials/_footer-sticky.scss */
+    /* line 38, ../_src/sass/partials/_footer-sticky.scss */
+    .sitemap a:hover, .sitemap a:focus {
+      color: white; }
+    /* line 42, ../_src/sass/partials/_footer-sticky.scss */
     .sitemap a.audience {
       color: white; }
+      /* line 45, ../_src/sass/partials/_footer-sticky.scss */
+      .sitemap a.audience:hover, .sitemap a.audience:focus {
+        color: #0099cc; }
 
-/* line 39, ../_src/sass/partials/_footer-sticky.scss */
+/* line 52, ../_src/sass/partials/_footer-sticky.scss */
 .footer-cta {
   background: #0099cc;
   height: 74px;
   text-align: center; }
 
-/* line 45, ../_src/sass/partials/_footer-sticky.scss */
+/* line 58, ../_src/sass/partials/_footer-sticky.scss */
 .cta-links {
   color: #002857;
   font-size: 1.5rem;
   font-weight: 600; }
-  /* line 49, ../_src/sass/partials/_footer-sticky.scss */
+  /* line 62, ../_src/sass/partials/_footer-sticky.scss */
   .cta-links a {
     color: #002857; }
+    /* line 65, ../_src/sass/partials/_footer-sticky.scss */
+    .cta-links a:hover, .cta-links a:focus {
+      color: white; }
 
 /* line 19, ../_src/sass/main.scss */
 .page {

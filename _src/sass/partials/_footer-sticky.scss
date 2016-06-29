@@ -21,6 +21,10 @@
 .sitemap, .cta-links{
 	margin-top:2.75rem;
 	text-transform: uppercase;
+	
+	a{
+		text-decoration: none;
+	}
 }
 
 .sitemap{
@@ -30,8 +34,17 @@
 		color:$accent-color;
 		display: inline-block;
 		margin:0 0.5rem;
+		
+		&:hover, &:focus{
+			color:$white;
+		}
+		
 		&.audience{
-			color:white;
+			color:$white;
+			
+			&:hover, &:focus{
+				color:$accent-color;
+			}
 		}
 	}
 }
@@ -48,5 +61,9 @@
 	font-weight: 600;
 	a{
 		color:$brand-color;
+		
+		&:hover, &:focus{
+			color:$white;
+		}
 	}
 }
