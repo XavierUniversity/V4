@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
 	  "test": "grunt check",
-	  "start": "grunt watch"
+	  "start": "grunt"
   },
   "author": {
 	"name": "Greg McMullen",
