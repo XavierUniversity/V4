@@ -26,17 +26,18 @@
 					
 					<div class="col-md-6 col-sm-12">
 						<!--- Needs microdata --->
-						<p class="org">Xavier University</p>
-						<p class="address">
-							<span>3800 Victory Parkway</span>
-							<span>Cincinnati, OH 45207</span>	
-							<span>513-745-3000</span>
-						</p>
-						
+						<div itemscope itemtype="http://schema.org/EducationalOrganization">
+							<p class="org" itemprop="name">Xavier University</p>
+							<p class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+								<span itemprop="streetAddress">3800 Victory Parkway</span>
+								<span><span itemprop="addressLocality">Cincinnati</span>, <span itemprop="addressRegion">OH</span> <span itemprop="postalCode">45207</span></span>	
+								<span>513-745-3000</span>
+							</p>
+						</div>
 						<p class="legal">&copy; 2016 Xavier University</p>
 					</div>
 				</div>
-			</div>
+			</div>			
 		</footer>
 	
 		<div class="backmatter">

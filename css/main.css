@@ -4441,15 +4441,15 @@ footer {
 .address {
   margin: 0; }
   /* line 22, ../_src/sass/partials/_footer-layout.scss */
-  .address span {
+  .address > span {
     display: block; }
     @media screen and (min-width: 1070px) {
       /* line 22, ../_src/sass/partials/_footer-layout.scss */
-      .address span {
+      .address > span {
         display: inline;
         padding: 0 1rem; }
         /* line 28, ../_src/sass/partials/_footer-layout.scss */
-        .address span:not(:last-child) {
+        .address > span:not(:last-child) {
           border-right: solid 1px #002857; } }
 
 /* line 36, ../_src/sass/partials/_footer-layout.scss */

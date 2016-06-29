@@ -19,7 +19,7 @@ footer{
 
 .address{
 	margin: 0;
-	span{
+	> span{
 		display: block;
 		
 		@media screen and (min-width:1070px){
