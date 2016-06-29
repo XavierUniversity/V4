@@ -1,14 +1,19 @@
 // Import base utilities and configuration
 @import 'config';
 
-// Import all of Bootstrap until we get a better idea of what we actually NEED
+// Import only what you need to survive.
 @import 'partials/bootstrap';
+@import 'partials/fontawesome';
+
+@import 'partials/global-typography';
 
 // Header (in order of page load)
 @import 
 	'partials/accessibility-skip',
 	'partials/header-search',
-	'partials/header-layout'
+	'partials/header-layout',
+	'partials/footer-layout',
+	'partials/footer-sticky'
 ;
 
 .page{

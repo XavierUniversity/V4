@@ -13,7 +13,7 @@
 	width:1px; 
 	height:1px; 
  	overflow:hidden;
-	z-index: 100;
+	z-index: 1000;
 	
 	&:focus, &:hover, &:active{
 		position: absolute;
@@ -30,7 +30,7 @@
 		
 		+ .site-heading{
 			position:absolute;
-			top:calc(84px+42px);
+			top:126px;
 		}
 	}
 	

@@ -1,4 +1,4 @@
-/*! Xavier - v0.1.0 - 2016-06-17 */
+/*! Xavier - v0.1.0 - 2016-06-28 */
 // Show search
 
 var $searchContainer 	= $(".search-container");
@@ -6,14 +6,24 @@ var $searchInput		= $("#header-search-box");
 
 var $navContainer		= $(".navigation");
 var $firstNavItem		= $(".navigation.main-navigation:first-child a").focus();
+var $searchIcon			= $(".show-nav a");
 
 function headerToggle(hash){
 	if (hash == "#search"){
-		$searchContainer.slideToggle();
-		$searchInput.focus();
+		if ($searchContainer.hasClass("show")){
+			$searchContainer.removeClass("show").addClass("hide");
+		} else {
+			$searchContainer.removeClass("hide").addClass("show");
+			$searchInput.focus();
+		}
 	} else if (hash == "#nav"){
-		$navContainer.slideToggle();
-		$firstNavItem.focus();
+		if ($navContainer.hasClass("show")){
+			$navContainer.removeClass("show").addClass("hide");
+		} else {
+			$navContainer.removeClass("hide").addClass("show");
+			$firstNavItem.focus();
+		}
+		$searchIcon.toggleClass("open");
 	}
 	
 }
@@ -29,5 +39,13 @@ $(document).ready(function(){
 		$searchContainer.show();
 		$searchInput.focus();
 	}	
+});
+
+$(window).resize(function(){
+    var winwidth = $(window).innerWidth();
+    if(winwidth > 1024){
+        $navContainer.removeClass('show').removeClass('hide');
+        $searchIcon.removeClass('open');
+    }
 });
 //# sourceMappingURL=main.js.map

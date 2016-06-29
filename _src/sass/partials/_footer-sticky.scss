@@ -1,0 +1,69 @@
+.backmatter{
+	background: $brand-color;
+	height:74px;
+	width: 100vw;
+	display: none;
+	
+	
+	@media screen and (min-width:1070px){
+		display: block;
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+.footer-logo{
+	width:50px;
+	float:left;
+	padding-top:1.25rem;
+}
+
+.sitemap, .cta-links{
+	margin-top:2.75rem;
+	text-transform: uppercase;
+	
+	a{
+		text-decoration: none;
+	}
+}
+
+.sitemap{
+	font-weight: 300;
+	margin-left: 7rem;
+	a{
+		color:$accent-color;
+		display: inline-block;
+		margin:0 0.5rem;
+		
+		&:hover, &:focus{
+			color:$white;
+		}
+		
+		&.audience{
+			color:$white;
+			
+			&:hover, &:focus{
+				color:$accent-color;
+			}
+		}
+	}
+}
+
+.footer-cta{
+	background: $accent-color;
+	height:74px;
+	text-align: center;
+}
+
+.cta-links{
+	color:$brand-color;
+	font-size: 1.5rem;
+	font-weight: 600;
+	a{
+		color:$brand-color;
+		
+		&:hover, &:focus{
+			color:$white;
+		}
+	}
+}

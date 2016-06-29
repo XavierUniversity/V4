@@ -40,7 +40,12 @@
 	    
 		    <header class="site-header">
 			    <div class="show-nav">
-				    <a href="#nav" role="button">&#9776;</a>
+				    <a id="nav-icon" href="#nav">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
 			    </div>
 			    
 				<div class="site-logo">
