@@ -107,15 +107,15 @@
 		display: inline-block;
 		line-height: 1.25;
 		padding:0.5rem;
+		font-size: 2.2rem;
+		text-decoration: none;
 		
 		&:hover, &:focus, &:active{
 			border-bottom-color: $accent-color;
-			text-decoration: none;
 		}
 	}
 	
 	@media screen and (min-width:1070px){
-		font-size: 2.2rem;
 		ul li {
 			display: inline-block;
 			margin: 0 1rem;
@@ -134,8 +134,10 @@
 	
 	a{
 		color:$white; 
+		font-size:1.5rem;
 		font-weight: 400;
 		text-transform: uppercase;
+		text-decoration: none;
 		
 		&.audience{
 			color: $accent-color;
@@ -152,19 +154,22 @@
 	color:$brand-color;
 	text-align: center;
 	font-weight: 600;
-	font-size: 2.1rem;
 	padding:1rem;
+	
 	li{
 		display: inline-block;
 		
 		&:not(:last-child):after{
-			content: " / "
+			content: " / ";
+			font-size: 2.1rem;
 		}
 	}
 	
 	a{
 		color:$brand-color;
+		text-decoration: none;
 		text-transform: uppercase;
+		font-size: 2.1rem;
 	}
 	
 	@media screen and (min-width:1070px){
