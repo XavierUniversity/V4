@@ -45,7 +45,7 @@
 		display: none;
 		width:210px;
 		height:55px;
-		margin: 0 0 0 2rem;
+		margin: 0 0 0 4rem;
 		
 		@media screen and (min-width:1070px){
 			display: block;
@@ -79,9 +79,10 @@
 		border:none;
 		background: transparent;
 		overflow: visible;
-		top:0;
-		left: 250px;
-		max-width: 74%;
+		top:8px;
+		left: 0;
+		max-width: 100%;
+		height: auto;
 		z-index: 999;
 	}
 	
@@ -100,25 +101,31 @@
 	margin: 0;
 	padding:0;
 	text-align: center;
-		
+	
 	a{
 		border-bottom: solid 3px transparent;
 		color:$white;
 		display: inline-block;
 		line-height: 1.25;
-		padding:0.5rem;
 		font-size: 2.2rem;
+		font-weight: 100;
 		text-decoration: none;
 		
 		&:hover, &:focus, &:active{
 			border-bottom-color: $accent-color;
 		}
+		
+		// Smaller font size to accommodate smaller browser not in responsive yet
+		@media (min-width:1070px) and (max-width:1175px){
+			font-size: 1.8rem;
+		}
+		
 	}
 	
 	@media screen and (min-width:1070px){
 		ul li {
 			display: inline-block;
-			margin: 0 1rem;
+			margin: 0 1.5rem;
 		}
 	}
 }
