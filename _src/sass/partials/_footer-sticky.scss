@@ -4,10 +4,9 @@
 	width: 100vw;
 	display: none;
 	
-	
 	@media screen and (min-width:1070px){
 		display: block;
-		position: absolute;
+		position: fixed;
 		bottom: 0;
 	}
 }
