@@ -122,7 +122,6 @@ module.exports = function (grunt){
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	
 	// Register Tasks
-	grunt.registerTask('init', ['concat:vendor']);
 	grunt.registerTask('check', ['jshint']);
-	
+	grunt.registerTask('default', ['jshint', 'compass:dev', 'postcss', 'jshint', 'concat:main', 'uglify', 'watch']);
 };
