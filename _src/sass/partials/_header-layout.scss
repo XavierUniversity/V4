@@ -7,7 +7,7 @@
 	position: absolute;
 	top:0;
 	width: 100%;
-	z-index: 998;
+	z-index: 100;
 }
 
 .show-nav, .site-logo, .search-icon{
@@ -28,9 +28,10 @@
 }
 
 .site-logo{
-	
+	z-index: 102;
 	a{
 		display: inline;
+		z-index: 102;
 	}
 	.mobile-logo{
 		width:50px;
@@ -49,6 +50,7 @@
 		
 		@media screen and (min-width:1070px){
 			display: block;
+			z-index: 102;
 		}
 	}
 }
@@ -83,13 +85,12 @@
 		left: 0;
 		max-width: 100%;
 		height: auto;
-		z-index: 999;
+		z-index: 1;
 	}
 	
     &.show{
 	    height:auto;
 	    max-height:1070px;
-	    z-index: 1001;
     }
     &.hide{
 	    max-height:0px;

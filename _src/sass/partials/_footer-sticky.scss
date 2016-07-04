@@ -18,7 +18,6 @@
 }
 
 .sitemap, .cta-links{
-	margin-top:2.75rem;
 	text-transform: uppercase;
 	
 	a{
@@ -28,12 +27,15 @@
 
 .sitemap{
 	font-weight: 300;
+	margin-top: 2.5rem;
 	margin-left: 7rem;
 	a{
 		color:$accent-color;
 		display: inline-block;
-		margin:0 0.5rem;
-		
+		margin:0 0.8rem;
+		&:first-child{
+			margin-left:-0.2rem;
+		}	
 		&:hover, &:focus{
 			color:$white;
 		}
@@ -56,11 +58,14 @@
 
 .cta-links{
 	color:$brand-color;
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 	font-weight: 600;
+	margin-top:2.25rem;
+	
 	a{
 		color:$brand-color;
-		
+		font-size: 1.8rem;
+			
 		&:hover, &:focus{
 			color:$white;
 		}
