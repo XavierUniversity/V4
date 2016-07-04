@@ -16,6 +16,10 @@
 	'partials/footer-sticky'
 ;
 
+// Content Includes -- Use a seperate file for content?
+@import 
+	'partials/bands'
+;
 .page{
 	position: relative;
 	margin:0;
