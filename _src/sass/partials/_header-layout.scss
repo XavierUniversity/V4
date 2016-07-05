@@ -41,10 +41,6 @@
 		margin-left: 4rem;
 	}
 	
-	a{
-		z-index: 5;
-	}
-	
 	.mobile-logo{
 		
 		@media screen and (min-width:1070px){
@@ -55,8 +51,7 @@
 	.desktop-logo{
 		display: none;
 		width:210px;
-		height: 55px;
-			
+		height: 55px;			
 		@media screen and (min-width:1070px){
 			display: inline-block;
 		}
@@ -114,6 +109,7 @@
 	font-weight: 100;
 	text-align: center;
 	margin: 3.25rem 0;
+
 	a{
 		border-bottom: solid 3px transparent;
 		color:$white;
@@ -125,6 +121,12 @@
 		&:hover, &:focus, &:active{
 			border-bottom-color: $accent-color;
 		}
+		
+		// Smaller font size to accommodate smaller browser not in responsive yet
+		@media (min-width:1070px) and (max-width:1175px){
+			font-size: 1.8rem;
+		}
+		
 	}
 	
 	@media screen and (min-width:1070px){
@@ -241,5 +243,3 @@
 		}
 	}
 }
-
-/* Icon 3 */
