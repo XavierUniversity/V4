@@ -1,3 +1,11 @@
+$env: "prod" !default;
+$path: "/Template/temp-v4/" !default;
+
+// URL Path
+@if $env == "dev" {
+	$path: "../";
+}
+
 // Brand colors
 $brand-color:			#002857;
 $accent-color:			#0099cc;
@@ -47,3 +55,4 @@ $color_trout_approx: 			#49595e;
 $color_viking_approx: 			#59bdde;
 $color_waikawa_gray_approx: 	#556099;
 $color_wattle_approx: 			#dae454;
+

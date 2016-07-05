@@ -1,3 +1,6 @@
+// Set environment vars
+$env: "dev";
+
 // Import base utilities and configuration
 @import 'config';
 
@@ -18,7 +21,8 @@
 
 // Content Includes -- Use a seperate file for content?
 @import 
-	'partials/bands'
+	'partials/bands/hero',
+	'partials/bands/billboard'
 ;
 .page{
 	position: relative;
