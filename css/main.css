@@ -4565,50 +4565,50 @@ footer {
     .cta-links a:hover, .cta-links a:focus {
       color: white; }
 
-/* line 3, ../_src/sass/partials/_bands.scss */
-.band.hero {
-  background-image: url(http://www.xavier.edu/Templates/temp-v4/img/cover/cover-hero-7.jpg);
+/* line 1, ../_src/sass/partials/bands/_hero.scss */
+.hero {
+  background-image: url(../img/band-example.jpg);
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
   height: 100vh;
   position: relative;
   width: 100vw; }
-  /* line 12, ../_src/sass/partials/_bands.scss */
-  .band.hero .hero-center {
+  /* line 10, ../_src/sass/partials/bands/_hero.scss */
+  .hero .hero-center {
     bottom: 0;
     left: 0;
     position: absolute;
     right: 0;
     text-align: center;
     top: 84px; }
-  /* line 21, ../_src/sass/partials/_bands.scss */
-  .band.hero .hero-wrap {
+  /* line 19, ../_src/sass/partials/bands/_hero.scss */
+  .hero .hero-wrap {
     display: inline-block;
     margin: 0 auto;
     position: relative;
     vertical-align: middle;
     width: 98%;
     z-index: 3; }
-  /* line 30, ../_src/sass/partials/_bands.scss */
-  .band.hero .hero-helper {
+  /* line 28, ../_src/sass/partials/bands/_hero.scss */
+  .hero .hero-helper {
     display: inline-block;
     height: 100%;
     position: relative;
     vertical-align: middle;
     width: 0; }
-  /* line 38, ../_src/sass/partials/_bands.scss */
-  .band.hero .hero-box {
+  /* line 36, ../_src/sass/partials/bands/_hero.scss */
+  .hero .hero-box {
     background: rgba(255, 255, 255, 0.75);
     margin: 0 auto;
     padding: 15px 0 20px;
     width: 90%; }
     @media screen and (min-width: 1070px) {
-      /* line 38, ../_src/sass/partials/_bands.scss */
-      .band.hero .hero-box {
+      /* line 36, ../_src/sass/partials/bands/_hero.scss */
+      .hero .hero-box {
         width: 700px; } }
-  /* line 49, ../_src/sass/partials/_bands.scss */
-  .band.hero .hero-heading {
+  /* line 47, ../_src/sass/partials/bands/_hero.scss */
+  .hero .hero-heading {
     color: #002857;
     font-weight: 600;
     font-style: normal;
@@ -4616,12 +4616,12 @@ footer {
     line-height: 1.1;
     margin: 0 0 24px 0;
     text-transform: uppercase; }
-  /* line 59, ../_src/sass/partials/_bands.scss */
-  .band.hero form {
+  /* line 57, ../_src/sass/partials/bands/_hero.scss */
+  .hero form {
     margin: 0;
     padding: 0; }
-  /* line 63, ../_src/sass/partials/_bands.scss */
-  .band.hero .form-input {
+  /* line 61, ../_src/sass/partials/bands/_hero.scss */
+  .hero .form-input {
     box-shadow: none;
     -webkit-box-shadow: none;
     -webkit-appearance: none;
@@ -4637,8 +4637,8 @@ footer {
     margin: 0;
     padding: 0 8px;
     width: 200px; }
-  /* line 82, ../_src/sass/partials/_bands.scss */
-  .band.hero .form-button {
+  /* line 80, ../_src/sass/partials/bands/_hero.scss */
+  .hero .form-button {
     background-color: #0099cc;
     border: 1px solid #0099cc;
     color: white;
@@ -4649,48 +4649,114 @@ footer {
     padding: 0 8px;
     width: 60px;
     transition: background-color 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out; }
-    /* line 97, ../_src/sass/partials/_bands.scss */
-    .band.hero .form-button:hover {
+    /* line 95, ../_src/sass/partials/bands/_hero.scss */
+    .hero .form-button:hover {
       background-color: #002857;
       border: 1px solid #002857;
       color: #0099cc; }
   @media (min-width: 1070px) {
-    /* line 105, ../_src/sass/partials/_bands.scss */
-    .band.hero .hero-box {
+    /* line 103, ../_src/sass/partials/bands/_hero.scss */
+    .hero .hero-box {
       width: 700px; }
-    /* line 108, ../_src/sass/partials/_bands.scss */
-    .band.hero .hero-heading {
+    /* line 106, ../_src/sass/partials/bands/_hero.scss */
+    .hero .hero-heading {
       font-size: 4.8rem; }
-    /* line 111, ../_src/sass/partials/_bands.scss */
-    .band.hero .form-input {
+    /* line 109, ../_src/sass/partials/bands/_hero.scss */
+    .hero .form-input {
       font-size: 2.4rem;
       height: 50px;
       padding: 0 16px;
       width: 450px; }
-    /* line 117, ../_src/sass/partials/_bands.scss */
-    .band.hero .form-button {
+    /* line 115, ../_src/sass/partials/bands/_hero.scss */
+    .hero .form-button {
       font-size: 2.4rem;
       height: 50px;
       padding: 0 16px;
       width: 120px; }
-    /* line 123, ../_src/sass/partials/_bands.scss */
-    .band.hero .hero-video {
+    /* line 121, ../_src/sass/partials/bands/_hero.scss */
+    .hero .hero-video {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       width: 100%;
       height: 100%; }
-      /* line 131, ../_src/sass/partials/_bands.scss */
-      .band.hero .hero-video video {
+      /* line 129, ../_src/sass/partials/bands/_hero.scss */
+      .hero .hero-video video {
         position: absolute;
         object-fit: cover; }
-      /* line 135, ../_src/sass/partials/_bands.scss */
-      .band.hero .hero-video .fill {
+      /* line 133, ../_src/sass/partials/bands/_hero.scss */
+      .hero .hero-video .fill {
         width: 100%;
         height: 100%; } }
 
-/* line 23, ../_src/sass/main.scss */
+/* line 1, ../_src/sass/partials/bands/_billboard.scss */
+.billboard {
+  height: 500px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+  display: block;
+  overflow: hidden; }
+  /* line 11, ../_src/sass/partials/bands/_billboard.scss */
+  .billboard .billboard-main {
+    bottom: 0;
+    position: absolute;
+    width: 100%; }
+    /* line 16, ../_src/sass/partials/bands/_billboard.scss */
+    .billboard .billboard-main .billboard-box {
+      background-color: #59bdde;
+      border-top: 9px solid #0099cc;
+      padding: 12px 12px 0 12px; }
+      @media (min-width: 768px) {
+        /* line 16, ../_src/sass/partials/bands/_billboard.scss */
+        .billboard .billboard-main .billboard-box {
+          padding-top: 25px; } }
+      /* line 25, ../_src/sass/partials/bands/_billboard.scss */
+      .billboard .billboard-main .billboard-box .billboard-heading {
+        font-size: 3.0rem;
+        font-weight: 600;
+        line-height: 1.1;
+        margin-bottom: 12px;
+        margin-top: 0;
+        color: #fff;
+        font-style: normal; }
+        @media (min-width: 768px) {
+          /* line 25, ../_src/sass/partials/bands/_billboard.scss */
+          .billboard .billboard-main .billboard-box .billboard-heading {
+            font-size: 4.8rem; } }
+        /* line 38, ../_src/sass/partials/bands/_billboard.scss */
+        .billboard .billboard-main .billboard-box .billboard-heading .emphasis {
+          color: #002857; }
+      /* line 42, ../_src/sass/partials/bands/_billboard.scss */
+      .billboard .billboard-main .billboard-box .billboard-half-title {
+        background: url(../img/bg-half-title.png) repeat-x left center;
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0 30px;
+        width: auto; }
+        @media (min-width: 768px) {
+          /* line 42, ../_src/sass/partials/bands/_billboard.scss */
+          .billboard .billboard-main .billboard-box .billboard-half-title {
+            padding: 0 90px; } }
+        /* line 53, ../_src/sass/partials/bands/_billboard.scss */
+        .billboard .billboard-main .billboard-box .billboard-half-title .billboard-half-title-content {
+          background-color: #59bdde;
+          color: #002857;
+          display: inline-block;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1.8rem;
+          line-height: 1.1;
+          padding: 0 15px; }
+  @media (min-width: 768px) {
+    /* line 1, ../_src/sass/partials/bands/_billboard.scss */
+    .billboard {
+      height: 640px; } }
+
+/* line 27, ../_src/sass/main.scss */
 .page {
   position: relative;
   margin: 0;

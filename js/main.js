@@ -1,4 +1,4 @@
-/*! Xavier - v0.1.0 - 2016-06-29 */
+/*! Xavier - v0.1.0 - 2016-07-05 */
 // Show search
 
 var $searchContainer 	= $(".search-container");
