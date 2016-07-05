@@ -2,39 +2,46 @@
 .site-header{
 	background: rgba($brand-color, 0.85);
 	color: $white;
-	display: table;
-	height: 84px;
+	height: 8.4rem;
 	position: absolute;
 	top:0;
 	width: 100%;
-	z-index: 998;
-}
-
-.show-nav, .site-logo, .search-icon{
-	display: table-cell;
-	text-align: center;
-	vertical-align: middle;
+	z-index: 1000;
 }
 
 .show-nav, .search-icon{
-	height: 84px;
-	width: 84px;
+	display: inline-block;
+	height:8.4rem;
+	text-align: center;
+	padding-top: 2.7rem;
+	position: absolute;
+	width: 8.4rem;
 }
 
 .show-nav{
+	top:0;
+	left:0;
+	
 	@media screen and (min-width:1070px){
 		display: none;
 	}
 }
 
+.search-icon{
+	top:0;
+	right:0;
+}
+
 .site-logo{
-	
-	a{
-		display: inline;
+	display: block;
+	text-align: center;
+	margin-top: 1.4rem;
+	@media screen and (min-width:1070px){
+		text-align: left;
+		margin-left: 4rem;
 	}
+	
 	.mobile-logo{
-		width:50px;
-		height:50px;
 		
 		@media screen and (min-width:1070px){
 			display: none;
@@ -44,11 +51,9 @@
 	.desktop-logo{
 		display: none;
 		width:210px;
-		height:55px;
-		margin: 0 0 0 4rem;
-		
+		height: 55px;			
 		@media screen and (min-width:1070px){
-			display: block;
+			display: inline-block;
 		}
 	}
 }
@@ -56,17 +61,26 @@
 .navigation{
 	background:$brand-color;
 	border-top: 1px solid #395d84;
-	margin: 0;
-	padding: 0;
+	height: 0px;
+	margin:0;
+	overflow: hidden;
+	padding:0;
 	position: absolute;
 	top:84px;
 	width: 100%;
-	height:0px;
-	transition: max-height 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
-	overflow: hidden;
+	
+	&.show{
+		height: auto;
+		max-height: 1070px;
+		overflow: visible;
+		
+	}
+	&.hide{
+		height: 0;
+	}
 	
 	ul{
-		margin:2rem 0;
+		margin: 0;
 		padding:0;
 		
 		li{
@@ -76,41 +90,34 @@
 	}
 	
 	@media screen and (min-width:1070px){
+		background:transparent;
+		bottom:0;
 		border:none;
-		background: transparent;
-		overflow: visible;
-		top:8px;
-		left: 0;
-		max-width: 100%;
 		height: auto;
-		z-index: 999;
+		left:250px;
+		overflow: visible;
+		right:90px;
+		top:0;
+		width: auto;
 	}
-	
-    &.show{
-	    height:auto;
-	    max-height:1070px;
-	    z-index: 1001;
-    }
-    &.hide{
-	    max-height:0px;
-    }
+	@media screen and (min-width:1230px){
+		right:250px;
+	}
 }
 
-.main-navigation {
-	font-size: 3rem;
-	margin: 0;
-	padding:0;
+.main-navigation{
+	font-weight: 100;
 	text-align: center;
-	
+	margin: 3.25rem 0;
+
 	a{
 		border-bottom: solid 3px transparent;
 		color:$white;
 		display: inline-block;
 		line-height: 1.25;
-		font-size: 2.2rem;
-		font-weight: 100;
+		padding:0.5rem;
+		font-size: 3rem;
 		text-decoration: none;
-		
 		&:hover, &:focus, &:active{
 			border-bottom-color: $accent-color;
 		}
@@ -123,36 +130,36 @@
 	}
 	
 	@media screen and (min-width:1070px){
+		margin: 2rem;
 		ul li {
 			display: inline-block;
-			margin: 0 1.5rem;
+			margin:0 1rem;
+		}
+		
+		a{
+			font-size: 2.2rem;
 		}
 	}
 }
 
 .audience-navigation{
-	border-top: 1px solid #395d84;
+	border-top: solid 1px rgb(25, 61, 103);
 	display: table;
 	width: 100%;
-	ul{
+	ul {
 		display: table-cell;
-		padding:2rem;
+		padding: 1.7rem 1.75rem;
 	}
 	
 	a{
-		color:$white; 
-		font-size:1.5rem;
+		color:$white;
+		font-size: 1.5rem;
 		font-weight: 400;
-		text-transform: uppercase;
 		text-decoration: none;
-		
-		&.audience{
-			color: $accent-color;
+		text-transform: uppercase;
+		&.audience {
+			color:$accent-color;
 		}
-	}
-	
-	@media screen and (min-width: 1070px){
-		display:none;
 	}
 }
 
@@ -161,7 +168,7 @@
 	color:$brand-color;
 	text-align: center;
 	font-weight: 600;
-	padding:1rem;
+	padding:2rem;
 	
 	li{
 		display: inline-block;
@@ -178,17 +185,21 @@
 		text-transform: uppercase;
 		font-size: 2.1rem;
 	}
-	
-	@media screen and (min-width:1070px){
+}
+
+
+@media screen and (min-width:1070px){
+	.header-cta, .audience-navigation{
 		display: none;	
 	}
 }
+
 #nav-icon {
 	display: block;
 	width: 30px;
 	height: 40px;
+	margin:0 auto;
 	position: relative;
-	margin: 25px auto;
 	transform: rotate(0deg);
 	transition: .5s ease-in-out;
 	cursor: pointer;
@@ -232,5 +243,3 @@
 		}
 	}
 }
-
-/* Icon 3 */
