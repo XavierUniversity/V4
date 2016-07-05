@@ -1,0 +1,69 @@
+.billboard {
+	height:500px;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: scroll;
+	background-size: cover;
+	display: block;
+	overflow: hidden;
+	
+	.billboard-main{
+		bottom:0;
+		position:absolute;
+		width:100%;
+		
+		.billboard-box{
+			background-color: #59bdde;
+			border-top: 9px solid #0099cc;
+			padding:12px 12px 0 12px;
+			
+			@media (min-width: 768px){
+				padding-top: 25px;
+			}
+			
+			.billboard-heading{
+				font-size: 3.0rem;
+				font-weight: 600;
+				line-height: 1.1;
+				margin-bottom:12px;
+				margin-top:0;
+				color:#fff;
+				font-style: normal;
+				
+				@media (min-width: 768px){
+					font-size: 4.8rem;
+				}
+				
+				.emphasis{
+					color:#002857;
+				}
+			}
+			.billboard-half-title{
+				background:url(#{$path}img/bg-half-title.png) repeat-x left center;
+				display: inline-block;
+				margin:0 auto;
+				padding:0 30px;
+				width:auto;
+				
+				@media (min-width: 768px){
+					padding:0 90px;
+				}
+				
+				.billboard-half-title-content{
+					background-color:#59bdde;
+					color:#002857;
+					display: inline-block;
+					font-weight: 400;
+					font-style: normal;
+					font-size: 1.8rem;
+					line-height: 1.1;
+					padding:0 15px;
+				}
+			}
+		}
+	}
+	@media (min-width: 768px){
+		height:640px;
+	}
+}
