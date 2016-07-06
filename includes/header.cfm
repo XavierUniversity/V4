@@ -35,9 +35,38 @@
 		    	<input type="submit" value="Search" />
 		    </form>
 	    </div>
-	    
+	    <cfif isDefined("campusAlert")>
+		    <div class="campusAlert">
+			    <cfswitch expression="campuAlert">
+			    	<cfcase value="weather">
+				    	<p><strong>Campus Closed on [DATE].</strong><br />
+							Xavier University is closed today, [DATE], due to inclement weather. For more information, visit [YOUR URL]</p>
+			    	</cfcase>
+			    	<cfcase value="shooter">
+				    	<p><strong>CAMPUS ALERT!</strong> <br />
+					    	SHELTER IN PLACE IMMEDIATELY. Armed intruder @ Xavier University. Police are responding. More to follow. [Your URL] [DATE]</p>
+			    	</cfcase>
+			    	<cfcase value="power">
+				    	<p><strong>Power Outage</strong> @ Xavier University.<br />
+					    	We are aware of power outage. Repairs underway. For emergencies call [Phone Number]. More info [YOUR URL].</p>
+			    	</cfcase>
+			    	<cfcase value="network">
+				    	<p><strong>Email Outage</strong> [DATE] [TIME]<br />
+					    	Xavier University email/network systems down. Techs are working towards a fix. More info [Your URL]</p>
+			    	</cfcase>
+			    	<cfcase value="clear">
+				    	<p><strong>ALL CLEAR</strong> @ Xavier University. Situation has been resolved. Resume normal activity. More info [Your URL].</p>
+			    	</cfcase>
+			    	<cfcase value="general">
+				    	<p><strong>Security Alert</strong> @ Xavier University Shelter in place. Lock doors/windows. Await further info. [DATE] - [YOUR URL] for more information.</p>
+			    	</cfcase>
+			    	<cfdefaultcase>
+			    	</cfdefaultcase>
+			    </cfswitch>
+			</div>
+    	</cfif>
 	    <div class="page">
-	    
+	    	
 		    <header class="site-header">
 			    <div class="show-nav">
 				    <a id="nav-icon" href="#nav">
