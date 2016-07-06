@@ -4,6 +4,9 @@ $env: "dev";
 // Import base utilities and configuration
 @import 'config';
 
+@import 'mixins/contrast'
+;
+
 // Import only what you need to survive.
 @import 'partials/bootstrap';
 @import 'partials/fontawesome';
@@ -23,7 +26,8 @@ $env: "dev";
 // Content Includes -- Use a seperate file for content?
 @import 
 	'partials/bands/hero',
-	'partials/bands/billboard'
+	'partials/bands/billboard',
+	'partials/bands/bands'
 ;
 .page{
 	position: relative;

@@ -1,0 +1,71 @@
+$Placeholder-Selectors: ();
+
+@mixin bands($color, $fontColor: $white, $extend: true){
+	@include band-static($extend);
+	
+	background-color: $color;
+	
+	color: color_adjust_contrast_AERT($fontColor, $color);
+	
+	
+// 	color:$fontColor;
+	
+}
+
+@mixin band-static($extend){
+	$band-selector: map-get($Placeholder-Selectors, 'band');
+	
+	@if $extend == true {
+		@if $band-selector == null {
+			$band-selector: unique-id();
+			$Placeholder-Selectors: map-merge( $Placeholder-Selectors, ('band': $band-selector)) !global;
+			
+			@at-root %#{$band-selector}{
+				@include band-static(false);
+			}
+		}
+		@extend %#{$band-selector};
+	} @else {
+		padding: 3rem 0;
+		position: relative;
+	}
+	
+}
+
+
+@mixin button($color, $extend: true) {
+	@include button-static($extend);
+	
+	background-color: $color;
+	border-color: mix(black, $color, 25%);
+	
+	&:hover {
+		background-color: mix(black, $color, 15%);
+		border-color: mix(black, $color, 40%);
+	}
+}
+
+@mixin button-static($extend: true) {
+	$button-selector: map-get($Placeholder-Selectors, 'button');
+	
+	@if $extend == true {
+		@if $button-selector == null {
+			$button-selector: unique-id();
+			$Placeholder-Selectors: map-merge($Placeholder-Selectors, ('button': $button-selector)) !global;
+			
+			@at-root %#{$button-selector} {
+				@include button-static(false);
+			}
+		}
+		@extend %#{$button-selector};
+		}
+		@else {
+		border: 1px solid;
+		border-radius: 5px;
+		padding: .25em .5em;
+		
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

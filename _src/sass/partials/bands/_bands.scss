@@ -1,0 +1,17 @@
+@import 'mixin';
+
+.band {
+	@include bands($accent-light, #21304E, true);
+}
+
+.navy{
+	@include bands($brand-color, $white, true);
+}
+
+.white{
+	@include bands($white, $brand-color, true);
+}
+
+.grey{
+	@include bands(#b0b6b9, $brand-color, true);
+}

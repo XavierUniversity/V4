@@ -1,4 +1,3 @@
-
 <section class="band hero">
 	<div class="hero-center">
 		<div class="hero-wrap">
@@ -18,7 +17,6 @@
 	</div>
 </section>
 
-
 <section class="billboard" style="background-image: url(img/band-example.jpg); ">
 	<div class="billboard-main">
 		<div class="container-fluid">
@@ -34,4 +32,43 @@
 			</div> <!-- /row -->
 		</div> <!-- /container-fluid -->
 	</div> <!-- /billboard-main -->
+</section>
+
+<section class="band">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p>I am a band</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="band navy">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p>I am a band</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="band grey">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p>I am a band</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="band white">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p>I am a band</p>
+			</div>
+		</div>
+	</div>
 </section>
