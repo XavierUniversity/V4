@@ -1,3 +1,5 @@
+			</main>
+		
 		<!--- Close out the page wrapper --->
 		</div>
 		

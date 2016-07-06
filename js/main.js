@@ -1,4 +1,4 @@
-/*! Xavier - v0.1.0 - 2016-07-05 */
+/*! Xavier - v0.1.0 - 2016-07-06 */
 // Show search
 
 var $searchContainer 	= $(".search-container");
@@ -7,6 +7,8 @@ var $searchInput		= $("#header-search-box");
 var $navContainer		= $(".navigation");
 var $firstNavItem		= $(".navigation.main-navigation:first-child a").focus();
 var $searchIcon			= $(".show-nav a");
+
+var $mainContent		= $("#main-content");
 
 function headerToggle(hash){
 	if (hash == "#search"){
@@ -47,5 +49,22 @@ $(window).resize(function(){
         $navContainer.removeClass('show').removeClass('hide');
         $searchIcon.removeClass('open');
     }
+});
+
+$(".skip").click(function(event){
+    
+    // strip the leading hash and declare
+    // the content we're skipping to
+    var skipTo="#"+this.href.split('#')[1];
+
+    // Setting 'tabindex' to -1 takes an element out of normal 
+    // tab flow but allows it to be focused via javascript
+    $(skipTo).attr('tabindex', -1).on('blur focusout', function () {
+
+        // when focus leaves this element, 
+        // remove the tabindex attribute
+        $(this).removeAttr('tabindex');
+
+    }).focus(); // focus on the content container
 });
 //# sourceMappingURL=main.js.map
