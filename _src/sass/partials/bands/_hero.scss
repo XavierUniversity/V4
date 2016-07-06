@@ -60,9 +60,6 @@
 	}
 	.form-input {
 		box-shadow: none;
-		-webkit-box-shadow: none;
-		-webkit-appearance: none;
-	    -moz-appearance: none;
 	    appearance: none;
 		background-color: $white;
 		border: 1px solid $white;
@@ -87,9 +84,6 @@
 		margin: 0;
 		padding: 0 8px;	
 		width: 60px;
-		-webkit-transition: background-color 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out;
-		-moz-transition: background-color 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out;
-		-o-transition: background-color 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out;
 		transition: background-color 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out;
 		
 		&:hover {
