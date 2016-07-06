@@ -8,8 +8,6 @@ var $navContainer		= $(".navigation");
 var $firstNavItem		= $(".navigation.main-navigation:first-child a").focus();
 var $searchIcon			= $(".show-nav a");
 
-var $mainContent		= $("#main-content");
-
 function headerToggle(hash){
 	if (hash == "#search"){
 		if ($searchContainer.hasClass("show")){
