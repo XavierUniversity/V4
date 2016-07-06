@@ -35,7 +35,7 @@
 		    	<input type="submit" value="Search" />
 		    </form>
 	    </div>
-	    <cfif isDefined("campusAlert")>
+	    <cfif isDefined("campusAlert") and campusAlert NEQ "">
 		    <div class="campusAlert">
 			    <cfswitch expression="campuAlert">
 			    	<cfcase value="weather">
