@@ -3941,7 +3941,7 @@ ul.ua {
 
 /* line 118, ../_src/sass/partials/_global-typography.scss */
 .text-white {
-  color: #fff !important; }
+  color: white !important; }
 
 /* line 121, ../_src/sass/partials/_global-typography.scss */
 .text-navy {
@@ -4071,12 +4071,7 @@ ul.ua {
 blockquote footer {
   color: inherit; }
 
-/*
-.error-placeholder{
-	@include placeholder(#850018);
-}
-*/
-/* line 189, ../_src/sass/partials/_global-typography.scss */
+/* line 183, ../_src/sass/partials/_global-typography.scss */
 .date {
   border: solid 2px #59bdde;
   text-align: center;
@@ -4084,28 +4079,28 @@ blockquote footer {
   width: 50px;
   height: 55px;
   padding: 0.25em; }
-  /* line 196, ../_src/sass/partials/_global-typography.scss */
+  /* line 190, ../_src/sass/partials/_global-typography.scss */
   .date .day {
     font-weight: 700;
     font-size: 1.75rem;
     display: block; }
-  /* line 201, ../_src/sass/partials/_global-typography.scss */
+  /* line 195, ../_src/sass/partials/_global-typography.scss */
   .date .month {
     color: #59bdde;
     font-weight: 400;
     display: block;
     text-transform: uppercase; }
 
-/* line 210, ../_src/sass/partials/_global-typography.scss */
+/* line 204, ../_src/sass/partials/_global-typography.scss */
 .important-dates p {
   font-size: 1.4rem; }
 
-/* line 215, ../_src/sass/partials/_global-typography.scss */
+/* line 209, ../_src/sass/partials/_global-typography.scss */
 .all-for-one, .we-will, .we-are {
   font-size: 2.1rem;
   line-height: 1.2; }
   @media (min-width: 768px) {
-    /* line 215, ../_src/sass/partials/_global-typography.scss */
+    /* line 209, ../_src/sass/partials/_global-typography.scss */
     .all-for-one, .we-will, .we-are {
       font-size: 2.7rem; } }
 
@@ -4174,7 +4169,7 @@ blockquote footer {
   background-color: #002857;
   border: 0;
   border-radius: 0;
-  color: #fff;
+  color: white;
   font-weight: 100;
   font-style: normal;
   font-size: 1.6rem;
@@ -4189,10 +4184,10 @@ blockquote footer {
       font-size: 3.6rem; } }
 /* line 38, ../_src/sass/partials/_header-search.scss */
 #header-search-form input[type=submit] {
-  background-color: #09c;
-  border: 1px solid #09c;
+  background-color: #0099cc;
+  border: 1px solid #0099cc;
   border-radius: 0;
-  color: #fff;
+  color: white;
   font-weight: 100;
   font-style: normal;
   font-size: 1.6rem;
@@ -4208,8 +4203,13 @@ blockquote footer {
     #header-search-form input[type=submit] {
       font-size: 2.4rem;
       width: 180px; } }
+  /* line 59, ../_src/sass/partials/_header-search.scss */
+  #header-search-form input[type=submit]:hover, #header-search-form input[type=submit]:focus, #header-search-form input[type=submit]:active {
+    background: #002857;
+    border-color: #002857;
+    color: #0099cc; }
 
-/* line 62, ../_src/sass/partials/_header-search.scss */
+/* line 68, ../_src/sass/partials/_header-search.scss */
 .search-box {
   display: inline-block;
   height: 84px;
@@ -4217,12 +4217,12 @@ blockquote footer {
   position: relative;
   width: calc( 100vw - 84px); }
   @media screen and (min-width: 1070px) {
-    /* line 62, ../_src/sass/partials/_header-search.scss */
+    /* line 68, ../_src/sass/partials/_header-search.scss */
     .search-box {
       width: calc( 100vw - 200px); } }
-  /* line 73, ../_src/sass/partials/_header-search.scss */
+  /* line 79, ../_src/sass/partials/_header-search.scss */
   .search-box label {
-    color: #fff;
+    color: white;
     font-weight: 200;
     position: absolute;
     top: 5px;
@@ -4513,7 +4513,8 @@ footer {
   background: #002857;
   height: 74px;
   width: 100vw;
-  display: none; }
+  display: none;
+  z-index: 10; }
   @media screen and (min-width: 1070px) {
     /* line 1, ../_src/sass/partials/_footer-sticky.scss */
     .backmatter {
@@ -4640,7 +4641,7 @@ footer {
             appearance: none;
     background-color: white;
     border: 1px solid white;
-    color: #333;
+    color: #333333;
     font-weight: 100;
     font-style: normal;
     font-size: 1.6rem;
@@ -4732,7 +4733,7 @@ footer {
         line-height: 1.1;
         margin-bottom: 12px;
         margin-top: 0;
-        color: #fff;
+        color: white;
         font-style: normal; }
         @media (min-width: 768px) {
           /* line 25, ../_src/sass/partials/bands/_billboard.scss */

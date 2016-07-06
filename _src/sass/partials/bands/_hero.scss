@@ -34,7 +34,7 @@
 	}
 	
 	.hero-box{
-		background: rgba(255, 255, 255, 0.75);
+		background: rgba($white, 0.75);
 		margin: 0 auto;
 		padding: 15px 0 20px;
 		width: 90%;
@@ -63,7 +63,7 @@
 	    appearance: none;
 		background-color: $white;
 		border: 1px solid $white;
-		color: $color_mine_shaft_approx;
+		color: $gray-dark;
 		font-weight: 100;
 		font-style: normal;
 		font-size: 1.6rem; // 16px font allows no zoom on input fields

@@ -108,7 +108,7 @@ ul{
 				float: left;
 				margin-left: -1.5rem;
 				margin-top: 1.025rem;
-				color: #59bdde;
+				color: $accent-light;
 				font-size: 0.55rem;
 			}
 		}
@@ -116,16 +116,16 @@ ul{
 }
 
 .text-white{
-	color:#fff !important;
+	color:$white !important;
 }
 .text-navy{
-	color:#002857 !important;
+	color:$brand-color !important;
 }
 .text-blue{
-	color:#0099cc !important;
+	color:$accent-color !important;
 }
 .text-lblue{
-	color: #59bdde !important;
+	color:$accent-light !important;
 }
 .uppercase, .text-uppercase{
 	text-transform: uppercase;
@@ -180,14 +180,8 @@ blockquote {
 	}
 }
 
-/*
-.error-placeholder{
-	@include placeholder(#850018);
-}
-*/
-
 .date {
-  border: solid 2px #59bdde;
+  border: solid 2px $accent-light;
   text-align: center;
   line-height: 1;
   width: 50px;
@@ -199,7 +193,7 @@ blockquote {
     display: block;
   }
   .month {
-    color: #59bdde;
+    color: $accent-light;
     font-weight: 400;
     display: block;
     text-transform: uppercase;
