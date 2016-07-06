@@ -30,7 +30,7 @@
 		    <form action="#0" id="header-search-form">
 			    <div class="search-box">
 			    	<input name="q" id="header-search-box" type="text" placeholder="e.g. undergraduate admission" />
-			    	<label for="header-search-box">Search Xavier.edu</label>
+			    	<label for="header-search-box">Search</label>
 			    </div>
 		    	<input type="submit" value="Search" />
 		    </form>
