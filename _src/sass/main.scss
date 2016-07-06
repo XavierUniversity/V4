@@ -13,6 +13,7 @@ $env: "dev";
 // Header (in order of page load)
 @import 
 	'partials/accessibility-skip',
+	'partials/header-alert',
 	'partials/header-search',
 	'partials/header-layout',
 	'partials/footer-layout',

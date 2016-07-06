@@ -4142,6 +4142,18 @@ blockquote footer {
       position: absolute;
       top: 126px; }
 
+/* line 1, ../_src/sass/partials/_header-alert.scss */
+.campus-alert {
+  background: #e7c3c3;
+  color: #a94442;
+  text-align: center;
+  padding: 2rem 0; }
+  /* line 7, ../_src/sass/partials/_header-alert.scss */
+  .campus-alert p {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 75vw; }
+
 /* line 1, ../_src/sass/partials/_header-search.scss */
 .search-container {
   background: #002857;
@@ -4623,10 +4635,9 @@ footer {
   /* line 61, ../_src/sass/partials/bands/_hero.scss */
   .hero .form-input {
     box-shadow: none;
-    -webkit-box-shadow: none;
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     background-color: white;
     border: 1px solid white;
     color: #333;
@@ -4637,7 +4648,7 @@ footer {
     margin: 0;
     padding: 0 8px;
     width: 200px; }
-  /* line 80, ../_src/sass/partials/bands/_hero.scss */
+  /* line 77, ../_src/sass/partials/bands/_hero.scss */
   .hero .form-button {
     background-color: #0099cc;
     border: 1px solid #0099cc;
@@ -4649,31 +4660,31 @@ footer {
     padding: 0 8px;
     width: 60px;
     transition: background-color 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out; }
-    /* line 95, ../_src/sass/partials/bands/_hero.scss */
+    /* line 89, ../_src/sass/partials/bands/_hero.scss */
     .hero .form-button:hover {
       background-color: #002857;
       border: 1px solid #002857;
       color: #0099cc; }
   @media (min-width: 1070px) {
-    /* line 103, ../_src/sass/partials/bands/_hero.scss */
+    /* line 97, ../_src/sass/partials/bands/_hero.scss */
     .hero .hero-box {
       width: 700px; }
-    /* line 106, ../_src/sass/partials/bands/_hero.scss */
+    /* line 100, ../_src/sass/partials/bands/_hero.scss */
     .hero .hero-heading {
       font-size: 4.8rem; }
-    /* line 109, ../_src/sass/partials/bands/_hero.scss */
+    /* line 103, ../_src/sass/partials/bands/_hero.scss */
     .hero .form-input {
       font-size: 2.4rem;
       height: 50px;
       padding: 0 16px;
       width: 450px; }
-    /* line 115, ../_src/sass/partials/bands/_hero.scss */
+    /* line 109, ../_src/sass/partials/bands/_hero.scss */
     .hero .form-button {
       font-size: 2.4rem;
       height: 50px;
       padding: 0 16px;
       width: 120px; }
-    /* line 121, ../_src/sass/partials/bands/_hero.scss */
+    /* line 115, ../_src/sass/partials/bands/_hero.scss */
     .hero .hero-video {
       position: absolute;
       top: 0;
@@ -4681,11 +4692,11 @@ footer {
       right: 0;
       width: 100%;
       height: 100%; }
-      /* line 129, ../_src/sass/partials/bands/_hero.scss */
+      /* line 123, ../_src/sass/partials/bands/_hero.scss */
       .hero .hero-video video {
         position: absolute;
         object-fit: cover; }
-      /* line 133, ../_src/sass/partials/bands/_hero.scss */
+      /* line 127, ../_src/sass/partials/bands/_hero.scss */
       .hero .hero-video .fill {
         width: 100%;
         height: 100%; } }
@@ -4756,7 +4767,7 @@ footer {
     .billboard {
       height: 640px; } }
 
-/* line 27, ../_src/sass/main.scss */
+/* line 28, ../_src/sass/main.scss */
 .page {
   position: relative;
   margin: 0;
