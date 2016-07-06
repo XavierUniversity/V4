@@ -114,7 +114,7 @@ module.exports = function (grunt){
 		watch: {
 			css: {
 				files: ['_src/sass/**/*.{scss,sass}'],
-				tasks: ['newer:compass:dev', 'newer:postcss']
+				tasks: ['compass:dev', 'newer:postcss']
 			},
 			js: {
 				files: ['_src/js/**/*.js'],
@@ -140,5 +140,5 @@ module.exports = function (grunt){
 	
 	// Register Tasks
 	grunt.registerTask('check', ['jshint']);
-	grunt.registerTask('default', ['newer:jshint', 'newer:compass:dev', 'newer:postcss', 'newer:jshint', 'newer:concat:main', 'newer:uglify', 'watch']);
+	grunt.registerTask('default', ['newer:jshint', 'compass:dev', 'newer:postcss', 'newer:jshint', 'newer:concat:main', 'newer:uglify', 'watch']);
 };
