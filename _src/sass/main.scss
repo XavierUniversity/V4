@@ -4,7 +4,9 @@ $env: "dev";
 // Import base utilities and configuration
 @import 'config';
 
-@import 'mixins/contrast'
+@import 
+	'mixins/contrast',
+	'../bower_components/aos/dist/aos.css'
 ;
 
 // Import only what you need to survive.
@@ -27,7 +29,8 @@ $env: "dev";
 @import 
 	'partials/bands/hero',
 	'partials/bands/billboard',
-	'partials/bands/bands'
+	'partials/bands/bands',
+	'partials/buttons'
 ;
 .page{
 	position: relative;

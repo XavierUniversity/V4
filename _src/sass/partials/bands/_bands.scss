@@ -1,4 +1,4 @@
-@import 'mixin';
+@import '../../mixins/bands';
 
 .band {
 	@include bands($accent-light, #21304E, true);
@@ -21,7 +21,6 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: scroll;
-	padding:120px 0;
 	
 	&.cover{
 		background-size: cover;

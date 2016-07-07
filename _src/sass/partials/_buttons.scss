@@ -1,0 +1,13 @@
+@import '../mixins/buttons';
+
+.button{
+	@include button($white);
+}
+
+.navy{
+	@include button($brand-color, true);
+	
+	&:hover, &:focus, &:active{
+		color:white !important;
+	}
+}
