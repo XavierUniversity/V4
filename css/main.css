@@ -4276,7 +4276,7 @@ blockquote footer {
 
 /* line 2, ../_src/sass/partials/_header-layout.scss */
 .site-header {
-  background: rgba(0, 40, 87, 0.85);
+  background: rgba(0, 40, 87, 0.9);
   color: white;
   height: 8.4rem;
   position: absolute;
@@ -4368,7 +4368,7 @@ blockquote footer {
       left: 250px;
       overflow: visible;
       right: 90px;
-      top: 0;
+      top: 0.3rem;
       width: auto; } }
   @media screen and (min-width: 1230px) {
     /* line 61, ../_src/sass/partials/_header-layout.scss */
@@ -4820,7 +4820,7 @@ footer {
   background-color: #62c0e0;
   color: #040405; }
   /* line 23, ../_src/sass/partials/bands/_mixin.scss */
-  .band, .navy, .white, .grey {
+  .band, .navy, .white, .grey, .photo {
     padding: 3rem 0;
     position: relative; }
 
@@ -4837,7 +4837,25 @@ footer {
 /* line 15, ../_src/sass/partials/bands/_bands.scss */
 .grey {
   background-color: #b0b6b9;
-  color: #020c18; }
+  color: #002857; }
+
+/* line 19, ../_src/sass/partials/bands/_bands.scss */
+.photo {
+  background-color: transparent;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  padding: 120px 0; }
+  /* line 26, ../_src/sass/partials/bands/_bands.scss */
+  .photo.cover {
+    background-size: cover;
+    overflow: hidden; }
+  @media (min-width: 768px) {
+    /* line 31, ../_src/sass/partials/bands/_bands.scss */
+    .photo.fixed {
+      background-attachment: fixed;
+      position: static; } }
 
 /* line 32, ../_src/sass/main.scss */
 .page {
