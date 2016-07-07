@@ -55,8 +55,8 @@
 							<a class="audience" href="/students">Current Students</a>
 							<a class="audience" href="/alumni">Alumni</a>
 							<a class="audience" href="/employees">Employees</a>
-							<a class="text-nowrap" href="https://admissions.xavier.edu/register/requestinfo">Request Info</a>
 							
+							<a class="text-nowrap" href="https://admissions.xavier.edu/register/requestinfo">Request Info</a>
 							<a class="text-nowrap" href="/about/map.cfm">Maps &amp; Directions</a>
 							<a class="text-nowrap" href="https://careersatxavier.silkroad.com">Employment</a>
 						</div>
@@ -73,8 +73,9 @@
 		<!--- jquery and javascript includes here --->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
-        <script src="js/plugins.min.js"></script>
+        <script src="js/vendor.min.js"></script>
         <script src="js/main.min.js"></script>
+        <script src="scripts/local.js"></script>
 		<!--- jquery and javascript includes here --->
 	</body>
 </html>
