@@ -1,6 +1,6 @@
 // Header navigation
 .site-header{
-	background: rgba($brand-color, 0.85);
+	background: rgba($brand-color, 0.9);
 	color: $white;
 	height: 8.4rem;
 	position: absolute;
@@ -97,7 +97,7 @@
 		left:250px;
 		overflow: visible;
 		right:90px;
-		top:0;
+		top:0.3rem;
 		width: auto;
 	}
 	@media screen and (min-width:1230px){
