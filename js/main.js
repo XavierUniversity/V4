@@ -1,4 +1,3 @@
-/*! Xavier - v0.1.0 - 2016-07-06 */
 // Show search
 
 var $searchContainer 	= $(".search-container");
@@ -65,4 +64,3 @@ $(".skip").click(function(event){
 
     }).focus(); // focus on the content container
 });
-//# sourceMappingURL=main.js.map

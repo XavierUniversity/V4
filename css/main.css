@@ -5,6 +5,7 @@ property of Monotype Imaging and/or its suppliers. You may not attempt to copy, 
 redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
 Imaging with any questions regarding Web Fonts:  http://webfonts.fonts.com
 */
+@import url(../bower_components/aos/dist/aos.css);
 @font-face {
   font-family: "Frutiger W01_n1";
   src: url("../fonts/7d3671fc-8c26-459c-98e1-997c4f6c8c93.eot?#iefix") format("eot"); }
@@ -4061,15 +4062,15 @@ ul.ua {
   font-style: italic; }
 
 /* line 157, ../_src/sass/partials/_global-typography.scss */
-.xs-text-right {
+.text-right {
   text-align: right; }
 
 /* line 158, ../_src/sass/partials/_global-typography.scss */
-.xs-text-left {
+.text-left {
   text-align: left; }
 
 /* line 159, ../_src/sass/partials/_global-typography.scss */
-.xs-text-center {
+.text-center {
   text-align: center; }
 
 @media (min-width: 768px) {
@@ -4139,7 +4140,8 @@ blockquote footer {
 /* line 209, ../_src/sass/partials/_global-typography.scss */
 .all-for-one, .we-will, .we-are {
   font-size: 2.1rem;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin: 1rem 0; }
   @media (min-width: 768px) {
     /* line 209, ../_src/sass/partials/_global-typography.scss */
     .all-for-one, .we-will, .we-are {
@@ -4630,7 +4632,7 @@ footer {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 74px);
   position: relative;
   width: 100vw; }
   /* line 10, ../_src/sass/partials/bands/_hero.scss */
@@ -4819,7 +4821,7 @@ footer {
 .band {
   background-color: #62c0e0;
   color: #040405; }
-  /* line 23, ../_src/sass/partials/bands/_mixin.scss */
+  /* line 23, ../_src/sass/mixins/_bands.scss */
   .band, .navy, .white, .grey, .photo {
     padding: 3rem 0;
     position: relative; }
@@ -4845,19 +4847,55 @@ footer {
   color: white;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: scroll;
-  padding: 120px 0; }
-  /* line 26, ../_src/sass/partials/bands/_bands.scss */
+  background-attachment: scroll; }
+  /* line 25, ../_src/sass/partials/bands/_bands.scss */
   .photo.cover {
     background-size: cover;
     overflow: hidden; }
   @media (min-width: 768px) {
-    /* line 31, ../_src/sass/partials/bands/_bands.scss */
+    /* line 30, ../_src/sass/partials/bands/_bands.scss */
     .photo.fixed {
       background-attachment: fixed;
       position: static; } }
 
-/* line 32, ../_src/sass/main.scss */
+/* line 3, ../_src/sass/partials/_buttons.scss */
+.button {
+  background-color: transparent;
+  border-color: white;
+  color: white; }
+  /* line 25, ../_src/sass/mixins/_buttons.scss */
+  .button, .navy {
+    border-width: 2px;
+    border-style: solid;
+    font-weight: 200;
+    padding: 1rem 5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 500ms ease, background-color 500ms ease; }
+    /* line 40, ../_src/sass/mixins/_buttons.scss */
+    .button:hover, .navy:hover {
+      cursor: pointer; }
+  /* line 10, ../_src/sass/mixins/_buttons.scss */
+  .button:hover, .button:focus, .button:active {
+    background-color: white;
+    color: #002857;
+    outline: none; }
+
+/* line 7, ../_src/sass/partials/_buttons.scss */
+.navy {
+  background-color: transparent;
+  border-color: #002857;
+  color: #002857; }
+  /* line 10, ../_src/sass/mixins/_buttons.scss */
+  .navy:hover, .navy:focus, .navy:active {
+    background-color: #002857;
+    color: #002857;
+    outline: none; }
+  /* line 10, ../_src/sass/partials/_buttons.scss */
+  .navy:hover, .navy:focus, .navy:active {
+    color: white !important; }
+
+/* line 35, ../_src/sass/main.scss */
 .page {
   position: relative;
   margin: 0;
