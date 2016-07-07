@@ -13,5 +13,25 @@
 }
 
 .grey{
-	@include bands(#b0b6b9, $brand-color, true);
+	@include bands(#b0b6b9, $brand-color, true, false);
+}
+
+.photo{
+	@include bands(transparent, $white, true, false);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: scroll;
+	padding:120px 0;
+	
+	&.cover{
+		background-size: cover;
+		overflow: hidden;
+	}
+	
+	&.fixed{
+		@media(min-width:768px){
+			background-attachment: fixed;
+			position: static;
+		}
+	}
 }

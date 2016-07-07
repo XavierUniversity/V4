@@ -1,15 +1,15 @@
 $Placeholder-Selectors: ();
 
-@mixin bands($color, $fontColor: $white, $extend: true){
+@mixin bands($color, $fontColor: $white, $extend: true, $contrast: true){
 	@include band-static($extend);
 	
 	background-color: $color;
 	
-	color: color_adjust_contrast_AERT($fontColor, $color);
-	
-	
-// 	color:$fontColor;
-	
+	@if $contrast == true {
+		color: color_adjust_contrast_AERT($fontColor, $color);
+	} @else {
+		color: $fontColor;
+	}
 }
 
 @mixin band-static($extend){

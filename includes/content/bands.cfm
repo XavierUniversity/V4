@@ -72,3 +72,12 @@
 		</div>
 	</div>
 </section>
+<section class="photo cover fixed" style="background-image: url(img/band-example.jpg);">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p>I am a band</p>
+			</div>
+		</div>
+	</div>
+</section>
