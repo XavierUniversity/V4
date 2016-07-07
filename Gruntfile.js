@@ -13,13 +13,6 @@ module.exports = function (grunt){
 			}
 		},
 		concat: {
-			options: {
-				banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-					'<%= grunt.template.today("yyyy-mm-dd") %> */\n',
-				separator: ';\n',
-				sourceMap: true
-				
-			},
 			main: {
 				src: ['_src/js/**/*.js'],
 				dest: 'js/main.js'
@@ -28,7 +21,8 @@ module.exports = function (grunt){
 				// combine some vendor scripts for production, to reduce requests
 				src: [
 					'bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js',
-					'bower_components/owl.carousel/dist/owl.carousel.js'
+					'bower_components/owl.carousel/dist/owl.carousel.js',
+					'bower_components/aos/dist/aos.js'
 				],
 				dest: 'js/vendor.js'
 			}
