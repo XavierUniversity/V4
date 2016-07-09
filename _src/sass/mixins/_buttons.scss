@@ -27,16 +27,15 @@ $Placeholder-Selectors: ();
 			}
 		}
 		@extend %#{$button-selector};
-		}
-		@else {
-		border-width: 2px;
+	} @else {
+		border-width: 0.2rem;
 		border-style: solid;
 		font-weight: 200;
 		padding: 1rem 5rem;
 		text-transform: uppercase;
 		text-decoration: none;
 		transition: color 500ms ease, background-color 500ms ease;
-		
+	
 		&:hover {
 			cursor: pointer;
 		}

@@ -2,12 +2,12 @@
 
 .button{
 	@include button($white);
-}
-
-.navy{
-	@include button($brand-color, true);
 	
-	&:hover, &:focus, &:active{
-		color:white !important;
+	&.navy{
+		@include button($brand-color);
+		
+		&:hover, &:focus, &:active{
+			color:white !important;
+		}
 	}
 }

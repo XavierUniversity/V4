@@ -5,7 +5,6 @@ property of Monotype Imaging and/or its suppliers. You may not attempt to copy, 
 redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
 Imaging with any questions regarding Web Fonts:  http://webfonts.fonts.com
 */
-@import url(../bower_components/aos/dist/aos.css);
 @font-face {
   font-family: "Frutiger W01_n1";
   src: url("../fonts/7d3671fc-8c26-459c-98e1-997c4f6c8c93.eot?#iefix") format("eot"); }
@@ -4864,38 +4863,37 @@ footer {
   border-color: white;
   color: white; }
   /* line 25, ../_src/sass/mixins/_buttons.scss */
-  .button, .navy {
-    border-width: 2px;
+  .button, .button.navy {
+    border-width: 0.2rem;
     border-style: solid;
     font-weight: 200;
     padding: 1rem 5rem;
     text-transform: uppercase;
     text-decoration: none;
     transition: color 500ms ease, background-color 500ms ease; }
-    /* line 40, ../_src/sass/mixins/_buttons.scss */
-    .button:hover, .navy:hover {
+    /* line 39, ../_src/sass/mixins/_buttons.scss */
+    .button:hover {
       cursor: pointer; }
   /* line 10, ../_src/sass/mixins/_buttons.scss */
   .button:hover, .button:focus, .button:active {
     background-color: white;
     color: #002857;
     outline: none; }
+  /* line 6, ../_src/sass/partials/_buttons.scss */
+  .button.navy {
+    background-color: transparent;
+    border-color: #002857;
+    color: #002857; }
+    /* line 10, ../_src/sass/mixins/_buttons.scss */
+    .button.navy:hover, .button.navy:focus, .button.navy:active {
+      background-color: #002857;
+      color: #002857;
+      outline: none; }
+    /* line 9, ../_src/sass/partials/_buttons.scss */
+    .button.navy:hover, .button.navy:focus, .button.navy:active {
+      color: white !important; }
 
-/* line 7, ../_src/sass/partials/_buttons.scss */
-.navy {
-  background-color: transparent;
-  border-color: #002857;
-  color: #002857; }
-  /* line 10, ../_src/sass/mixins/_buttons.scss */
-  .navy:hover, .navy:focus, .navy:active {
-    background-color: #002857;
-    color: #002857;
-    outline: none; }
-  /* line 10, ../_src/sass/partials/_buttons.scss */
-  .navy:hover, .navy:focus, .navy:active {
-    color: white !important; }
-
-/* line 35, ../_src/sass/main.scss */
+/* line 34, ../_src/sass/main.scss */
 .page {
   position: relative;
   margin: 0;
