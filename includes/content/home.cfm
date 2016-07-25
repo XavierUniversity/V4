@@ -40,10 +40,10 @@
 				Faith and service
 			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12 text-center">
-			<h2 data-aos="slide-right">See all programs <span class="fa fa-chevron-circle-down"></span></h2>
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h2 data-aos="slide-right">See all programs <span class="fa fa-chevron-circle-down"></span></h2>
+			</div>
 		</div>
 	</div>
 </section>
@@ -114,7 +114,7 @@
 					<a href="#commitmentVideo" class="button">Watch the Xavier Student Commitment</a>
 				</p>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 hidden-sm hidden-xs">
 				<img src="http://www.xavier.edu/images/about-commitment.png" class="img-responsive" alt="" />
 			</div>
 		</div>
