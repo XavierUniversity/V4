@@ -1,5 +1,5 @@
 .backmatter{
-	background: $brand-color;
+	background: $brand-primary;
 	height:74px;
 	width: 100vw;
 	display: none;
@@ -30,7 +30,7 @@
 	margin-top: 2.5rem;
 	margin-left: 7rem;
 	a{
-		color:$accent-color;
+		color:$brand-secondary;
 		display: inline-block;
 		margin:0 0.8rem;
 		&:first-child{
@@ -44,26 +44,26 @@
 			color:$white;
 			
 			&:hover, &:focus{
-				color:$accent-color;
+				color:$brand-secondary;
 			}
 		}
 	}
 }
 
 .footer-cta{
-	background: $accent-color;
+	background: $brand-secondary;
 	height:74px;
 	text-align: center;
 }
 
 .cta-links{
-	color:$brand-color;
+	color:$brand-primary;
 	font-size: 1.8rem;
 	font-weight: 600;
 	margin-top:2.25rem;
 	
 	a{
-		color:$brand-color;
+		color:$brand-primary;
 		font-size: 1.8rem;
 			
 		&:hover, &:focus{

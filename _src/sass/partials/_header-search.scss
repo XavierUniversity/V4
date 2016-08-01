@@ -1,5 +1,5 @@
 .search-container{
-    background:$brand-color;
+    background:$brand-primary;
     height: 0px;
     position: relative;
 	transition: height 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
@@ -17,7 +17,7 @@
 #header-search-form {
 	
 	input[type=text]{
-    	background-color: $brand-color;
+    	background-color: $brand-primary;
     	border:none;
 		border-bottom: solid 3px transparent;
 		border-radius: 0;
@@ -44,8 +44,8 @@
 	}
 	
 	input[type=submit]{
-	    background-color: $accent-color;
-		border: 1px solid $accent-color;
+	    background-color: $brand-secondary;
+		border: 1px solid $brand-secondary;
 		border-radius: 0;
 		color: $white;
 		font-weight: 100;
@@ -65,7 +65,7 @@
 		}
 		
 		&:hover, &:focus, &:active{
-			color: $brand-color;
+			color: $brand-primary;
 		}
 	}
 	

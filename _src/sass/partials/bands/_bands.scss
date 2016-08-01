@@ -1,31 +1,35 @@
-@import '../../mixins/bands';
-
 .band {
-	@include bands($accent-light, #21304E, true);
+	background-color: $brand-quaternary;
+	color: $brand-primary;
+	padding:3rem 0;
+	position: relative;
 }
 
 .navy{
-	@include bands($brand-color, $white, true);
+	@extend .band;
+	background-color: $brand-primary;
+	color:$white;
 }
 
 .white{
-	@include bands($white, $brand-color, true);
+	@extend .band;
+	background-color:$white;
 }
 
 .grey{
-	@include bands(#b0b6b9, $brand-color, true, false);
+	@extend .band;
+	background-color:$brand-tertiary;
 }
 
 .photo{
-	@include bands(transparent, $white, true, false);
+	@extend .band;
+	background-color:transparent;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: scroll;
-	
-	&.cover{
-		background-size: cover;
-		overflow: hidden;
-	}
+	background-size: cover;
+	overflow: hidden;
+	color:$white;
 	
 	&.fixed{
 		@media(min-width:768px){

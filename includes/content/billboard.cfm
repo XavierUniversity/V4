@@ -20,6 +20,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>I am a band</p>
+				<p><a href="#" class="button">Button</a></p>
 			</div>
 		</div>
 	</div>
@@ -30,6 +31,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>I am a band</p>
+				<p><a href="#" class="button">Button</a></p>
 			</div>
 		</div>
 	</div>
@@ -40,6 +42,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>I am a band</p>
+				<p><a href="#" class="button secondary fill">Button</a></p>
 			</div>
 		</div>
 	</div>
@@ -49,6 +52,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>I am a band</p>
+				<p><a href="#" class="button primary fill">Button</a></p>
 			</div>
 		</div>
 	</div>
@@ -58,6 +62,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>I am a band</p>
+				<p><a href="#" class="button">Button</a></p>
 			</div>
 		</div>
 	</div>

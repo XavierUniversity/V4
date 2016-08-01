@@ -1,0 +1,112 @@
+.content-a{
+	@include make-row();
+	 > .col{
+		@include make-sm-column(12);
+	}
+}
+
+.content-b{
+	@include make-row();
+	
+	> .col {
+		@include make-sm-column(12);
+		@include make-md-column(6);
+	}
+}
+
+.content-c{
+	@include make-row();
+	
+	> .col{
+		@include make-sm-column(12);
+		@include make-md-column(4);
+	}
+}
+.content-d{
+	@include make-row();
+	
+	> .col{
+		@include make-sm-column(12);
+		@include make-md-column(3);		
+	}
+}
+.content-e{
+	@include make-row();
+	
+	> .col{
+		@include make-sm-column(12);
+		@include make-md-column(8);
+		
+		&.last{
+			@include make-md-column(4);
+		}
+	}
+}
+.content-f{
+	@include make-row();
+	
+	> .col{
+		@include make-sm-column(12);
+		@include make-md-column(4);
+		
+		&.last {
+			@include make-md-column(8);
+		}
+	}
+}
+.content-g{
+	@include make-row();
+	
+	> .col{
+		@include make-sm-column(12);
+		@include make-md-column(9); 
+		
+		&.last{
+			@include make-md-column(3);
+		}
+	}
+}
+.content-h{
+	@include make-row();
+	
+	> .col{
+		@include make-sm-column(12);	
+		@include make-md-column(3);		
+		
+		&.last{
+			@include make-md-column(9);
+		}
+	}
+}
+.content-i{
+	@include make-row();
+	
+	> .col{
+		@include make-sm-column(12);	
+		@include make-md-column(2);	
+	}
+}
+.content-j{
+	@include make-row();
+	
+	> .col{
+		@include make-sm-column(12);	
+		@include make-md-column(2);	
+	}
+}
+
+.feature-a{
+	@include make-sm-column(12);
+}
+
+.row-no-padding{
+	[class*="col-"]{
+		padding-left:0;
+		padding-right:0;
+	}
+}
+
+.row.collapse{
+	display: inline-block !important;
+	visibility: visible !important;
+}

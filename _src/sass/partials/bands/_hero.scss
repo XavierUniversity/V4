@@ -44,7 +44,7 @@
 	}
 
 	.hero-heading {
-		color: $brand-color;
+		color: $brand-primary;
 		font-weight: 600;
 		font-style: normal;
 		font-size: 2.4rem;
@@ -74,8 +74,8 @@
 	}
 	
 	.form-button {
-		background-color: $accent-color;
-		border: 1px solid $accent-color;
+		background-color: $brand-secondary;
+		border: 1px solid $brand-secondary;
 		color: $white;
 		font-weight: 100;
 		font-size: 1.6rem;
@@ -86,9 +86,9 @@
 		transition: background-color 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out;
 		
 		&:hover {
-			background-color: $brand-color;
-			border: 1px solid $brand-color;
-			color: $accent-color;
+			background-color: $brand-primary;
+			border: 1px solid $brand-primary;
+			color: $brand-secondary;
 		}
 	}
 	

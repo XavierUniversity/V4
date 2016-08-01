@@ -1,13 +1,114 @@
-@import '../mixins/buttons';
-
 .button{
-	@include button($white);
+	background-color: transparent;
+	border:solid 0.2rem $white;
+	color:$white;
+	display: block;
+	font-size: 1.4rem;
+	font-weight: 200;
+	padding: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: color 500ms ease, background-color 500ms ease, border-color 500ms ease;
+	width: 100%;
 	
-	&.navy{
-		@include button($brand-color);
-		
-		&:hover, &:focus, &:active{
-			color:white !important;
-		}
+	&:hover, &:focus, &:active{
+		background: $white;
+		color:$brand-primary;
+		cursor: pointer;
+		outline: none;
+		text-decoration: underline;
 	}
 }
+
+.button.primary{
+	@extend .button;
+	border-color: $brand-primary;
+	color:$brand-primary;
+	&:hover, &:focus, &:active{
+		background-color: $brand-primary;	
+		color: $white;
+	}
+	
+	&.fill{
+		background-color: $brand-primary;
+		color:$white;
+		&:hover, &:focus, &:active{
+			background-color: darken($brand-primary, 10%);
+			color: $white;
+		}		
+	}
+}
+
+.button.secondary{
+	@extend .button;
+	border-color: $brand-secondary;
+	color:$brand-secondary;
+	&:hover, &:focus, &:active{
+		background-color: $brand-secondary;	
+		color: $white;
+	}
+	
+	&.fill{
+		background-color: $brand-secondary;
+		color:$white;
+		&:hover, &:focus, &:active{
+			background-color: darken($brand-secondary, 10%);
+			border-color: darken($brand-secondary, 10%);
+			color: $white;
+		}		
+	}
+}
+
+.button.secondary{
+	@extend .button;
+	border-color: $brand-secondary;
+	color:$brand-secondary;
+	&:hover, &:focus, &:active{
+		background-color: $brand-secondary;	
+		color: $white;
+	}
+	
+	&.fill{
+		background-color: $brand-secondary;
+		color:$white;
+		&:hover, &:focus, &:active{
+			background-color: darken($brand-secondary, 10%);
+			border-color: darken($brand-secondary, 10%);
+			color: $white;
+		}		
+	}
+}
+
+/*
+
+.button.navy{
+	@extend .button;
+	border-color: $brand-primary;
+	color:$brand-primary;
+	&:hover, &:focus, &:active{
+		background-color: $brand-primary;	
+		color: $white;
+	}
+}
+
+.button.navy{
+	@extend .button;
+	border-color: $brand-primary;
+	color:$brand-primary;
+	&:hover, &:focus, &:active{
+		background-color: $brand-primary;	
+		color: $white;
+	}
+}
+
+.button.navy{
+	@extend .button;
+	border-color: $brand-primary;
+	color:$brand-primary;
+	&:hover, &:focus, &:active{
+		background-color: $brand-primary;	
+		color: $white;
+	}
+}
+*/

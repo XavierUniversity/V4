@@ -14,23 +14,9 @@ a{
 input, select{
 
 }
-/*
-.button {
-	border-width: 2px;
-	border-style: solid;
-	display: block;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 1.4rem;
-	line-height: 1.1;
-	padding: 20px;
-	text-align: center;
-	text-decoration: none !important;
-	text-transform: uppercase;
-}
-*/
+
 h1 {
-	color: $brand-color;
+	color: $brand-primary;
 	font-weight: 600;
 	font-style: normal;
 	font-size: 4.2rem;
@@ -44,7 +30,7 @@ h1 {
 	}
 }
 h2 {
-	color: $brand-color;
+	color: $brand-primary;
 	font-weight: 600;
 	font-style: normal;
 	font-size: 2.8rem;
@@ -56,7 +42,7 @@ h2 {
 	}
 }
 h3 {
-	color: $brand-color;
+	color: $brand-primary;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 3.0rem;
@@ -68,7 +54,7 @@ h3 {
 	}
 }
 h4 {
-	color: $brand-color;
+	color: $brand-primary;
 	font-weight: 200;
 	font-style: normal;
 	font-size: 2.2rem;
@@ -80,7 +66,7 @@ h4 {
 	}
 }
 h5 {
-	color: $brand-color;
+	color: $brand-primary;
 	font-weight: 300;
 	font-style: normal;
 	font-size: 1.8rem;
@@ -108,7 +94,7 @@ ul{
 				float: left;
 				margin-left: -1.5rem;
 				margin-top: 1.025rem;
-				color: $accent-light;
+				color: $brand-quaternary;
 				font-size: 0.55rem;
 			}
 		}
@@ -119,13 +105,13 @@ ul{
 	color:$white !important;
 }
 .text-navy{
-	color:$brand-color !important;
+	color:$brand-primary !important;
 }
 .text-blue{
-	color:$accent-color !important;
+	color:$brand-secondary !important;
 }
 .text-lblue{
-	color:$accent-light !important;
+	color:$brand-quaternary !important;
 }
 .uppercase, .text-uppercase{
 	text-transform: uppercase;
@@ -181,7 +167,7 @@ blockquote {
 }
 
 .date {
-  border: solid 2px $accent-light;
+  border: solid 2px $brand-quaternary;
   text-align: center;
   line-height: 1;
   width: 50px;
@@ -193,7 +179,7 @@ blockquote {
     display: block;
   }
   .month {
-    color: $accent-light;
+    color: $brand-quaternary;
     font-weight: 400;
     display: block;
     text-transform: uppercase;

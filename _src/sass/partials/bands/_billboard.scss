@@ -15,8 +15,8 @@
 		width:100%;
 		
 		.billboard-box{
-			background-color: $accent-light;
-			border-top: 9px solid $accent-color;
+			background-color: $brand-quaternary;
+			border-top: 9px solid $brand-secondary;
 			padding:12px 12px 0 12px;
 			
 			@media (min-width: 768px){
@@ -37,7 +37,7 @@
 				}
 				
 				.emphasis{
-					color:$brand-color;
+					color:$brand-primary;
 				}
 			}
 			.billboard-half-title{
@@ -52,8 +52,8 @@
 				}
 				
 				.billboard-half-title-content{
-					background-color:$accent-light;
-					color:$brand-color;
+					background-color:$brand-quaternary;
+					color:$brand-primary;
 					display: inline-block;
 					font-weight: 400;
 					font-style: normal;

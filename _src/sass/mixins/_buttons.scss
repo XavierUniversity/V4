@@ -30,8 +30,12 @@ $Placeholder-Selectors: ();
 	} @else {
 		border-width: 0.2rem;
 		border-style: solid;
+		display: inline-block;
+		width: 100%;
+		font-size: 1.4rem;
 		font-weight: 200;
 		padding: 1rem 5rem;
+		text-align: center;
 		text-transform: uppercase;
 		text-decoration: none;
 		transition: color 500ms ease, background-color 500ms ease;
