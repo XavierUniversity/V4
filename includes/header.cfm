@@ -13,8 +13,8 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="<cfoutput>#path#</cfoutput>css/normalize.css">
+        <link rel="stylesheet" href="<cfoutput>#path#</cfoutput>css/main.css">
         <!--- Grunt should LOOK for modernizr needs
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>--->
         
@@ -39,7 +39,6 @@
     	<cfif showAlert EQ true AND isDefined("campusAlert")>
 	    	<cfinclude template="header-alert.cfm">
     	</cfif>
-    	
 	    <div class="page">
 	    	
 		    <header class="site-header">
@@ -54,63 +53,28 @@
 			    
 			    <div class="site-logo">
 				    <a href="#home">
-					    <img src="img/xu-shield.svg" class="mobile-logo" />
-					    <img src="img/xu-logo.svg" class="desktop-logo" />
+					    <img src="<cfoutput>#mobileLogo#</cfoutput>" class="mobile-logo" />
+					    <img src="<cfoutput>#desktopLogo#</cfoutput>" class="desktop-logo" />
 				    </a>
 			    </div>
 			    
 			    <div class="search-icon">
 				    <a href="#search" class="show-search" role="button">
-					    <img src="img/search.svg" alt="toggle search bar" />
+					    <img src="<cfoutput>#path#</cfoutput>img/search.svg" alt="toggle search bar" />
 				    </a>
 			    </div>
 			    
 			    <div class="navigation">
 				    <nav class="main-navigation" role="navigation">
-						<ul role="menubar">
-							<li>
-								<a href="#" role="menuitem">Admission</a>
-							</li>
-							<li>
-								<a href="#" role="menuitem">Academics</a>
-							</li>
-							<li>
-								<a href="#" role="menuitem">Life at Xavier</a>
-							</li>
-							<li>
-								<a href="#" role="menuitem">Athletics</a>
-							</li>
-							<li>
-								<a href="#" role="menuitem">About Xavier</a>
-							</li>
-					   </ul>
+						<cfoutput>#mainNavHTML#</cfoutput>
 				    </nav>
 				    
 				    <nav class="audience-navigation" role="navigation">
-						<ul role="menubar">
-							<li><a class='audience' href='/students/index.cfm' role="menuitem">Current Students</a></li>
-							<li><a class='audience' href='/alumni/index.cfm' role="menuitem">Alumni</a></li>
-							<li><a class='audience' href='/employees/index.cfm' role="menuitem">Employees</a></li>
-						</ul>
-						<ul role="menubar">
-							<li><a href='https://admissions.xavier.edu/register/requestinfo' role="menuitem">Request Info</a></li>
-					        <li><a href='/about/map.cfm' role="menuitem">Maps &amp; Directions</a></li>
-					        <li><a href='https://careersatxavier.silkroad.com' role="menuitem">Employment</a></li>
-						</ul>
+					    <cfoutput>#audienceNavHTML#</cfoutput>
 					</nav>
 					
 					<nav class="header-cta" role="navigation">
-						<ul role="menubar">
-							<li>
-								<a href="#" role="menuitem">Visit</a>
-							</li>
-							<li>
-								<a href="#" role="menuitem">Apply</a>
-							</li>
-							<li>
-								<a href="#" role="menuitem">Give</a>
-							</li>
-						</ul>
+						<cfoutput>#ctaHTML#</cfoutput>
 					</nav>
 			   </div>
 			    

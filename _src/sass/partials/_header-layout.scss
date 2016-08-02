@@ -172,18 +172,18 @@
 	
 	li{
 		display: inline-block;
-		
-		&:not(:last-child):after{
-			content: " / ";
-			font-size: 2.1rem;
-		}
 	}
 	
 	a{
 		color:$brand-primary;
+		display: inline-block;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-size: 2.1rem;
+		
+		&:not(:last-child):after{
+			content: "\00a0/\00a0";
+		}
 	}
 }
 
