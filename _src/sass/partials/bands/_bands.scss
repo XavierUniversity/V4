@@ -1,24 +1,34 @@
-.band {
+.band{
 	background-color: $brand-quaternary;
 	color: $brand-primary;
 	padding:3rem 0;
 	position: relative;
 }
 
-.navy{
+.primary{
 	@extend .band;
 	background-color: $brand-primary;
 	color:$white;
 }
 
+.secondary{
+	@extend .band;
+	background-color: $brand-secondary;
+	color: $white;
+}
+
+.tertiary{
+	@extend .band;
+	background-color:$brand-tertiary;
+}
+.quaternary{
+	@extend .band;
+	background-color: $brand-quaternary;
+}
+
 .white{
 	@extend .band;
 	background-color:$white;
-}
-
-.grey{
-	@extend .band;
-	background-color:$brand-tertiary;
 }
 
 .photo{
