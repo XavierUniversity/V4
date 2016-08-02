@@ -1,3 +1,7 @@
+AOS.init({		
+	offset: 200,		
+	delay: 200		
+}); 
 // Show search
 
 var $searchContainer 	= $(".search-container");
