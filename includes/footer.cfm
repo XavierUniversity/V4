@@ -38,7 +38,7 @@
 						<p class="legal">&copy; <cfoutput>#dateFormat(now(),'YYYY')#</cfoutput> Xavier University</p>
 					</div>
 				</div>
-			</div>			
+			</div>
 		</footer>
 	
 		<div class="backmatter">
