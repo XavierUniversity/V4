@@ -32,7 +32,7 @@
 							<p class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 								<span itemprop="streetAddress">3800 Victory Parkway</span>
 								<span><span itemprop="addressLocality">Cincinnati</span>, <span itemprop="addressRegion">OH</span> <span itemprop="postalCode">45207</span></span>	
-								<span>513-745-3000</span>
+								<span itemprop="telephone">513-745-3000</span>
 							</p>
 						</div>
 						<p class="legal">&copy; <cfoutput>#dateFormat(now(),'YYYY')#</cfoutput> Xavier University</p>
