@@ -20,29 +20,93 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>I am a band</p>
-				<p><a href="#" class="button">Button</a></p>
+				<p><a href="#" class="button">.button</a></p>
+				<p><a href="#" class="button fill">.button.fill</a></p>
+				<p><a href="#" class="button primary">.button.primary</a></p>
+				<p><a href="#" class="button primary fill">.button.primary.fill</a></p>
+				<p><a href="#" class="button secondary">.button.secondary</a></p>
+				<p><a href="#" class="button secondary fill">.button.secondary.fill</a></p>
+				<p><a href="#" class="button tertiary">.button.tertiary</a></p>
+				<p><a href="#" class="button tertiary fill">.button.tertiary.fill</a></p>
+				<p><a href="#" class="button quaternary">.button.quaternary</a></p>
+				<p><a href="#" class="button quaternary fill">.button.quaternary.fill</a></p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="band navy">
+<section class="band primary">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<p>I am a band</p>
-				<p><a href="#" class="button">Button</a></p>
+				<p><a href="#" class="button">.button</a></p>
+				<p><a href="#" class="button fill">.button.fill</a></p>
+				<p><a href="#" class="button primary">.button.primary</a></p>
+				<p><a href="#" class="button primary fill">.button.primary.fill</a></p>
+				<p><a href="#" class="button secondary">.button.secondary</a></p>
+				<p><a href="#" class="button secondary fill">.button.secondary.fill</a></p>
+				<p><a href="#" class="button tertiary">.button.tertiary</a></p>
+				<p><a href="#" class="button tertiary fill">.button.tertiary.fill</a></p>
+				<p><a href="#" class="button quaternary">.button.quaternary</a></p>
+				<p><a href="#" class="button quaternary fill">.button.quaternary.fill</a></p>
 			</div>
 		</div>
 	</div>
 </section>
-
-<section class="band grey">
+<section class="band secondary">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<p>I am a band</p>
-				<p><a href="#" class="button secondary fill">Button</a></p>
+				<p><a href="#" class="button">.button</a></p>
+				<p><a href="#" class="button fill">.button.fill</a></p>
+				<p><a href="#" class="button primary">.button.primary</a></p>
+				<p><a href="#" class="button primary fill">.button.primary.fill</a></p>
+				<p><a href="#" class="button secondary">.button.secondary</a></p>
+				<p><a href="#" class="button secondary fill">.button.secondary.fill</a></p>
+				<p><a href="#" class="button tertiary">.button.tertiary</a></p>
+				<p><a href="#" class="button tertiary fill">.button.tertiary.fill</a></p>
+				<p><a href="#" class="button quaternary">.button.quaternary</a></p>
+				<p><a href="#" class="button quaternary fill">.button.quaternary.fill</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="band tertiary">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p>I am a band</p>
+				<p><a href="#" class="button">.button</a></p>
+				<p><a href="#" class="button fill">.button.fill</a></p>
+				<p><a href="#" class="button primary">.button.primary</a></p>
+				<p><a href="#" class="button primary fill">.button.primary.fill</a></p>
+				<p><a href="#" class="button secondary">.button.secondary</a></p>
+				<p><a href="#" class="button secondary fill">.button.secondary.fill</a></p>
+				<p><a href="#" class="button tertiary">.button.tertiary</a></p>
+				<p><a href="#" class="button tertiary fill">.button.tertiary.fill</a></p>
+				<p><a href="#" class="button quaternary">.button.quaternary</a></p>
+				<p><a href="#" class="button quaternary fill">.button.quaternary.fill</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="band quaternary">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p>I am a band</p>
+				<p><a href="#" class="button">.button</a></p>
+				<p><a href="#" class="button fill">.button.fill</a></p>
+				<p><a href="#" class="button primary">.button.primary</a></p>
+				<p><a href="#" class="button primary fill">.button.primary.fill</a></p>
+				<p><a href="#" class="button secondary">.button.secondary</a></p>
+				<p><a href="#" class="button secondary fill">.button.secondary.fill</a></p>
+				<p><a href="#" class="button tertiary">.button.tertiary</a></p>
+				<p><a href="#" class="button tertiary fill">.button.tertiary.fill</a></p>
+				<p><a href="#" class="button quaternary">.button.quaternary</a></p>
+				<p><a href="#" class="button quaternary fill">.button.quaternary.fill</a></p>
 			</div>
 		</div>
 	</div>
@@ -52,7 +116,16 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>I am a band</p>
-				<p><a href="#" class="button primary fill">Button</a></p>
+				<p><a href="#" class="button">.button</a></p>
+				<p><a href="#" class="button fill">.button.fill</a></p>
+				<p><a href="#" class="button primary">.button.primary</a></p>
+				<p><a href="#" class="button primary fill">.button.primary.fill</a></p>
+				<p><a href="#" class="button secondary">.button.secondary</a></p>
+				<p><a href="#" class="button secondary fill">.button.secondary.fill</a></p>
+				<p><a href="#" class="button tertiary">.button.tertiary</a></p>
+				<p><a href="#" class="button tertiary fill">.button.tertiary.fill</a></p>
+				<p><a href="#" class="button quaternary">.button.quaternary</a></p>
+				<p><a href="#" class="button quaternary fill">.button.quaternary.fill</a></p>
 			</div>
 		</div>
 	</div>
@@ -62,7 +135,16 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>I am a band</p>
-				<p><a href="#" class="button">Button</a></p>
+				<p><a href="#" class="button">.button</a></p>
+				<p><a href="#" class="button fill">.button.fill</a></p>
+				<p><a href="#" class="button primary">.button.primary</a></p>
+				<p><a href="#" class="button primary fill">.button.primary.fill</a></p>
+				<p><a href="#" class="button secondary">.button.secondary</a></p>
+				<p><a href="#" class="button secondary fill">.button.secondary.fill</a></p>
+				<p><a href="#" class="button tertiary">.button.tertiary</a></p>
+				<p><a href="#" class="button tertiary fill">.button.tertiary.fill</a></p>
+				<p><a href="#" class="button quaternary">.button.quaternary</a></p>
+				<p><a href="#" class="button quaternary fill">.button.quaternary.fill</a></p>
 			</div>
 		</div>
 	</div>

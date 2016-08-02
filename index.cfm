@@ -1,6 +1,6 @@
 <cfinclude template="includes/header.cfm">
 
-<cfset pageType = ( structKeyExists(url, "type") ? url.type : "bands" )>
+<cfset pageType = ( structKeyExists(url, "type") ? url.type : "" )>
 
 <cfswitch expression="#pageType#">
 	<cfcase value="billboard">
@@ -8,6 +8,9 @@
 	</cfcase>
 	<cfcase value="cs">
 		<cfinclude template="includes/content/cs.cfm">
+	</cfcase>
+	<cfcase value="academic">
+		<cfinclude template="includes/content/academic.cfm">
 	</cfcase>
 	<cfdefaultcase>
 		<cfinclude template="includes/content/home.cfm">
