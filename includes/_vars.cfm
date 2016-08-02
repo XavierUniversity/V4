@@ -6,13 +6,70 @@
 <cfset customMsg 	= "I am a custom message, I can contain <strong>HTML</strong> code too."><!--- if custom alert, add your text. Code is wrapped in a <p> tag --->
 
 
-<!--- Header --->
 <cfset path = (CGI.SERVER_NAME EQ "localhost" OR CGI.SERVER_NAME EQ "webdev.xavier.edu" ? "" : "/Templates/temp-v4/" )>
 <cfset mobileLogo = path & "img/xu-shield.svg">
 <cfset desktopLogo = path & "img/xu-logo.svg">
 
-<cffunction name="buildNav" description="Builds the navigation listing, based on vars" output="no" returnType="string">
-	<cfargument name="navArray" required="true" type="array" hint="Multi-dimensional Array">
+<cfset mainSiteNav = StructNew()>
+<cfset mainSiteNav[1]["title"] = "Admisions">
+<cfset mainSiteNav[1]["url"] = "/admission">
+<cfset mainSiteNav[2]["title"] = "Academics">
+<cfset mainSiteNav[2]["url"] = "/academics">
+<cfset mainSiteNav[3]["title"] = "Life at Xavier">
+<cfset mainSiteNav[3]["url"] = "/life-at-xavier">
+<cfset mainSiteNav[4]["title"] = "Athletics">
+<cfset mainSiteNav[4]["url"] = "/athletics">
+<cfset mainSiteNav[5]["title"] = "About Xavier">
+<cfset mainSiteNav[5]["url"] = "/about">
+<cfset mainNavHTML = buildNav(mainSiteNav, true, false)>
+
+<cfset audienceNav = StructNew()>
+<cfset audienceNav[1]["title"] = "Current Students">
+<cfset audienceNav[1]["url"] = "/students/index.cfm">
+<cfset audienceNav[1]["class"] = "audience">
+<cfset audienceNav[2]["title"] = "Alumni">
+<cfset audienceNav[2]["url"] = "/alumni/index.cfm">
+<cfset audienceNav[2]["class"] = "audience">
+<cfset audienceNav[3]["title"] = "Employees">
+<cfset audienceNav[3]["url"] = "/employees/index.cfm">
+<cfset audienceNav[3]["class"] = "audience">
+<cfset audienceNav[4]["title"] = "Request Info">
+<cfset audienceNav[4]["url"] = "https://admissions.xavier.edu/register/requestinfo">
+<cfset audienceNav[4]["class"] = "">
+<cfset audienceNav[5]["title"] = "Maps &amp; Directions">
+<cfset audienceNav[5]["url"] = "/about/map.cfm">
+<cfset audienceNav[5]["class"] = "">
+<cfset audienceNav[6]["title"] = "Employment">
+<cfset audienceNav[6]["url"] = "/working-at-xavier/index.cfm">
+<cfset audienceNav[6]["class"] = "">
+<cfset audienceNavHTML = buildNav(audienceNav, true, true)>
+<cfset footerAudienceHTML = BuildNav(audienceNav, false, false)>
+
+<cfset cta = StructNew()>
+<cfset cta[1]["title"] = "Visit">
+<cfset cta[1]["url"] = "/visit">
+<cfset cta[2]["title"] = "Apply">
+<cfset cta[2]["url"] = "/apply">
+<cfset cta[3]["title"] = "Give">
+<cfset cta[3]["url"] = "/give">
+
+<cfset ctaHTML = buildNav(cta, false, false)>
+<cfset footerCtaHTML = buildNav(cta, false, false)>
+
+
+
+
+
+
+
+
+<!---
+	Functions -- To be moved, possibly.
+	------------------
+--->
+
+<cffunction name="buildNav" output="no" returnType="string" description="Builds the navigation listing, based on vars">
+	<cfargument name="navStruct" required="true" type="struct" hint="Multi-dimensional Array">
 	<cfargument name="navWrap" default="true" type="boolean" required="true" hint="Wrap in UL?">
 	<cfargument name="splitNav" default="false" type="boolean" required="true" hint="Split nav in half? Only works when navWrap = true.">
 	<cfset html = ''>
@@ -21,71 +78,24 @@
 		<cfset html &= '<ul role="menubar">'>
 	</cfif>
 	
-	<cfloop from="1" to="#arrayLen(navArray)#" index="i">
+	<cfloop collection="#navStruct#" item="item">	
+		<cfset currentItem = navStruct[item]>
 		<cfif navWrap>
 			<cfset html &= '<li>'>
 		</cfif>
-		<cfset html &= '<a #( ArrayLen(navArray[i]) GT 2 AND navArray[i][3] NEQ '' ? "class='#navArray[i][3]#'" : '' )# href="#navArray[i][2]#" role="menuitem">#navArray[i][1]#</a>'>
+		<cfset html &= '<a #( structKeyExists(currentItem, "class") AND currentItem.class NEQ "" ? "class='#currentItem.class#'" : '' )# href="#currentItem.url#" role="menuitem">#currentItem.title#</a>'>
 		<cfif navWrap>
 			<cfset html &= '</li>'>
-			<cfif splitNav AND i EQ Int(arrayLen(#navArray#) / 2)>
+			<cfif splitNav AND item EQ Int(structCount(#navStruct#) / 2)>
 				<cfset html &= "</ul><ul role='menubar'>">
 			</cfif>
 		</cfif>
-	</cfloop>
+	</cfloop>	
 	<cfif navWrap>
 		<cfset html &= '</ul>'>
 	</cfif>
 	
 	<cfreturn html>
 </cffunction>
-
-
-<cfset mainNav = ArrayNew(2)>
-<cfset mainNav[1][1] = "Admisions">
-<cfset mainNav[1][2] = "/admission">
-<cfset mainNav[2][1] = "Academics">
-<cfset mainNav[2][2] = "/academics">
-<cfset mainNav[3][1] = "Life at Xavier">
-<cfset mainNav[3][2] = "/life-at-xavier">
-<cfset mainNav[4][1] = "Athletics">
-<cfset mainNav[4][2] = "/athletics">
-<cfset mainNav[5][1] = "About Xavier">
-<cfset mainNav[5][2] = "/about">
-
-<cfset mainNavHTML = buildNav(mainNav, true, false)>
-
-<cfset audienceNav = ArrayNew(2)>
-<cfset audienceNav[1][1] = "Current Students">
-<cfset audienceNav[1][2] = "/students/index.cfm">
-<cfset audienceNav[1][3] = "audience">
-<cfset audienceNav[2][1] = "Alumni">
-<cfset audienceNav[2][2] = "/alumni/index.cfm">
-<cfset audienceNav[2][3] = "audience">
-<cfset audienceNav[3][1] = "Employees">
-<cfset audienceNav[3][2] = "/employees/index.cfm">
-<cfset audienceNav[3][3] = "audience">
-<cfset audienceNav[4][1] = "Request Info">
-<cfset audienceNav[4][2] = "https://admissions.xavier.edu/register/requestinfo">
-<cfset audienceNav[4][3] = "">
-<cfset audienceNav[5][1] = "Maps &amp; Directions">
-<cfset audienceNav[5][2] = "/about/map.cfm">
-<cfset audienceNav[5][3] = "">
-<cfset audienceNav[6][1] = "Employment">
-<cfset audienceNav[6][2] = "/working-at-xavier/index.cfm">
-<cfset audienceNav[6][3] = "">
-
-<cfset audienceNavHTML = buildNav(audienceNav, true, true)>
-<cfset footerAudienceHTML = BuildNav(audienceNav, false, false)>
-
-<cfset cta = ArrayNew(2)>
-<cfset cta[1][1] = "Visit">
-<cfset cta[1][2] = "/visit">
-<cfset cta[2][1] = "Apply">
-<cfset cta[2][2] = "/apply">
-<cfset cta[3][1] = "Give">
-<cfset cta[3][2] = "/give">
-
-<cfset ctaHTML = buildNav(cta, false, false)>
-
-<cfset footerCtaHTML = buildNav(cta, false, false)>
+	
+	
