@@ -5,6 +5,7 @@ property of Monotype Imaging and/or its suppliers. You may not attempt to copy, 
 redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
 Imaging with any questions regarding Web Fonts:  http://webfonts.fonts.com
 */
+@import url(../bower_components/aos/dist/aos.css);
 @font-face {
   font-family: "Frutiger W01_n1";
   src: url("../fonts/7d3671fc-8c26-459c-98e1-997c4f6c8c93.eot?#iefix") format("eot"); }
@@ -3929,89 +3930,59 @@ a {
   transition: color 0.25s ease; }
 
 /* line 18, ../_src/sass/partials/_global-typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #0c2340;
+  font-style: normal;
+  margin: 2rem 0 1rem; }
+
+/* line 24, ../_src/sass/partials/_global-typography.scss */
+.subheader {
+  color: #0099cc; }
+
+/* line 28, ../_src/sass/partials/_global-typography.scss */
 h1 {
-  color: #0c2340;
+  font-size: 4.0rem;
   font-weight: 600;
-  font-style: normal;
-  font-size: 4.2rem;
   text-transform: uppercase; }
-  /* line 25, ../_src/sass/partials/_global-typography.scss */
-  h1.subheader {
-    font-size: 3.12rem; }
-  @media (min-width: 768px) {
-    /* line 18, ../_src/sass/partials/_global-typography.scss */
-    h1 {
-      font-size: 4.8rem; } }
 
-/* line 32, ../_src/sass/partials/_global-typography.scss */
+/* line 34, ../_src/sass/partials/_global-typography.scss */
 h2 {
-  color: #0c2340;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 2.8rem; }
-  /* line 37, ../_src/sass/partials/_global-typography.scss */
-  h2.subheader {
-    font-size: 2.34rem; }
-  @media (min-width: 768px) {
-    /* line 32, ../_src/sass/partials/_global-typography.scss */
-    h2 {
-      font-size: 3.4rem; } }
+  font-size: 2.8rem;
+  font-weight: 600; }
 
-/* line 44, ../_src/sass/partials/_global-typography.scss */
+/* line 39, ../_src/sass/partials/_global-typography.scss */
 h3 {
-  color: #0c2340;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3.0rem; }
-  /* line 49, ../_src/sass/partials/_global-typography.scss */
-  h3.subheader {
-    font-size: 2.34rem; }
-  @media (min-width: 768px) {
-    /* line 44, ../_src/sass/partials/_global-typography.scss */
-    h3 {
-      font-size: 3.6rem; } }
+  font-size: 2.3rem;
+  font-weight: 400; }
+
+/* line 43, ../_src/sass/partials/_global-typography.scss */
+h4 {
+  font-size: 2.1rem;
+  font-weight: 200; }
+
+/* line 47, ../_src/sass/partials/_global-typography.scss */
+h5 {
+  font-size: 1.8rem;
+  font-weight: 300; }
+
+/* line 51, ../_src/sass/partials/_global-typography.scss */
+h6 {
+  font-size: 1.6rem;
+  font-weight: 500; }
 
 /* line 56, ../_src/sass/partials/_global-typography.scss */
-h4 {
-  color: #0c2340;
-  font-weight: 200;
-  font-style: normal;
-  font-size: 2.2rem; }
-  /* line 61, ../_src/sass/partials/_global-typography.scss */
-  h4.subheader {
-    font-size: 1.95rem; }
-  @media (min-width: 768px) {
-    /* line 56, ../_src/sass/partials/_global-typography.scss */
-    h4 {
-      font-size: 3.0rem; } }
-
-/* line 68, ../_src/sass/partials/_global-typography.scss */
-h5 {
-  color: #0c2340;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1.8rem; }
-  /* line 73, ../_src/sass/partials/_global-typography.scss */
-  h5.subheader {
-    font-size: 1.8rem; }
-  @media (min-width: 768px) {
-    /* line 68, ../_src/sass/partials/_global-typography.scss */
-    h5 {
-      font-size: 2.4rem; } }
-
-/* line 81, ../_src/sass/partials/_global-typography.scss */
 p, ul, ol {
   font-size: 1.6rem; }
 
-/* line 85, ../_src/sass/partials/_global-typography.scss */
+/* line 60, ../_src/sass/partials/_global-typography.scss */
 ul.ua {
   padding: 0 1rem;
   margin: 1rem 0; }
-  /* line 88, ../_src/sass/partials/_global-typography.scss */
+  /* line 63, ../_src/sass/partials/_global-typography.scss */
   ul.ua li {
     margin: 1rem 0;
     list-style: none; }
-    /* line 91, ../_src/sass/partials/_global-typography.scss */
+    /* line 66, ../_src/sass/partials/_global-typography.scss */
     ul.ua li:before {
       content: '\f111';
       font-family: 'FontAwesome';
@@ -4021,139 +3992,143 @@ ul.ua {
       color: #62c0e0;
       font-size: 0.55rem; }
 
-/* line 104, ../_src/sass/partials/_global-typography.scss */
+/* line 79, ../_src/sass/partials/_global-typography.scss */
 .text-white {
-  color: white !important; }
+  color: white; }
 
-/* line 107, ../_src/sass/partials/_global-typography.scss */
-.text-navy {
-  color: #0c2340 !important; }
+/* line 82, ../_src/sass/partials/_global-typography.scss */
+.text-primary {
+  color: #0c2340; }
 
-/* line 110, ../_src/sass/partials/_global-typography.scss */
-.text-blue {
-  color: #0099cc !important; }
+/* line 85, ../_src/sass/partials/_global-typography.scss */
+.text-secondary {
+  color: #0099cc; }
 
-/* line 113, ../_src/sass/partials/_global-typography.scss */
-.text-lblue {
-  color: #62c0e0 !important; }
+/* line 88, ../_src/sass/partials/_global-typography.scss */
+.text-tertiary {
+  color: #a5a7a8; }
 
-/* line 116, ../_src/sass/partials/_global-typography.scss */
+/* line 91, ../_src/sass/partials/_global-typography.scss */
+.text-quarternary {
+  color: #62c0e0; }
+
+/* line 94, ../_src/sass/partials/_global-typography.scss */
 .uppercase, .text-uppercase {
   text-transform: uppercase; }
 
-/* line 119, ../_src/sass/partials/_global-typography.scss */
+/* line 97, ../_src/sass/partials/_global-typography.scss */
 .capitalize, .text-capitalize {
   text-transform: capitalize; }
 
-/* line 122, ../_src/sass/partials/_global-typography.scss */
+/* line 100, ../_src/sass/partials/_global-typography.scss */
 .lowercase, .text-lowercase {
   text-transform: lowercase; }
 
-/* line 125, ../_src/sass/partials/_global-typography.scss */
+/* line 103, ../_src/sass/partials/_global-typography.scss */
 .text-none {
   text-transform: none; }
 
-/* line 128, ../_src/sass/partials/_global-typography.scss */
+/* line 106, ../_src/sass/partials/_global-typography.scss */
 .text-underline {
   text-decoration: underline; }
 
-/* line 132, ../_src/sass/partials/_global-typography.scss */
+/* line 110, ../_src/sass/partials/_global-typography.scss */
 .block {
   display: block; }
 
-/* line 133, ../_src/sass/partials/_global-typography.scss */
+/* line 111, ../_src/sass/partials/_global-typography.scss */
 .text-normal-100 {
   font-weight: 100; }
 
-/* line 134, ../_src/sass/partials/_global-typography.scss */
+/* line 112, ../_src/sass/partials/_global-typography.scss */
 .text-normal-200 {
   font-weight: 200; }
 
-/* line 135, ../_src/sass/partials/_global-typography.scss */
+/* line 113, ../_src/sass/partials/_global-typography.scss */
 .text-normal-300 {
   font-weight: 300; }
 
-/* line 136, ../_src/sass/partials/_global-typography.scss */
+/* line 114, ../_src/sass/partials/_global-typography.scss */
 .text-normal-400 {
   font-weight: 400; }
 
-/* line 137, ../_src/sass/partials/_global-typography.scss */
+/* line 115, ../_src/sass/partials/_global-typography.scss */
 .text-normal-600 {
   font-weight: 600; }
 
-/* line 138, ../_src/sass/partials/_global-typography.scss */
+/* line 116, ../_src/sass/partials/_global-typography.scss */
 .text-italic-100 {
   font-weight: 100;
   font-style: italic; }
 
-/* line 139, ../_src/sass/partials/_global-typography.scss */
+/* line 117, ../_src/sass/partials/_global-typography.scss */
 .text-italic-200 {
   font-weight: 200;
   font-style: italic; }
 
-/* line 140, ../_src/sass/partials/_global-typography.scss */
+/* line 118, ../_src/sass/partials/_global-typography.scss */
 .text-italic-300 {
   font-weight: 300;
   font-style: italic; }
 
-/* line 141, ../_src/sass/partials/_global-typography.scss */
+/* line 119, ../_src/sass/partials/_global-typography.scss */
 .text-italic-400 {
   font-weight: 400;
   font-style: italic; }
 
-/* line 143, ../_src/sass/partials/_global-typography.scss */
+/* line 121, ../_src/sass/partials/_global-typography.scss */
 .text-right {
   text-align: right; }
 
-/* line 144, ../_src/sass/partials/_global-typography.scss */
+/* line 122, ../_src/sass/partials/_global-typography.scss */
 .text-left {
   text-align: left; }
 
-/* line 145, ../_src/sass/partials/_global-typography.scss */
+/* line 123, ../_src/sass/partials/_global-typography.scss */
 .text-center {
   text-align: center; }
 
 @media (min-width: 768px) {
-  /* line 148, ../_src/sass/partials/_global-typography.scss */
+  /* line 126, ../_src/sass/partials/_global-typography.scss */
   .sm-text-right {
     text-align: right; }
 
-  /* line 149, ../_src/sass/partials/_global-typography.scss */
+  /* line 127, ../_src/sass/partials/_global-typography.scss */
   .sm-text-left {
     text-align: left; }
 
-  /* line 150, ../_src/sass/partials/_global-typography.scss */
+  /* line 128, ../_src/sass/partials/_global-typography.scss */
   .sm-text-center {
     text-align: center; } }
 @media (min-width: 992px) {
-  /* line 153, ../_src/sass/partials/_global-typography.scss */
+  /* line 131, ../_src/sass/partials/_global-typography.scss */
   .md-text-right {
     text-align: right; }
 
-  /* line 154, ../_src/sass/partials/_global-typography.scss */
+  /* line 132, ../_src/sass/partials/_global-typography.scss */
   .md-text-left {
     text-align: left; }
 
-  /* line 155, ../_src/sass/partials/_global-typography.scss */
+  /* line 133, ../_src/sass/partials/_global-typography.scss */
   .md-text-center {
     text-align: center; } }
 @media (min-width: 1200px) {
-  /* line 158, ../_src/sass/partials/_global-typography.scss */
+  /* line 136, ../_src/sass/partials/_global-typography.scss */
   .lg-text-right {
     text-align: right; }
 
-  /* line 159, ../_src/sass/partials/_global-typography.scss */
+  /* line 137, ../_src/sass/partials/_global-typography.scss */
   .lg-text-left {
     text-align: left; }
 
-  /* line 160, ../_src/sass/partials/_global-typography.scss */
+  /* line 138, ../_src/sass/partials/_global-typography.scss */
   .lg-text-center {
     text-align: center; } }
-/* line 164, ../_src/sass/partials/_global-typography.scss */
+/* line 142, ../_src/sass/partials/_global-typography.scss */
 blockquote footer {
   color: inherit; }
 
-/* line 169, ../_src/sass/partials/_global-typography.scss */
+/* line 147, ../_src/sass/partials/_global-typography.scss */
 .date {
   border: solid 2px #62c0e0;
   text-align: center;
@@ -4161,29 +4136,29 @@ blockquote footer {
   width: 50px;
   height: 55px;
   padding: 0.25em; }
-  /* line 176, ../_src/sass/partials/_global-typography.scss */
+  /* line 154, ../_src/sass/partials/_global-typography.scss */
   .date .day {
     font-weight: 700;
     font-size: 1.75rem;
     display: block; }
-  /* line 181, ../_src/sass/partials/_global-typography.scss */
+  /* line 159, ../_src/sass/partials/_global-typography.scss */
   .date .month {
     color: #62c0e0;
     font-weight: 400;
     display: block;
     text-transform: uppercase; }
 
-/* line 190, ../_src/sass/partials/_global-typography.scss */
+/* line 168, ../_src/sass/partials/_global-typography.scss */
 .important-dates p {
   font-size: 1.4rem; }
 
-/* line 195, ../_src/sass/partials/_global-typography.scss */
+/* line 173, ../_src/sass/partials/_global-typography.scss */
 .all-for-one, .we-will, .we-are {
   font-size: 2.1rem;
   line-height: 1.2;
   margin: 1rem 0; }
   @media (min-width: 768px) {
-    /* line 195, ../_src/sass/partials/_global-typography.scss */
+    /* line 173, ../_src/sass/partials/_global-typography.scss */
     .all-for-one, .we-will, .we-are {
       font-size: 2.7rem; } }
 
@@ -5552,13 +5527,30 @@ footer {
     .deck {
       font-size: 2.2rem; } }
 
-/* line 29, ../_src/sass/partials/cms/_content.scss */
+/*
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.5;
-  margin: 0;
-  padding: 0; }
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+*/
+/* line 35, ../_src/sass/partials/cms/_content.scss */
+.flex-video {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 16px;
+  overflow: hidden; }
+  /* line 43, ../_src/sass/partials/cms/_content.scss */
+  .flex-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
-/* line 43, ../_src/sass/main.scss */
+/* line 44, ../_src/sass/main.scss */
 .page {
   position: relative;
   margin: 0;
