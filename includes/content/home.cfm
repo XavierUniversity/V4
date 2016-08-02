@@ -20,7 +20,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h1 data-aos="fade-up">See how Xavier will take you further</h1>
+				<h1 data-aos="fade-up"><span class="text-white">See how Xavier will</span> take you further</h1>
 			</div>
 		</div>
 	</div>

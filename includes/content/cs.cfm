@@ -2,9 +2,9 @@
     <div class="banner-main">
 	    <div class="breadcrumb">
 		    <div class="trail">
-	            <a href="/index.cfm">Xavier Home</a> <span>/</span> <a href="/marketing-and-communications/">Marketing &amp; Communications</a>
+	            <a href="#">Xavier Home</a> <span>/</span> <a href="#">Department Name</a>
 		    </div>
-            <h1 class="heading">Marketing &amp; Communications</h1>
+            <h1 class="heading">Page Name</h1>
 	    </div>
     </div>
 </section>
@@ -18,27 +18,27 @@
 				<a class="nav-jump scroll" href="#subnav">Section Menu</a>
 				
 				<p class="deck">
-                    What do you get when you stir together some tight writing, catchy design, fresh websites and effective public relations? Literally, a gooey mess. But figuratively? Xavier's Office of Marketing and Communications.
+                    I'm a deck. I look much cooler than the regular old paragraph. I make people think this text is more important, plus I add some pizazz.
                 </p>
                 <p>
-                    We are a multimedia, multitalented, multitasking task force with a goal of partnering with the campus to assist in recruitment, fundraising and building Xavier's brand equity.
+                    Hey! I'm just a regular paragraph minding my own business. I don't need deck telling me I'm not cool.
                 </p>
                 <div class="content-e">
                     <div class="col">
-                        <h2>Telling the Xavier Story</h2>
+                        <h2>H2 Heading</h2>
                         
-                        <h5>Xavier Magazine</h5>
+                        <h3>H3 Heading</h3>
                         <ul class="disc">
                             <li>
-                                <a href="http://xtra.xavier.edu/xavier-magazine/brian-grant-a-new-life/"
-                                    target="_blank">Brian Grant feature</a>
+                                <a href="#"
+                                    target="_blank">Sample Link</a>
                             </li>
                         </ul>
-                        <h5>Annual Fund</h5>
+                        <h3>H3 Heading</h3>
                         <ul class="disc">
                             <li>
-                                <a href="http://www.xavier.edu/march-gladness/"
-                                    target="_blank">March Gladness Storify</a>
+                                <a href="#"
+                                    target="_blank">Sample Link</a>
                             </li>
                         </ul>
                         <p>
@@ -57,41 +57,41 @@
                     </div>
                     <div class="col last">
                         <div class="panel-grey">
-                            <h5>
-                                Resources
-                            </h5>
+                            <h4>
+                                H4 Heading
+                            </h4>
                             <p>
                                 <a class="button fill secondary"
-                                   href="http://www.xavier.edu/marketing-and-communications/brand.cfm">Creative Style Guides</a>
+                                   href="#">We don't</a>
                             </p>
                             <p>
                                 <a class="button fill secondary"
-                                   href="http://www.xavier.edu/print-storefront">Printing Store Front</a>
+                                   href="#">Do anything</a>
                             </p>
                             <p>
                                 <a class="button fill secondary"
-                                   href="https://www.xavier.edu/campusuite/secure/index.cfm">Campus Suite Login</a>
+                                   href="#">Either</a>
                             </p>
                         </div>&nbsp;
                         <div class="panel-grey">
-                            <h5>
-                                Work With Us
-                            </h5>
+                            <h4>
+                                H4 Heading
+                            </h4>
                             <p>
                                 <a class="button fill primary"
-                                   href="http://www.xavier.edu/marketing-and-communications/management.cfm">Contact Marketing Partner</a>
+                                   href="#">One of us</a>
                             </p>
                             <p>
                                 <a class="button fill primary"
-                                   href="http://www.xavier.edu/marketing-and-communications/project-request.cfm">Project Proposal Form</a>
+                                   href="#">Might do</a>
                             </p>
                             <p>
                                 <a class="button fill primary"
-                                   href="http://www.xavier.edu/marketing-and-communications/web-update-request.cfm">Quick Web Update Form</a>
+                                   href="#">Something</a>
                             </p>
                             <p>
                                 <a class="button fill primary"
-                                   href="http://www.xavier.edu/marketing-and-communications/web-campusuite-request.cfm">Campus Suite Access Request</a>
+                                   href="#">J.K. Not really.</a>
                             </p>
                         </div>
                     </div>
@@ -104,25 +104,25 @@
                     <div class="subnav" id="subnav">
                         <ul class="side-nav">
                             <li class="active">
-                                <a href="/marketing-and-communications/index.cfm">Home</a>
+                                <a href="#">Home</a>
                             </li>
                             <li>
-                                <a href="/marketing-and-communications/what-we-offer.cfm">What We Offer</a>
+                                <a href="#">Have Fun</a>
                             </li>
                             <li>
-                                <a href="/marketing-and-communications/about-us.cfm">Our Team</a>
+                                <a href="#">Clicking</a>
                             </li>
                             <li>
-                                <a href="/marketing-and-communications/brand.cfm">Creative Style Guides</a>
+                                <a href="#">On Me</a>
                             </li>
                             <li>
-                                <a href="/marketing-and-communications/learn.cfm">Learn With Us</a>
+                                <a href="#">I don't</a>
                             </li>
                             <li>
-                                <a href="/marketing-and-communications/management.cfm">Marketing Partners</a>
+                                <a href="#">Do anything</a>
                             </li>
                             <li>
-                                <a href="/marketing-and-communications/project-request.cfm">Project Proposal</a>
+                                <a href="#">N00b</a>
                             </li>
                         </ul>
                     </div>
