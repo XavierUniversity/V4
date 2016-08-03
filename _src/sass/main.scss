@@ -4,7 +4,7 @@ $env: "dev";
 // Import base utilities and configuration
 @import 'config',
 		'mixins/contrast',
-		'../bower_components/aos/dist/aos.css'
+		'vendor/aos'
 ;
 
 // 3rd party needs

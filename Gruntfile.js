@@ -91,7 +91,7 @@ module.exports = function (grunt){
 			}
 		},
 		copy: {
-			main: {
+			fonts: {
 				files: [
 					{
 						expand: true,
@@ -101,7 +101,21 @@ module.exports = function (grunt){
 						filter: 'isFile'
 					}
 				]
-			}	
+			},
+			aos: {
+				files: [
+					{
+						expand: true,
+						flatten: true,
+						src: ['bower_components/aos/dist/*.css'],
+						dest: '_src/sass/vendor/',
+						filter: 'isFile',
+						rename: function(dest,src){
+							return dest + "_" + src.replace(/\.css$/, ".scss");
+						}
+					}
+				]
+			}				
 		},
 		
 		// Watch should always be the last task, just because.
