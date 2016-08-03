@@ -53,8 +53,8 @@
 			    
 			    <div class="site-logo">
 				    <a href="#home">
-					    <img src="<cfoutput>#mobileLogo#</cfoutput>" class="mobile-logo" />
-					    <img src="<cfoutput>#desktopLogo#</cfoutput>" class="desktop-logo" />
+					    <img src="<cfoutput>#mobileLogo#</cfoutput>" class="mobile-logo" alt="Xavier University Home" />
+					    <img src="<cfoutput>#desktopLogo#</cfoutput>" class="desktop-logo" alt="Xavier University Home" />
 				    </a>
 			    </div>
 			    
