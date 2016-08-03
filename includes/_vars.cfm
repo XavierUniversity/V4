@@ -11,7 +11,7 @@
 <cfset desktopLogo = path & "img/xu-logo.svg">
 
 <cfset mainSiteNav = StructNew()>
-<cfset mainSiteNav[1]["title"] = "Admisions">
+<cfset mainSiteNav[1]["title"] = "Admissions">
 <cfset mainSiteNav[1]["url"] = "/admission">
 <cfset mainSiteNav[2]["title"] = "Academics">
 <cfset mainSiteNav[2]["url"] = "/academics">
