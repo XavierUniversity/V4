@@ -21,7 +21,7 @@
 								<span class="fa fa-youtube" aria-label="Xavier University YouTube Channel"></span>
 							</a>
 							<a href="http://instagram.com/xavieruniversity" target="_blank">
-								<span class="fa fa-instagram"></span>
+								<span class="fa fa-instagram" aria-label="Xavier University on Instagram"></span>
 							</a>
 						</div>
 					</div>
@@ -47,7 +47,7 @@
 					<div class="col-sm-8 col-lg-9 nav-backmatter">
 						<div class="footer-logo">
 							<a href="/">
-								<img src="<cfoutput>#mobileLogo#</cfoutput>" />
+								<img src="<cfoutput>#mobileLogo#</cfoutput>" alt="Xavier University Home" />
 							</a>
 						</div>
 						<div class="sitemap">
