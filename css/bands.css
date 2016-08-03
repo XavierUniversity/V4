@@ -7,17 +7,15 @@ $brand-novenary:				;
 $brand-decenary:				;
 $brand-undenary:				;
 $brand-duodenary:				; */
-/* ------------------------------------------------------------------------------------------------
-// These will be limited in usage. Copied over while we replace
-// Grunt should provide us with an error message if these are used in a copied stylesheet
+/*
 // These should be replaced as best we can. These are the old Ologie based colors
-
 //$color_green_vogue_approx: 		#002857; //  Replace with $brand-primary
-//$color_pacific_blue_approx: 	#0099cc; //  Replace with $brand-secondary		
-
-THESE ARE ONLY HERE WHILE WE MIGHT BE COPING CODE FROM THE EXISTING V4 TEMPLATE. 
-REMOVE AS SOON AS IN PRODUCTION
-// ------------------------------------------------------------------------------------------------
+//$color_pacific_blue_approx: 	#0099cc; //  Replace with $brand-secondary	
+	
+	
+	
+	THESE ARE ONLY HERE WHILE WE MIGHT BE COPING CODE FROM THE EXISTING V4 TEMPLATE. 
+	REMOVE AS SOON AS IN PRODUCTION
 $color_biscay_approx: 			#193d67;
 $color_black_haze_approx: 		#f5f7f9;
 $color_blue_zodiac_approx: 		#0c234b;
@@ -37,11 +35,13 @@ $color_genoa_approx: 			#0d776e;
 $color_gold_drop_approx: 		#e98300;
 $color_gray_chateau_approx: 	#a5acb2;
 $color_gray_nurse_approx: 		#e8eaeb;
+
 $color_java_approx: 			#16cabb;
 $color_mercury_approx: 			#dee5e9;
 $color_mine_shaft_approx: 		#333;
 $color_mischka_approx: 			#ccd4dd;
 $color_niagara_approx: 			#11988d;
+
 $color_pistachio_approx: 		#a8b400;
 $color_portage_approx: 			#8e9be4;
 $color_resolution_blue_approx: 	#002587;
