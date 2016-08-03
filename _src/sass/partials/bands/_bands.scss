@@ -1,0 +1,50 @@
+.band{
+	background-color: $brand-quaternary;
+	color: $brand-primary;
+	padding:3rem 0;
+	position: relative;
+}
+
+.primary{
+	@extend .band;
+	background-color: $brand-primary;
+	color:$white;
+}
+
+.secondary{
+	@extend .band;
+	background-color: $brand-secondary;
+	color: $white;
+}
+
+.tertiary{
+	@extend .band;
+	background-color:$brand-tertiary;
+}
+.quaternary{
+	@extend .band;
+	background-color: $brand-quaternary;
+}
+
+.white{
+	@extend .band;
+	background-color:$white;
+}
+
+.photo{
+	@extend .band;
+	background-color:transparent;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: scroll;
+	background-size: cover;
+	overflow: hidden;
+	color:$white;
+	
+	&.fixed{
+		@media(min-width:768px){
+			background-attachment: fixed;
+			position: static;
+		}
+	}
+}

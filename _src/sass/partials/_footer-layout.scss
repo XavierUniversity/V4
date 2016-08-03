@@ -1,6 +1,6 @@
 footer{
-	background-color: #dee5e9;
-	color:$brand-color;	
+	background-color: $brand-footer;
+	color:$brand-primary;	
 	padding:40px 0 94px;
 	line-height: 1.5;
 	text-align: center;	
@@ -25,7 +25,7 @@ footer{
 			display: inline;
 			padding:0 1rem;
 			&:not(:last-child){
-				border-right: solid 1px $brand-color;
+				border-right: solid 1px $brand-primary;
 			}
 		}
 		
@@ -35,8 +35,8 @@ footer{
 .social-icons{
 	padding-bottom:2rem;
 	a{
-		border:solid 2px $brand-color;
-		color:$brand-color;
+		border:solid 2px $brand-primary;
+		color:$brand-primary;
 		display:inline-block;
 		height:42px;
 		margin: 0 0.25rem;

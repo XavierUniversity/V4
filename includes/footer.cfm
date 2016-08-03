@@ -1,3 +1,5 @@
+			</main>
+		
 		<!--- Close out the page wrapper --->
 		</div>
 		
@@ -25,19 +27,18 @@
 					</div>
 					
 					<div class="col-md-6 col-sm-12">
-						<!--- Needs microdata --->
 						<div itemscope itemtype="http://schema.org/EducationalOrganization">
 							<p class="org" itemprop="name">Xavier University</p>
 							<p class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 								<span itemprop="streetAddress">3800 Victory Parkway</span>
 								<span><span itemprop="addressLocality">Cincinnati</span>, <span itemprop="addressRegion">OH</span> <span itemprop="postalCode">45207</span></span>	
-								<span>513-745-3000</span>
+								<span itemprop="telephone">513-745-3000</span>
 							</p>
 						</div>
-						<p class="legal">&copy; 2016 Xavier University</p>
+						<p class="legal">&copy; <cfoutput>#dateFormat(now(),'YYYY')#</cfoutput> Xavier University</p>
 					</div>
 				</div>
-			</div>			
+			</div>
 		</footer>
 	
 		<div class="backmatter">
@@ -46,22 +47,16 @@
 					<div class="col-sm-8 col-lg-9 nav-backmatter">
 						<div class="footer-logo">
 							<a href="/">
-								<img src="img/xu-shield.svg" />
+								<img src="<cfoutput>#mobileLogo#</cfoutput>" />
 							</a>
 						</div>
 						<div class="sitemap">
-							<a class="audience" href="/students">Current Students</a>
-							<a class="audience" href="/alumni">Alumni</a>
-							<a class="audience" href="/employees">Employees</a>
-							<a class="text-nowrap" href="https://admissions.xavier.edu/register/requestinfo">Request Info</a>
-							
-							<a class="text-nowrap" href="/about/map.cfm">Maps &amp; Directions</a>
-							<a class="text-nowrap" href="https://careersatxavier.silkroad.com">Employment</a>
+							<cfoutput>#footerAudienceHTML#</cfoutput>
 						</div>
 					</div>
 					<div class="col-sm-4 col-lg-3 footer-cta">
 						<div class="cta-links">
-							<a href="/visit">Visit</a> / <a href="/apply">Apply</a> / <a href="/give">Give</a>	
+							<cfoutput>#footerCtaHTML#</cfoutput>
 						</div>
 					</div>
 				</div>
@@ -70,9 +65,11 @@
 		
 		<!--- jquery and javascript includes here --->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<!--- Make "local" instead of bower --->
         <script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
-        <script src="js/plugins.min.js"></script>
+        <script src="js/vendor.min.js"></script>
         <script src="js/main.min.js"></script>
+        <script src="scripts/local.js"></script>
 		<!--- jquery and javascript includes here --->
 	</body>
 </html>

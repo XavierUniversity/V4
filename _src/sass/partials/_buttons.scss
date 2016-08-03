@@ -1,0 +1,128 @@
+.button{
+	background-color: transparent;
+	border:solid 0.2rem $white;
+	color:$white;
+	display: block;
+	font-size: 1.4rem;
+	font-weight: 200;
+	padding: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: color 500ms ease,
+				background-color 500ms ease,
+				border-color 500ms ease;
+	width: 100%;
+	
+	&:hover,
+	&:focus,
+	&:active{
+		background: $white;
+		color:$brand-primary;
+		cursor: pointer;
+		outline: none;
+		text-decoration: underline;
+	}
+	&.fill{
+		background-color: $white;
+		color:$brand-primary;
+		&:hover,
+		&:focus,
+		&:active{
+			background-color: darken($white, 10%);
+			border-color: darken($white, 10%);
+		}
+	}
+}
+
+.button.primary{
+	@extend .button;
+	border-color: $brand-primary;
+	color:$brand-primary;
+	&:hover,
+	&:focus,
+	&:active{
+		background-color: $brand-primary;
+		color: $white;
+	}
+	
+	&.fill{
+		background-color: $brand-primary;
+		color:$white;
+		&:hover,
+		&:focus,
+		&:active{
+			background-color: lighten($brand-primary, 10%);
+			border-color: lighten($brand-primary, 10%);
+		}
+	}
+}
+
+.button.secondary{
+	@extend .button;
+	border-color: $brand-secondary;
+	color:$brand-secondary;
+	&:hover,
+	&:focus,
+	&:active{
+		background-color: $brand-secondary;
+		color: $white;
+	}
+	
+	&.fill{
+		background-color: $brand-secondary;
+		color:$white;
+		&:hover,
+		&:focus,
+		&:active{
+			background-color: darken($brand-secondary, 10%);
+			border-color: darken($brand-secondary, 10%);
+		}
+	}
+}
+
+.button.tertiary{
+	@extend .button;
+	border-color: $brand-tertiary;
+	color:$brand-tertiary;
+	&:hover,
+	&:focus,
+	&:active{
+		background-color: $brand-tertiary;
+		color: $white;
+	}
+
+	&.fill{
+		background-color: $brand-tertiary;
+		color:$white;
+		&:hover,
+		&:focus,
+		&:active{
+			background-color: darken($brand-tertiary, 10%);
+			border-color: darken($brand-tertiary, 10%);
+		}
+	}
+}
+
+.button.quaternary{
+	@extend .button;
+	border-color: $brand-quaternary;
+	color:$brand-quaternary;
+	&:hover,
+	&:focus,
+	&:active{
+		background-color: $brand-quaternary;	
+		color: $brand-primary;
+	}
+	
+	&.fill{
+		background-color: $brand-quaternary;
+		color:$brand-primary;
+		&:hover,
+		&:focus,
+		&:active{
+			background-color: darken($brand-quaternary, 10%);
+			border-color: darken($brand-quaternary, 10%);
+		}
+	}
+}

@@ -1,12 +1,12 @@
 // Header navigation
 .site-header{
-	background: rgba($brand-color, 0.85);
+	background: rgba($brand-primary, 0.9);
 	color: $white;
 	height: 8.4rem;
 	position: absolute;
 	top:0;
 	width: 100%;
-	z-index: 1000;
+	z-index: 100;
 }
 
 .show-nav, .search-icon{
@@ -59,7 +59,7 @@
 }
 
 .navigation{
-	background:$brand-color;
+	background:$brand-primary;
 	border-top: 1px solid #395d84;
 	height: 0px;
 	margin:0;
@@ -93,11 +93,11 @@
 		background:transparent;
 		bottom:0;
 		border:none;
-		height: auto;
+		height: auto;	
 		left:250px;
 		overflow: visible;
 		right:90px;
-		top:0;
+		top:0.3rem;
 		width: auto;
 	}
 	@media screen and (min-width:1230px){
@@ -119,7 +119,7 @@
 		font-size: 3rem;
 		text-decoration: none;
 		&:hover, &:focus, &:active{
-			border-bottom-color: $accent-color;
+			border-bottom-color: $brand-secondary;
 		}
 		
 		// Smaller font size to accommodate smaller browser not in responsive yet
@@ -158,32 +158,32 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		&.audience {
-			color:$accent-color;
+			color:$brand-secondary;
 		}
 	}
 }
 
 .header-cta{
-	background: $accent-color;
-	color:$brand-color;
+	background: $brand-secondary;
+	color:$brand-primary;
 	text-align: center;
 	font-weight: 600;
 	padding:2rem;
 	
 	li{
 		display: inline-block;
-		
-		&:not(:last-child):after{
-			content: " / ";
-			font-size: 2.1rem;
-		}
 	}
 	
 	a{
-		color:$brand-color;
+		color:$brand-primary;
+		display: inline-block;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-size: 2.1rem;
+		
+		&:not(:last-child):after{
+			content: "\00a0/\00a0";
+		}
 	}
 }
 

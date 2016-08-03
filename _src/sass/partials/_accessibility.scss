@@ -1,7 +1,7 @@
 .skip{	
 
 	background: $white;
-	color: $brand-color;
+	color: $brand-primary;
 	text-align: center;
 	padding: 10px;
 	display: block;
@@ -24,7 +24,7 @@
 		height: 42px;
 		background: $white;
 		z-index: 999;
-		color: $brand-color;
+		color: $brand-primary;
 		text-align: center;
 		padding: 1rem;
 		
@@ -36,3 +36,9 @@
 	
 }
 
+// Need to find a way to call out focus. 
+// Also need to find the best way to do this on band pages.
+// Outline on the main item causes scroll lag
+main:focus{
+	outline:none;
+}

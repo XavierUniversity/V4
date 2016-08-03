@@ -1,20 +1,45 @@
+// Set environment vars
+$env: "dev";
+
 // Import base utilities and configuration
-@import 'config';
+@import 'config',
+		'mixins/contrast',
+		'vendor/aos'
+;
 
-// Import only what you need to survive.
-@import 'partials/bootstrap';
-@import 'partials/fontawesome';
+// 3rd party needs
+@import 'partials/bootstrap',							// Only include
+		'partials/fontawesome';							// what we HAVE to have in these files
 
+// 
 @import 'partials/global-typography';
 
-// Header (in order of page load)
+// Global styles (in order of page load); skips content
 @import 
-	'partials/accessibility-skip',
-	'partials/header-search',
+	'partials/accessibility',							// Anything to do with the main accessibility styles
+	'partials/header-alert',							// Alert indicator (snow/campus threat/etc)
+	'partials/header-search',							
 	'partials/header-layout',
 	'partials/footer-layout',
 	'partials/footer-sticky'
 ;
+
+// Content Includes -- Use a seperate file for content?
+@import 
+	'partials/bands/hero',
+	'partials/bands/billboard',
+	'partials/bands/bands',
+	'partials/buttons'
+;
+
+@import 
+	'partials/cms/custom-grid',
+	'partials/cms/header',
+	'partials/cms/header-nav',
+	'partials/cms/navigation',
+	'partials/cms/content'
+;
+
 
 .page{
 	position: relative;

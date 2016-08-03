@@ -13,13 +13,6 @@ module.exports = function (grunt){
 			}
 		},
 		concat: {
-			options: {
-				banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-					'<%= grunt.template.today("yyyy-mm-dd") %> */\n',
-				separator: ';\n',
-				sourceMap: true
-				
-			},
 			main: {
 				src: ['_src/js/**/*.js'],
 				dest: 'js/main.js'
@@ -28,7 +21,8 @@ module.exports = function (grunt){
 				// combine some vendor scripts for production, to reduce requests
 				src: [
 					'bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js',
-					'bower_components/owl.carousel/dist/owl.carousel.js'
+					'bower_components/owl.carousel/dist/owl.carousel.js',
+					'bower_components/aos/dist/aos.js'
 				],
 				dest: 'js/vendor.js'
 			}
@@ -46,6 +40,17 @@ module.exports = function (grunt){
 					'js/plugins.min.js' : ['js/plugins.js']	
 				}
 			}	
+		},
+		// Image tasks
+		imagemin: {
+			dynamic: {                         // Another target
+				files: [{
+					expand: true,                  // Enable dynamic expansion
+					cwd: '_src/img/',                   // Src matches are relative to this path
+					src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+					dest: 'img/'                  // Destination path prefix
+				}]
+			}
 		},
 		// CSS tasks
 		compass: {
@@ -86,7 +91,7 @@ module.exports = function (grunt){
 			}
 		},
 		copy: {
-			main: {
+			fonts: {
 				files: [
 					{
 						expand: true,
@@ -96,26 +101,46 @@ module.exports = function (grunt){
 						filter: 'isFile'
 					}
 				]
-			}	
+			},
+			aos: {
+				files: [
+					{
+						expand: true,
+						flatten: true,
+						src: ['bower_components/aos/dist/*.css'],
+						dest: '_src/sass/vendor/',
+						filter: 'isFile',
+						rename: function(dest,src){
+							return dest + "_" + src.replace(/\.css$/, ".scss");
+						}
+					}
+				]
+			}				
 		},
 		
 		// Watch should always be the last task, just because.
 		watch: {
 			css: {
 				files: ['_src/sass/**/*.{scss,sass}'],
-				tasks: ['compass:dev', 'postcss']
+				tasks: ['compass:dev', 'newer:postcss']
 			},
 			js: {
 				files: ['_src/js/**/*.js'],
-				tasks: ['jshint', 'concat:main', 'uglify']
+				tasks: ['newer:jshint', 'newer:concat:main', 'newer:uglify']
+			},
+			images: {
+				files: ['_src/img/**/*.{svg,png,jpg,gif}'],
+				tasks: ['newer:imagemin']
 			}
 		}
 	});
 	
 	// Load tasks
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-copy');
@@ -123,5 +148,5 @@ module.exports = function (grunt){
 	
 	// Register Tasks
 	grunt.registerTask('check', ['jshint']);
-	grunt.registerTask('default', ['jshint', 'compass:dev', 'postcss', 'jshint', 'concat:main', 'uglify', 'watch']);
+	grunt.registerTask('default', ['newer:jshint', 'compass:dev', 'newer:postcss', 'newer:jshint', 'newer:concat:main', 'newer:uglify', 'watch']);
 };

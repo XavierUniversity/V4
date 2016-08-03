@@ -1,16 +1,55 @@
-// Brand colors
-$brand-color:			#002857;
-$accent-color:			#0099cc;
-$brand-grey:			#a5acaf;
+// Check environment (for compiling Sass)
+// Use this var for background images in the stylesheets.
+// DO NOT MOVE, this is required for the font load
+$env: 							"prod" !default;
+$path: 							"/Template/temp-v4/" !default;
+@if $env == "dev" {
+	$path: 						"../";
+}
 
-// Other colors
-$white:					white;
-$black:					black;
-
+// Establish Font loading first and foremost
 @import 'partials/global-fonts';
-
 $font-family: "Frutiger W01", 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
+// Setup the color scheme
+$brand-primary:					#0c2340;
+$brand-secondary:				#0099cc;
+$brand-tertiary:				#a5a7a8;
+$brand-quaternary:				lighten(desaturate(adjust-hue($brand-secondary, 0.2381), 32.9787), 23.1373);
+/* Should we need more colors :)
+$brand-quinary:					;
+$brand-senary:;
+$brand-septenary:				;
+$brand-octonary:				;
+$brand-novenary:				;
+$brand-decenary:				;
+$brand-undenary:				;
+$brand-duodenary:				; */
+$brand-footer:					#dee5e9;
+
+// Other colors
+$white:							white;
+$black:							black;
+
+$gray-base:              		#000 !default;
+$gray-darker:            		lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:             		lighten($gray-base, 20%) !default;   // #333
+$gray:                   		lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             		lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           		lighten($gray-base, 93.5%) !default; // #eee
+
+
+// These will be limited in usage. Copied over while we replace
+// Grunt should provide us with an error message if these are used in a copied stylesheet
+/*
+// These should be replaced as best we can. These are the old Ologie based colors
+//$color_green_vogue_approx: 		#002857; //  Replace with $brand-primary
+//$color_pacific_blue_approx: 	#0099cc; //  Replace with $brand-secondary	
+	
+	
+	
+	THESE ARE ONLY HERE WHILE WE MIGHT BE COPING CODE FROM THE EXISTING V4 TEMPLATE. 
+	REMOVE AS SOON AS IN PRODUCTION
 $color_biscay_approx: 			#193d67;
 $color_black_haze_approx: 		#f5f7f9;
 $color_blue_zodiac_approx: 		#0c234b;
@@ -30,13 +69,13 @@ $color_genoa_approx: 			#0d776e;
 $color_gold_drop_approx: 		#e98300;
 $color_gray_chateau_approx: 	#a5acb2;
 $color_gray_nurse_approx: 		#e8eaeb;
-$color_green_vogue_approx: 		#002857;
+
 $color_java_approx: 			#16cabb;
 $color_mercury_approx: 			#dee5e9;
 $color_mine_shaft_approx: 		#333;
 $color_mischka_approx: 			#ccd4dd;
 $color_niagara_approx: 			#11988d;
-$color_pacific_blue_approx: 	#0099cc;
+
 $color_pistachio_approx: 		#a8b400;
 $color_portage_approx: 			#8e9be4;
 $color_resolution_blue_approx: 	#002587;
@@ -47,3 +86,5 @@ $color_trout_approx: 			#49595e;
 $color_viking_approx: 			#59bdde;
 $color_waikawa_gray_approx: 	#556099;
 $color_wattle_approx: 			#dae454;
+
+*/

@@ -1,0 +1,65 @@
+
+.banner-small {
+	height: 240px;
+	background: linear-gradient(rgba(255,0,0,0.45), rgba(255,0,0,0.45));
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	position: relative;
+	.breadcrumb{
+		margin-top: 3.4rem;
+/* NEED TO FIGURE OUT SIZING FOR THIS
+		@media (min-width:375px){
+			margin-top:2.4rem;
+		}
+		@media (min-width:768px){
+			margin-top:3.4rem;
+		}
+*/
+	}
+	
+	.trail {
+		border-bottom: 2px solid #a5acb2;
+		color: $brand-primary;
+		display: inline-block;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 1.2rem;
+		margin-bottom: 10px;
+		padding: 0 30px 10px;
+		text-transform: uppercase;
+		a {
+			padding:0 .6rem;
+			color: $brand-primary;
+			text-decoration: none;
+			&:hover, &:focus {
+				color: $brand-secondary;
+			}
+		}
+	}
+	.heading {
+		color: $brand-primary;
+		font-weight: 600;
+		font-style: normal;
+		font-size: 2.2rem;
+		line-height: 1.1;
+		margin: 0;
+		padding:0 1rem;
+		text-transform: uppercase;
+		
+		@media (min-width: 768px){
+			font-size:4rem;
+		}
+	}
+}
+.banner-main {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
+	bottom: 0;
+	height: 156px;
+	position: absolute;
+	width: 100%;
+	.box-table {
+		height: 156px;
+	}
+}

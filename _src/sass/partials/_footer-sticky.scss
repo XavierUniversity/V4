@@ -1,9 +1,9 @@
 .backmatter{
-	background: $brand-color;
+	background: $brand-primary;
 	height:74px;
 	width: 100vw;
 	display: none;
-	
+	z-index: 10;
 	@media screen and (min-width:1070px){
 		display: block;
 		position: fixed;
@@ -18,7 +18,6 @@
 }
 
 .sitemap, .cta-links{
-	margin-top:2.75rem;
 	text-transform: uppercase;
 	
 	a{
@@ -28,12 +27,15 @@
 
 .sitemap{
 	font-weight: 300;
+	margin-top: 2.5rem;
 	margin-left: 7rem;
 	a{
-		color:$accent-color;
+		color:$brand-secondary;
 		display: inline-block;
-		margin:0 0.5rem;
-		
+		margin:0 0.8rem;
+		&:first-child{
+			margin-left:-0.2rem;
+		}	
 		&:hover, &:focus{
 			color:$white;
 		}
@@ -42,27 +44,33 @@
 			color:$white;
 			
 			&:hover, &:focus{
-				color:$accent-color;
+				color:$brand-secondary;
 			}
 		}
 	}
 }
 
 .footer-cta{
-	background: $accent-color;
+	background: $brand-secondary;
 	height:74px;
 	text-align: center;
 }
 
 .cta-links{
-	color:$brand-color;
-	font-size: 1.5rem;
+	color:$brand-primary;
+	font-size: 1.8rem;
 	font-weight: 600;
+	margin-top:2.25rem;
+	
 	a{
-		color:$brand-color;
-		
+		color:$brand-primary;
+		font-size: 1.8rem;
+			
 		&:hover, &:focus{
 			color:$white;
+		}
+		&:not(:last-child):after{
+			content: "\00a0/\00a0";
 		}
 	}
 }

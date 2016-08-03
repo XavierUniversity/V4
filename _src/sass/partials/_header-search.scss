@@ -1,5 +1,5 @@
 .search-container{
-    background:#002857;
+    background:$brand-primary;
     height: 0px;
     position: relative;
 	transition: height 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
@@ -17,29 +17,37 @@
 #header-search-form {
 	
 	input[type=text]{
-    	background-color: #002857;
-		border: 0;
+    	background-color: $brand-primary;
+    	border:none;
+		border-bottom: solid 3px transparent;
 		border-radius: 0;
-		color: #fff;
+		color: $white;
 		font-weight: 100;
 		font-style: normal;
 		font-size: 1.6rem;
 		height: 50px;
-		padding: 0 10px;
+		line-height: 1.25;
+		padding: 0.2rem 1rem;
 		width: 100%;
 		position: absolute;
 			top:25px;
 			
 		@media screen and (min-width:1070px){
-			font-size: 3.6rem;
+			font-size: 3rem;
+		}
+		
+		&:focus{
+			background: rgba($white, 0.1);
+			border-color: rgba($white, 0.5);
+			outline: none;
 		}
 	}
 	
 	input[type=submit]{
-	    background-color: #09c;
-		border: 1px solid #09c;
+	    background-color: $brand-secondary;
+		border: 1px solid $brand-secondary;
 		border-radius: 0;
-		color: #fff;
+		color: $white;
 		font-weight: 100;
 		font-style: normal;
 		font-size: 1.6rem;
@@ -54,6 +62,10 @@
 		@media screen and (min-width:1070px){
 			font-size: 2.4rem;
 			width: 180px;
+		}
+		
+		&:hover, &:focus, &:active{
+			color: $brand-primary;
 		}
 	}
 	
@@ -71,7 +83,7 @@
 	}
 	
 	label{
-	    color:#fff;
+	    color:rgba($white,0.66);
 	    font-weight: 200;
 	    position: absolute;
     		top: 5px;
