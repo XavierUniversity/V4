@@ -1,0 +1,330 @@
+/* Should we need more colors :)
+$brand-quinary:					;
+$brand-senary:;
+$brand-septenary:				;
+$brand-octonary:				;
+$brand-novenary:				;
+$brand-decenary:				;
+$brand-undenary:				;
+$brand-duodenary:				; */
+/* ------------------------------------------------------------------------------------------------
+// These will be limited in usage. Copied over while we replace
+// Grunt should provide us with an error message if these are used in a copied stylesheet
+// These should be replaced as best we can. These are the old Ologie based colors
+
+//$color_green_vogue_approx: 		#002857; //  Replace with $brand-primary
+//$color_pacific_blue_approx: 	#0099cc; //  Replace with $brand-secondary		
+
+THESE ARE ONLY HERE WHILE WE MIGHT BE COPING CODE FROM THE EXISTING V4 TEMPLATE. 
+REMOVE AS SOON AS IN PRODUCTION
+// ------------------------------------------------------------------------------------------------
+$color_biscay_approx: 			#193d67;
+$color_black_haze_approx: 		#f5f7f9;
+$color_blue_zodiac_approx: 		#0c234b;
+$color_cannon_pink_approx: 		#8f3f6d;
+$color_cararra_approx: 			#ebebeb;
+$color_carissma_approx: 		#e076b3;
+$color_chambray_approx: 		#395d84;
+$color_chardonnay_approx: 		#ffc78a;
+$color_citron_approx: 			#97a200;
+$color_cornflower_approx: 		#9ec3de;
+$color_cruise_approx: 			#b9e4e1;
+$color_curious_blue_approx: 	#29aad4;
+$color_deluge_approx: 			#6773b6;
+$color_dodger_blue_approx: 		#3399ff;
+$color_gallery_approx: 			#f0f0f0;
+$color_genoa_approx: 			#0d776e;
+$color_gold_drop_approx: 		#e98300;
+$color_gray_chateau_approx: 	#a5acb2;
+$color_gray_nurse_approx: 		#e8eaeb;
+$color_java_approx: 			#16cabb;
+$color_mercury_approx: 			#dee5e9;
+$color_mine_shaft_approx: 		#333;
+$color_mischka_approx: 			#ccd4dd;
+$color_niagara_approx: 			#11988d;
+$color_pistachio_approx: 		#a8b400;
+$color_portage_approx: 			#8e9be4;
+$color_resolution_blue_approx: 	#002587;
+$color_scooter_approx: 			#22bcf0;
+$color_sea_buckthorn_approx: 	#f69c28;
+$color_shakespeare_approx: 		#51b9dc;
+$color_trout_approx: 			#49595e;
+$color_viking_approx: 			#59bdde;
+$color_waikawa_gray_approx: 	#556099;
+$color_wattle_approx: 			#dae454;
+
+*/
+/*
+
+SCSS Color Methods for Accessibility
+================================================================================
+
+Adjust given colors to ensure that those color combination provide sufficient
+contrast.
+
+@version 0.1
+@link http://eye48.com/go/scsscontrast
+@license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License (LGPL)
+@author Michael Haschke, http://michael.haschke.biz/
+
+Usage
+--------------------------------------------------------------------------------
+
+Import contrast.scss first, then use method ``color_adjust_contrast_AERT``.
+
+```(scss)
+@import 'libs/contrast';
+
+.my-element {
+    background-color: #eee;
+    color: color_adjust_contrast_AERT(#ccc, #eee); // get grey with good contrast on #eee
+}
+```
+
+How it works
+--------------------------------------------------------------------------------
+
+It tests for sufficent difference on brightness and color of two values. If it
+is not enough contrats regarding test formulas of accessible guidelines then one
+color is adjusted on lightness and saturation.
+
+Methods using calculations from:
+
+* "Techniques For Accessibility Evaluation And Repair Tools (AERT)" working draft,
+  @see http://www.w3.org/TR/AERT#color-contrast
+* TODO: add methods to test with WCAG2 formulas
+
+*/
+/* line 1, ../_src/sass/partials/bands/_hero.scss */
+.hero {
+  background-image: url(../img/band-example.jpg);
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  height: calc(100vh - 74px);
+  position: relative; }
+  /* line 9, ../_src/sass/partials/bands/_hero.scss */
+  .hero .hero-center {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 84px; }
+  /* line 18, ../_src/sass/partials/bands/_hero.scss */
+  .hero .hero-wrap {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    vertical-align: middle;
+    width: 98%;
+    z-index: 3; }
+  /* line 27, ../_src/sass/partials/bands/_hero.scss */
+  .hero .hero-helper {
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    vertical-align: middle;
+    width: 0; }
+  /* line 35, ../_src/sass/partials/bands/_hero.scss */
+  .hero .hero-box {
+    background: rgba(255, 255, 255, 0.75);
+    margin: 0 auto;
+    padding: 15px 0 20px;
+    width: 90%; }
+    @media screen and (min-width: 1070px) {
+      /* line 35, ../_src/sass/partials/bands/_hero.scss */
+      .hero .hero-box {
+        width: 700px; } }
+  /* line 46, ../_src/sass/partials/bands/_hero.scss */
+  .hero .hero-heading {
+    color: #0c2340;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.4rem;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+    text-transform: uppercase; }
+  /* line 56, ../_src/sass/partials/bands/_hero.scss */
+  .hero form {
+    margin: 0;
+    padding: 0; }
+  /* line 60, ../_src/sass/partials/bands/_hero.scss */
+  .hero .form-input {
+    box-shadow: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: white;
+    border: 1px solid white;
+    color: #333333;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.6rem;
+    height: 40px;
+    margin: 0;
+    padding: 0 8px;
+    width: 200px; }
+  /* line 76, ../_src/sass/partials/bands/_hero.scss */
+  .hero .form-button {
+    background-color: #0099cc;
+    border: 1px solid #0099cc;
+    color: white;
+    font-weight: 100;
+    font-size: 1.6rem;
+    height: 40px;
+    margin: 0;
+    padding: 0 8px;
+    width: 60px;
+    transition: background-color 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out; }
+    /* line 88, ../_src/sass/partials/bands/_hero.scss */
+    .hero .form-button:hover {
+      background-color: #0c2340;
+      border: 1px solid #0c2340;
+      color: #0099cc; }
+  @media (min-width: 1070px) {
+    /* line 96, ../_src/sass/partials/bands/_hero.scss */
+    .hero .hero-box {
+      width: 700px; }
+    /* line 99, ../_src/sass/partials/bands/_hero.scss */
+    .hero .hero-heading {
+      font-size: 4.8rem; }
+    /* line 102, ../_src/sass/partials/bands/_hero.scss */
+    .hero .form-input {
+      font-size: 2.4rem;
+      height: 50px;
+      padding: 0 16px;
+      width: 450px; }
+    /* line 108, ../_src/sass/partials/bands/_hero.scss */
+    .hero .form-button {
+      font-size: 2.4rem;
+      height: 50px;
+      padding: 0 16px;
+      width: 120px; }
+    /* line 114, ../_src/sass/partials/bands/_hero.scss */
+    .hero .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%; }
+      /* line 122, ../_src/sass/partials/bands/_hero.scss */
+      .hero .hero-video video {
+        position: absolute;
+        object-fit: cover; }
+      /* line 126, ../_src/sass/partials/bands/_hero.scss */
+      .hero .hero-video .fill {
+        width: 100%;
+        height: 100%; } }
+
+/* line 1, ../_src/sass/partials/bands/_billboard.scss */
+.billboard {
+  height: 500px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+  display: block;
+  overflow: hidden;
+  position: relative; }
+  /* line 12, ../_src/sass/partials/bands/_billboard.scss */
+  .billboard .billboard-main {
+    bottom: 0;
+    position: absolute;
+    width: 100%; }
+    /* line 17, ../_src/sass/partials/bands/_billboard.scss */
+    .billboard .billboard-main .billboard-box {
+      background-color: #62c0e0;
+      border-top: 9px solid #0099cc;
+      padding: 12px 12px 0 12px; }
+      @media (min-width: 768px) {
+        /* line 17, ../_src/sass/partials/bands/_billboard.scss */
+        .billboard .billboard-main .billboard-box {
+          padding-top: 25px; } }
+      /* line 26, ../_src/sass/partials/bands/_billboard.scss */
+      .billboard .billboard-main .billboard-box .billboard-heading {
+        font-size: 3.0rem;
+        font-weight: 600;
+        line-height: 1.1;
+        margin-bottom: 12px;
+        margin-top: 0;
+        color: white;
+        font-style: normal; }
+        @media (min-width: 768px) {
+          /* line 26, ../_src/sass/partials/bands/_billboard.scss */
+          .billboard .billboard-main .billboard-box .billboard-heading {
+            font-size: 4.8rem; } }
+        /* line 39, ../_src/sass/partials/bands/_billboard.scss */
+        .billboard .billboard-main .billboard-box .billboard-heading .emphasis {
+          color: #0c2340; }
+      /* line 43, ../_src/sass/partials/bands/_billboard.scss */
+      .billboard .billboard-main .billboard-box .billboard-half-title {
+        background: url(../img/bg-half-title.png) repeat-x left center;
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0 30px;
+        width: auto; }
+        @media (min-width: 768px) {
+          /* line 43, ../_src/sass/partials/bands/_billboard.scss */
+          .billboard .billboard-main .billboard-box .billboard-half-title {
+            padding: 0 90px; } }
+        /* line 54, ../_src/sass/partials/bands/_billboard.scss */
+        .billboard .billboard-main .billboard-box .billboard-half-title .billboard-half-title-content {
+          background-color: #62c0e0;
+          color: #0c2340;
+          display: inline-block;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1.8rem;
+          line-height: 1.1;
+          padding: 0 15px; }
+  @media (min-width: 768px) {
+    /* line 1, ../_src/sass/partials/bands/_billboard.scss */
+    .billboard {
+      height: 640px; } }
+
+/* line 1, ../_src/sass/partials/bands/_bands.scss */
+.band, .primary, .secondary, .tertiary, .quaternary, .white, .photo {
+  background-color: #62c0e0;
+  color: #0c2340;
+  padding: 3rem 0;
+  position: relative; }
+
+/* line 8, ../_src/sass/partials/bands/_bands.scss */
+.primary {
+  background-color: #0c2340;
+  color: white; }
+
+/* line 14, ../_src/sass/partials/bands/_bands.scss */
+.secondary {
+  background-color: #0099cc;
+  color: white; }
+
+/* line 20, ../_src/sass/partials/bands/_bands.scss */
+.tertiary {
+  background-color: #a5a7a8; }
+
+/* line 24, ../_src/sass/partials/bands/_bands.scss */
+.quaternary {
+  background-color: #62c0e0; }
+
+/* line 29, ../_src/sass/partials/bands/_bands.scss */
+.white {
+  background-color: white; }
+
+/* line 34, ../_src/sass/partials/bands/_bands.scss */
+.photo {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+  overflow: hidden;
+  color: white; }
+  @media (min-width: 768px) {
+    /* line 44, ../_src/sass/partials/bands/_bands.scss */
+    .photo.fixed {
+      background-attachment: fixed;
+      position: static; } }

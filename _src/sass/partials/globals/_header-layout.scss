@@ -1,0 +1,245 @@
+// Header navigation
+.site-header{
+	background: rgba($brand-primary, 0.9);
+	color: $white;
+	height: 8.4rem;
+	position: absolute;
+	top:0;
+	width: 100%;
+	z-index: 100;
+}
+
+.show-nav, .search-icon{
+	display: inline-block;
+	height:8.4rem;
+	text-align: center;
+	padding-top: 2.7rem;
+	position: absolute;
+	width: 8.4rem;
+}
+
+.show-nav{
+	top:0;
+	left:0;
+	
+	@media screen and (min-width:1070px){
+		display: none;
+	}
+}
+
+.search-icon{
+	top:0;
+	right:0;
+}
+
+.site-logo{
+	display: block;
+	text-align: center;
+	margin-top: 1.4rem;
+	@media screen and (min-width:1070px){
+		text-align: left;
+		margin-left: 4rem;
+	}
+	
+	.mobile-logo{
+		
+		@media screen and (min-width:1070px){
+			display: none;
+		}
+	}
+	
+	.desktop-logo{
+		display: none;
+		width:210px;
+		height: 55px;			
+		@media screen and (min-width:1070px){
+			display: inline-block;
+		}
+	}
+}
+
+.navigation{
+	background:$brand-primary;
+	border-top: 1px solid #395d84;
+	height: 0px;
+	margin:0;
+	overflow: hidden;
+	padding:0;
+	position: absolute;
+	top:84px;
+	width: 100%;
+	
+	&.show{
+		height: auto;
+		max-height: 1070px;
+		overflow: visible;
+		
+	}
+	&.hide{
+		height: 0;
+	}
+	
+	ul{
+		margin: 0;
+		padding:0;
+		
+		li{
+			margin:0;
+			padding:0;
+		}
+	}
+	
+	@media screen and (min-width:1070px){
+		background:transparent;
+		bottom:0;
+		border:none;
+		height: auto;	
+		left:250px;
+		overflow: visible;
+		right:90px;
+		top:0.3rem;
+		width: auto;
+	}
+	@media screen and (min-width:1230px){
+		right:250px;
+	}
+}
+
+.main-navigation{
+	font-weight: 100;
+	text-align: center;
+	margin: 3.25rem 0;
+
+	a{
+		border-bottom: solid 3px transparent;
+		color:$white;
+		display: inline-block;
+		line-height: 1.25;
+		padding:0.5rem;
+		font-size: 3rem;
+		text-decoration: none;
+		&:hover, &:focus, &:active{
+			border-bottom-color: $brand-secondary;
+		}
+		
+		// Smaller font size to accommodate smaller browser not in responsive yet
+		@media (min-width:1070px) and (max-width:1175px){
+			font-size: 1.8rem;
+		}
+		
+	}
+	
+	@media screen and (min-width:1070px){
+		margin: 2rem;
+		ul li {
+			display: inline-block;
+			margin:0 1rem;
+		}
+		
+		a{
+			font-size: 2.2rem;
+		}
+	}
+}
+
+.audience-navigation{
+	border-top: solid 1px rgb(25, 61, 103);
+	display: table;
+	width: 100%;
+	ul {
+		display: table-cell;
+		padding: 1.7rem 1.75rem;
+	}
+	
+	a{
+		color:$white;
+		font-size: 1.5rem;
+		font-weight: 400;
+		text-decoration: none;
+		text-transform: uppercase;
+		&.audience {
+			color:$brand-secondary;
+		}
+	}
+}
+
+.header-cta{
+	background: $brand-secondary;
+	color:$brand-primary;
+	text-align: center;
+	font-weight: 600;
+	padding:2rem;
+	
+	li{
+		display: inline-block;
+	}
+	
+	a{
+		color:$brand-primary;
+		display: inline-block;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 2.1rem;
+		
+		&:not(:last-child):after{
+			content: "\00a0/\00a0";
+		}
+	}
+}
+
+
+@media screen and (min-width:1070px){
+	.header-cta, .audience-navigation{
+		display: none;	
+	}
+}
+
+#nav-icon {
+	display: block;
+	width: 30px;
+	height: 40px;
+	margin:0 auto;
+	position: relative;
+	transform: rotate(0deg);
+	transition: .5s ease-in-out;
+	cursor: pointer;
+	span {
+	    display: inline-block;
+	    position: absolute;
+	    height: 4px;
+	    width: 100%;
+	    background: white;
+	    opacity: 1;
+	    left: 0;
+	    transform: rotate(0deg);
+	    transition: .25s ease-in-out;
+
+		&:nth-child(1) {
+			top: 8px;
+		}
+
+	    &:nth-child(2), &:nth-child(3) {
+			top: 16px;
+	    }
+
+	    &:nth-child(4) {
+	    	top: 24px;
+		}
+	}
+
+	&.open span {
+    	&:nth-child(1), &:nth-child(4) {
+			top: 16px;
+			width: 0%;
+			left: 50%;
+		}
+
+		&:nth-child(2) {
+			transform: rotate(45deg);
+		}
+
+		&:nth-child(3) {
+			transform: rotate(-45deg);
+		}
+	}
+}

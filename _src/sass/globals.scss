@@ -1,0 +1,26 @@
+// Import base utilities and configuration
+@import 'config',
+		'mixins/contrast'
+;
+
+// 3rd party vendors
+@import 
+		'partials/vendor/normalize',
+		'partials/vendor/bootstrap',							// Only include
+		'partials/vendor/fontawesome',							// what we HAVE to have in these files
+		'partials/vendor/aos'
+;
+
+// Global styles (in order of page load); skips content
+@import 
+	'partials/globals/reset',
+	'partials/globals/fonts',
+	'partials/globals/typography',
+	'partials/globals/accessibility',							// Anything to do with the main accessibility styles
+	'partials/globals/header-alert',							// Alert indicator (snow/campus threat/etc)
+	'partials/globals/header-search',							
+	'partials/globals/header-layout',
+	'partials/globals/footer-layout',
+	'partials/globals/footer-sticky',
+	'partials/globals/buttons'
+;
