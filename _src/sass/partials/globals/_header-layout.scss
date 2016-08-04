@@ -163,34 +163,11 @@
 	}
 }
 
-.header-cta{
-	background: $brand-secondary;
-	color:$brand-primary;
-	text-align: center;
-	font-weight: 600;
-	padding:2rem;
-	
-	li{
-		display: inline-block;
-	}
-	
-	a{
-		color:$brand-primary;
-		display: inline-block;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-size: 2.1rem;
-		
-		&:not(:last-child):after{
-			content: "\00a0/\00a0";
+.site-header{
+	@media screen and (min-width:1070px){
+		.cta, .audience-navigation{
+			display: none;	
 		}
-	}
-}
-
-
-@media screen and (min-width:1070px){
-	.header-cta, .audience-navigation{
-		display: none;	
 	}
 }
 

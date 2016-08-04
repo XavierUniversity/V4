@@ -53,8 +53,7 @@
 <cfset cta[3]["title"] = "Give">
 <cfset cta[3]["url"] = "/give">
 
-<cfset ctaHTML = buildNav(cta, false, false)>
-<cfset footerCtaHTML = buildNav(cta, false, false)>
+<cfset ctaHTML = buildNav(cta, true, false)>
 
 
 

@@ -74,7 +74,7 @@
 					    <cfoutput>#audienceNavHTML#</cfoutput>
 					</nav>
 					
-					<nav class="header-cta" role="navigation">
+					<nav class="cta" role="navigation">
 						<cfoutput>#ctaHTML#</cfoutput>
 					</nav>
 			   </div>
