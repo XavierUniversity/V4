@@ -14,12 +14,14 @@
     
 }
 
-#header-search-form {
+#header-search-form{
 	
 	input[type=text]{
     	background-color: $brand-primary;
     	border:none;
 		border-bottom: solid 3px transparent;
+		background: rgba($white, 0.1);
+			border-color: $brand-secondary;
 		border-radius: 0;
 		color: $white;
 		font-weight: 100;
@@ -36,10 +38,15 @@
 			font-size: 3rem;
 		}
 		
-		&:focus{
+		&:focus, &:valid{
 			background: rgba($white, 0.1);
-			border-color: rgba($white, 0.5);
+			border-color: $brand-secondary;
 			outline: none;
+			
+			+ label{
+				font-size: 1.4rem;
+				top:5px;
+			}
 		}
 	}
 	
@@ -76,17 +83,23 @@
     height:84px;
 	padding:0 10px;
 	position: relative;
-	width: calc( 100vw - 84px);
+	width: calc( 100vw - 100px);
 	
 	@media screen and (min-width:1070px){
 		width: calc( 100vw - 200px);
 	}
 	
 	label{
-	    color:rgba($white,0.66);
+	    color:$white;
+	    font-size: 1.4rem;
 	    font-weight: 200;
 	    position: absolute;
-    		top: 5px;
-			left: 10px;
+    		top: 3.75rem;
+			left: 2rem;
+		transition: top 200ms ease, font-size 200ms ease;
+		@media screen and (min-width:1070px){
+			top:2.5rem;
+			font-size: 3rem;
+		}
 	}
 }

@@ -5726,6 +5726,8 @@ main:focus {
   background-color: #0c2340;
   border: none;
   border-bottom: solid 3px transparent;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #0099cc;
   border-radius: 0;
   color: white;
   font-weight: 100;
@@ -5741,12 +5743,16 @@ main:focus {
     /* line 19, ../_src/sass/partials/globals/_header-search.scss */
     #header-search-form input[type=text] {
       font-size: 3rem; } }
-  /* line 39, ../_src/sass/partials/globals/_header-search.scss */
-  #header-search-form input[type=text]:focus {
+  /* line 41, ../_src/sass/partials/globals/_header-search.scss */
+  #header-search-form input[type=text]:focus, #header-search-form input[type=text]:valid {
     background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.5);
+    border-color: #0099cc;
     outline: none; }
-/* line 46, ../_src/sass/partials/globals/_header-search.scss */
+    /* line 46, ../_src/sass/partials/globals/_header-search.scss */
+    #header-search-form input[type=text]:focus + label, #header-search-form input[type=text]:valid + label {
+      font-size: 1.4rem;
+      top: 5px; }
+/* line 53, ../_src/sass/partials/globals/_header-search.scss */
 #header-search-form input[type=submit] {
   background-color: #0099cc;
   border: 1px solid #0099cc;
@@ -5763,32 +5769,39 @@ main:focus {
   transition: .5s;
   width: 84px; }
   @media screen and (min-width: 1070px) {
-    /* line 46, ../_src/sass/partials/globals/_header-search.scss */
+    /* line 53, ../_src/sass/partials/globals/_header-search.scss */
     #header-search-form input[type=submit] {
       font-size: 2.4rem;
       width: 180px; } }
-  /* line 67, ../_src/sass/partials/globals/_header-search.scss */
+  /* line 74, ../_src/sass/partials/globals/_header-search.scss */
   #header-search-form input[type=submit]:hover, #header-search-form input[type=submit]:focus, #header-search-form input[type=submit]:active {
     color: #0c2340; }
 
-/* line 74, ../_src/sass/partials/globals/_header-search.scss */
+/* line 81, ../_src/sass/partials/globals/_header-search.scss */
 .search-box {
   display: inline-block;
   height: 84px;
   padding: 0 10px;
   position: relative;
-  width: calc( 100vw - 84px); }
+  width: calc( 100vw - 100px); }
   @media screen and (min-width: 1070px) {
-    /* line 74, ../_src/sass/partials/globals/_header-search.scss */
+    /* line 81, ../_src/sass/partials/globals/_header-search.scss */
     .search-box {
       width: calc( 100vw - 200px); } }
-  /* line 85, ../_src/sass/partials/globals/_header-search.scss */
+  /* line 92, ../_src/sass/partials/globals/_header-search.scss */
   .search-box label {
-    color: rgba(255, 255, 255, 0.66);
+    color: white;
+    font-size: 1.4rem;
     font-weight: 200;
     position: absolute;
-    top: 5px;
-    left: 10px; }
+    top: 3.75rem;
+    left: 2rem;
+    transition: top 200ms ease, font-size 200ms ease; }
+    @media screen and (min-width: 1070px) {
+      /* line 92, ../_src/sass/partials/globals/_header-search.scss */
+      .search-box label {
+        top: 2.5rem;
+        font-size: 3rem; } }
 
 /* line 2, ../_src/sass/partials/globals/_header-layout.scss */
 .site-header {
