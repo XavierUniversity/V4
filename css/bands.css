@@ -236,7 +236,7 @@ Methods using calculations from:
     width: 100%; }
     /* line 17, ../_src/sass/partials/bands/_billboard.scss */
     .billboard .billboard-main .billboard-box {
-      background-color: #62c0e0;
+      background-color: #59bdde;
       border-top: 9px solid #0099cc;
       padding: 12px 12px 0 12px; }
       @media (min-width: 768px) {
@@ -272,7 +272,7 @@ Methods using calculations from:
             padding: 0 90px; } }
         /* line 54, ../_src/sass/partials/bands/_billboard.scss */
         .billboard .billboard-main .billboard-box .billboard-half-title .billboard-half-title-content {
-          background-color: #62c0e0;
+          background-color: #59bdde;
           color: #0c2340;
           display: inline-block;
           font-weight: 400;
@@ -287,7 +287,7 @@ Methods using calculations from:
 
 /* line 1, ../_src/sass/partials/bands/_bands.scss */
 .band, .primary, .secondary, .tertiary, .quaternary, .white, .photo {
-  background-color: #62c0e0;
+  background-color: #59bdde;
   color: #0c2340;
   padding: 3rem 0;
   position: relative; }
@@ -308,7 +308,7 @@ Methods using calculations from:
 
 /* line 24, ../_src/sass/partials/bands/_bands.scss */
 .quaternary {
-  background-color: #62c0e0; }
+  background-color: #59bdde; }
 
 /* line 29, ../_src/sass/partials/bands/_bands.scss */
 .white {
