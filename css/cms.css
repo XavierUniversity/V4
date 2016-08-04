@@ -664,3 +664,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%; }
+
+/* line 52, ../_src/sass/partials/cms/_content.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0; }
