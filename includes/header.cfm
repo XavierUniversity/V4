@@ -13,8 +13,9 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="<cfoutput>#path#</cfoutput>css/normalize.css">
-        <link rel="stylesheet" href="<cfoutput>#path#</cfoutput>css/main.css">
+        <link rel="stylesheet" href="<cfoutput>#path#</cfoutput>css/globals.css">
+        <link rel="stylesheet" href="<cfoutput>#path#</cfoutput>css/bands.css">
+        <link rel="stylesheet" href="<cfoutput>#path#</cfoutput>css/cms.css">
         <!--- Grunt should LOOK for modernizr needs
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>--->
         
@@ -73,7 +74,7 @@
 					    <cfoutput>#audienceNavHTML#</cfoutput>
 					</nav>
 					
-					<nav class="header-cta" role="navigation">
+					<nav class="cta" role="navigation">
 						<cfoutput>#ctaHTML#</cfoutput>
 					</nav>
 			   </div>

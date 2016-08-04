@@ -1,0 +1,13 @@
+// Import base utilities and configuration
+@import 'partials/globals/_config',
+		'mixins/contrast'
+;
+
+// Import CMS only styles
+@import 
+	'partials/cms/custom-grid',
+	'partials/cms/header',
+	'partials/cms/header-nav',
+	'partials/cms/navigation',
+	'partials/cms/content'
+;

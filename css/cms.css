@@ -1,0 +1,666 @@
+/* Should we need more colors :)
+$brand-quinary:					;
+$brand-senary:;
+$brand-septenary:				;
+$brand-octonary:				;
+$brand-novenary:				;
+$brand-decenary:				;
+$brand-undenary:				;
+$brand-duodenary:				; */
+/*
+// These should be replaced as best we can. These are the old Ologie based colors
+//$color_green_vogue_approx: 		#002857; //  Replace with $brand-primary
+//$color_pacific_blue_approx: 	#0099cc; //  Replace with $brand-secondary	
+	
+	
+	
+	THESE ARE ONLY HERE WHILE WE MIGHT BE COPING CODE FROM THE EXISTING V4 TEMPLATE. 
+	REMOVE AS SOON AS IN PRODUCTION
+$color_biscay_approx: 			#193d67;
+$color_black_haze_approx: 		#f5f7f9;
+$color_blue_zodiac_approx: 		#0c234b;
+$color_cannon_pink_approx: 		#8f3f6d;
+$color_cararra_approx: 			#ebebeb;
+$color_carissma_approx: 		#e076b3;
+$color_chambray_approx: 		#395d84;
+$color_chardonnay_approx: 		#ffc78a;
+$color_citron_approx: 			#97a200;
+$color_cornflower_approx: 		#9ec3de;
+$color_cruise_approx: 			#b9e4e1;
+$color_curious_blue_approx: 	#29aad4;
+$color_deluge_approx: 			#6773b6;
+$color_dodger_blue_approx: 		#3399ff;
+$color_gallery_approx: 			#f0f0f0;
+$color_genoa_approx: 			#0d776e;
+$color_gold_drop_approx: 		#e98300;
+$color_gray_chateau_approx: 	#a5acb2;
+$color_gray_nurse_approx: 		#e8eaeb;
+
+$color_java_approx: 			#16cabb;
+$color_mercury_approx: 			#dee5e9;
+$color_mine_shaft_approx: 		#333;
+$color_mischka_approx: 			#ccd4dd;
+$color_niagara_approx: 			#11988d;
+
+$color_pistachio_approx: 		#a8b400;
+$color_portage_approx: 			#8e9be4;
+$color_resolution_blue_approx: 	#002587;
+$color_scooter_approx: 			#22bcf0;
+$color_sea_buckthorn_approx: 	#f69c28;
+$color_shakespeare_approx: 		#51b9dc;
+$color_trout_approx: 			#49595e;
+$color_viking_approx: 			#59bdde;
+$color_waikawa_gray_approx: 	#556099;
+$color_wattle_approx: 			#dae454;
+
+*/
+/*
+
+SCSS Color Methods for Accessibility
+================================================================================
+
+Adjust given colors to ensure that those color combination provide sufficient
+contrast.
+
+@version 0.1
+@link http://eye48.com/go/scsscontrast
+@license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License (LGPL)
+@author Michael Haschke, http://michael.haschke.biz/
+
+Usage
+--------------------------------------------------------------------------------
+
+Import contrast.scss first, then use method ``color_adjust_contrast_AERT``.
+
+```(scss)
+@import 'libs/contrast';
+
+.my-element {
+    background-color: #eee;
+    color: color_adjust_contrast_AERT(#ccc, #eee); // get grey with good contrast on #eee
+}
+```
+
+How it works
+--------------------------------------------------------------------------------
+
+It tests for sufficent difference on brightness and color of two values. If it
+is not enough contrats regarding test formulas of accessible guidelines then one
+color is adjusted on lightness and saturation.
+
+Methods using calculations from:
+
+* "Techniques For Accessibility Evaluation And Repair Tools (AERT)" working draft,
+  @see http://www.w3.org/TR/AERT#color-contrast
+* TODO: add methods to test with WCAG2 formulas
+
+*/
+/* line 4, ../_src/sass/partials/cms/_custom-grid.scss */
+.content-a {
+  margin-left: -15px;
+  margin-right: -15px; }
+  /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-a:before, .content-a:after {
+    content: " ";
+    display: table; }
+  /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-a:after {
+    clear: both; }
+  /* line 6, ../_src/sass/partials/cms/_custom-grid.scss */
+  .content-a > .col {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      /* line 6, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-a > .col {
+        float: left;
+        width: 100%; } }
+
+/* line 11, ../_src/sass/partials/cms/_custom-grid.scss */
+.content-b {
+  margin-left: -15px;
+  margin-right: -15px; }
+  /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-b:before, .content-b:after {
+    content: " ";
+    display: table; }
+  /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-b:after {
+    clear: both; }
+  /* line 14, ../_src/sass/partials/cms/_custom-grid.scss */
+  .content-b > .col {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      /* line 14, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-b > .col {
+        float: left;
+        width: 100%; } }
+    @media (min-width: 992px) {
+      /* line 14, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-b > .col {
+        float: left;
+        width: 50%; } }
+
+/* line 20, ../_src/sass/partials/cms/_custom-grid.scss */
+.content-c {
+  margin-left: -15px;
+  margin-right: -15px; }
+  /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-c:before, .content-c:after {
+    content: " ";
+    display: table; }
+  /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-c:after {
+    clear: both; }
+  /* line 23, ../_src/sass/partials/cms/_custom-grid.scss */
+  .content-c > .col {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      /* line 23, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-c > .col {
+        float: left;
+        width: 100%; } }
+    @media (min-width: 992px) {
+      /* line 23, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-c > .col {
+        float: left;
+        width: 33.33333%; } }
+
+/* line 28, ../_src/sass/partials/cms/_custom-grid.scss */
+.content-d {
+  margin-left: -15px;
+  margin-right: -15px; }
+  /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-d:before, .content-d:after {
+    content: " ";
+    display: table; }
+  /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-d:after {
+    clear: both; }
+  /* line 31, ../_src/sass/partials/cms/_custom-grid.scss */
+  .content-d > .col {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      /* line 31, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-d > .col {
+        float: left;
+        width: 100%; } }
+    @media (min-width: 992px) {
+      /* line 31, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-d > .col {
+        float: left;
+        width: 25%; } }
+
+/* line 36, ../_src/sass/partials/cms/_custom-grid.scss */
+.content-e {
+  margin-left: -15px;
+  margin-right: -15px; }
+  /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-e:before, .content-e:after {
+    content: " ";
+    display: table; }
+  /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-e:after {
+    clear: both; }
+  /* line 39, ../_src/sass/partials/cms/_custom-grid.scss */
+  .content-e > .col {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      /* line 39, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-e > .col {
+        float: left;
+        width: 100%; } }
+    @media (min-width: 992px) {
+      /* line 39, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-e > .col {
+        float: left;
+        width: 66.66667%; } }
+    /* line 43, ../_src/sass/partials/cms/_custom-grid.scss */
+    .content-e > .col.last {
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px; }
+      @media (min-width: 992px) {
+        /* line 43, ../_src/sass/partials/cms/_custom-grid.scss */
+        .content-e > .col.last {
+          float: left;
+          width: 33.33333%; } }
+
+/* line 48, ../_src/sass/partials/cms/_custom-grid.scss */
+.content-f {
+  margin-left: -15px;
+  margin-right: -15px; }
+  /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-f:before, .content-f:after {
+    content: " ";
+    display: table; }
+  /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-f:after {
+    clear: both; }
+  /* line 51, ../_src/sass/partials/cms/_custom-grid.scss */
+  .content-f > .col {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      /* line 51, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-f > .col {
+        float: left;
+        width: 100%; } }
+    @media (min-width: 992px) {
+      /* line 51, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-f > .col {
+        float: left;
+        width: 33.33333%; } }
+    /* line 55, ../_src/sass/partials/cms/_custom-grid.scss */
+    .content-f > .col.last {
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px; }
+      @media (min-width: 992px) {
+        /* line 55, ../_src/sass/partials/cms/_custom-grid.scss */
+        .content-f > .col.last {
+          float: left;
+          width: 66.66667%; } }
+
+/* line 60, ../_src/sass/partials/cms/_custom-grid.scss */
+.content-g {
+  margin-left: -15px;
+  margin-right: -15px; }
+  /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-g:before, .content-g:after {
+    content: " ";
+    display: table; }
+  /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-g:after {
+    clear: both; }
+  /* line 63, ../_src/sass/partials/cms/_custom-grid.scss */
+  .content-g > .col {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      /* line 63, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-g > .col {
+        float: left;
+        width: 100%; } }
+    @media (min-width: 992px) {
+      /* line 63, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-g > .col {
+        float: left;
+        width: 75%; } }
+    /* line 67, ../_src/sass/partials/cms/_custom-grid.scss */
+    .content-g > .col.last {
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px; }
+      @media (min-width: 992px) {
+        /* line 67, ../_src/sass/partials/cms/_custom-grid.scss */
+        .content-g > .col.last {
+          float: left;
+          width: 25%; } }
+
+/* line 72, ../_src/sass/partials/cms/_custom-grid.scss */
+.content-h {
+  margin-left: -15px;
+  margin-right: -15px; }
+  /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-h:before, .content-h:after {
+    content: " ";
+    display: table; }
+  /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-h:after {
+    clear: both; }
+  /* line 75, ../_src/sass/partials/cms/_custom-grid.scss */
+  .content-h > .col {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      /* line 75, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-h > .col {
+        float: left;
+        width: 100%; } }
+    @media (min-width: 992px) {
+      /* line 75, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-h > .col {
+        float: left;
+        width: 25%; } }
+    /* line 79, ../_src/sass/partials/cms/_custom-grid.scss */
+    .content-h > .col.last {
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px; }
+      @media (min-width: 992px) {
+        /* line 79, ../_src/sass/partials/cms/_custom-grid.scss */
+        .content-h > .col.last {
+          float: left;
+          width: 75%; } }
+
+/* line 84, ../_src/sass/partials/cms/_custom-grid.scss */
+.content-i {
+  margin-left: -15px;
+  margin-right: -15px; }
+  /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-i:before, .content-i:after {
+    content: " ";
+    display: table; }
+  /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-i:after {
+    clear: both; }
+  /* line 87, ../_src/sass/partials/cms/_custom-grid.scss */
+  .content-i > .col {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      /* line 87, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-i > .col {
+        float: left;
+        width: 100%; } }
+    @media (min-width: 992px) {
+      /* line 87, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-i > .col {
+        float: left;
+        width: 16.66667%; } }
+
+/* line 92, ../_src/sass/partials/cms/_custom-grid.scss */
+.content-j {
+  margin-left: -15px;
+  margin-right: -15px; }
+  /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-j:before, .content-j:after {
+    content: " ";
+    display: table; }
+  /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .content-j:after {
+    clear: both; }
+  /* line 95, ../_src/sass/partials/cms/_custom-grid.scss */
+  .content-j > .col {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      /* line 95, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-j > .col {
+        float: left;
+        width: 100%; } }
+    @media (min-width: 992px) {
+      /* line 95, ../_src/sass/partials/cms/_custom-grid.scss */
+      .content-j > .col {
+        float: left;
+        width: 16.66667%; } }
+
+/* line 101, ../_src/sass/partials/cms/_custom-grid.scss */
+.feature-a {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 768px) {
+    /* line 101, ../_src/sass/partials/cms/_custom-grid.scss */
+    .feature-a {
+      float: left;
+      width: 100%; } }
+
+/* line 106, ../_src/sass/partials/cms/_custom-grid.scss */
+.row-no-padding [class*="col-"] {
+  padding-left: 0;
+  padding-right: 0; }
+
+/* line 112, ../_src/sass/partials/cms/_custom-grid.scss */
+.row.collapse {
+  display: inline-block !important;
+  visibility: visible !important; }
+
+/* line 2, ../_src/sass/partials/cms/_header.scss */
+.banner-small {
+  height: 240px;
+  background: linear-gradient(rgba(255, 0, 0, 0.45), rgba(255, 0, 0, 0.45));
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative; }
+  /* line 10, ../_src/sass/partials/cms/_header.scss */
+  .banner-small .breadcrumb {
+    margin-top: 3.4rem;
+    /* NEED TO FIGURE OUT SIZING FOR THIS
+    		@media (min-width:375px){
+    			margin-top:2.4rem;
+    		}
+    		@media (min-width:768px){
+    			margin-top:3.4rem;
+    		}
+    */ }
+  /* line 22, ../_src/sass/partials/cms/_header.scss */
+  .banner-small .trail {
+    border-bottom: 2px solid #a5acb2;
+    color: #0c2340;
+    display: inline-block;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding: 0 30px 10px;
+    text-transform: uppercase; }
+    /* line 32, ../_src/sass/partials/cms/_header.scss */
+    .banner-small .trail a {
+      padding: 0 .6rem;
+      color: #0c2340;
+      text-decoration: none; }
+      /* line 36, ../_src/sass/partials/cms/_header.scss */
+      .banner-small .trail a:hover, .banner-small .trail a:focus {
+        color: #0099cc; }
+  /* line 41, ../_src/sass/partials/cms/_header.scss */
+  .banner-small .heading {
+    color: #0c2340;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0 1rem;
+    text-transform: uppercase; }
+    @media (min-width: 768px) {
+      /* line 41, ../_src/sass/partials/cms/_header.scss */
+      .banner-small .heading {
+        font-size: 4rem; } }
+
+/* line 56, ../_src/sass/partials/cms/_header.scss */
+.banner-main {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
+  bottom: 0;
+  height: 156px;
+  position: absolute;
+  width: 100%; }
+  /* line 62, ../_src/sass/partials/cms/_header.scss */
+  .banner-main .box-table {
+    height: 156px; }
+
+/* line 6, ../_src/sass/partials/cms/_navigation.scss */
+.subnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  /* line 11, ../_src/sass/partials/cms/_navigation.scss */
+  .subnav ul ul {
+    border-left: 4px solid #f5f7f9;
+    margin-top: .5em;
+    padding-left: .5em; }
+    /* line 15, ../_src/sass/partials/cms/_navigation.scss */
+    .subnav ul ul li {
+      font-weight: 200;
+      font-style: italic;
+      font-size: 1.4rem;
+      margin: 0; }
+/* line 24, ../_src/sass/partials/cms/_navigation.scss */
+.subnav li {
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.6rem;
+  margin: 0; }
+  /* line 30, ../_src/sass/partials/cms/_navigation.scss */
+  .subnav li:not(:first-child) {
+    border-top: solid 1px #f5f7f9; }
+  /* line 33, ../_src/sass/partials/cms/_navigation.scss */
+  .subnav li.active {
+    color: #0099cc; }
+    /* line 36, ../_src/sass/partials/cms/_navigation.scss */
+    .subnav li.active > a {
+      color: #0099cc; }
+/* line 41, ../_src/sass/partials/cms/_navigation.scss */
+.subnav a {
+  padding: 0.5rem 0;
+  display: block; }
+  /* line 46, ../_src/sass/partials/cms/_navigation.scss */
+  .subnav a:link, .subnav a:visited, .subnav a:focus {
+    color: #0c234b;
+    text-decoration: none; }
+  /* line 50, ../_src/sass/partials/cms/_navigation.scss */
+  .subnav a:hover, .subnav a:active, .subnav a.current {
+    color: #0099cc; }
+
+@media (min-width: 992px) {
+  /* line 60, ../_src/sass/partials/cms/_navigation.scss */
+  .subnav ul ul li {
+    margin-bottom: .55em; }
+  /* line 66, ../_src/sass/partials/cms/_navigation.scss */
+  .subnav li:not(:first-child) {
+    border-color: #ccd4dd; }
+  /* line 70, ../_src/sass/partials/cms/_navigation.scss */
+  .subnav a {
+    padding: 0.5rem 0; } }
+/* line 75, ../_src/sass/partials/cms/_navigation.scss */
+.nav-jump {
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  border-top: 1px solid #ccd4dd;
+  border-bottom: 1px solid #ccd4dd;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #0c2340;
+  clear: both; }
+  /* line 89, ../_src/sass/partials/cms/_navigation.scss */
+  .nav-jump:hover, .nav-jump:focus {
+    background: #fefefe;
+    text-decoration: underline;
+    outline: none;
+    color: #0c2340; }
+  @media (min-width: 992px) {
+    /* line 75, ../_src/sass/partials/cms/_navigation.scss */
+    .nav-jump {
+      display: none; } }
+
+@media (min-width: 992px) {
+  /* line 1, ../_src/sass/partials/cms/_content.scss */
+  #content {
+    padding: 5rem 0; } }
+
+/* line 8, ../_src/sass/partials/cms/_content.scss */
+.panel, .panel-grey {
+  margin: 0;
+  background: #ebebeb;
+  border: solid 1px #dedede;
+  border-radius: 0.3rem;
+  padding: 1rem; }
+
+/* line 16, ../_src/sass/partials/cms/_content.scss */
+.deck {
+  color: #0099cc;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 10px; }
+  @media (min-width: 768px) {
+    /* line 16, ../_src/sass/partials/cms/_content.scss */
+    .deck {
+      font-size: 2.2rem; } }
+
+/*
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+*/
+/* line 35, ../_src/sass/partials/cms/_content.scss */
+.flex-video {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 16px;
+  overflow: hidden; }
+  /* line 43, ../_src/sass/partials/cms/_content.scss */
+  .flex-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }

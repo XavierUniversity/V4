@@ -1,7 +1,7 @@
 footer{
 	background-color: $brand-footer;
 	color:$brand-primary;	
-	padding:40px 0 94px;
+	padding:40px 0 140px;
 	line-height: 1.5;
 	text-align: center;	
 	p{
@@ -42,11 +42,17 @@ footer{
 		margin: 0 0.25rem;
 		padding:0.6rem;
 		width: 42px;
+		transition: border-color 500ms ease, color 500ms ease;
 		
 		@media screen and (min-width: 768px){
 			height:36px;
 			width:36px;
 			padding:0.4rem;
+		}
+		
+		&:hover, &:active, &:focus{
+			border-color: $brand-secondary;
+			color: $brand-secondary;
 		}
 	}
 	

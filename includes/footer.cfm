@@ -55,8 +55,8 @@
 						</div>
 					</div>
 					<div class="col-sm-4 col-lg-3 footer-cta">
-						<div class="cta-links">
-							<cfoutput>#footerCtaHTML#</cfoutput>
+						<div class="cta">
+							<cfoutput>#ctaHTML#</cfoutput>
 						</div>
 					</div>
 				</div>

@@ -1,21 +1,21 @@
 // Check environment (for compiling Sass)
 // Use this var for background images in the stylesheets.
 // DO NOT MOVE, this is required for the font load
-$env: 							"prod" !default;
-$path: 							"/Template/temp-v4/" !default;
-@if $env == "dev" {
-	$path: 						"../";
+$path: "/Template/temp-v4/";
+@if compass-env() == "development"{
+	$path: "../";
+}
+@else if compass-env() == "production" {
+	$path: "/Template/temp-v4/";
 }
 
-// Establish Font loading first and foremost
-@import 'partials/global-fonts';
 $font-family: "Frutiger W01", 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // Setup the color scheme
 $brand-primary:					#0c2340;
 $brand-secondary:				#0099cc;
 $brand-tertiary:				#a5a7a8;
-$brand-quaternary:				lighten(desaturate(adjust-hue($brand-secondary, 0.2381), 32.9787), 23.1373);
+$brand-quaternary:				#59bdde;
 /* Should we need more colors :)
 $brand-quinary:					;
 $brand-senary:;
@@ -37,6 +37,9 @@ $gray-dark:             		lighten($gray-base, 20%) !default;   // #333
 $gray:                   		lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             		lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           		lighten($gray-base, 93.5%) !default; // #eee
+
+// Breakpoints
+
 
 
 // These will be limited in usage. Copied over while we replace
