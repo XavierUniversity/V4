@@ -6,6 +6,11 @@
 	overflow: hidden;
     &.show{
 	    height:84px;
+	    
+	    @media(min-width:1070px){
+		    height:100px;
+		}
+	    
 	    visibility: visible;
     }
     &.hide{
@@ -19,9 +24,8 @@
 	input[type=text]{
     	background-color: $brand-primary;
     	border:none;
-		border-bottom: solid 3px transparent;
+		border-bottom: solid 3px $brand-secondary;
 		background: rgba($white, 0.1);
-			border-color: $brand-secondary;
 		border-radius: 0;
 		color: $white;
 		font-weight: 100;
@@ -31,22 +35,14 @@
 		line-height: 1.25;
 		padding: 0.2rem 1rem;
 		width: 100%;
-		position: absolute;
-			top:25px;
 			
 		@media screen and (min-width:1070px){
 			font-size: 3rem;
 		}
 		
-		&:focus, &:valid{
-			background: rgba($white, 0.1);
-			border-color: $brand-secondary;
-			outline: none;
-			
-			+ label{
-				font-size: 1.4rem;
-				top:5px;
-			}
+		&:focus{
+			border: none;
+			outline: solid 3px $brand-secondary;
 		}
 	}
 	
@@ -68,6 +64,7 @@
 		
 		@media screen and (min-width:1070px){
 			font-size: 2.4rem;
+			height: 100px;
 			width: 180px;
 		}
 		
@@ -93,13 +90,9 @@
 	    color:$white;
 	    font-size: 1.4rem;
 	    font-weight: 200;
-	    position: absolute;
-    		top: 3.75rem;
-			left: 2rem;
 		transition: top 200ms ease, font-size 200ms ease;
 		@media screen and (min-width:1070px){
-			top:2.5rem;
-			font-size: 3rem;
+			font-size: 2.4rem;
 		}
 	}
 }
