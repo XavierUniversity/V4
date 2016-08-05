@@ -14,8 +14,7 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="<cfoutput>#path#</cfoutput>css/globals.css">
-        <link rel="stylesheet" href="<cfoutput>#path#</cfoutput>css/bands.css">
-        <link rel="stylesheet" href="<cfoutput>#path#</cfoutput>css/cms.css">
+        <link rel="stylesheet" href="<cfoutput>#stylesheet#</cfoutput>">
         <!--- Grunt should LOOK for modernizr needs
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>--->
         
