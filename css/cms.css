@@ -621,14 +621,6 @@ Methods using calculations from:
     padding: 5rem 0; } }
 
 /* line 8, ../_src/sass/partials/cms/_content.scss */
-.panel, .panel-grey {
-  margin: 0;
-  background: #ebebeb;
-  border: solid 1px #dedede;
-  border-radius: 0.3rem;
-  padding: 1rem; }
-
-/* line 16, ../_src/sass/partials/cms/_content.scss */
 .deck {
   color: #0099cc;
   font-weight: 100;
@@ -638,7 +630,7 @@ Methods using calculations from:
   margin-top: 0;
   margin-bottom: 10px; }
   @media (min-width: 768px) {
-    /* line 16, ../_src/sass/partials/cms/_content.scss */
+    /* line 8, ../_src/sass/partials/cms/_content.scss */
     .deck {
       font-size: 2.2rem; } }
 
@@ -649,7 +641,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 }
 */
-/* line 35, ../_src/sass/partials/cms/_content.scss */
+/* line 27, ../_src/sass/partials/cms/_content.scss */
 .flex-video {
   position: relative;
   padding-top: 0;
@@ -657,10 +649,14 @@ h1, h2, h3, h4, h5, h6 {
   height: 0;
   margin-bottom: 16px;
   overflow: hidden; }
-  /* line 43, ../_src/sass/partials/cms/_content.scss */
+  /* line 35, ../_src/sass/partials/cms/_content.scss */
   .flex-video iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%; }
+
+/* line 44, ../_src/sass/partials/cms/_content.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0; }

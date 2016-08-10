@@ -1,0 +1,59 @@
+.panel{
+	background-color: darken($white, 5%); // 14.103 with primary; 11.286 with #333; 2.918 with $secondary
+	border:solid 1px darken($white, 10%);
+	border-radius: 0.3rem;
+	display: block;
+	margin-bottom: 1rem;
+	padding:1rem;
+}
+
+.primary{
+	.panel{
+		background-color: lighten($brand-primary, 5%); 
+		color: $white; // Contrast: with white, 13.463; with quarternary 6.256
+		border:none;
+	}
+}
+
+.secondary{
+	.panel{
+		background-color: lighten($brand-secondary, 5%); // 6.047 with primary
+		border:none;
+	}
+}
+
+.tertiary{
+	.panel{
+		background-color: darken($brand-tertiary, 5%); // 5.587 with primary
+		border:none;
+	}
+}
+.quaternary{
+	.panel{
+		background-color: darken($brand-quaternary, 5%); // 6.667 with primary
+		border:none;
+	}
+}
+
+.white{
+	.panel{
+		background-color: darken($white, 5%); // 14.103 with primary
+		border:none;
+	}
+}
+
+.photo{
+	.panel{
+		background-color: rgba($white, 0.75); // 12.19 +/-3.6 with primary
+		border:none;
+		color:$brand-primary;
+	}
+	
+	&.dark{
+		.panel{
+			background-color: rgba($black, 0.52); // 12.65 +/-8.35 with white
+			border:none;
+			color: $white;
+		}
+	}
+}
