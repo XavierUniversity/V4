@@ -1,5 +1,5 @@
 .band{
-	background-color: $brand-quaternary;
+	background-color: $brand-quaternary; // 7.337 with primary
 	color: $brand-primary;
 	padding:3rem 0;
 	position: relative;
@@ -7,28 +7,28 @@
 
 .primary{
 	@extend .band;
-	background-color: $brand-primary;
+	background-color: $brand-primary; // 15.7 with white
 	color:$white;
 }
 
 .secondary{
 	@extend .band;
-	background-color: $brand-secondary;
-	color: $white;
+	background-color: $brand-secondary; // 4.83 with primary
+	color: $brand-primary; 
 }
 
 .tertiary{
 	@extend .band;
-	background-color:$brand-tertiary;
+	background-color:$brand-tertiary; // 6.53 with primary
 }
-.quaternary{
+.quaternary{ // Same color as .band, is it needed?
 	@extend .band;
-	background-color: $brand-quaternary;
+	background-color: $brand-quaternary; // 7.337 with primary
 }
 
 .white{
 	@extend .band;
-	background-color:$white;
+	background-color:$white; // 15.789 with primary
 }
 
 .photo{

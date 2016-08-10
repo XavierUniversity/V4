@@ -56,7 +56,7 @@
                         </p>
                     </div>
                     <div class="col last">
-                        <div class="panel-grey">
+                        <div class="panel">
                             <h4>
                                 H4 Heading
                             </h4>
@@ -73,7 +73,7 @@
                                    href="#">Either</a>
                             </p>
                         </div>&nbsp;
-                        <div class="panel-grey">
+                        <div class="panel-darker">
                             <h4>
                                 H4 Heading
                             </h4>

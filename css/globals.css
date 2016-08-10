@@ -6240,3 +6240,49 @@ footer {
     .button.quaternary.fill:hover, .button.quaternary.fill:focus, .button.quaternary.fill:active {
       background-color: #2eacd6;
       border-color: #2eacd6; }
+
+/* line 1, ../_src/sass/partials/globals/_panels.scss */
+.panel {
+  background-color: #f2f2f2;
+  border: solid 1px #e6e6e6;
+  border-radius: 0.3rem;
+  display: block;
+  margin-bottom: 1rem;
+  padding: 1rem; }
+
+/* line 11, ../_src/sass/partials/globals/_panels.scss */
+.primary .panel {
+  background-color: #102f55;
+  color: white;
+  border: none; }
+
+/* line 19, ../_src/sass/partials/globals/_panels.scss */
+.secondary .panel {
+  background-color: #00ace6;
+  border: none; }
+
+/* line 26, ../_src/sass/partials/globals/_panels.scss */
+.tertiary .panel {
+  background-color: #989a9b;
+  border: none; }
+
+/* line 32, ../_src/sass/partials/globals/_panels.scss */
+.quaternary .panel {
+  background-color: #44b5da;
+  border: none; }
+
+/* line 39, ../_src/sass/partials/globals/_panels.scss */
+.white .panel {
+  background-color: #f2f2f2;
+  border: none; }
+
+/* line 46, ../_src/sass/partials/globals/_panels.scss */
+.photo .panel {
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none;
+  color: #0c2340; }
+/* line 53, ../_src/sass/partials/globals/_panels.scss */
+.photo.dark .panel {
+  background-color: rgba(0, 0, 0, 0.52);
+  border: none;
+  color: white; }
