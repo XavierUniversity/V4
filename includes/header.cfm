@@ -30,8 +30,7 @@
 		    <form action="#0" id="header-search-form">
 			    <div class="search-box">
 				    <label for="header-search-box">Find programs, activities and more...</label>
-			    	<input name="q" id="header-search-box" type="text"  required />
-			    	
+			    	<input name="q" id="header-search-box" type="text" placeholder="e.g. undergraduate admission" />
 			    </div>
 		    	<input type="submit" value="Search" />
 		    </form>

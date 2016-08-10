@@ -5729,8 +5729,8 @@ main:focus {
 /* line 24, ../_src/sass/partials/globals/_header-search.scss */
 #header-search-form input[type=text] {
   background-color: #0c2340;
-  border: none;
-  border-bottom: solid 3px #0099cc;
+  border: solid 3px transparent;
+  border-bottom-color: #0099cc;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 0;
   color: white;
@@ -5747,9 +5747,8 @@ main:focus {
       font-size: 3rem; } }
   /* line 43, ../_src/sass/partials/globals/_header-search.scss */
   #header-search-form input[type=text]:focus {
-    border: none;
-    outline: solid 3px #0099cc; }
-/* line 49, ../_src/sass/partials/globals/_header-search.scss */
+    outline: solid 2px #0099cc; }
+/* line 48, ../_src/sass/partials/globals/_header-search.scss */
 #header-search-form input[type=submit] {
   background-color: #0099cc;
   border: 1px solid #0099cc;
@@ -5766,16 +5765,16 @@ main:focus {
   transition: .5s;
   width: 84px; }
   @media screen and (min-width: 1070px) {
-    /* line 49, ../_src/sass/partials/globals/_header-search.scss */
+    /* line 48, ../_src/sass/partials/globals/_header-search.scss */
     #header-search-form input[type=submit] {
       font-size: 2.4rem;
       height: 100px;
       width: 180px; } }
-  /* line 71, ../_src/sass/partials/globals/_header-search.scss */
+  /* line 70, ../_src/sass/partials/globals/_header-search.scss */
   #header-search-form input[type=submit]:hover, #header-search-form input[type=submit]:focus, #header-search-form input[type=submit]:active {
     color: #0c2340; }
 
-/* line 78, ../_src/sass/partials/globals/_header-search.scss */
+/* line 77, ../_src/sass/partials/globals/_header-search.scss */
 .search-box {
   display: inline-block;
   height: 84px;
@@ -5783,19 +5782,28 @@ main:focus {
   position: relative;
   width: calc( 100vw - 100px); }
   @media screen and (min-width: 1070px) {
-    /* line 78, ../_src/sass/partials/globals/_header-search.scss */
+    /* line 77, ../_src/sass/partials/globals/_header-search.scss */
     .search-box {
       width: calc( 100vw - 200px); } }
-  /* line 89, ../_src/sass/partials/globals/_header-search.scss */
+  /* line 88, ../_src/sass/partials/globals/_header-search.scss */
   .search-box label {
-    color: white;
+    color: rgba(255, 255, 255, 0.63);
     font-size: 1.4rem;
     font-weight: 200;
     transition: top 200ms ease, font-size 200ms ease; }
     @media screen and (min-width: 1070px) {
-      /* line 89, ../_src/sass/partials/globals/_header-search.scss */
+      /* line 88, ../_src/sass/partials/globals/_header-search.scss */
       .search-box label {
         font-size: 2.4rem; } }
+  /* line 98, ../_src/sass/partials/globals/_header-search.scss */
+  .search-box ::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.63); }
+  .search-box ::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.63); }
+  .search-box :-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.63); }
+  .search-box ::placeholder {
+    color: rgba(255, 255, 255, 0.63); }
 
 /* line 2, ../_src/sass/partials/globals/_header-layout.scss */
 .site-header {

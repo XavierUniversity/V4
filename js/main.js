@@ -31,6 +31,24 @@ function headerToggle(hash){
 	
 }
 
+function setPlaceholder(){
+	var placeholderText = [
+		"e.g. undergraduate admission",
+		"e.g. biology",
+		"e.g. graduate admission",
+		"e.g. athletic trainig",
+		"e.g. nursing programs",
+		"e.g. Father Graham",
+		"e.g. business programs",
+		"e.g. occupational therapy"
+	];
+	
+	var number = Math.floor((Math.random() * placeholderText.length) + 1);
+	
+	$("#header-search-box").attr('placeholder', placeholderText[number]);
+	
+}
+
 $(".show-search, .show-nav a").on("click", function(e){
 	e.preventDefault();
 	var $hash = $(this).attr("href");
@@ -41,7 +59,10 @@ $(document).ready(function(){
 	if (window.location.hash == "#search"){
 		$searchContainer.show();
 		$searchInput.focus();
-	}	
+	}
+	
+	setPlaceholder();
+	
 });
 
 $(window).resize(function(){

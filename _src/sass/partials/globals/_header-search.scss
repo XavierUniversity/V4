@@ -23,8 +23,8 @@
 	
 	input[type=text]{
     	background-color: $brand-primary;
-    	border:none;
-		border-bottom: solid 3px $brand-secondary;
+    	border:solid 3px transparent;
+		border-bottom-color: $brand-secondary;
 		background: rgba($white, 0.1);
 		border-radius: 0;
 		color: $white;
@@ -41,8 +41,7 @@
 		}
 		
 		&:focus{
-			border: none;
-			outline: solid 3px $brand-secondary;
+			outline: solid 2px $brand-secondary;
 		}
 	}
 	
@@ -87,12 +86,16 @@
 	}
 	
 	label{
-	    color:$white;
+	    color:rgba($white, 0.63); // Minimum transparency for AAA standard
 	    font-size: 1.4rem;
 	    font-weight: 200;
 		transition: top 200ms ease, font-size 200ms ease;
 		@media screen and (min-width:1070px){
 			font-size: 2.4rem;
 		}
+	}
+	
+	::placeholder{
+		color: rgba($white,0.63); // 7.036 on transparent BG!!
 	}
 }
