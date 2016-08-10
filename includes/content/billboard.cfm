@@ -33,17 +33,7 @@
 				
 				<div class="panel">
 					<p>I am panel content</p>
-				</div>
-				<div class="panel-light">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-lighter">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-darker">
-					<p>I am panel content</p>
-				</div>
-				
+				</div>				
 			</div>
 		</div>
 	</div>
@@ -65,15 +55,6 @@
 				<p><a href="#" class="button quaternary">.button.quaternary</a></p>
 				<p><a href="#" class="button quaternary fill">.button.quaternary.fill</a></p>
 				<div class="panel">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-light">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-lighter">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-darker">
 					<p>I am panel content</p>
 				</div>
 			</div>
@@ -98,15 +79,6 @@
 				<div class="panel">
 					<p>I am panel content</p>
 				</div>
-				<div class="panel-light">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-lighter">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-darker">
-					<p>I am panel content</p>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -127,15 +99,6 @@
 				<p><a href="#" class="button quaternary">.button.quaternary</a></p>
 				<p><a href="#" class="button quaternary fill">.button.quaternary.fill</a></p>
 				<div class="panel">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-light">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-lighter">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-darker">
 					<p>I am panel content</p>
 				</div>
 			</div>
@@ -160,15 +123,6 @@
 				<div class="panel">
 					<p>I am panel content</p>
 				</div>
-				<div class="panel-light">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-lighter">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-darker">
-					<p>I am panel content</p>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -191,15 +145,6 @@
 				<div class="panel">
 					<p>I am panel content</p>
 				</div>
-				<div class="panel-light">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-lighter">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-darker">
-					<p>I am panel content</p>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -220,15 +165,6 @@
 				<p><a href="#" class="button quaternary">.button.quaternary</a></p>
 				<p><a href="#" class="button quaternary fill">.button.quaternary.fill</a></p>
 				<div class="panel">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-light">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-lighter">
-					<p>I am panel content</p>
-				</div>
-				<div class="panel-darker">
 					<p>I am panel content</p>
 				</div>
 			</div>
