@@ -5787,7 +5787,7 @@ main:focus {
       width: calc( 100vw - 200px); } }
   /* line 88, ../_src/sass/partials/globals/_header-search.scss */
   .search-box label {
-    color: rgba(255, 255, 255, 0.63);
+    color: white;
     font-size: 1.4rem;
     font-weight: 200;
     transition: top 200ms ease, font-size 200ms ease; }
