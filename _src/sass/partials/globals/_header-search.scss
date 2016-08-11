@@ -6,6 +6,11 @@
 	overflow: hidden;
     &.show{
 	    height:84px;
+	    
+	    @media(min-width:1070px){
+		    height:100px;
+		}
+	    
 	    visibility: visible;
     }
     &.hide{
@@ -14,12 +19,13 @@
     
 }
 
-#header-search-form {
+#header-search-form{
 	
 	input[type=text]{
     	background-color: $brand-primary;
-    	border:none;
-		border-bottom: solid 3px transparent;
+    	border:solid 3px transparent;
+		border-bottom-color: $brand-secondary;
+		background: rgba($white, 0.1);
 		border-radius: 0;
 		color: $white;
 		font-weight: 100;
@@ -29,17 +35,13 @@
 		line-height: 1.25;
 		padding: 0.2rem 1rem;
 		width: 100%;
-		position: absolute;
-			top:25px;
 			
 		@media screen and (min-width:1070px){
 			font-size: 3rem;
 		}
 		
 		&:focus{
-			background: rgba($white, 0.1);
-			border-color: rgba($white, 0.5);
-			outline: none;
+			outline: solid 2px $brand-secondary;
 		}
 	}
 	
@@ -61,6 +63,7 @@
 		
 		@media screen and (min-width:1070px){
 			font-size: 2.4rem;
+			height: 100px;
 			width: 180px;
 		}
 		
@@ -76,17 +79,23 @@
     height:84px;
 	padding:0 10px;
 	position: relative;
-	width: calc( 100vw - 84px);
+	width: calc( 100vw - 100px);
 	
 	@media screen and (min-width:1070px){
 		width: calc( 100vw - 200px);
 	}
 	
 	label{
-	    color:rgba($white,0.66);
+	    color:$white;
+	    font-size: 1.4rem;
 	    font-weight: 200;
-	    position: absolute;
-    		top: 5px;
-			left: 10px;
+		transition: top 200ms ease, font-size 200ms ease;
+		@media screen and (min-width:1070px){
+			font-size: 2.4rem;
+		}
+	}
+	
+	::placeholder{
+		color: rgba($white,0.63); // 7.036 on transparent BG!!
 	}
 }
