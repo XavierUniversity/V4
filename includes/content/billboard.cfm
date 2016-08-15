@@ -149,7 +149,29 @@
 		</div>
 	</div>
 </section>
-<section class="photo cover fixed" style="background-image: url(img/band-example.jpg);">
+<section class="photo fixed" style="background-image: url(img/band-example.jpg);">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p>I am a band</p>
+				<p><a href="#" class="button">.button</a></p>
+				<p><a href="#" class="button fill">.button.fill</a></p>
+				<p><a href="#" class="button primary">.button.primary</a></p>
+				<p><a href="#" class="button primary fill">.button.primary.fill</a></p>
+				<p><a href="#" class="button secondary">.button.secondary</a></p>
+				<p><a href="#" class="button secondary fill">.button.secondary.fill</a></p>
+				<p><a href="#" class="button tertiary">.button.tertiary</a></p>
+				<p><a href="#" class="button tertiary fill">.button.tertiary.fill</a></p>
+				<p><a href="#" class="button quaternary">.button.quaternary</a></p>
+				<p><a href="#" class="button quaternary fill">.button.quaternary.fill</a></p>
+				<div class="panel">
+					<p>I am panel content</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="photo dark" style="background-image: url(img/band-example.jpg);">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
