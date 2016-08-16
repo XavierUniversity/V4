@@ -1,3 +1,5 @@
+<cfset path = (CGI.SERVER_NAME EQ "localhost" OR CGI.SERVER_NAME EQ "webdev.xavier.edu" ? "" : "/Templates/temp-v4/" )>
+
 <cfset mobileLogo = path & "img/xu-shield.svg">
 <cfset desktopLogo = path & "img/xu-logo.svg">
 

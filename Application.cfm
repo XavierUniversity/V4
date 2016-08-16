@@ -5,9 +5,6 @@
 <cfset alertURI		= "http://www.xavier.edu/safety"><!--- URI for more information --->
 <cfset customMsg 	= "I am a custom message, I can contain <strong>HTML</strong> code too."><!--- if custom alert, add your text. Code is wrapped in a <p> tag --->
 
-
-<cfset path = (CGI.SERVER_NAME EQ "localhost" OR CGI.SERVER_NAME EQ "webdev.xavier.edu" ? "" : "/Templates/temp-v4/" )>
-
 <!---
 	Functions -- To be moved, possibly.
 	------------------

@@ -1,1 +1,1 @@
-<cfinclude template="globals/header.cfm">
+<cfinclude template="globals/footer.cfm">
