@@ -29,8 +29,8 @@
 </cffunction>
 
 <cffunction name="loadStylesheets" output="yes" returnType="string" description="Builds styles as appropriate">
-	<cfset stylesheets = '<link rel="stylesheet" href="<cfoutput>#templatePath#</cfoutput>css/globals.css">'>
-	<cfset stylesheets &= '<link rel="stylesheet" href="<cfoutput>#templatePath#</cfoutput>css/bands.css">'>
+	<cfset stylesheets = '<link rel="stylesheet" href="#templatePath#css/globals.css">'>
+	<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#css/bands.css">'>
 	
 	<!---	
 		<cfset stylesheet = "#path#css/bands.css">
