@@ -13,6 +13,22 @@
 <!--- Set template path location --->
 <cfset templatePath = (CGI.SERVER_NAME EQ "localhost" OR CGI.SERVER_NAME EQ "webdev.xavier.edu" ? "" : "/Templates/temp-v41/" )>
 
+
+<!--- Global Navigation Items --->
+<cfset v4 = true>
+<cfset cleanedName = replace(CGI.SCRIPT_NAME, '/','-', "ALL")>
+<cfset cleanedName = replace(cleanedName, '-','', "ONE")>
+<cfset placementRate = "96">
+<cfset placementText = "of Xavier graduates are employed, enrolled in a full-time graduate program or volunteering within 90 days of graduation.">
+<cfif isDefined("Application.css_ver")>
+	<cfset css_ver = "#Application.css_ver#">
+<cfelse>
+	<cfset css_ver = ''>
+</cfif>
+<cfset currentPath = CGI.SCRIPT_NAME>
+<cfset currentPath = listFirst(currentPath, '\/')>
+
+
 <!--- Dynamically load logo locations --->
 <cfset mobileLogo = templatePath & "img/xu-shield.svg">
 <cfset desktopLogo = templatePath & "img/xu-logo.svg">
