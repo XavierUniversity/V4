@@ -81,7 +81,7 @@
 		    </header>
 		    
 		    <div class="secondary-nav">
-			    <cfif isDefined("secondaryNav") AND secondaryNav NEQ "">
+			    <cfif isDefined("header_secondary") AND header_secondary EQ TRUE>
 				    <cfoutput>#secondaryNav#</cfoutput>
 			    </cfif>
 		    </div>
