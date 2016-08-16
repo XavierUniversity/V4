@@ -1,5 +1,5 @@
 <cfinclude template="_vars.cfm">
-
+<cfinclude template="_functions.cfm">
 
 <!doctype html>
 <html class="no-js" lang="">
@@ -13,7 +13,7 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="<cfoutput>#path#</cfoutput>css/globals.css">
+        <link rel="stylesheet" href="<cfoutput>#templatePath#</cfoutput>css/globals.css">
         <link rel="stylesheet" href="<cfoutput>#stylesheet#</cfoutput>">
         <!--- Grunt should LOOK for modernizr needs
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>--->
@@ -60,7 +60,7 @@
 			    
 			    <div class="search-icon">
 				    <a href="#search" class="show-search" role="button">
-					    <img src="<cfoutput>#path#</cfoutput>img/search.svg" alt="toggle search bar" />
+					    <img src="<cfoutput>#templatePath#</cfoutput>img/search.svg" alt="toggle search bar" />
 				    </a>
 			    </div>
 			    

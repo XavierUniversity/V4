@@ -1,7 +1,7 @@
-<cfset path = (CGI.SERVER_NAME EQ "localhost" OR CGI.SERVER_NAME EQ "webdev.xavier.edu" ? "" : "/Templates/temp-v4/" )>
+<cfset templatePath = (CGI.SERVER_NAME EQ "localhost" OR CGI.SERVER_NAME EQ "webdev.xavier.edu" ? "" : "/Templates/temp-v41/" )>
 
-<cfset mobileLogo = path & "img/xu-shield.svg">
-<cfset desktopLogo = path & "img/xu-logo.svg">
+<cfset mobileLogo = templatePath & "img/xu-shield.svg">
+<cfset desktopLogo = templatePath & "img/xu-logo.svg">
 
 <cfset mainSiteNav = StructNew()>
 <cfset mainSiteNav[1]["title"] = "Admissions">
