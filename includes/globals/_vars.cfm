@@ -28,6 +28,7 @@
 <cfset currentPath = CGI.SCRIPT_NAME>
 <cfset currentPath = listFirst(currentPath, '\/')>
 
+<cfparam name="pageTitle" default="">
 
 <!--- Dynamically load logo locations --->
 <cfset mobileLogo = templatePath & "img/xu-shield.svg">
