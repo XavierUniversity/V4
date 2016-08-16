@@ -80,4 +80,10 @@
 			    
 		    </header>
 		    
+		    <div class="secondary-nav">
+			    <cfif isDefined("secondaryNav") AND secondaryNav NEQ "">
+				    <cfoutput>#secondaryNav#</cfoutput>
+			    </cfif>
+		    </div>
+		    
 			<main id="main-content" tabindex="-1">

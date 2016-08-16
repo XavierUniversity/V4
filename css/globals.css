@@ -6006,6 +6006,38 @@ main:focus {
   #nav-icon.open span:nth-child(3) {
     transform: rotate(-45deg); }
 
+/* line 1, ../_src/sass/partials/globals/_header-secondary-nav.scss */
+.secondary-nav {
+  position: absolute;
+  top: 84px;
+  text-align: center;
+  z-index: 1;
+  width: 100%; }
+  /* line 8, ../_src/sass/partials/globals/_header-secondary-nav.scss */
+  .secondary-nav ul {
+    background-color: rgba(255, 255, 255, 0.9);
+    display: inline-block;
+    height: 48px;
+    line-height: 48px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px; }
+  /* line 18, ../_src/sass/partials/globals/_header-secondary-nav.scss */
+  .secondary-nav li {
+    display: inline;
+    margin: 0;
+    padding: 0; }
+  /* line 24, ../_src/sass/partials/globals/_header-secondary-nav.scss */
+  .secondary-nav a {
+    color: #0c2340;
+    font-size: 1.6rem;
+    font-weight: 200;
+    padding: 0 2rem;
+    text-decoration: none; }
+    /* line 31, ../_src/sass/partials/globals/_header-secondary-nav.scss */
+    .secondary-nav a:hover, .secondary-nav a:focus, .secondary-nav a:active {
+      color: #0099cc; }
+
 /* line 1, ../_src/sass/partials/globals/_cta.scss */
 .cta {
   background: #0099cc;

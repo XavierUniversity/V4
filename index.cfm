@@ -1,5 +1,12 @@
 <cfset pageType = ( structKeyExists(url, "type") ? url.type : "" )>
 
+<cfsavecontent variable="secondaryNav">
+	<ul role="menubar">
+		<li><a id="index.cfm--body-secondaryNav-map" href='map.cfm'>Campus Map</a></li>
+		<li><a id="index.cfm--body-secondaryNav-map" href='a-z.cfm'>A &ndash; Z Indez</a></li>
+	</ul>
+</cfsavecontent>
+
 <cfinclude template="includes/globals/header.cfm">
 
 
