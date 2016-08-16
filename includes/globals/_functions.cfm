@@ -27,3 +27,19 @@
 	
 	<cfreturn html>
 </cffunction>
+
+<cffunction name="stylesheets" output="no" returnType="string" description="Builds styles as appropriate">
+	<cfset stylesheets = '<link rel="stylesheet" href="<cfoutput>#templatePath#</cfoutput>css/globals.css">'>
+	<cfset stylesheets &= '<link rel="stylesheet" href="<cfoutput>#templatePath#</cfoutput>css/bands.css">'>
+	
+	<!---	
+		<cfset stylesheet = "#path#css/bands.css">
+			<cfif pageType EQ "cs">
+				<cfset stylesheet = "#path#css/cms.css">
+				<cfelseif pageType EQ "admin">
+				<cfset stylesheet = "#path#css/admin.css">
+		</cfif>
+	--->
+	
+	<cfreturn stylesheets>
+</cffunction>

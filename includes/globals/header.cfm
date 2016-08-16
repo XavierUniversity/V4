@@ -13,8 +13,8 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="<cfoutput>#templatePath#</cfoutput>css/globals.css">
-        <link rel="stylesheet" href="<cfoutput>#stylesheet#</cfoutput>">
+        <cfset loadStylesheets()>
+<!---         <link rel="stylesheet" href="<cfoutput>#stylesheet#</cfoutput>"> --->
         <!--- Grunt should LOOK for modernizr needs
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>--->
         

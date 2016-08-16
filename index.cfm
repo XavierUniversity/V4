@@ -1,12 +1,5 @@
 <cfset pageType = ( structKeyExists(url, "type") ? url.type : "" )>
 
-<cfset stylesheet = "#path#css/bands.css">
-<cfif pageType EQ "cs">
-	<cfset stylesheet = "#path#css/cms.css">
-<cfelseif pageType EQ "admin">
-	<cfset stylesheet = "#path#css/admin.css">
-</cfif>
-
 <cfinclude template="includes/globals/header.cfm">
 
 
