@@ -1,5 +1,5 @@
-<cfinclude template="_vars.cfm">
 <cfinclude template="_functions.cfm">
+<cfinclude template="_vars.cfm">
 
 <!doctype html>
 <html class="no-js" lang="">
