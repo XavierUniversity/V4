@@ -7,7 +7,7 @@
 	<cfset stylesheet = "#path#css/admin.css">
 </cfif>
 
-<cfinclude template="includes/header.cfm">
+<cfinclude template="includes/globals/header.cfm">
 
 
 
@@ -26,4 +26,4 @@
 	</cfdefaultcase>
 </cfswitch>
 
-<cfinclude template="includes/footer.cfm">
+<cfinclude template="includes/globals/footer.cfm">
