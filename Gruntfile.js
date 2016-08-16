@@ -63,13 +63,12 @@ module.exports = function (grunt){
 					
 				}
 			},
-			live: {
+			prod: {
 				options: {
 					sassDir: '_src/sass',
 					cssDir: 'css',
 					environment: 'production',
-					outputStyle: 'compressed',
-					sourcemap: 'true'
+					outputStyle: 'compressed'
 				}
 			},
 			clean: {
@@ -120,17 +119,13 @@ module.exports = function (grunt){
 		
 		// Watch should always be the last task, just because.
 		watch: {
-			css: {
-				files: ['_src/sass/**/*.{scss,sass}'],
-				tasks: ['compass:dev', 'newer:postcss']
+			dev:{
+				files: ['_src/sass/**/*.{scss,sass}', '_src/js/**/*.js', '_src/img/**/*.{svg,png,jpg,gif'],
+				tasks: ['dev']
 			},
-			js: {
-				files: ['_src/js/**/*.js'],
-				tasks: ['newer:jshint', 'newer:concat:main', 'newer:uglify']
-			},
-			images: {
-				files: ['_src/img/**/*.{svg,png,jpg,gif}'],
-				tasks: ['newer:imagemin']
+			prod: {
+				files: ['_src/sass/**/*.{scss,sass}', '_src/js/**/*.js', '_src/img/**/*.{svg,png,jpg,gif'],
+				tasks: ['prod']
 			}
 		}
 	});
@@ -148,5 +143,8 @@ module.exports = function (grunt){
 	
 	// Register Tasks
 	grunt.registerTask('check', ['jshint']);
-	grunt.registerTask('default', ['newer:jshint', 'compass:dev', 'newer:postcss', 'newer:jshint', 'newer:concat:main', 'newer:uglify', 'watch']);
+	grunt.registerTask('default', ['wach:dev']);
+	
+	grunt.registerTask('dev', ['newer:jshint', 'newer:concat:main', 'newer:uglify', 'compass:dev', 'newer:postcss', 'newer:imagemin', 'watch:dev']);
+	grunt.registerTask('prod', ['newer:jshint', 'newer:concat:main', 'newer:uglify', 'compass:prod', 'newer:postcss', 'newer:imagemin', 'watch:prod']);
 };
