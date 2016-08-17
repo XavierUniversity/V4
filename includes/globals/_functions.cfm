@@ -33,7 +33,7 @@
 	
 	<cfif isDefined("isCampusSuite") AND isCampusSuite>
 		<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#css/cms.css">'>
-		<cfif isLoggedIn()>
+		<cfif isdefined("session.user_id") AND session.user_id is not "">
 			<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#css/admin.css">'>
 		</cfif>
 	<cfelse>
