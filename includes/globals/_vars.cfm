@@ -9,8 +9,6 @@
 <!--- if custom alert, add your text. Code is wrapped in a <p> tag --->
 <cfset customMsg 	= "I am a custom message, I can contain <strong>HTML</strong> code too.">
 
-<cfparam name="isCampusSuite" default="false">
-
 <!--- Set template path location --->
 <cfset templatePath = (CGI.SERVER_NAME EQ "localhost" OR CGI.SERVER_NAME EQ "webdev.xavier.edu" ? "" : "/Templates/temp-v41/" )>
 
