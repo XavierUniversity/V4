@@ -31,7 +31,7 @@
 <cffunction name="loadStylesheets" output="no" returnType="string" description="Builds styles as appropriate">
 	<cfset stylesheets = '<link rel="stylesheet" href="#templatePath#css/globals.css">'>
 	
-	<cfif isCampusSuite>
+	<cfif isDefined("isCampusSuite") AND isCampusSuite>
 		<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#css/cms.css">'>
 		<cfif isLoggedIn>
 			<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#css/admin.css">'>
