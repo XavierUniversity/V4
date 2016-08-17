@@ -30,16 +30,15 @@
 
 <cffunction name="loadStylesheets" output="no" returnType="string" description="Builds styles as appropriate">
 	<cfset stylesheets = '<link rel="stylesheet" href="#templatePath#css/globals.css">'>
-	<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#css/bands.css">'>
-	<!--- TO DO
-		Check if CS and if Admin; Add those styles, replace band path
-		<cfset stylesheet = "#path#css/bands.css">
-			<cfif pageType EQ "cs">
-				<cfset stylesheet = "#path#css/cms.css">
-				<cfelseif pageType EQ "admin">
-				<cfset stylesheet = "#path#css/admin.css">
-		</cfif>
-	--->
 	
+	<cfif isCampusSuite>
+		<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#css/cms.css">'>
+		<cfif isLoggedIn>
+			<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#css/admin.css">'>
+		</cfif>
+	<cfelse>
+		<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#css/bands.css">'>
+	</cfif>
+		
 	<cfreturn stylesheets>
 </cffunction>
