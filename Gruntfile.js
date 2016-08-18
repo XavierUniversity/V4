@@ -20,6 +20,7 @@ module.exports = function (grunt){
 			vendor: {
 				// combine some vendor scripts for production, to reduce requests
 				src: [
+					'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
 					'bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js',
 					'bower_components/owl.carousel/dist/owl.carousel.js',
 					'bower_components/aos/dist/aos.js'
