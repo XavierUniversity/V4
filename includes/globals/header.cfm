@@ -24,6 +24,7 @@
     </head>
     <body>
 <!--- 	    <cfset bodyTag()> --->
+	Hello world
 		<cfinclude template="#templatePath#includes/admin/admin-bar.cfm" />
 	    <a href="#main-content" class="skip">Skip to main content</a>
 	    
