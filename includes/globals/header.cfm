@@ -23,7 +23,8 @@
         
     </head>
     <body>
-	    
+<!--- 	    <cfset bodyTag()> --->
+		<cfinclude template="/Templates/temp-v4/includes/admin-bar.cfm" />
 	    <a href="#main-content" class="skip">Skip to main content</a>
 	    
 	    <div class="search-container">
