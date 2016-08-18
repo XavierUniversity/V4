@@ -23,9 +23,11 @@
         
     </head>
     <body>
-<!--- 	    <cfset bodyTag()> --->
-	Hello world
+
+	<cfif isDefined("isCampussuite") AND isCampusSuite>
+		<!--- <cfset bodyTag()> --->
 		<cfinclude template="#templatePath#includes/admin/admin-bar.cfm" />
+	</cfif>
 	    <a href="#main-content" class="skip">Skip to main content</a>
 	    
 	    <div class="search-container">

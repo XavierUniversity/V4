@@ -3,7 +3,6 @@
 	Defines the new admin toolbar with utilizing the bootstrap navbar vs foundation 
 	Needs minor tweaking as of 12/9/2014
 --->
-Admin bar
 <cfinclude template="/campusuite25/admin/includes/user-permissions.cfm">
 <cfinclude template="/campusuite25/modules/navigation_version.cfm">
 <cfinclude template="/campusuite25/modules/template_version.cfm">
