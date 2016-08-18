@@ -12,3 +12,8 @@
 @import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
 @import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/navs";
 @import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
+
+// Add margin to accommodate the navbar
+body{
+	margin-top:51px;
+}
