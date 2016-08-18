@@ -3,10 +3,10 @@
 	Defines the new admin toolbar with utilizing the bootstrap navbar vs foundation 
 	Needs minor tweaking as of 12/9/2014
 --->
+<cfinclude template="/campusuite25/admin/includes/user-permissions.cfm">
+<cfinclude template="/campusuite25/modules/navigation_version.cfm">
+<cfinclude template="/campusuite25/modules/template_version.cfm">
 <cfif isdefined("session.user_id") AND session.user_id is not "">
-	<cfinclude template="/campusuite25/admin/includes/user-permissions.cfm">
-	<cfinclude template="/campusuite25/modules/navigation_version.cfm">
-	<cfinclude template="/campusuite25/modules/template_version.cfm">
 	<!--- adding XSS header ---><!--- JZ 2014-01-29 --->
 	<cfheader name="X-XSS-Protection" value="0">
 	
