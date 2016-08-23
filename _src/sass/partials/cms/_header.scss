@@ -22,7 +22,7 @@
 	}
 	
 	.trail {
-		display: table-cell;
+		display: table-row;
 		border-bottom: 2px solid #a5acb2;
 		color: $brand-primary;
 		display: inline-block;
@@ -42,7 +42,7 @@
 		}
 	}
 	.heading {
-		display: table-cell;
+		display: table-row;
 		color: $brand-primary;
 		font-weight: 600;
 		font-style: normal;
