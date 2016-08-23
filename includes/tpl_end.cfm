@@ -1,2 +1,5 @@
-<!--- Footer for campus suite based pages --->
+</section>
+<!--- Close out CS --->
+
+<!--- Footer --->
 <cfinclude template="globals/footer.cfm">
