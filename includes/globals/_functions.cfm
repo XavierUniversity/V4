@@ -77,9 +77,9 @@
 	            <cfset v4renderBreadCrumb(seperator, child)>
 			</cfif>                   
         </cfloop>
-
+		
     	<cfcatch type="any">        
-    		<cfdump var="#cfcatch#">
+    		<cfset errorEmail("mcmulleng@xavier.edu;lieslandr@xavier.edu", "V4 Breadcrumb Error - All", true)>
         	<cfreturn false>
         </cfcatch>
     </cftry>
@@ -111,7 +111,7 @@
 			</cfif>
 		</cfoutput>
 		<cfcatch type="any">
-			<cfdump var="#cfcatch#">
+			<cfset errorEmail("mcmulleng@xavier.edu;lieslandr@xavier.edu", "V4 Breadcrumb Error - Single", true)>
 			<cfreturn false>
 			
 		</cfcatch>
