@@ -20,7 +20,9 @@
 		}
 */
 	}
-	
+	.breadcrumbs{
+		border-bottom: 2px solid #a5acb2;
+	}	
 	.trail {
 		display: table-cell;
 		color: $brand-primary;
@@ -42,7 +44,6 @@
 		}
 	}
 	.heading {
-		border-top: 2px solid #a5acb2;
 		color: $brand-primary;
 		font-weight: 600;
 		font-style: normal;
