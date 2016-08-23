@@ -22,7 +22,7 @@
 	}
 	
 	.trail {
-		display: table-row;
+		display: table-cell;
 		vertical-align: middle;
 		border-bottom: 2px solid #a5acb2;
 		color: $brand-primary;
@@ -43,8 +43,6 @@
 		}
 	}
 	.heading {
-		display: table-row;
-		vertical-align: middle;
 		color: $brand-primary;
 		font-weight: 600;
 		font-style: normal;
