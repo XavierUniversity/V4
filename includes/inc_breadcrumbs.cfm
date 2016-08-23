@@ -58,8 +58,6 @@
 		    	<cfargument name="seperator" default="&gt;" required="no" type="string">
 		    	<cfargument name="nav" required="yes">
 		    	
-		    	<cfdump var="#nav#" label="renderAll">
-		    	
 		    	<cftry>
 		        	<cfset found = 0>
 		        
@@ -84,8 +82,6 @@
 			<cffunction name="v4renderBreadCrumb" access="public" returntype="boolean" hint="Renders bread crumb for this nav item" output="yes">
 				<cfargument name="seperator" default="&gt;" required="no" type="string">
 				<cfargument name="nav" required="yes">
-				
-				<cfdump var="#nav#" label="RenderSingle">
 				
 				<cftry>
 					<cfoutput>
