@@ -52,7 +52,7 @@
 	    	
 	    	<cfif session.folder is not "/"><cfoutput><span>/</span> <a href="/#session.folder#/">#session.department#</a></cfoutput></cfif>
             <cfset sideNav = CreateObject("component","campusuite25.objects.navigation.NavigationList").load(session.grp_id)>
-		  
+			<cfdump var="#sideNav#">
 		  <!---<cfmail from="lieslandr@xavier.edu" to="lieslandr@xavier.edu" subject="sideNav Quick Email" type="html">
 			  <p>#listGetAt(structFind(GetHttpRequestData().headers,'X-forwarded-for'),1)#</p>
 			  <cfdump var="#sideNav#" label="sideNav">
