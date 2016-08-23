@@ -1,3 +1,21 @@
+<cffunction name="errorEmail" output="no" description="quick email">
+	<cfargument name="address" type="string" required="yes">
+	<cfargument name="subject" type="string" required="false" default="Quick Email">
+	
+	<cfmail to="#address#" from="Error Email <webmaster@xavier.edu>" subject="#subject#">
+		IP: #listGetAt(structFind(GetHttpRequestData().headers, 'X-forwarded-for'),1)#
+		<cfif cfcatch>
+			<cfdump var="#cfcatch#" label="Catch">
+		</cfif>
+		<cfdump var="#variables#" label="Variables">
+        <cfdump var="#session#" label="Session">
+        <cfdump var="#application#" label="Application">
+        <cfdump var="#form#" label="Form">
+        <cfdump var="#cgi#" label="CGI">
+        <cfdump var="#server#" label="Server">
+	</cfmail>
+</cffunction>
+
 <cffunction name="buildNav" output="no" returnType="string" description="Builds the navigation listing, based on vars">
 	<cfargument name="navStruct" required="true" type="struct" hint="Multi-dimensional Array">
 	<cfargument name="navWrap" default="true" type="boolean" required="true" hint="Wrap in UL?">
@@ -42,7 +60,6 @@
 		
 	<cfreturn stylesheets>
 </cffunction>
-
 
 <cffunction name="v4renderBreadCrumbs" access="public" returntype="boolean" hint="" output="yes">
 	<cfargument name="seperator" default="&gt;" required="no" type="string">
