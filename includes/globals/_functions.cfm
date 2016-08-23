@@ -1,10 +1,10 @@
 <cffunction name="errorEmail" output="no" description="quick email">
-	<cfargument name="address" type="string" required="yes">
+	<cfargument name="address" type="string" required="true">
 	<cfargument name="subject" type="string" required="false" default="Quick Email">
-	
+	<cfargument name="catch" type="boolean" required="true" hint="Show Catch?">
 	<cfmail to="#address#" from="Error Email <webmaster@xavier.edu>" subject="#subject#">
 		IP: #listGetAt(structFind(GetHttpRequestData().headers, 'X-forwarded-for'),1)#
-		<cfif cfcatch>
+		<cfif catch>
 			<cfdump var="#cfcatch#" label="Catch">
 		</cfif>
 		<cfdump var="#variables#" label="Variables">
