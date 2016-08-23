@@ -38,21 +38,8 @@
 				<cfset sideNav = CreateObject("component","campusuite25.objects.navigation.NavigationList").load(session.grp_id)>
 	            
 	            <cfset v4renderBreadCrumbs("<span>/</span>", sideNav)>
-				<cfset break
 	    	<cfcatch>
-	    		<cfset errorEmail("mcmulleng@xavier.edu;lieslandr@xavier.edu", "V4 Breadcrumb Error")>
-<!---
-	    		<cfmail from="v4Test@xavier.edu" to="mcmulleng@xavier.edu;lieslandr@xavier.edu" subject="V4 Breadcrumb Error" type="html">
-	    			IP: #listGetAt(structFind(GetHttpRequestData().headers, 'X-forwarded-for'),1)#
-	    			<cfdump var="#cfcatch#" label="Catch">
-	    			<cfdump var="#variables#" label="Variables">
-                    <cfdump var="#session#" label="Session">
-                    <cfdump var="#application#" label="Application">
-                    <cfdump var="#form#" label="Form">
-                    <cfdump var="#cgi#" label="CGI">
-                    <cfdump var="#server#" label="Server">
-	    		</cfmail>
---->
+	    		<!--- <cfset errorEmail("mcmulleng@xavier.edu;lieslandr@xavier.edu", "V4 Breadcrumb Error", true)> --->
 	    	</cfcatch>
 	    	</cftry>
 	    </cfif>

@@ -1,6 +1,5 @@
 <cfinclude template="_functions.cfm">
 <cfinclude template="_vars.cfm">
-<cfset errorEmail("mcmulleng@xavier.edu", "V4 Breadcrumb Error", false)>
 <!doctype html>
 <html class="no-js" lang="">
     <head>
