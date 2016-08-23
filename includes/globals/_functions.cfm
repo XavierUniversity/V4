@@ -42,3 +42,61 @@
 		
 	<cfreturn stylesheets>
 </cffunction>
+
+
+<cffunction name="v4renderBreadCrumbs" access="public" returntype="boolean" hint="" output="yes">
+	<cfargument name="seperator" default="&gt;" required="no" type="string">
+	<cfargument name="nav" required="yes">
+	
+	<cftry>
+    	<cfset found = 0>
+    
+        <cfloop array="#nav.children#" index="child">
+        	<cfif found eq 0>
+            	<cfif child.open or child.selected>
+                	<cfset found = 1>
+                </cfif>
+	            <cfset v4renderBreadCrumb(seperator, child)>
+			</cfif>                   
+        </cfloop>
+
+    	<cfcatch type="any">        
+    		<cfdump var="#cfcatch#">
+        	<cfreturn false>
+        </cfcatch>
+    </cftry>
+
+	<cfreturn true>
+</cffunction>
+
+
+<cffunction name="v4renderBreadCrumb" access="public" returntype="boolean" hint="Renders bread crumb for nav.nav item" output="yes">
+	<cfargument name="seperator" default="&gt;" required="no" type="string">
+	<cfargument name="nav" required="yes">
+	
+	<cftry>
+		<cfoutput>
+			<cfif (nav.open or nav.selected) and (right(trim(nav.getPath()),9) NEQ 'index.cfm' OR findNoCase('online',nav.getPath())) and nav.getPath() NEQ CGI.script_name >
+#seperator#
+				<cfif not nav.selected>
+					<a href="#nav.getPath()#">
+				</cfif>
+				#nav.label#
+				<cfif not nav.selected>
+					</a>
+				</cfif>
+				<cfloop array="#nav.children#" index="child">
+					<cfif child.hidden neq 1>
+						<cfset v4renderBreadCrumb(seperator, child)>
+					</cfif>
+				</cfloop>
+			</cfif>
+		</cfoutput>
+		<cfcatch type="any">
+			<cfdump var="#cfcatch#">
+			<cfreturn false>
+			
+		</cfcatch>
+	</cftry>
+	<cfreturn true>
+</cffunction>
