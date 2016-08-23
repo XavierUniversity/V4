@@ -8,8 +8,8 @@
 	text-align: center;
 	position: relative;
 	.breadcrumb{
-		margin-top: 3.4rem;
 		display: table;
+		height:156px;
 		width: 100%;
 /* NEED TO FIGURE OUT SIZING FOR THIS
 		@media (min-width:375px){
@@ -22,10 +22,11 @@
 	}
 	.breadcrumbs{
 		border-bottom: 2px solid #a5acb2;
+		display: inline-block;
 	}	
 	.trail {
-		display: table-cell;
 		color: $brand-primary;
+		display: table-cell;
 		font-weight: 400;
 		font-style: normal;
 		font-size: 1.2rem;
@@ -58,6 +59,7 @@
 		}
 	}
 }
+/*
 .banner-main {
 	background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
 	bottom: 0;
@@ -68,3 +70,4 @@
 		height: 156px;
 	}
 }
+*/
