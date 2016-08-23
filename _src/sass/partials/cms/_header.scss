@@ -9,6 +9,8 @@
 	position: relative;
 	.breadcrumb{
 		margin-top: 3.4rem;
+		display: table;
+		width: 100%
 /* NEED TO FIGURE OUT SIZING FOR THIS
 		@media (min-width:375px){
 			margin-top:2.4rem;
@@ -20,6 +22,7 @@
 	}
 	
 	.trail {
+		display: table-cell;
 		border-bottom: 2px solid #a5acb2;
 		color: $brand-primary;
 		display: inline-block;
@@ -39,6 +42,7 @@
 		}
 	}
 	.heading {
+		display: table-cell;
 		color: $brand-primary;
 		font-weight: 600;
 		font-style: normal;
