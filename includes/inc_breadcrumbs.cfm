@@ -52,7 +52,6 @@
 	    	
 	    	<cfif session.folder is not "/"><cfoutput><span>/</span> <a href="/#session.folder#/">#session.department#</a></cfoutput></cfif>
             <cfset sideNav = CreateObject("component","campusuite25.objects.navigation.NavigationList").load(session.grp_id)>
-			<cfdump var="#sideNav#">
 			
 			<cffunction name="v4renderBreadCrumbs" access="public" returntype="boolean" hint="" output="yes">
 		    	<cfargument name="seperator" default="&gt;" required="no" type="string">
