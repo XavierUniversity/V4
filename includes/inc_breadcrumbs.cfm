@@ -117,7 +117,7 @@
 			  <cfdump var="#cgi#" label="CGI">
 			</cfmail>--->
 		  
-            <cfset sideNav.v4renderBreadCrumbs("<span>/</span>")>
+            <cfset v4renderBreadCrumbs("<span>/</span>", sidenav)>
             
 	    </cfif>
     </div>
