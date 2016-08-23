@@ -65,7 +65,7 @@
 		                	<cfif child.open or child.selected>
 		                    	<cfset found = 1>
 		                    </cfif>
-				            <cfset child.v4renderBreadCrumb(seperator)>
+				            <cfset v4renderBreadCrumb(seperator, child)>
 						</cfif>                   
 		            </cfloop>
 		
