@@ -53,13 +53,63 @@
 	    	<cfif session.folder is not "/"><cfoutput><span>/</span> <a href="/#session.folder#/">#session.department#</a></cfoutput></cfif>
             <cfset sideNav = CreateObject("component","campusuite25.objects.navigation.NavigationList").load(session.grp_id)>
 			<cfdump var="#sideNav#">
+			
+			<cffunction name="v4renderBreadCrumbs" access="public" returntype="boolean" hint="" output="yes">
+		    	<cfargument name="seperator" default="&gt;" required="no" type="string">
+		    	<cftry>
+		        	<cfset found = 0>
+		        
+		            <cfloop array="#this.children#" index="child">
+		            	<cfif found eq 0>
+		                	<cfif child.open or child.selected>
+		                    	<cfset found = 1>
+		                    </cfif>
+				            <cfset child.v4renderBreadCrumb(seperator)>
+						</cfif>                   
+		            </cfloop>
+		
+		        	<cfcatch type="any">        
+		            	<cfreturn false>
+		            </cfcatch>
+		        </cftry>
+		
+				<cfreturn true>
+			</cffunction>
+		    
+			
+			<cffunction name="v4renderBreadCrumb" access="public" returntype="boolean" hint="Renders bread crumb for this nav item" output="yes">
+				<cfargument name="seperator" default="&gt;" required="no" type="string">
+				<cftry>
+					<cfoutput>
+						<cfif (this.open or this.selected) and (right(trim(this.getPath()),9) NEQ 'index.cfm' OR findNoCase('online',this.getPath())) and this.getPath() NEQ CGI.script_name >
+			#seperator#
+							<cfif not this.selected>
+								<a href="#this.getPath()#">
+							</cfif>
+							#this.label#
+							<cfif not this.selected>
+								</a>
+							</cfif>
+							<cfloop array="#this.children#" index="child">
+								<cfif child.hidden neq 1>
+									<cfset child.v4renderBreadCrumb(seperator)>
+								</cfif>
+							</cfloop>
+						</cfif>
+					</cfoutput>
+					<cfcatch type="any">
+						<cfreturn false>
+					</cfcatch>
+				</cftry>
+				<cfreturn true>
+			</cffunction>
 		  <!---<cfmail from="lieslandr@xavier.edu" to="lieslandr@xavier.edu" subject="sideNav Quick Email" type="html">
 			  <p>#listGetAt(structFind(GetHttpRequestData().headers,'X-forwarded-for'),1)#</p>
 			  <cfdump var="#sideNav#" label="sideNav">
 			  <cfdump var="#cgi#" label="CGI">
 			</cfmail>--->
 		  
-            <cfset sideNav.renderBreadCrumbs("<span>/</span>")>
+            <cfset sideNav.v4renderBreadCrumbs("<span>/</span>")>
             
 	    </cfif>
     </div>
