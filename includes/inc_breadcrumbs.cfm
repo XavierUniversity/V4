@@ -53,6 +53,7 @@
 	    	<cfif session.folder is not "/"><cfoutput><span>/</span> <a href="/#session.folder#/">#session.department#</a></cfoutput></cfif>
             <cfset sideNav = CreateObject("component","campusuite25.objects.navigation.NavigationList").load(session.grp_id)>
 			
+			
 			<cffunction name="v4renderBreadCrumbs" access="public" returntype="boolean" hint="" output="yes">
 		    	<cfargument name="seperator" default="&gt;" required="no" type="string">
 		    	<cfargument name="nav" required="yes">
@@ -60,7 +61,7 @@
 		    	<cftry>
 		        	<cfset found = 0>
 		        
-		            <cfloop array="#this.children#" index="child">
+		            <cfloop array="#nav.children#" index="child">
 		            	<cfif found eq 0>
 		                	<cfif child.open or child.selected>
 		                    	<cfset found = 1>
@@ -79,22 +80,22 @@
 			</cffunction>
 		    
 			
-			<cffunction name="v4renderBreadCrumb" access="public" returntype="boolean" hint="Renders bread crumb for this nav item" output="yes">
+			<cffunction name="v4renderBreadCrumb" access="public" returntype="boolean" hint="Renders bread crumb for nav.nav item" output="yes">
 				<cfargument name="seperator" default="&gt;" required="no" type="string">
 				<cfargument name="nav" required="yes">
 				
 				<cftry>
 					<cfoutput>
-						<cfif (this.open or this.selected) and (right(trim(this.getPath()),9) NEQ 'index.cfm' OR findNoCase('online',this.getPath())) and this.getPath() NEQ CGI.script_name >
+						<cfif (nav.open or nav.selected) and (right(trim(nav.getPath()),9) NEQ 'index.cfm' OR findNoCase('online',nav.getPath())) and nav.getPath() NEQ CGI.script_name >
 			#seperator#
-							<cfif not this.selected>
-								<a href="#this.getPath()#">
+							<cfif not nav.selected>
+								<a href="#nav.getPath()#">
 							</cfif>
-							#this.label#
-							<cfif not this.selected>
+							#nav.label#
+							<cfif not nav.selected>
 								</a>
 							</cfif>
-							<cfloop array="#this.children#" index="child">
+							<cfloop array="#nav.children#" index="child">
 								<cfif child.hidden neq 1>
 									<cfset child.v4renderBreadCrumb(seperator)>
 								</cfif>
