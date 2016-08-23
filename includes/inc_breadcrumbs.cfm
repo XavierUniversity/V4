@@ -97,7 +97,7 @@
 							</cfif>
 							<cfloop array="#nav.children#" index="child">
 								<cfif child.hidden neq 1>
-									<cfset child.v4renderBreadCrumb(seperator)>
+									<cfset v4renderBreadCrumb(seperator, child)>
 								</cfif>
 							</cfloop>
 						</cfif>
@@ -116,7 +116,7 @@
 			  <cfdump var="#cgi#" label="CGI">
 			</cfmail>--->
 		  
-            <cfset v4renderBreadCrumbs("<span>/</span>", #sideNav#)>
+            <cfset v4renderBreadCrumbs("<span>/</span>", sideNav)>
             
 	    </cfif>
     </div>
