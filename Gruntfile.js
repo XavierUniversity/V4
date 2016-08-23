@@ -144,7 +144,7 @@ module.exports = function (grunt){
 	
 	// Register Tasks
 	grunt.registerTask('check', ['jshint']);
-	grunt.registerTask('default', ['wach:dev']);
+	grunt.registerTask('default', ['watch:dev']);
 	
 	grunt.registerTask('dev', ['newer:jshint', 'newer:concat:main', 'newer:uglify', 'compass:dev', 'newer:postcss', 'newer:imagemin', 'watch:dev']);
 	grunt.registerTask('prod', ['newer:jshint', 'newer:concat:main', 'newer:uglify', 'compass:prod', 'newer:postcss', 'newer:imagemin', 'watch:prod']);
