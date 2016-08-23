@@ -70,6 +70,7 @@
 		            </cfloop>
 		
 		        	<cfcatch type="any">        
+		        		<cfdump var="#cfcatch#">
 		            	<cfreturn false>
 		            </cfcatch>
 		        </cftry>
@@ -101,7 +102,9 @@
 						</cfif>
 					</cfoutput>
 					<cfcatch type="any">
+						<cfdump var="#cfcatch#">
 						<cfreturn false>
+						
 					</cfcatch>
 				</cftry>
 				<cfreturn true>
