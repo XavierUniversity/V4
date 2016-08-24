@@ -3,7 +3,7 @@
 <cfinclude template="globals/header.cfm">
 
 <!--- Banner image, yo --->
-<section class="banner-small" <!--- needs FeatureImage() ---> style="background-image: url(http://www.xavier.edu/marketing-and-communications/images/dept-header-graphic.jpg);">
+<section class="banner-small" <cfset v4FeatureImage()>>
     <div class="banner-main">
 	    <div class="breadcrumb">
 		    <div class="trail">

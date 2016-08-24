@@ -87,7 +87,6 @@
 	<cfreturn true>
 </cffunction>
 
-
 <cffunction name="v4renderBreadCrumb" access="public" returntype="boolean" hint="Renders bread crumb for nav.nav item" output="yes">
 	<cfargument name="seperator" default="&gt;" required="no" type="string">
 	<cfargument name="nav" required="yes">
@@ -117,4 +116,31 @@
 		</cfcatch>
 	</cftry>
 	<cfreturn true>
+</cffunction>
+
+<cffunction name="v4FeatureImage" returntype="void" output="yes" hint="Loads in the header graphic for Campus Suite pages.">
+	<cfset var cur_dir = "/#currentDirectory#">
+	<cfset var sess_dir = "/#session.folder#">
+	<cfif cur_dir IS "//">
+		<cfset cur_dir = "">
+	</cfif>
+	<cfif sess_dir IS "//">
+		<cfset sess_dir = "">
+	</cfif>
+	<cfset cur_file = listgetat(cgi.script_name, listlen(cgi.script_name, "/"), "/")>
+    <cfset cur_file = listgetat(cur_file, 1, ".")>
+	<cfif fileExists(expandPath("#sess_dir#/images/header-#cur_file#.jpg"))>
+        <cfset header = "#sess_dir#/images/header-#cur_file#.jpg">
+    <cfelseif fileExists(expandPath("#sess_dir#/images/dept-header-graphic.jpg"))>
+        <cfset header = "#sess_dir#/images/dept-header-graphic.jpg">
+    <cfelseif fileExists(expandPath("#sess_dir#/images/dept-header-graphic.gif"))>
+        <cfset header = "#sess_dir#/images/dept-header-graphic.gif">
+    <cfelseif fileExists(expandPath("#sess_dir#/images/dept-header-graphic.png"))>
+        <cfset header = "#sess_dir#/images/dept-header-graphic.png">
+    <cfelse>
+        <cfset header = "/Templates/temp-v4/img/cover/banner-content.jpg">
+    </cfif>
+    <cfif header is not "">
+		style='background-image: url(<cfoutput>#header#</cfoutput>);'
+    </cfif>
 </cffunction>
