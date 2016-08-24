@@ -3,7 +3,7 @@
 	<cfargument name="subject" type="string"  required="false" default="Quick Email">
 	<cfargument name="catch"   type="boolean" required="true" default="false" hint="Show Catch?">
 	
-	<cfmail to="#address#" from="Template Error Email <webmaster@xavier.edu>" subject="#subject#">
+	<cfmail to="#address#" from="Template Error Email <webmaster@xavier.edu>" subject="#subject#" type="html">
 		IP: #listGetAt(structFind(GetHttpRequestData().headers, 'X-forwarded-for'),1)#
 		<cfif catch>
 			<cfdump var="#cfcatch#" label="Catch">
@@ -62,18 +62,18 @@
 	<cfreturn stylesheets>
 </cffunction>
 
-<cffunction name="loadJS" output="yes" returnType="string" description="Builds styles as appropriate">
-	
-	<!--- jquery and javascript includes here --->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="#templatePath#js/jquery.min.js"><\/script>')</script>
-    <script src="#templatePath#js/vendor.min.js"></script>
-    <script src="#templatePath#js/main.min.js"></script>
-    <script src="scripts/local.js"></script>
+<cffunction name="loadJS" output="no" returnType="string" description="Builds styles as appropriate">
+	<cfset js = '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>'
+				& '<script>window.jQuery || document.write(''<script src="#templatePath#js/jquery.min.js"><\/script>'')</script>'
+				& '<script src="#templatePath#js/vendor.min.js"></script>'
+				& '<script src="#templatePath#js/main.min.js"></script>'
+				& '<script src="scripts/local.js"></script>'>
     
     <cfif isDefined("session.user_id") AND session.user_id IS NOT "">
-        <script src="<cfoutput>#templatePath#</cfoutput>js/admin.min.js"></script>
+        <cfset js = '<script src="#templatePath#js/admin.min.js"></script>'
 	</cfif>
+
+	<cfreturn js>
 	
 </cffunction>
 
