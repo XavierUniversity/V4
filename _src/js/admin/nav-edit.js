@@ -16,17 +16,13 @@ var updateOutput = function(e) {
 		maxDepth: 4
 	}).on("change", updateOutput);
 updateOutput($('#nestable'));
-// Better to not rely on inline scripts to do what we want.
-// Seperate JS from HTML for cleaner code.
+
 $("#save-nav").on('click', function() {
-	// Not needed since we can just call it directly as a global var
-	// var pageData = $('#nestable-output').val();
 	$.ajax({
 		type: 'post',
 		url: '/campusuite25/admin/nav_edit2/organize_nav_db.cfm',
 		data: {
 			pages: pageData,
-			// grabbed directly from the global var 
 			grp_id: grp_id
 		},
 		dataType: "json",
@@ -44,7 +40,6 @@ $("#save-nav").on('click', function() {
 			}
 		},
 		error: function(request, status, error) {
-			// do something if call fails..
 			console.log(request);
 			console.log(status);
 			console.log(error);
