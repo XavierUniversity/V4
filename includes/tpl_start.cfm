@@ -56,8 +56,9 @@
 			
 			<cfif pagetype is 'fullpg' or (isDefined('module') and (module IS 'blogXU' or module is 'blog' or module is 'cdn'))>
 				<div class="col-md-12">
+					<!--- START EDITOR ENTRY --->
 			<cfelse>
 				<div class="col-md-9 col-md-push-3">
+					<!--- START EDITOR ENTRY --->
 			</cfif>
-		</div>
 </cfif>
