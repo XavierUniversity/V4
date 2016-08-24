@@ -23,6 +23,7 @@
 	</cfif>
 	</div><!--- content row --->
 </cfif>
+</section>
 <!--- Close out CS --->
 
 <!--- Footer --->

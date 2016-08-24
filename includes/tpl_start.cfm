@@ -37,28 +37,27 @@
 	else, only one section is main content. We should target it with "skip to content"
 		include navigation
 --->
-<cfif isDefined("pageType") and pageType IS 'homepg'>
+<cfif isDefined("pageType") and pageType IS 'homepg' or (isDefined('module') and (module IS 'blogXU' or module is 'blog' or module is 'cdn'))>
+	<section id="site-content" class="container-fluid">
 	<!--- 	No navigational elements here. --->
-	<section id="site-content">
-		<!--- nothing else to really do here. --->
+	<!--- nothing else to really do here. --->
 <cfelse>
-	<div class="row">
-		<div class="col-sm-12">
-			<cfif isDefined("sideNav") && pageType EQ 'secondaryPg'>
-				<div class="subnav-jump">
-					<a class="scroll" href="#subnav">Section Menu <span class="fa fa-angle-down fa-lg"></span></a>
-				</div>
+	<section id="site-content" class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<cfif isDefined("sideNav") && pageType EQ 'secondaryPg'>
+					<div class="subnav-jump">
+						<a class="scroll" href="#subnav">Section Menu <span class="fa fa-angle-down fa-lg"></span></a>
+					</div>
+				</cfif>
+			</div>
+		</div>
+		<div class="row">
+			
+			<cfif pagetype is 'fullpg' or (isDefined('module') and (module IS 'blogXU' or module is 'blog' or module is 'cdn'))>
+				<div class="col-md-12">
+			<cfelse>
+				<div class="col-md-9 col-md-push-3">
 			</cfif>
 		</div>
-	</div>
-	<div class="row">
-		
-		<cfif pagetype is 'fullpg' or (isDefined('module') and (module IS 'blogXU' or module is 'blog' or module is 'cdn'))>
-			<div class="col-md-12">
-		<cfelse>
-			<div class="col-md-9 col-md-push-3">
-		</cfif>
-	</div>
-	<!--- include navigational elements --->
-	<!--- 	if full page or module take full width. Otherwise use 9 cols --->
 </cfif>
