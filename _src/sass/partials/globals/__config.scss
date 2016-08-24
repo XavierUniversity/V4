@@ -1,12 +1,12 @@
 // Check environment (for compiling Sass)
 // Use this var for background images in the stylesheets.
 // DO NOT MOVE, this is required for the font load
-$path: "/Template/temp-v41/";
+$path: "/Templates/temp-v41/";
 @if compass-env() == "development"{
 	$path: "../";
 }
 @else if compass-env() == "production" {
-	$path: "/Template/temp-v41/";
+	$path: "/Templates/temp-v41/";
 }
 
 $font-family: "Frutiger W01", 'Helvetica Neue', Helvetica, Arial, sans-serif;
