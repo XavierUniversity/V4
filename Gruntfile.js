@@ -116,7 +116,7 @@ module.exports = function (grunt){
 						expand: true,
 						flatten: true,
 						src: ['bower_components/aos/dist/*.css'],
-						dest: '_src/sass/vendor/',
+						dest: '_src/sass/partials/vendor/',
 						filter: 'isFile',
 						rename: function(dest,src){
 							return dest + "_" + src.replace(/\.css$/, ".scss");
