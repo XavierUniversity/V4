@@ -78,3 +78,8 @@
 <cfset cta[3]["url"] = "/give">
 
 <cfset ctaHTML = buildNav(cta, true, false)>
+
+
+
+<cfset stylesheets = loadCSS()>
+<cfset javascripts = loadJS()>

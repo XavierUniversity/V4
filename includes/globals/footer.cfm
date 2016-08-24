@@ -63,6 +63,6 @@
 			</div>
 		</div>
 		
-		<cfset loadJS()>
+		<cfoutput>#javascripts#</cfoutput>
 	</body>
 </html>

@@ -47,7 +47,7 @@
 	<cfreturn html>
 </cffunction>
 
-<cffunction name="loadStylesheets" output="no" returnType="string" description="Builds styles as appropriate">
+<cffunction name="loadCSS" output="no" returnType="string" description="Builds styles as appropriate">
 	<cfset stylesheets = '<link rel="stylesheet" href="#templatePath#css/globals.css">'>
 	
 	<cfif isDefined("isCampusSuite") AND isCampusSuite>
