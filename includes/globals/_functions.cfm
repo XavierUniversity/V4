@@ -107,23 +107,21 @@
 	<cfargument name="nav" required="yes">
 	
 	<cftry>
-		<cfoutput>
-			<cfif (nav.open or nav.selected) and (right(trim(nav.getPath()),9) NEQ 'index.cfm' OR findNoCase('online',nav.getPath())) and nav.getPath() NEQ CGI.script_name >
+		<cfif (nav.open or nav.selected) and (right(trim(nav.getPath()),9) NEQ 'index.cfm' OR findNoCase('online',nav.getPath())) and nav.getPath() NEQ CGI.script_name >
 #seperator#
-				<cfif not nav.selected>
-					<a href="#nav.getPath()#">
-				</cfif>
-				#nav.label#
-				<cfif not nav.selected>
-					</a>
-				</cfif>
-				<cfloop array="#nav.children#" index="child">
-					<cfif child.hidden neq 1>
-						<cfset v4renderBreadCrumb(seperator, child)>
-					</cfif>
-				</cfloop>
+			<cfif not nav.selected>
+				<a href="#nav.getPath()#">
 			</cfif>
-		</cfoutput>
+			#nav.pageTitle#
+			<cfif not nav.selected>
+				</a>
+			</cfif>
+			<cfloop array="#nav.children#" index="child">
+				<cfif child.hidden neq 1>
+					<cfset v4renderBreadCrumb(seperator, child)>
+				</cfif>
+			</cfloop>
+		</cfif>
 		<cfcatch type="any">
 			<cfset errorEmail("mcmulleng@xavier.edu;lieslandr@xavier.edu", "V4 Breadcrumb Error - Single", true)>
 			<cfreturn false>
