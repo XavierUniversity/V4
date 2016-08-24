@@ -14,7 +14,7 @@ module.exports = function (grunt){
 		},
 		concat: {
 			main: {
-				src: ['_src/js/**/*.js', '!_src/js/admin/*.js'],
+				src: ['_src/js/*.js'],
 				dest: 'js/main.js'
 			},
 			admin: {
