@@ -14,13 +14,13 @@ module.exports = function (grunt){
 		},
 		concat: {
 			main: {
-				src: ['_src/js/**/*.js', '!_src/js/**/admin-*.js'],
+				src: ['_src/js/**/*.js', '!_src/js/admin/*.js'],
 				dest: 'js/main.js'
 			},
 			admin: {
 				src: [
 					'bower_components/nestable/jquery.nestable.js',
-					'_src/js/**/admin-*.js'
+					'_src/js/admin/*.js'
 				],
 				dest: 'js/admin.js'
 			},
@@ -165,6 +165,6 @@ module.exports = function (grunt){
 	grunt.registerTask('check', ['jshint']);
 	grunt.registerTask('default', ['watch:dev']);
 	
-	grunt.registerTask('dev', ['newer:jshint', 'newer:concat:main', 'newer:uglify', 'compass:dev', 'newer:postcss', 'newer:imagemin', 'watch:dev']);
-	grunt.registerTask('prod', ['newer:jshint', 'newer:concat:main', 'newer:uglify', 'compass:prod', 'newer:postcss', 'newer:imagemin', 'watch:prod']);
+	grunt.registerTask('dev', ['newer:jshint', 'newer:concat', 'newer:uglify', 'compass:dev', 'newer:postcss', 'newer:imagemin', 'watch:dev']);
+	grunt.registerTask('prod', ['newer:jshint', 'newer:concat', 'newer:uglify', 'compass:prod', 'newer:postcss', 'newer:imagemin', 'watch:prod']);
 };
