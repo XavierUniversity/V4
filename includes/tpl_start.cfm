@@ -3,7 +3,7 @@
 <cfinclude template="globals/header.cfm">
 
 <!--- Banner image, yo --->
-<section class="banner-small" style="background-image: url(http://www.xavier.edu/marketing-and-communications/images/dept-header-graphic.jpg);">
+<section class="banner-small" <!--- needs FeatureImage() ---> style="background-image: url(http://www.xavier.edu/marketing-and-communications/images/dept-header-graphic.jpg);">
     <div class="banner-main">
 	    <div class="breadcrumb">
 		    <div class="trail">
@@ -28,5 +28,37 @@
     </div>
 </section>
 
-<!--- begin CS content area --->
-<section id="content">
+<!--- Header navigation stuff --->
+<cfinclude template="#templatePath#/includes/cms/header-nav.cfm">
+
+<!--- begin CS content area 
+	
+	if homepage, the entire area is the main copy; No navigation
+	else, only one section is main content. We should target it with "skip to content"
+		include navigation
+--->
+<cfif isDefined("pageType") and pageType IS 'homepg'>
+	<!--- 	No navigational elements here. --->
+	<section id="site-content">
+		<!--- nothing else to really do here. --->
+<cfelse>
+	<div class="row">
+		<div class="col-sm-12">
+			<cfif isDefined("sideNav") && pageType EQ 'secondaryPg'>
+				<div class="subnav-jump">
+					<a class="scroll" href="#subnav">Section Menu <span class="fa fa-angle-down fa-lg"></span></a>
+				</div>
+			</cfif>
+		</div>
+	</div>
+	<div class="row">
+		
+		<cfif pagetype is 'fullpg' or (isDefined('module') and (module IS 'blogXU' or module is 'blog' or module is 'cdn'))>
+			<div class="col-md-12">
+		<cfelse>
+			<div class="col-md-9 col-md-push-3">
+		</cfif>
+	</div>
+	<!--- include navigational elements --->
+	<!--- 	if full page or module take full width. Otherwise use 9 cols --->
+</cfif>
