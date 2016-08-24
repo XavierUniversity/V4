@@ -38,11 +38,11 @@
 		include navigation
 --->
 <cfif isDefined("pageType") and pageType IS 'homepg' or (isDefined('module') and (module IS 'blogXU' or module is 'blog' or module is 'cdn'))>
-	<section id="site-content" class="container-fluid">
+	<section id="content" class="container-fluid">
 	<!--- 	No navigational elements here. --->
 	<!--- nothing else to really do here. --->
 <cfelse>
-	<section id="site-content" class="container">
+	<section id="content" class="container">
 		<a class="nav-jump scroll" href="#subnav">Section Menu <span class="fa fa-chevron-down" aria-hidden="true"></span></a>
 		
 		<div class="row">
