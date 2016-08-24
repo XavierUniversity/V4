@@ -14,8 +14,15 @@ module.exports = function (grunt){
 		},
 		concat: {
 			main: {
-				src: ['_src/js/**/*.js'],
+				src: ['_src/js/**/*.js', '!_src/js/**/admin-*.js'],
 				dest: 'js/main.js'
+			},
+			admin: {
+				src: [
+					'bower_components/nestable/jquery.nestable.js',
+					'_src/js/**/admin-*.js'
+				],
+				dest: 'js/admin.js'
 			},
 			vendor: {
 				// combine some vendor scripts for production, to reduce requests
@@ -38,7 +45,8 @@ module.exports = function (grunt){
 				files: {
 					'js/main.min.js' : ['js/main.js'],
 					'js/vendor.min.js': ['js/vendor.js'],
-					'js/plugins.min.js' : ['js/plugins.js']	
+					'js/plugins.min.js' : ['js/plugins.js'],
+					'js/admin.min.js' : ['js/admin.js']	
 				}
 			}	
 		},
@@ -113,6 +121,17 @@ module.exports = function (grunt){
 						rename: function(dest,src){
 							return dest + "_" + src.replace(/\.css$/, ".scss");
 						}
+					}
+				]
+			},
+			jquery: {
+				files: [
+					{
+						expand: true,
+						flatten: true,
+						src: ['bower_components/jquery/dist/jquery.min.js'],
+						dest: 'js/',
+						filter: 'isFile'
 					}
 				]
 			}				

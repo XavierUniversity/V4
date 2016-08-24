@@ -10,7 +10,7 @@
   ],
   "dependencies": {
     "modernizr": "^3.0.0",
-    "jquery": "^1.10.2",
+    "jquery": "^1.11.2",
     "bootstrap-sass": "^3.3.5",
     "normalize.scss": "^3.0.2",
     "owl.carousel": "owl-carousel2#~2.0.0-beta.3",
@@ -21,7 +21,8 @@
     "fancybox": "~2.1.5",
     "jquery-ui": "jquery.ui#~1.11.4",
     "animate.scss": "animate-scss#~1.2.1",
-    "aos": "^2.0.4"
+    "aos": "^2.0.4",
+    "nestable": "*"
   },
   "devDependencies": {}
 }

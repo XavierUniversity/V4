@@ -63,13 +63,6 @@
 			</div>
 		</div>
 		
-		<!--- jquery and javascript includes here --->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<!--- Make "local" instead of bower --->
-        <script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
-        <script src="<cfoutput>#templatePath#</cfoutput>js/vendor.min.js"></script>
-        <script src="<cfoutput>#templatePath#</cfoutput>js/main.min.js"></script>
-        <script src="scripts/local.js"></script>
-		<!--- jquery and javascript includes here --->
+		<cfset loadJS()>
 	</body>
 </html>
