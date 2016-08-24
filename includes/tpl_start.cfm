@@ -43,22 +43,15 @@
 	<!--- nothing else to really do here. --->
 <cfelse>
 	<section id="site-content" class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<cfif isDefined("sideNav") && pageType EQ 'secondaryPg'>
-					<div class="subnav-jump">
-						<a class="scroll" href="#subnav">Section Menu <span class="fa fa-angle-down fa-lg"></span></a>
-					</div>
-				</cfif>
-			</div>
-		</div>
+		<a class="nav-jump scroll" href="#subnav">Section Menu <span class="fa fa-chevron-down" aria-hidden="true"></span></a>
+		
 		<div class="row">
 			
 			<cfif pagetype is 'fullpg' or (isDefined('module') and (module IS 'blogXU' or module is 'blog' or module is 'cdn'))>
-				<div class="col-md-12">
+				<article class="col-md-12">
 					<!--- START EDITOR ENTRY --->
 			<cfelse>
-				<div class="col-md-9 col-md-push-3">
+				<article class="col-md-9 col-md-push-3">
 					<!--- START EDITOR ENTRY --->
 			</cfif>
 </cfif>
