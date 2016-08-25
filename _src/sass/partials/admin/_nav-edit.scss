@@ -66,6 +66,12 @@
 }
 
 .uiNavEditor{
+	label, input{
+		display: block;
+	}
+	input {
+		padding:0.5rem;
+	}
 	footer{
 		background:none;
 		padding: 0;
