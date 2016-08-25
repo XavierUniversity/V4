@@ -19,11 +19,13 @@
         </style>
         
     </head>
-    <body>
+    
 
 	<cfif isDefined("isCampussuite") AND isCampusSuite>
-		<!--- <cfset bodyTag()> --->
+		<cfset bodyTag()>
 		<cfinclude template="#templatePath#includes/admin/admin-bar.cfm" />
+	<cfelse>
+	<body>
 	</cfif>
 	    <a href="#main-content" class="skip">Skip to main content</a>
 	    
