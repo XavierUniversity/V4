@@ -26,6 +26,9 @@
 		background: darken($white, 20%);
 		border-color: darken($white, 20%);
 		margin: 0 0.5rem;
+		&:hover, &:focus{
+			background-color: darken($white, 5%);
+		}
 	}
 }
 
