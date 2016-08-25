@@ -66,6 +66,10 @@
 }
 
 .uiNavEditor{
+	h1{
+		color:$brand-secondary;
+		font-size: 1.8rem;
+	}
 	label, input[type='text']{
 		display: block;
 		margin: 0.5rem 0;
