@@ -113,3 +113,11 @@
 	display: inline-block !important;
 	visibility: visible !important;
 }
+
+.six.columns{
+	@include make-sm-column(12);
+	@include make-md-column(6);
+}
+.twelve.columns{
+	@include make-sm-column(12);
+}
