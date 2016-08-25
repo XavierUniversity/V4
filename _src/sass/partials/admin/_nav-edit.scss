@@ -6,7 +6,7 @@
 	margin:1rem 0.5rem;
 	padding:0.35rem;
 	text-decoration: none;
-	&:hover{
+	&:hover, &:focus{
 		background-color: darken($white, 15%);
 	}
 		
@@ -15,7 +15,7 @@
 		border-color:$brand-success;
 		color:$white;
 		
-		&:hover{
+		&:hover, &:focus{
 			background-color: darken($brand-success, 10%);
 		}
 	}
