@@ -3,12 +3,20 @@
 	border:solid 1px darken($white, 10%);
 	display: inline-block;
 	font-size: 1.4rem;
-	margin:0 0.5rem;
+	margin:1rem 0.5rem;
 	padding:0.25rem;
 	
 	&.success{
 		background-color:$brand-success;
 		border-color:$brand-success;
 		color:$white;
+	}
+}
+
+.nav-actions{
+	.ui-button{
+		background: darken($white, 20%);
+		border-color: darken($white, 20%);
+		margin: 0 0.5rem;
 	}
 }
