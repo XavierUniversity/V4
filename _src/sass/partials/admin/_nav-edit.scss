@@ -2,6 +2,7 @@
 	background:$brand-tertiary;
 	border:solid 1px $brand-tertiary;
 	display: inline-block;
+	font-size: 1.4rem;
 	margin:1rem;
 	padding:0.5rem;
 	
@@ -9,9 +10,5 @@
 		background-color:$brand-success;
 		border-color:$brand-success;
 		color:$white;
-	}
-	
-	.nav-actions{
-		font-size:1.2rem;
 	}
 }
