@@ -70,7 +70,7 @@
 				& '<script src="scripts/local.js"></script>'>
     
     <cfif isDefined("session.user_id") AND session.user_id IS NOT "">
-        <cfset js = '<script src="#templatePath#js/admin.min.js"></script>'>
+        <cfset js &= '<script src="#templatePath#js/admin.min.js"></script>'>
 	</cfif>
 
 	<cfreturn js>
