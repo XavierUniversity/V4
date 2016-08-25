@@ -122,7 +122,7 @@
 	@include make-sm-column(12);
 }
 
-.pgProperties{
+#pgProperties{
 	@include make-row();
 	
 	.col1_2{
