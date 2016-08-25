@@ -1,6 +1,6 @@
 .ui-button{
-	background:$brand-tertiary;
-	border:solid 1px $brand-tertiary;
+	background:darken($white, 10%);
+	border:solid 1px darken($white, 10%);
 	display: inline-block;
 	font-size: 1.4rem;
 	margin:0 0.5rem;
