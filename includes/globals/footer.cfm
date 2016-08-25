@@ -64,5 +64,9 @@
 		</div>
 		
 		<cfoutput>#javascripts#</cfoutput>
+		<cfif isDefined("pageFootScript")>
+			<cfoutput>#pageFootScript#</cfoutput>
+		</cfif>
+
 	</body>
 </html>
