@@ -1,12 +1,15 @@
 .ui-button{
+	background:$brand-tertiary;
+	border:solid 1px $brand-tertiary;
 	display: inline-block;
 	margin:1rem;
 	padding:0.5rem;
-	border:solid 1px $brand-primary;
 	
 	&.success{
 		background-color:$brand-success;
 		border-color:$brand-success;
 		color:$white;
 	}
+	
+	
 }
