@@ -48,3 +48,26 @@
 		display: inline-block;
 	}
 }
+
+.ui-tabs{
+	border-bottom: solid 1px #e6e6e6;
+	display: block;
+	height: 40px;
+	
+	dd{
+		display: block;
+		float: left;
+		padding: 0;
+		margin: 0;
+		
+		&.active{
+			border-top: 3px solid $brand-primary;
+			margin-top: -3px;
+		}
+	}
+}
+
+.ui-tabs-content{
+	list-style: none;
+}
+
