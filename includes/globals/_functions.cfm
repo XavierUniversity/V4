@@ -110,7 +110,7 @@
 		<cfif (nav.open or nav.selected) and (right(trim(nav.getPath()),9) NEQ 'index.cfm' OR findNoCase('online',nav.getPath()) or trim(nav.getPath()) NEQ CGI.script_name)>
 			#seperator#
 			<cfif not nav.selected>
-				<a href="#nav.getPath()#">
+				<a href="#nav.getPath()#" id="#cgi.script_name#">
 			</cfif>
 			#nav.pageTitle#
 			<cfif not nav.selected>
