@@ -32,7 +32,7 @@
 	    		</cfloop>
     		</cfif>
     		
-    		<cfif session.folder is not "/"><cfoutput><span>/</span> <a href="/#session.folder#/">#session.department#</a></cfoutput></cfif>
+    		<cfif session.folder is not "/"><span>/</span> <cfoutput><a href="/#session.folder#/">#session.department#</a></cfoutput></cfif>
 			<cfset sideNav = CreateObject("component","campusuite25.objects.navigation.NavigationList").load(session.grp_id)>
             
             <cfset v4renderBreadCrumbs("<span>/</span>", sideNav)>
