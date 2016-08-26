@@ -107,12 +107,12 @@
 	<cfargument name="nav" required="yes">
 	
 	<cftry>
-		<cfif (nav.open or nav.selected) and (right(trim(nav.getPath()),9) NEQ 'index.cfm' OR findNoCase('online',nav.getPath()))>
+		<cfif (nav.open or nav.selected) and (right(trim(nav.getPath()),9) NEQ 'index.cfm' OR findNoCase('online',nav.getPath())) and nav.getPath() NEQ CGI.script_name >
 			#seperator#
 			<cfif not nav.selected>
 				<a href="#nav.getPath()#">
 			</cfif>
-			#nav.pageTitle#
+			#nav.label#
 			<cfif not nav.selected>
 				</a>
 			</cfif>
