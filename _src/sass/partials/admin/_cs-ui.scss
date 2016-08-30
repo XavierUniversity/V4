@@ -80,8 +80,8 @@
 		background-color: lighten($brand-primary, 5%);
 	}
 	&:active{
-		box-shadow: none;
-		transform: translateY(10px);
+		box-shadow: 0 5px darken($brand-primary, 5%);
+		transform: translateY(5px);
 	}
 	
 	
@@ -106,4 +106,25 @@
 		}
 	}
 */
+}
+
+
+section.press button {
+  color: #fff;
+  background-color: #6496c8;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px #27496d;
+}
+
+section.press button:hover,
+section.press button.hover {
+  background-color: #417cb8
+}
+
+section.press button:active,
+section.press button.active {
+  background-color: #417cb8;
+  box-shadow: 0 5px #27496d;
+  transform: translateY(5px);
 }
