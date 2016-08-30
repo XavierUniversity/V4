@@ -113,18 +113,18 @@
 	padding: 0.5rem 1rem;
 	text-align: center;
 	cursor: pointer;
-	color: #fff;
+	color: $white;
 	background-color: $brand-primary;
 	border: none;
-	border-radius: 15px;
-	box-shadow: 0 5px lighten($brand-primary, 10%);
+	box-shadow: 0 5px lighten($brand-primary, 15%);
 	
 	&:focus, &:hover{
 		background-color: lighten($brand-primary, 5%);
+		color: $white;
 	}
 	
 	&:active{
-		box-shadow: 0 0px $brand-primary;
+		box-shadow: 0 0px lighten($brand-primary, 15%);
 		transform: translateY(5px);
 	}
 }
