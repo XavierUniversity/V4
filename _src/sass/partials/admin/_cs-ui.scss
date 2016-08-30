@@ -132,11 +132,11 @@
 	
 	&.success{
 		background-color: darken($brand-success, 26%);
-		box-shadow: 0 5px darken($brand-success, 20%);
+		box-shadow: 0 5px darken($brand-success, 15%);
 		color: $white;
 		&:focus, &:hover{
 			background-color: darken($brand-success, 30%);
-			box-shadow: 0 5px darken($brand-success, 26%);
+			box-shadow: 0 5px darken($brand-success, 20%);
 			color: $white;
 		}
 		
