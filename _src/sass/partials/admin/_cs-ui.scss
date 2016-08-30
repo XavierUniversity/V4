@@ -131,14 +131,17 @@
 	}
 	
 	&.success{
-		background-color: $brand-success;
-		box-shadow: 0 5px darken($brand-success, 15%);
+		background-color: darken($brand-success, 26%);
+		box-shadow: 0 5px $brand-success;
+		color: $white;
 		&:focus, &:hover{
-			background-color: darken($brand-success, 5%);
+			background-color: darken($brand-success, 30%);
+			color: $white;
 		}
 		
 		&:active{
 			box-shadow: 0 0px darken($brand-success, 15%);
+			color: $white;
 		}
 	}
 }
