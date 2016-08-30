@@ -71,3 +71,25 @@
 	list-style: none;
 }
 
+.ui-button{
+	background:transparent;
+	border:solid 2px darken($white, 10%);
+	display: inline-block;
+	font-size: 1.4rem;
+	margin:1rem 0.5rem;
+	padding:0.35rem;
+	text-decoration: none;
+	&:hover, &:focus{
+		background-color: darken($white, 15%);
+	}
+		
+	&.success{
+		background-color:$brand-success;
+		border-color:$brand-success;
+		color:$white;
+		
+		&:hover, &:focus{
+			background-color: darken($brand-success, 10%);
+		}
+	}
+}
