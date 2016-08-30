@@ -131,6 +131,7 @@
 	}
 	
 	&.success{
+		background-color: lighten($brand-success, 10%);
 		box-shadow: 0 5px $brand-success;
 		&:focus, &:hover{
 			background-color: darken($brand-success, 5%);
