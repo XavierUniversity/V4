@@ -109,18 +109,27 @@
 
 
 .ui-button {
-  padding: 15px 25px;
-  font-size: 24px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+	display: inline-block;
+	padding: 15px 25px;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+	background-color: $brand-primary;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px lighten($brand-primary, 10%);
+	
+	&:focus, &:hover{
+		background-color: lighten($brand-primary, 5%);
+	}
+	
+	&:active{
+		box-shadow: 0 5px $brand-primary;
+		transform: translateY(4px);
+	}
 }
 
+/*
 .ui-button:hover {background-color: #3e8e41}
 
 .ui-button:active {
@@ -149,3 +158,4 @@ section.press button.active {
   box-shadow: 0 5px #27496d;
   transform: translateY(5px);
 }
+*/
