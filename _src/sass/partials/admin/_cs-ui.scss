@@ -70,43 +70,6 @@
 .ui-tabs-content{
 	list-style: none;
 }
-/*
-
-.ui-button{
-	color: $white;
-	background-color: $brand-primary;
-	box-shadow: 0 10px darken($brand-primary, 5%);
-	
-	&:hover, &:focus {
-		background-color: lighten($brand-primary, 5%);
-	}
-	&:active{
-		box-shadow: 0 5px darken($brand-primary, 5%);
-		transform: translateY(5px);
-	}
-	
-	background:transparent;
-	border:solid 2px darken($white, 10%);
-	display: inline-block;
-	font-size: 1.4rem;
-	margin:1rem 0.5rem;
-	padding:0.35rem;
-	text-decoration: none;
-	&:hover, &:focus{
-		background-color: darken($white, 15%);
-	}
-		
-	&.success{
-		border-color:$brand-success;
-		
-		&:hover, &:focus{
-			background-color: darken($brand-success, 10%);
-			color:$white;
-		}
-	}
-
-}*/
-
 
 .ui-button {
 	background-color: lighten($brand-tertiary, 10%);
@@ -130,51 +93,20 @@
 		text-decoration: none;
 		transform: translateY(5px);
 	}
-	
-	&.success{
-		background-color: darken($brand-success, 26%);
-		box-shadow: 0 5px darken($brand-success, 15%);
+}
+
+.success{
+	background-color: darken($brand-success, 26%);
+	box-shadow: 0 5px darken($brand-success, 15%);
+	color: $white;
+	&:focus, &:hover{
+		background-color: darken($brand-success, 30%);
+		box-shadow: 0 5px darken($brand-success, 20%);
 		color: $white;
-		&:focus, &:hover{
-			background-color: darken($brand-success, 30%);
-			box-shadow: 0 5px darken($brand-success, 20%);
-			color: $white;
-		}
-		
-		&:active{
-			box-shadow: 0 0px darken($brand-success, 15%);
-			color: $white;
-		}
+	}
+	
+	&:active{
+		box-shadow: 0 0px darken($brand-success, 15%);
+		color: $white;
 	}
 }
-
-/*
-.ui-button:hover {background-color: #3e8e41}
-
-.ui-button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-
-section.press button {
-  color: #fff;
-  background-color: #6496c8;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 10px #27496d;
-}
-
-section.press button:hover,
-section.press button.hover {
-  background-color: #417cb8
-}
-
-section.press button:active,
-section.press button.active {
-  background-color: #417cb8;
-  box-shadow: 0 5px #27496d;
-  transform: translateY(5px);
-}
-*/
