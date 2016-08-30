@@ -109,23 +109,23 @@
 
 
 .ui-button {
-	background-color: $brand-primary;
+	background-color: $brand-tertiary;
 	border: none;
-	box-shadow: 0 5px lighten($brand-primary, 15%);
+	box-shadow: 0 5px lighten($brand-tertiary, 15%);
 	color: $white;
 	cursor: pointer;
 	display: inline-block;
-	padding: 0.5rem 1rem;
+	padding: 0.25rem 1rem;
 	text-align: center;
 	text-decoration: none;
 	
 	&:focus, &:hover{
-		background-color: lighten($brand-primary, 5%);
+		background-color: lighten($brand-tertiary, 5%);
 		color: $white;
 	}
 	
 	&:active{
-		box-shadow: 0 0px lighten($brand-primary, 15%);
+		box-shadow: 0 0px lighten($brand-tertiary, 15%);
 		color:$white;
 		transform: translateY(5px);
 	}
