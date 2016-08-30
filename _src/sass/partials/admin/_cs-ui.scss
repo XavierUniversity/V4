@@ -109,14 +109,14 @@
 
 
 .ui-button {
-	display: inline-block;
-	padding: 0.5rem 1rem;
-	text-align: center;
-	cursor: pointer;
-	color: $white;
 	background-color: $brand-primary;
 	border: none;
 	box-shadow: 0 5px lighten($brand-primary, 15%);
+	color: $white;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	text-align: center;
 	
 	&:focus, &:hover{
 		background-color: lighten($brand-primary, 5%);
@@ -125,6 +125,7 @@
 	
 	&:active{
 		box-shadow: 0 0px lighten($brand-primary, 15%);
+		color:$white;
 		transform: translateY(5px);
 	}
 }
