@@ -72,7 +72,7 @@
 }
 
 .ui-button {
-	background-color: lighten($brand-tertiary, 10%);
+	background-color: lighten($brand-tertiary, 12%);
 	border: none;
 	box-shadow: 0 5px $brand-tertiary;
 	color: #333;
@@ -84,7 +84,7 @@
 	text-decoration: none;
 	
 	&:focus, &:hover{
-		background-color: lighten($brand-tertiary, 10%);
+		background-color: lighten($brand-tertiary, 15%);
 		text-decoration: none;
 	}
 	
