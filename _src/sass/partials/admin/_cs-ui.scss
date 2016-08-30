@@ -117,15 +117,15 @@
 	background-color: $brand-primary;
 	border: none;
 	border-radius: 15px;
-	box-shadow: 0 9px lighten($brand-primary, 10%);
+	box-shadow: 0 5px lighten($brand-primary, 10%);
 	
 	&:focus, &:hover{
 		background-color: lighten($brand-primary, 5%);
 	}
 	
 	&:active{
-		box-shadow: 0 5px $brand-primary;
-		transform: translateY(4px);
+		box-shadow: 0 0px $brand-primary;
+		transform: translateY(5px);
 	}
 }
 
