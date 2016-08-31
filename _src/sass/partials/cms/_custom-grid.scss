@@ -121,12 +121,3 @@
 .twelve.columns{
 	@include make-sm-column(12);
 }
-
-#pgProperties{
-	@include make-row();
-	
-	.col1_2{
-		@include make-sm-column(12);
-		@include make-md-column(6);
-	}
-}
