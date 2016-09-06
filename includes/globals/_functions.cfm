@@ -163,7 +163,18 @@
 	<cfargument name="nav" required="yes">
 	<cfargument name="pageTitle" required="no" type="string">
 	<cfargument name="seperator" default="-" required="no" type="string">
-    	
+    
+    <cfif listLen(pageTitle, '-|') GT 1>
+	    <cfif ListFirst(pageTitle, '-') EQ "Xavier University">
+			<!--- Get last item --->
+			<cfset pageTitle = ListLast(pageTitle, '-')>
+		<cfelseif ListLast(pageTitle, '|') EQ "Xavier University">
+			<!--- Get first item --->
+			<cfset pageTitle = ListFirst(pageTitle, '-')>
+	    </cfif>
+    </cfif>
+    
+    
 	<cfset folderLength = listLen(session.folder,"/")>
 		
 	<cfif folderLength GE 2>
