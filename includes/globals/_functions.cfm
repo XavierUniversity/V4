@@ -160,7 +160,7 @@
 
 
 <cffunction name="v4PageTitle" returnType="string" output="no">
-	<cfargument name="navList" required="yes">
+	<cfargument name="nav" required="yes">
 	<cfargument name="pageTitle" required="no" type="string">
 	<cfargument name="seperator" default="-" required="no" type="string">
 	
