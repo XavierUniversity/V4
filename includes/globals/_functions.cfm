@@ -168,6 +168,7 @@
 		
 	<cfif folderLength GE 2>
 		<cfset workingFolder = ''>
+		
 		<cfloop from="1" to="#folderlength - 1#" index="i">
     		<!--- Add the working folder to the list --->
     		<cfset workingFolder = listAppend(workingFolder, listGetAt(session.folder,i,"/"),"/")>
@@ -182,7 +183,11 @@
     		</cfif>
     	</cfloop>
 	</cfif>
-
+	
+	<cfif session.folder is not "/">
+		<cfset dept="#session.department#">
+	</cfif>
+	
 	<cfset found = 0>
 	<cfset title = ''>
 	<cfloop array="#nav.children#" index="child">
