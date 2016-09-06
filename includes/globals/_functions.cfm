@@ -48,15 +48,15 @@
 </cffunction>
 
 <cffunction name="loadCSS" output="no" returnType="string" description="Builds styles as appropriate">
-	<cfset stylesheets = '<link rel="stylesheet" href="#templatePath#css/globals.css">'>
+	<cfset stylesheets = '<link rel="stylesheet" href="#templatePath#stylesheets/globals.css">'>
 	
 	<cfif isDefined("isCampusSuite") AND isCampusSuite>
-		<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#css/cms.css">'>
+		<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#stylesheets/cms.css">'>
 		<cfif isdefined("session.user_id") AND session.user_id is not "">
-			<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#css/admin.css">'>
+			<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#stylesheets/admin.css">'>
 		</cfif>
 	<cfelse>
-		<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#css/bands.css">'>
+		<cfset stylesheets &= '<link rel="stylesheet" href="#templatePath#stylesheets/bands.css">'>
 	</cfif>
 		
 	<cfreturn stylesheets>
