@@ -55,19 +55,22 @@
 	}
 }
 
-.csUi #pgProperties{
-	display:none;
+.csPgEditor{
+	padding:1rem;	
 }
 
-#pgProperties{
-	
-	label{
-		font-size: 1.4rem;
-		font-weight: 300;
-	}
-	
-	span{
-		display: inline-block;
+.csUi {
+	#pgProperties{
+		display:none;
+		
+		label{
+			font-size: 1.4rem;
+			font-weight: 300;
+		}
+		
+		span{
+			display: inline-block;
+		}
 	}
 }
 
