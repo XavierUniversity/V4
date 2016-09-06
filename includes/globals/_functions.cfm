@@ -197,11 +197,11 @@
 			</cfif>
 			
 			<cfif (child.open or child.selected) AND (right(trim(child.getPath()),9) NEQ 'index.cfm' OR findNoCase('online', child.getPath()))>
-				<cfset title = "#child.label# #seperator# #title#">
+				<cfset title = "#( child.getPath() EQ CGI.script_name AND child.label NEQ pageTitle ? pageTitle : child.label )# #seperator# #title#">
 			</cfif>
 			<cfloop array="#child.children#" index="grand">
 				<cfif (grand.open OR grand.selected) AND (right(trim(grand.getpath()), 9) NEQ 'index.cfm' OR findNoCase('online', grand.getPath()))>
-					<cfset title = "#( grand.getPath() EQ cgi.script_name AND grand.label NEQ pageTitle ? pageTitle : grand.label )# #seperator# #title#">
+					<cfset title = "#( grand.getPath() EQ CGI.script_name AND grand.label NEQ pageTitle ? pageTitle : grand.label )# #seperator# #title#">
 				</cfif>
 			</cfloop>
 		</cfif>
