@@ -176,8 +176,8 @@
 				<cfset title &= "#child.label#">
 			</cfif>
 			<cfloop array="#child.children#" index="grand">
-				<cfif (grand.open OR grand.selected) AND (right(trim(child.getpath()), 9) NEQ 'index.cfm' OR findNoCase('online', child.getPath()))>
-					<cfset title &= "#child.label#">
+				<cfif (grand.open OR grand.selected) AND (right(trim(grand.getpath()), 9) NEQ 'index.cfm' OR findNoCase('online', grand.getPath()))>
+					<cfset title &= "#grand.label#">
 				</cfif>
 			</cfloop>
 		</cfif>
