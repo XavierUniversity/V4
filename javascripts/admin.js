@@ -483,6 +483,9 @@
 
 })(window.jQuery || window.Zepto, window, document);
 
+console.log("hello world");
+
+console.log("hello world");console.log("hello world");console.log("hello world");
 var pageData = '';
 // Moved to global scope. Made a valid data attr; FYI custom attributes are not valid HTML
 var grp_id = $('.dd').data('grp-id');

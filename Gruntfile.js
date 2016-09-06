@@ -134,7 +134,18 @@ module.exports = function (grunt){
 						filter: 'isFile'
 					}
 				]
-			}				
+			},
+			customjs: {
+				files: [
+					{
+						expand: true,
+						flatten: true,
+						src: ['_src/javascripts/custom/*.js'],
+						dest: 'javascripts/',
+						filter: 'isFile'
+					}
+				]
+			}
 		},
 		
 		// Watch should always be the last task, just because.
@@ -165,6 +176,6 @@ module.exports = function (grunt){
 	grunt.registerTask('check', ['jshint']);
 	grunt.registerTask('default', ['watch:dev']);
 	
-	grunt.registerTask('dev', ['newer:jshint', 'newer:concat', 'newer:uglify', 'compass:dev', 'newer:postcss', 'newer:imagemin', 'watch:dev']);
-	grunt.registerTask('prod', ['newer:jshint', 'newer:concat', 'newer:uglify', 'compass:prod', 'newer:postcss', 'newer:imagemin', 'watch:prod']);
+	grunt.registerTask('dev', ['newer:jshint', 'newer:concat', 'newer:uglify', 'compass:dev', 'newer:postcss', 'copy:customjs', 'newer:imagemin', 'watch:dev']);
+	grunt.registerTask('prod', ['newer:jshint', 'newer:concat', 'newer:uglify', 'compass:prod', 'newer:postcss', 'copy:customjs', 'newer:imagemin', 'watch:prod']);
 };

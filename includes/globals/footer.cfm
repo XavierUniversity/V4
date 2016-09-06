@@ -62,7 +62,6 @@
 				</div>
 			</div>
 		</div>
-		
 		<cfoutput>#javascripts#</cfoutput>
 		<cfif isDefined("pageFootScript")>
 			<cfoutput>#pageFootScript#</cfoutput>
