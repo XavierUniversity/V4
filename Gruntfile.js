@@ -66,7 +66,7 @@ module.exports = function (grunt){
 			dev: {
 				options: {
 					sassDir: '_src/sass',
-					cssDir: 'css',
+					cssDir: 'stylesheets',
 					environment: 'development',
 					outputStyle: 'nested'
 					
@@ -75,7 +75,7 @@ module.exports = function (grunt){
 			prod: {
 				options: {
 					sassDir: '_src/sass',
-					cssDir: 'css',
+					cssDir: 'stylesheets',
 					environment: 'production',
 					outputStyle: 'compressed'
 				}
@@ -95,7 +95,7 @@ module.exports = function (grunt){
 				]
 			},
 			dist: {
-				src: 'css/**/*.css'
+				src: 'stylesheets/**/*.css'
 			}
 		},
 		copy: {
