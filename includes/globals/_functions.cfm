@@ -174,9 +174,9 @@
 			<cfif (nav.open OR nav.selected) AND (right(trim(nav.getPath()),9) NEQ 'index.cfm' OR findNoCase('online', nav.getPath()))>
 				<cfset title&= "#nav.label#">
 			</cfif>
-			<cfloop array="#nav.children#" index="child">
-				<cfif (nav.open OR nav.selected) AND (right(trim(nav.getPath()),9) NEQ 'index.cfm' OR findNoCase('online', nav.getPath()))>
-					<cfset title &= " #nav.label#">
+			<cfloop array="#child.children#" index="child">
+				<cfif (child.open OR child.selected) AND (right(trim(nav.getPath()),9) NEQ 'index.cfm' OR findNoCase('online', nav.getPath()))>
+					<cfset title &= " #child.label#">
 				</cfif>
 			</cfloop>
 		</cfif>
