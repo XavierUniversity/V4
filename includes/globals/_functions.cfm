@@ -157,3 +157,30 @@
 		style='background-image: url(<cfoutput>#header#</cfoutput>);'
     </cfif>
 </cffunction>
+
+
+<cffunction name="v4PageTitle" returnType="string">
+	<cfset sideNav = CreateObject("component","campusuite25.objects.navigation.NavigationList").load(session.grp_id)>
+	<cfset title = v4RenderBreadCrumb('-', sideNav)>
+	
+	<cfreturn title>	
+<!---
+	<cfif isDefined("isCampusuite") and isCampusuite EQ true>
+		<title><cfset headTitle()></title>
+		<meta name="description" content="<cfset metaDescription()>" />
+		<cfset metaNoFollow()>
+		<cfset metaCustom()>
+	<cfelseif isDefined("pageTitle") and pageTitle NEQ "">
+		<title><cfoutput>#pageTitle#</cfoutput></title>
+		<cfif isDefined("pageMetaDescription") AND pageMetaDescription NEQ "">
+			<meta name="description" content="<cfoutput>#pageMetaDescription#</cfoutput>" />
+		</cfif>
+		<cfif isDefined("pageMetaKeywords") AND pageMetaKeywords NEQ "">
+			<meta name="keywords" content="<cfoutput>#pageMetaKeywords#</cfoutput>" />
+		</cfif>
+	<cfelse>
+		<title>Xavier University</title>
+	</cfif>
+--->
+</cffunction>
+
