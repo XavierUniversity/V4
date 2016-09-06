@@ -164,3 +164,8 @@
 		color: $white;
 	}
 }
+
+@import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tables";
+.uitable{
+	@extend .table-striped;
+}
