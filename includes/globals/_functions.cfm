@@ -64,13 +64,13 @@
 
 <cffunction name="loadJS" output="no" returnType="string" description="Builds styles as appropriate">
 	<cfset js = '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>'
-				& '<script>window.jQuery || document.write(''<script src="#templatePath#js/jquery.min.js"><\/script>'')</script>'
-				& '<script src="#templatePath#js/vendor.min.js"></script>'
-				& '<script src="#templatePath#js/main.min.js"></script>'
+				& '<script>window.jQuery || document.write(''<script src="#templatePath#javascripts/jquery.min.js"><\/script>'')</script>'
+				& '<script src="#templatePath#javascripts/vendor.min.js"></script>'
+				& '<script src="#templatePath#javascripts/main.min.js"></script>'
 				& '<script src="scripts/local.js"></script>'>
     
     <cfif isDefined("session.user_id") AND session.user_id IS NOT "">
-        <cfset js &= '<script src="#templatePath#js/admin.min.js"></script>'>
+        <cfset js &= '<script src="#templatePath#javascripts/admin.min.js"></script>'>
 	</cfif>
 
 	<cfreturn js>

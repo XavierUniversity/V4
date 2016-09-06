@@ -7,22 +7,22 @@ module.exports = function (grunt){
 		pkg: grunt.file.readJSON('package.json'),
 		// JS tasks
 		jshint: {
-			files:['Gruntfile.js', '_src/js/**/*.js'], // Add more files to array
+			files:['Gruntfile.js', '_src/javascripts/**/*.js'], // Add more files to array
 			options: {
 				reporter: require('jshint-stylish')
 			}
 		},
 		concat: {
 			main: {
-				src: ['_src/js/*.js'],
-				dest: 'js/main.js'
+				src: ['_src/javascripts/*.js'],
+				dest: 'javascripts/main.js'
 			},
 			admin: {
 				src: [
 					'bower_components/nestable/jquery.nestable.js',
-					'_src/js/admin/*.js'
+					'_src/javascripts/admin/*.js'
 				],
-				dest: 'js/admin.js'
+				dest: 'javascripts/admin.js'
 			},
 			vendor: {
 				// combine some vendor scripts for production, to reduce requests
@@ -32,7 +32,7 @@ module.exports = function (grunt){
 					'bower_components/owl.carousel/dist/owl.carousel.js',
 					'bower_components/aos/dist/aos.js'
 				],
-				dest: 'js/vendor.js'
+				dest: 'javascripts/vendor.js'
 			}
 		},
 		uglify: {
@@ -43,10 +43,10 @@ module.exports = function (grunt){
 			},
 			prod: {
 				files: {
-					'js/main.min.js' : ['js/main.js'],
-					'js/vendor.min.js': ['js/vendor.js'],
-					'js/plugins.min.js' : ['js/plugins.js'],
-					'js/admin.min.js' : ['js/admin.js']	
+					'javascripts/main.min.js' : ['javascripts/main.js'],
+					'javascripts/vendor.min.js': ['javascripts/vendor.js'],
+					'javascripts/plugins.min.js' : ['javascripts/plugins.js'],
+					'javascripts/admin.min.js' : ['javascripts/admin.js']	
 				}
 			}	
 		},
@@ -130,7 +130,7 @@ module.exports = function (grunt){
 						expand: true,
 						flatten: true,
 						src: ['bower_components/jquery/dist/jquery.min.js'],
-						dest: 'js/',
+						dest: 'javascripts/',
 						filter: 'isFile'
 					}
 				]
@@ -140,11 +140,11 @@ module.exports = function (grunt){
 		// Watch should always be the last task, just because.
 		watch: {
 			dev:{
-				files: ['_src/sass/**/*.{scss,sass}', '_src/js/**/*.js', '_src/img/**/*.{svg,png,jpg,gif'],
+				files: ['_src/sass/**/*.{scss,sass}', '_src/javascripts/**/*.js', '_src/img/**/*.{svg,png,jpg,gif'],
 				tasks: ['dev']
 			},
 			prod: {
-				files: ['_src/sass/**/*.{scss,sass}', '_src/js/**/*.js', '_src/img/**/*.{svg,png,jpg,gif'],
+				files: ['_src/sass/**/*.{scss,sass}', '_src/javascripts/**/*.js', '_src/img/**/*.{svg,png,jpg,gif'],
 				tasks: ['prod']
 			}
 		}

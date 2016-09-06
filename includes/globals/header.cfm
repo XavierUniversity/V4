@@ -12,7 +12,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!---adjust for ie compatibilty mode and google chrome frame - mike --->
     	<cfif isDefined("pageNoFollow") and pageNoFollow eq 1><meta name="robots" content="noindex, nofollow, noarchive"></cfif>
 		
-		
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
