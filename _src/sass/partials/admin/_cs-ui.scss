@@ -75,16 +75,37 @@
 		float: left;
 		padding: 0;
 		margin: 0;
-		
+		a{
+			color: #6f6f6f;
+			display: block;
+			font-size: 14px;
+			height: 40px;
+			line-height: 40px;
+			padding: 0px 23.8px;
+		}
 		&.active{
 			border-top: 3px solid $brand-primary;
 			margin-top: -3px;
+			cursor: default;
+			a{	
+				color: #3c3c3c;
+				background: #fff;
+				border-left: 1px solid #e6e6e6;
+				border-right: 1px solid #e6e6e6;
+				font-weight: bold;
+			}
 		}
 	}
 }
 
 .ui-tabs-content{
 	list-style: none;
+	&.contained{
+		> li {
+			border: solid 0 #e6e6e6;
+			border-width: 0 1px 1px 1px;
+		}
+	}
 }
 
 .ui-button {
