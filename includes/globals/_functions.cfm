@@ -165,18 +165,19 @@
 	<cfargument name="seperator" default="-" required="no" type="string">
 	
 	<cfset found = 0>
-	
+	<cfset title = ''>
 	<cfloop array="#nav.children#" index="child">
 		<cfif found EQ 0>
 			<cfif child.open OR child.selected>
 				<cfset found = 1>
 			</cfif>
-			<cfif (nav.open OR nav.selected) AND (right(trim(nav.getPath()),9) NEQ 'index.cfm' OR findNoCase('online', nav.getPath()))>
-				<cfset title&= "#nav.label#">
+			
+			<cfif (child.open or child.selected) AND (right(trim(child.getPath()),9) NEQ 'index.cfm' OR findNoCase('online', child.getPath()))>
+				<cfset title &= "#child.label#">
 			</cfif>
-			<cfloop array="#child.children#" index="child">
-				<cfif (child.open OR child.selected) AND (right(trim(nav.getPath()),9) NEQ 'index.cfm' OR findNoCase('online', nav.getPath()))>
-					<cfset title &= " #child.label#">
+			<cfloop array="#child.children#" index="grand">
+				<cfif (grand.open OR grand.selected) AND (right(trim(child.getpath(), 9) NEQ 'index.cfm' OR findNoCase('online', child.getPath()))>
+					<cfset title &= "#child.label#">
 				</cfif>
 			</cfloop>
 		</cfif>
