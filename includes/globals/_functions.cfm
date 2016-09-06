@@ -163,7 +163,26 @@
 	<cfargument name="nav" required="yes">
 	<cfargument name="pageTitle" required="no" type="string">
 	<cfargument name="seperator" default="-" required="no" type="string">
-	
+    	
+	<cfset folderLength = listLen(session.folder,"/")>
+		
+	<cfif folderLength GE 2>
+		<cfset workingFolder = ''>
+		<cfloop from="1" to="#folderlength - 1#" index="i">
+    		<!--- Add the working folder to the list --->
+    		<cfset workingFolder = listAppend(workingFolder, listGetAt(session.folder,i,"/"),"/")>
+    		<!--- see if there is a matching department in the database --->
+    		<cfquery name="getDept" dataSource="cs2011read">
+	    		select name from groups_tbl
+	    		where folder = <cfqueryparam value="#workingFolder#" CFSQLType="CF_SQL_VARCHAR">
+    		</cfquery>
+	    		
+    		<cfif getDept.recordCount GT 0>
+				<cfset dept = "#getDept.name#">
+    		</cfif>
+    	</cfloop>
+	</cfif>
+
 	<cfset found = 0>
 	<cfset title = ''>
 	<cfloop array="#nav.children#" index="child">
@@ -173,15 +192,17 @@
 			</cfif>
 			
 			<cfif (child.open or child.selected) AND (right(trim(child.getPath()),9) NEQ 'index.cfm' OR findNoCase('online', child.getPath()))>
-				<cfset title = "#child.label# #title#">
+				<cfset title = "#child.label# #seperator# #title#">
 			</cfif>
 			<cfloop array="#child.children#" index="grand">
 				<cfif (grand.open OR grand.selected) AND (right(trim(grand.getpath()), 9) NEQ 'index.cfm' OR findNoCase('online', grand.getPath()))>
-					<cfset title = "#grand.label# #title#">
+					<cfset title = "#grand.label# #seperator# #title#">
 				</cfif>
 			</cfloop>
 		</cfif>
 	</cfloop>
+	
+	<cfset title = "#title# #dept# | Xavier University">
 	
 	<cfreturn title>
 	
