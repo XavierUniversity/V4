@@ -161,9 +161,7 @@
 
 <cffunction name="v4PageTitle" returnType="string" output="yes">
 	<cfset sideNav = CreateObject("component","campusuite25.objects.navigation.NavigationList").load(session.grp_id)>
-	<cfset title = v4renderBreadCrumbs('-', sideNav)>
-	
-	#title#
+	<cfset v4renderBreadCrumbs('-', sideNav)>
 <!---
 	<cfif isDefined("isCampusuite") and isCampusuite EQ true>
 		<title><cfset headTitle()></title>
