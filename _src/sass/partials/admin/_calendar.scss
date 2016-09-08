@@ -23,7 +23,9 @@
 }
 
 .ui-alert-box{
-	clear:both;
 	border: solid 1px $brand-info;
-	margin:0.5rem 0;
+	clear:both;
+	color: $brand-info;
+	margin:1rem 0;
+	padding:0.5rem;
 }
