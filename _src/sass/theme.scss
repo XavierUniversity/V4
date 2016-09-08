@@ -1,2 +1,40 @@
-@import 'globals',
-		'cms';
+// This file is explicitly for the Campus Suite editor. Will not be used elsewhere
+
+// Import base utilities and configuration
+@import 'partials/globals/_config',
+		'mixins/contrast'
+;
+
+// 3rd party vendors
+@import 
+		'partials/vendor/normalize',
+		'partials/vendor/bootstrap',							// Only include
+		'partials/vendor/fontawesome',							// what we HAVE to have in these files
+		'partials/vendor/aos'
+;
+
+// Global styles (in order of page load); skips content
+@import 
+	'partials/globals/reset',
+	'partials/globals/fonts',
+	'partials/globals/typography',
+	'partials/globals/accessibility',							// Anything to do with the main accessibility styles
+	'partials/globals/header-alert',							// Alert indicator (snow/campus threat/etc)
+	'partials/globals/header-search',							
+	'partials/globals/header-layout',
+	'partials/globals/header-secondary-nav',
+	'partials/globals/cta',
+	'partials/globals/footer-layout',
+	'partials/globals/footer-sticky',
+	'partials/globals/buttons',
+	'partials/globals/panels'
+;
+
+// Import CMS only styles
+@import 
+	'partials/cms/custom-grid',
+	'partials/cms/header',
+	'partials/cms/header-nav',
+	'partials/cms/navigation',
+	'partials/cms/content'
+;
