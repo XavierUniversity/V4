@@ -35,6 +35,29 @@
 	font-size: 1.4rem;
 }
 
+.calendricalDatePopup{
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: 0 0 8px rgba(204, 204, 204, 0.6);
+	display: none;
+	margin-top: 0;
+	padding: 10px;
+	width: 240px;
+	a {
+	text-decoration: none;
+		&:hover, &:focus {
+			text-decoration: none;
+			color: #2A6496;
+			transition: color 0.1s ease-in-out;
+		}
+	}
+	td:hover a {
+		color: #2A6496;
+		transition: color 0.1s ease-in-out;
+	}
+}
+
 .ui-datepicker {
   background-color: #fff;
   border: 1px solid #ccc;
