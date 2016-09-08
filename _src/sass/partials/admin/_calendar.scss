@@ -22,4 +22,8 @@
 	}
 }
 
-.ui-alert-box secondary{}
+.ui-alert-box secondary{
+	clear:both;
+	border: solid 1px $brand-info;
+	margin:0.5rem 0;
+}
