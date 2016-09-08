@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Xavier V4 : Dependency Install</title>
+        <meta name="description" content="Docs for the Xavier Template">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div id="header" class="col-sm-12">
+                    <h4><a class="brand" href="/">Xavier V4</a>
+    <small>Docs for the Xavier Template</small>
+</h4>
+
+                </div>
+            </div>
+
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-sm-2">
+                        <ul class="nav nav-list">
+    <li><a href="/">Home</a></li>
+    
+        
+        
+
+        
+            
+                <li class="nav-header">Documentation</li>
+            
+            <li data-order="2"><a href="/doc/structure.html">Template Structure</a></li>
+        
+            
+            <li data-order="0"><a href="/doc/installation.html">Dependency Install</a></li>
+        
+            
+            <li data-order="1"><a href="/doc/init.html">Initialize Repo</a></li>
+        
+    
+        
+        
+
+        
+    
+        
+        
+
+        
+            
+                <li class="nav-header">Reference</li>
+            
+            <li data-order="0"><a href="/ref/workflow.html">Workflow</a></li>
+        
+            
+            <li data-order="10"><a href="/ref/documentation.html">Documentation</a></li>
+        
+            
+            <li data-order="2"><a href="/ref/commit-guide.html">Git Guidelines and Basic Usage</a></li>
+        
+            
+            <li data-order="1"><a href="/ref/accessibility-resources.html">Accessibility Resources</a></li>
+        
+    
+        
+        
+
+        
+    
+        
+        
+
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class="divider"></li> first to break up the content. -->
+</ul>
+
+                    </div>
+
+                    <div id="content" class="col-sm-10">
+                        <div class="page-header">
+    <h2>Dependency Install
+        
+    </h2>
+</div>
+
+<p>Follow these steps to <a href="https://gorails.com/setup/osx/10.11-el-capitan">install Homebrew and RBENV</a> (required for Mac OS X 10.11).</p>
+
+<p><strong>The instructions below are based on Mac OSX 10.11 in case of link rot, use the above link if available.</strong></p>
+
+<h3 id="cloning-and-initialzation">Cloning and Initialzation</h3>
+
+<p>This process only needs to be completed once per machine the repository will be on, <em>do this prior to cloning the repo</em>. Once it’s setup, you will only need to do minor maintenance to ensure your libraries are up-to-date.</p>
+
+<p>Using terminal, <code class="highlighter-rouge">cd</code> to your working directory (where the repo will be housed locally) and run <code class="highlighter-rouge">git clone ssh/http url</code>, whichever flavor you are using.</p>
+
+<h3 id="optional-installation">Optional Installation</h3>
+
+<p>A local copy of <a href="http://www.adobe.com/products/coldfusion-family.html">ColdFusion</a> should be installed on your machine to enhance the development experience.</p>
+
+<hr />
+
+<p>These instructions are a copy of the information on the <a href="https://gorails.com/setup/osx/10.11-el-capitan">Homebrew and RBENV</a> install. Only use this info if the link above fails.</p>
+
+<h3 id="homebrew-and-rbenv-installation">Homebrew and RBENV Installation</h3>
+
+<p><a href="http://brew.sh">Homebrew</a> comes with a very simple install script. When it asks you to install XCode CommandLine Tools, say yes. Open Terminal and run the following command:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</code></pre>
+</div>
+
+<p>With Homebrew installed, install Ruby. <code class="highlighter-rouge">rbenv</code> will be installed to manage <code class="highlighter-rouge">ruby</code> and <code class="highlighter-rouge">gem</code>. Run the following commands in Terminal:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ brew install rbenv ruby-build
+</code></pre>
+</div>
+
+<h4 id="add-rbenv-to-bash-so-that-it-loads-every-time-you-open-a-terminal">Add rbenv to bash so that it loads every time you open a terminal</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ echo 'if which rbenv &gt; /dev/null; then eval "$(rbenv init -)"; fi' &gt;&gt; ~/.bash_profile
+$ source ~/.bash_profile
+</code></pre>
+</div>
+
+<h4 id="install-ruby">Install Ruby</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ rbenv install 2.2.3
+$ rbenv global 2.2.3
+$ ruby -v
+</code></pre>
+</div>
+
+<h3 id="install-compass">Install Compass</h3>
+
+<p>With <code class="highlighter-rouge">rbenv</code> installed, install <a href="http://compass-style.org">Compass</a>, run the following commands:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ gem install compass
+$ rbenv rehash
+</code></pre>
+</div>
+
+<p>This will install <code class="highlighter-rouge">compass</code> and <code class="highlighter-rouge">rehash</code> the shims allowing executables to run correctly.</p>
+
+<h3 id="configuring-git">Configuring Git</h3>
+
+<p>If you are using a Mac, you may already have Git. To find out, open a terminal and enter <code class="highlighter-rouge">git --version</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git --version
+git version 2.3.2
+</code></pre>
+</div>
+
+<p>If you receive a version number, as shown in the previous example, great! You have Git already and can continue to the next step. If not, install Git.</p>
+
+<p>If you run into issues while following these instructions, make sure you have root access (sudo) on the system where you want to install Git.</p>
+
+<ol>
+  <li><a href="http://git-scm.com/download/mac">Download the Git installer</a> from its official website.
+    <ul>
+      <li>The installer is a DMG file.</li>
+    </ul>
+  </li>
+  <li>Double-click the DMG to expand it.</li>
+  <li>Double-click the PKG file to install it.
+    <ul>
+      <li>The Git installer launches.</li>
+    </ul>
+  </li>
+  <li>Follow the prompts to install Git.</li>
+  <li>Open a terminal on your system.</li>
+  <li>Verify the installation was successful by typing <code class="highlighter-rouge">which git --version</code> at the command line.</li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git --version
+git version 2.3.2
+</code></pre>
+</div>
+
+<p>Depending on the version you install, the command line may return a different version.</p>
+
+<h4 id="step-2-save-your-information-to-git">Step 2. Save your information to Git</h4>
+
+<ol>
+  <li>
+    <p>Configure your global username using the following command, replacing Emma’s name with your own. Copy and paste the code after the $ and press enter.</p>
+
+    <p><code class="highlighter-rouge">
+ $ git config --global user.name "Emma Paris"
+</code></p>
+  </li>
+  <li>
+    <p>Configure your global email address using the following command, replacing Emma’s email address with your own.</p>
+
+    <p><code class="highlighter-rouge">
+ $ git config --global user.email "eparis@xavier.edu"
+</code></p>
+  </li>
+</ol>
+
+<p>Git uses the global email address for all your commits. Also, you can set this value per repository.</p>
+
+<h4 id="accessing-github">Accessing GitHub</h4>
+
+<p>Follow GitHub’s <a href="https://help.github.com/articles/set-up-git/">steps for setting up access</a> to pull from or push to remote repositories.</p>
+
+<h3 id="install-nodejs">Install Node.JS</h3>
+
+<p><a href="https://nodejs.org/en/">Node.js</a>® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js’ package ecosystem, npm, is the largest ecosystem of open source libraries in the world. Install Node.JS by running the following:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>brew install node
+</code></pre>
+</div>
+
+<h3 id="install-bower">Install Bower</h3>
+
+<p>Bower is the dependency manager which can simply manage versions of various popular frameworks such as Bootstrap, jQuery and Modernizr. To get a better idea of what we are using, see the <code class="highlighter-rouge">bower.json</code> file, or the <code class="highlighter-rouge">vendor</code> folder after running <code class="highlighter-rouge">bower install</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install -g bower
+</code></pre>
+</div>
+
+<h3 id="install-gruntjs">Install Grunt.JS</h3>
+
+<p>Grunt.JS is a task runner. Grunt will automate our tasks for compiling SASS, minifying images, and linting, concatenating and minifying JS files. Grunt will also handle deployment.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install -g grunt-cli
+</code></pre>
+</div>
+
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class="row">
+                <div id="footer" class="col-sm-12">
+                    Documentation for <a href="https://github.com/XavierUniversity/V4">Xavier V4</a>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                }
+
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+    </body>
+</html>
