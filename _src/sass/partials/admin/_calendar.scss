@@ -1,7 +1,6 @@
 .dept-share-box{
 	> div{
-		width:45%;
-		padding:0.5rem;
+		width:50%;
 		
 		&:last-child{
 			float:right;
@@ -13,7 +12,7 @@
 			list-style: none;
 			margin:0;
 			overflow-y: scroll;
-			padding:0;
+			padding:0.5rem;
 		}
 	}
 	
