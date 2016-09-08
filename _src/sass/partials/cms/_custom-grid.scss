@@ -121,3 +121,10 @@
 .twelve.columns{
 	@include make-sm-column(12);
 }
+
+.nine.columns{
+	@include make-sm-column(9);
+}
+.three.columns{
+	@include make-sm-column(3);
+}
