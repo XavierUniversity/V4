@@ -1,16 +1,15 @@
 .dept-share-box{
 	> div{
 		width:50%;
-		
+		float:left;
 		&:last-child{
-			float:right;
 		}
 		
 		ul{
 			border:solid 1px $brand-tertiary;
 			height: 400px;
 			list-style: none;
-			margin:0;
+			margin:0 0.5rem;
 			overflow-y: scroll;
 			padding:0.5rem;
 		}
@@ -22,3 +21,5 @@
 		height:1px;
 	}
 }
+
+.ui-alert-box secondary{}
