@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Xavier V4 : Git Guidelines and Basic Usage</title>
+        <meta name="description" content="Docs for the Xavier Template">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div id="header" class="col-sm-12">
+                    <h4><a class="brand" href="/">Xavier V4</a>
+    <small>Docs for the Xavier Template</small>
+</h4>
+
+                </div>
+            </div>
+
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-sm-2">
+                        <ul class="nav nav-list">
+    <li><a href="/">Home</a></li>
+    
+        
+        
+
+        
+            
+                <li class="nav-header">Documentation</li>
+            
+            <li data-order="2"><a href="/doc/structure.html">Template Structure</a></li>
+        
+            
+            <li data-order="0"><a href="/doc/installation.html">Dependency Install</a></li>
+        
+            
+            <li data-order="1"><a href="/doc/init.html">Initialize Repo</a></li>
+        
+    
+        
+        
+
+        
+    
+        
+        
+
+        
+            
+                <li class="nav-header">Reference</li>
+            
+            <li data-order="0"><a href="/ref/workflow.html">Workflow</a></li>
+        
+            
+            <li data-order="10"><a href="/ref/documentation.html">Documentation</a></li>
+        
+            
+            <li data-order="2"><a href="/ref/commit-guide.html">Git Guidelines and Basic Usage</a></li>
+        
+            
+            <li data-order="1"><a href="/ref/accessibility-resources.html">Accessibility Resources</a></li>
+        
+    
+        
+        
+
+        
+    
+        
+        
+
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class="divider"></li> first to break up the content. -->
+</ul>
+
+                    </div>
+
+                    <div id="content" class="col-sm-10">
+                        <div class="page-header">
+    <h2>Git Guidelines and Basic Usage
+        
+    </h2>
+</div>
+
+<h3 id="gui">GUI</h3>
+
+<p>If you are uninterested in learning the CLI commands here is a list of <a href="https://git-scm.com/download/gui/linux">GUI Git Clients</a>.</p>
+
+<p>Sourcetree is developed by Atlassian (JIRA and Bitbucket developers). GitHub desktop is developed by, you guessed it, GitHub.</p>
+
+<h3 id="very-basic-commands">(Very) Basic Commands</h3>
+
+<ul>
+  <li><code class="highlighter-rouge">git status</code>: View the status of tracked or untracked files.</li>
+  <li><code class="highlighter-rouge">git add</code>: Add files to be tracked by repository</li>
+  <li><code class="highlighter-rouge">git commit</code>: Commit files to the repo history</li>
+  <li><code class="highlighter-rouge">git push</code>: Push files to a remote repository
+    <ul>
+      <li>This requires an <code class="highlighter-rouge">upstream</code>; This repo doesn’t have one. It’s all local.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">git log</code>: View commit history and commit messages.</li>
+</ul>
+
+<h4 id="git-add">Git Add</h4>
+
+<p><code class="highlighter-rouge">git add</code> requires a file, directory or <code class="highlighter-rouge">.</code> (all files). This needs to be
+done whenever a new file is added to the structure OR whenever a file is
+modified.</p>
+
+<p><strong>Example:</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git add readme.md
+</code></pre>
+</div>
+
+<h4 id="git-commit">Git Commit</h4>
+
+<p>Git commit requires a message. Commit messages should be meaningful and use
+the imperative, present tense. When using <code class="highlighter-rouge">git commit</code> in the command line
+vi will open to add a commit message.</p>
+
+<p>Imperative mood just means “spoken or written as if giving a command or instruction”. Examples:</p>
+
+<ul>
+  <li>Clean your room</li>
+  <li>Close the door</li>
+  <li>Take out the trash</li>
+</ul>
+
+<p>Follow these steps to provide a detailed, but informative message.</p>
+
+<ol>
+  <li>Separate subject form body with a blank line</li>
+  <li>Limit the subject line to 50 characters</li>
+  <li>Capitalize the subject line</li>
+  <li>Do not end the subject line with a period</li>
+  <li>Use the imperative mood in the subject line</li>
+  <li>Wrap the body at 72 characters (just estimate)</li>
+  <li>Use the body to explain what and why vs. how</li>
+</ol>
+
+<p>Example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Summarize changes in around 50 characters or less
+
+More detailed explanatory text, if necessary. Wrap it about 72
+characters or so. In some contexts, the first line is treated
+as the subject of the commit and the rest of the text as the body.
+The lank line separating the summary from the body is critical (unless 
+you omit the body entirely); various tools like `log`, `shortlog` and
+`rebase` can get confused if you run the two together.
+
+Explain the problem that this commit is solving. Focus on why you
+are making this change as opposed to how (the code explains that).
+Are there side effects or other unintuitive consequences of this
+change? Here's the place to explain them.
+
+Further paragraphs come after blank lines. 
+
+- Bullet points are okay, too
+- Typically a hyphen or asterisk is used for the bullet, preceded
+  by a single space, with blank lines in between, but conventions
+  vary here
+
+If you use an issue tracker, but references to them at the bottom,
+like this:
+
+Resolves: #123
+See also: #456, #789
+</code></pre>
+</div>
+
+<p>A shortcut is <code class="highlighter-rouge">git commit -m "Commit message"</code>. The shortcut should only
+ be used when describing simple situations.</p>
+
+<p>An example would be:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git add index.html
+$ git commit -m "Add index page"
+</code></pre>
+</div>
+
+<p>With issue tracking you can also use the commit message to resolve issues
+within a short commit message:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git add filename.ext
+$ git commit -m "Fix #IssueNo"
+</code></pre>
+</div>
+
+<p>This commit message will close out the issue on the reporting tool (such as
+BitBucket, Jira or GitHub’s issue tracking tools).</p>
+
+<p>To write your commit message and exit Vi press <code class="highlighter-rouge">esc</code>, <code class="highlighter-rouge">:wq</code>. <code class="highlighter-rouge">Esc</code> will take the cursor out of
+edit mode. <code class="highlighter-rouge">:wq</code> will write the commit message and quit vi.</p>
+
+<h4 id="git-push">Git Push</h4>
+
+<p>Pushing with git requires a remote repository. In this particular example we will <em>not</em> be using 
+a remote repository. A remote could be:</p>
+
+<ul>
+  <li>A local/network server hosting the <code class="highlighter-rouge">master</code> branch of a repository as the production environment</li>
+  <li>A hosting service such as BitBucket or GitHub</li>
+  <li>A local/networked git server running GitHub Enterprise or similar software</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git push origin master
+</code></pre>
+</div>
+
+<p>This will push updates from the master branch to the remote origin established when setting up the local
+repository.</p>
+
+<h4 id="git-log">Git Log</h4>
+
+<p>Git log will display the commit hash, author, date and commit message in reverse chronological order.
+If there are numerous items, it will open in vi. Scroll using either the arrow keys or <code class="highlighter-rouge">ctrl+d</code>. 
+To quit use <code class="highlighter-rouge">:q</code>.</p>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class="row">
+                <div id="footer" class="col-sm-12">
+                    Documentation for <a href="https://github.com/XavierUniversity/V4">Xavier V4</a>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                }
+
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+    </body>
+</html>
