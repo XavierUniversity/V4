@@ -128,3 +128,6 @@
 .three.columns{
 	@include make-sm-column(3);
 }
+.four.columns{
+	@include make-sm-column(4);
+}
