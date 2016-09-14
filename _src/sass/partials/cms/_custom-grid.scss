@@ -114,23 +114,39 @@
 	visibility: visible !important;
 }
 
-.six.columns{
-	@include make-sm-column(12);
-	@include make-md-column(6);
-}
 .twelve.columns{
 	@include make-sm-column(12);
 }
-
+.eleven.columns{
+	@include make-sm-column(11);
+}
+.ten.columns{
+	@include make-sm-column(10);
+}
 .nine.columns{
 	@include make-sm-column(9);
 }
-.three.columns{
-	@include make-sm-column(3);
+.eight.columns{
+	@include make-sm-column(8);
+}
+.seven.columns{
+	@include make-sm-column(7);
+}
+.six.columns{
+	@include make-sm-column(6);
+}
+.five.columns{
+	@include make-sm-column(5);
 }
 .four.columns{
 	@include make-sm-column(4);
 }
+.three.columns{
+	@include make-sm-column(3);
+}
 .two.columns{
 	@include make-sm-column(2);
+}
+.one.columns{
+	@include make-sm-column(1);
 }
