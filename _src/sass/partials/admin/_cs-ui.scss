@@ -144,11 +144,10 @@
 	&:active{
 		text-decoration: none;
 	}
-}
-
-.success{
-	background-color: darken($brand-success, 26%);
-	color: $white;
+	
+	.success{
+		background-color: darken($brand-success, 26%);
+		color: $white;
 	&:focus, &:hover{
 		background-color: darken($brand-success, 30%);
 		color: $white;
@@ -157,6 +156,8 @@
 	&:active{
 		color: $white;
 	}
+}
+	
 }
 
 @import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tables";
