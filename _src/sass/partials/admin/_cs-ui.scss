@@ -145,7 +145,7 @@
 		text-decoration: none;
 	}
 	
-	.success{
+	&.success{
 		background-color: darken($brand-success, 26%);
 		color: $white;
 	&:focus, &:hover{
