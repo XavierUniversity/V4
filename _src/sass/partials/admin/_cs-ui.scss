@@ -128,7 +128,7 @@
 .ui-button {
 	background-color: lighten($brand-tertiary, 12%);
 	border: none;
-	box-shadow: 0 5px $brand-tertiary;
+	border-radius: 0.6rem;
 	color: #333;
 	cursor: pointer;
 	display: inline-block;
@@ -138,29 +138,23 @@
 	text-decoration: none;
 	
 	&:focus, &:hover{
-		background-color: lighten($brand-tertiary, 15%);
 		text-decoration: none;
 	}
 	
 	&:active{
-		box-shadow: 0 0px lighten($brand-tertiary, 15%);
 		text-decoration: none;
-		transform: translateY(5px);
 	}
 }
 
 .success{
 	background-color: darken($brand-success, 26%);
-	box-shadow: 0 5px darken($brand-success, 15%);
 	color: $white;
 	&:focus, &:hover{
 		background-color: darken($brand-success, 30%);
-		box-shadow: 0 5px darken($brand-success, 20%);
 		color: $white;
 	}
 	
 	&:active{
-		box-shadow: 0 0px darken($brand-success, 15%);
 		color: $white;
 	}
 }
