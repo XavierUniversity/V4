@@ -74,7 +74,7 @@
 	}
 }
 
-.ui-tabs, .tabs{
+ul.ui-tabs, .ui-tabs .tabs{
 	border-bottom: solid 1px #e6e6e6;
 	display: block;
 	height: 40px;
@@ -109,7 +109,7 @@
 	}
 }
 
-.ui-tabs-content{
+.ui-tabs-content, .tabs-content{
 	list-style: none;
 	margin:0 0 2rem;
 	padding:0;
