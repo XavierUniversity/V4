@@ -116,6 +116,10 @@ ul.ui-tabs, .ui-tabs .tabs{
 	li {
 		min-height: 75px;
 		padding:1rem;
+		display: none;
+		&:active{
+			display: block;
+		}
 	}
 	&.contained{
 		> li {
