@@ -138,6 +138,7 @@ ul.ui-tabs, .ui-tabs .tabs{
 	text-decoration: none;
 	
 	&:focus, &:hover{
+		background-color:$brand-tertiary;
 		text-decoration: none;
 	}
 	
@@ -146,18 +147,17 @@ ul.ui-tabs, .ui-tabs .tabs{
 	}
 	
 	&.success{
-		background-color: darken($brand-success, 26%);
+		background-color: $brand-success;
 		color: $white;
-	&:focus, &:hover{
-		background-color: darken($brand-success, 30%);
-		color: $white;
+		&:focus, &:hover{
+			background-color: darken($brand-success, 26%);
+			color: $white;
+		}
+		
+		&:active{
+			color: $white;
+		}
 	}
-	
-	&:active{
-		color: $white;
-	}
-}
-	
 }
 
 @import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tables";
