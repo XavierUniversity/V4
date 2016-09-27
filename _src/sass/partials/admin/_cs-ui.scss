@@ -165,7 +165,11 @@ ul.ui-tabs, .ui-tabs .tabs{
 }
 
 @import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tables";
-.uiTable, .mediaGuide-tags{
+.uiTable{
 	@extend .table;
 	@extend .table-striped;
+}
+
+.mediaGuide-tags{
+	@extend .table;
 }
