@@ -1,0 +1,35 @@
+.secondary-nav{
+	position: absolute;
+	top:84px;
+	text-align: center;
+	z-index: 1;
+	width: 100%;
+	
+	ul{
+		background-color: rgba(255, 255, 255, 0.9);
+		display: inline-block;
+		height: 48px;
+		line-height: 48px;
+		list-style-type: none;
+		margin: 0;
+		padding: 0 20px;
+	}
+	
+	li{
+		display: inline;
+		margin: 0;
+		padding: 0;
+	}
+	
+	a{
+		color: $brand-primary;
+		font-size: 1.6rem;
+		font-weight: 200;
+		padding:0 2rem;
+		text-decoration: none;
+		
+		&:hover, &:focus, &:active{
+			color:$brand-secondary;
+		}
+	}
+}
