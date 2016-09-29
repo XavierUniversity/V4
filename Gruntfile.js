@@ -7,24 +7,32 @@ module.exports = function (grunt){
 		pkg: grunt.file.readJSON('package.json'),
 		// JS tasks
 		jshint: {
-			files:['Gruntfile.js', '_src/js/**/*.js'], // Add more files to array
+			files:['Gruntfile.js', '_src/javascripts/**/*.js'], // Add more files to array
 			options: {
 				reporter: require('jshint-stylish')
 			}
 		},
 		concat: {
 			main: {
-				src: ['_src/js/**/*.js'],
-				dest: 'js/main.js'
+				src: ['_src/javascripts/*.js'],
+				dest: 'javascripts/main.js'
+			},
+			admin: {
+				src: [
+					'bower_components/nestable/jquery.nestable.js',
+					'_src/javascripts/admin/*.js'
+				],
+				dest: 'javascripts/admin.js'
 			},
 			vendor: {
 				// combine some vendor scripts for production, to reduce requests
 				src: [
+					'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
 					'bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js',
 					'bower_components/owl.carousel/dist/owl.carousel.js',
 					'bower_components/aos/dist/aos.js'
 				],
-				dest: 'js/vendor.js'
+				dest: 'javascripts/vendor.js'
 			}
 		},
 		uglify: {
@@ -35,9 +43,10 @@ module.exports = function (grunt){
 			},
 			prod: {
 				files: {
-					'js/main.min.js' : ['js/main.js'],
-					'js/vendor.min.js': ['js/vendor.js'],
-					'js/plugins.min.js' : ['js/plugins.js']	
+					'javascripts/main.min.js' : ['javascripts/main.js'],
+					'javascripts/vendor.min.js': ['javascripts/vendor.js'],
+					'javascripts/plugins.min.js' : ['javascripts/plugins.js'],
+					'javascripts/admin.min.js' : ['javascripts/admin.js']	
 				}
 			}	
 		},
@@ -57,19 +66,18 @@ module.exports = function (grunt){
 			dev: {
 				options: {
 					sassDir: '_src/sass',
-					cssDir: 'css',
+					cssDir: 'stylesheets',
 					environment: 'development',
 					outputStyle: 'nested'
 					
 				}
 			},
-			live: {
+			prod: {
 				options: {
 					sassDir: '_src/sass',
-					cssDir: 'css',
+					cssDir: 'stylesheets',
 					environment: 'production',
-					outputStyle: 'compressed',
-					sourcemap: 'true'
+					outputStyle: 'compressed'
 				}
 			},
 			clean: {
@@ -87,7 +95,7 @@ module.exports = function (grunt){
 				]
 			},
 			dist: {
-				src: 'css/**/*.css'
+				src: 'stylesheets/**/*.css'
 			}
 		},
 		copy: {
@@ -108,29 +116,47 @@ module.exports = function (grunt){
 						expand: true,
 						flatten: true,
 						src: ['bower_components/aos/dist/*.css'],
-						dest: '_src/sass/vendor/',
+						dest: '_src/sass/partials/vendor/',
 						filter: 'isFile',
 						rename: function(dest,src){
 							return dest + "_" + src.replace(/\.css$/, ".scss");
 						}
 					}
 				]
-			}				
+			},
+			jquery: {
+				files: [
+					{
+						expand: true,
+						flatten: true,
+						src: ['bower_components/jquery/dist/jquery.min.js'],
+						dest: 'javascripts/',
+						filter: 'isFile'
+					}
+				]
+			},
+			customjs: {
+				files: [
+					{
+						expand: true,
+						flatten: true,
+						src: ['_src/javascripts/custom/*.js'],
+						dest: 'javascripts/',
+						filter: 'isFile'
+					}
+				]
+			}
 		},
 		
 		// Watch should always be the last task, just because.
 		watch: {
-			css: {
-				files: ['_src/sass/**/*.{scss,sass}'],
-				tasks: ['compass:dev', 'newer:postcss']
+			dev:{
+				files: ['_src/sass/**/*.{scss,sass}', '_src/javascripts/**/*.js', '_src/img/**/*.{svg,png,jpg,gif'],
+				tasks: ['dev']
 			},
-			js: {
-				files: ['_src/js/**/*.js'],
-				tasks: ['newer:jshint', 'newer:concat:main', 'newer:uglify']
-			},
-			images: {
-				files: ['_src/img/**/*.{svg,png,jpg,gif}'],
-				tasks: ['newer:imagemin']
+			prod: {
+				files: ['_src/sass/**/*.{scss,sass}', '_src/javascripts/**/*.js', '_src/img/**/*.{svg,png,jpg,gif'],
+				tasks: ['prod']
 			}
 		}
 	});
@@ -148,5 +174,8 @@ module.exports = function (grunt){
 	
 	// Register Tasks
 	grunt.registerTask('check', ['jshint']);
-	grunt.registerTask('default', ['newer:jshint', 'compass:dev', 'newer:postcss', 'newer:jshint', 'newer:concat:main', 'newer:uglify', 'watch']);
+	grunt.registerTask('default', ['watch:dev']);
+	
+	grunt.registerTask('dev', ['newer:jshint', 'newer:concat', 'newer:uglify', 'compass:dev', 'newer:postcss', 'copy:customjs', 'newer:imagemin', 'watch:dev']);
+	grunt.registerTask('prod', ['newer:jshint', 'newer:concat', 'newer:uglify', 'compass:prod', 'newer:postcss', 'copy:customjs', 'newer:imagemin', 'watch:prod']);
 };

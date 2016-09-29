@@ -1,7 +1,7 @@
 {
   "name": "xavier-template",
-  "version": "0.1.0",
-  "homepage": "https://bitbucket.org/XavierUniv/v4-template/",
+  "version": "4.1.0",
+  "homepage": "http://www.xavier.edu",
   "private": true,
   "ignore": [
     "**/.*",
