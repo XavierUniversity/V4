@@ -1,29 +1,35 @@
+<cfinclude template="_functions.cfm">
 <cfinclude template="_vars.cfm">
-
-
 <!doctype html>
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Xavier University</title>
+        <cfset navComponent = CreateObject("component","campusuite25.objects.navigation.NavigationList").load(session.grp_id)>
+        <title><cfoutput>#v4PageTitle(navComponent, pageTitle)#</cfoutput></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!---adjust for ie compatibilty mode and google chrome frame - mike --->
+    	<cfif isDefined("pageNoFollow") and pageNoFollow eq 1><meta name="robots" content="noindex, nofollow, noarchive"></cfif>
+		
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="<cfoutput>#path#</cfoutput>css/globals.css">
-        <link rel="stylesheet" href="<cfoutput>#stylesheet#</cfoutput>">
+        <cfoutput>#stylesheets#</cfoutput>
         <!--- Grunt should LOOK for modernizr needs
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>--->
-        
         <style>
         </style>
         
     </head>
-    <body>
-	    
+    
+
+	<cfif isDefined("isCampussuite") AND isCampusSuite>
+		<cfset bodyTag()>
+		<cfinclude template="#templatePath#includes/admin/admin-bar.cfm" />
+	<cfelse>
+	<body>
+	</cfif>
 	    <a href="#main-content" class="skip">Skip to main content</a>
 	    
 	    <div class="search-container">
@@ -60,7 +66,7 @@
 			    
 			    <div class="search-icon">
 				    <a href="#search" class="show-search" role="button">
-					    <img src="<cfoutput>#path#</cfoutput>img/search.svg" alt="toggle search bar" />
+					    <img src="<cfoutput>#templatePath#</cfoutput>img/search.svg" alt="toggle search bar" />
 				    </a>
 			    </div>
 			    
@@ -79,5 +85,11 @@
 			   </div>
 			    
 		    </header>
+		    
+		    <div class="secondary-nav">
+			    <cfif isDefined("header_secondary") AND header_secondary EQ TRUE>
+				    <cfoutput>#secondaryNav#</cfoutput>
+			    </cfif>
+		    </div>
 		    
 			<main id="main-content" tabindex="-1">
