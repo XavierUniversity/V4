@@ -1,0 +1,18 @@
+// Core variables and mixins
+@import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+// Add margin to accommodate the navbar
+body{
+	margin-top:51px;
+}
+
+// What's necessary for the admin bar
+@import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/forms";
+@import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+@import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
+
+@import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
+
+@import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/navs";
+@import "../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/navbar";

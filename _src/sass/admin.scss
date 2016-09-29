@@ -1,1 +1,16 @@
+// Import base utilities and configuration
+@import 'partials/globals/_config',
+		'mixins/contrast'
+;
+
 // Everything we could possibly need to manage our CMS
+@import 
+	"partials/admin/admin-bar",
+	"partials/admin/cs-ui",
+	"partials/admin/nav-edit",
+	"partials/admin/calendar",
+	"partials/admin/blog",
+	"partials/admin/faculty",
+	"partials/admin/news",
+	"partials/admin/gallery"
+;
