@@ -1,6 +1,6 @@
 {
   "name": "Xavier",
-  "version": "0.1.0",
+  "version": "4.1.0",
   "description": "CMS Template for Xavier University",
   "private": true,
   "scripts": {
@@ -31,10 +31,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/XavierUniv/v4-template-redevelopment/"
+    "url": "https://github.com/XavierUniversity/V4"
   },
   "bugs": {
-    "url": "https://bitbucket.org/XavierUniv/v4-template/issues"
+    "url": "https://github.com/XavierUniversity/V4"
   },
-  "homepage": "https://bitbucket.org/XavierUniv/v4-template/"
+  "homepage": "https://www.xavier.edu"
 }

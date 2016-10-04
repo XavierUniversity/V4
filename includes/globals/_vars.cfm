@@ -1,6 +1,39 @@
-<cfset mobileLogo = path & "img/xu-shield.svg">
-<cfset desktopLogo = path & "img/xu-logo.svg">
+<!--- Campus Alert Variables --->
+<cfset showAlert 	= false>
+<!--- can be weather, shooter, power, network, clear, custom, or NULL (generic alert) --->
+<cfset campusAlert 	= "weather">
+<!--- The date of the alert --->
+<cfset alertDate 	= dateFormat(now(), 'MMMM DD YYYY')>
+<!--- URI for more information --->
+<cfset alertURI		= "http://www.xavier.edu/safety">
+<!--- if custom alert, add your text. Code is wrapped in a <p> tag --->
+<cfset customMsg 	= "I am a custom message, I can contain <strong>HTML</strong> code too.">
 
+<!--- Set template path location --->
+<cfset templatePath = (CGI.SERVER_NAME EQ "localhost" OR CGI.SERVER_NAME EQ "webdev.xavier.edu" ? "" : "/Templates/temp-v41/" )>
+
+
+<!--- Global Navigation Items --->
+<cfset v4 = true>
+<cfset cleanedName = replace(CGI.SCRIPT_NAME, '/','-', "ALL")>
+<cfset cleanedName = replace(cleanedName, '-','', "ONE")>
+<cfset placementRate = "96">
+<cfset placementText = "of Xavier graduates are employed, enrolled in a full-time graduate program or volunteering within 90 days of graduation.">
+<cfif isDefined("Application.css_ver")>
+	<cfset css_ver = "#Application.css_ver#">
+<cfelse>
+	<cfset css_ver = ''>
+</cfif>
+<cfset currentPath = CGI.SCRIPT_NAME>
+<cfset currentPath = listFirst(currentPath, '\/')>
+
+<cfparam name="pageTitle" default="">
+
+<!--- Dynamically load logo locations --->
+<cfset mobileLogo = templatePath & "img/xu-shield.svg">
+<cfset desktopLogo = templatePath & "img/xu-logo.svg">
+
+<!--- Build out the navigation lists --->
 <cfset mainSiteNav = StructNew()>
 <cfset mainSiteNav[1]["title"] = "Admissions">
 <cfset mainSiteNav[1]["url"] = "/admission">
@@ -45,3 +78,8 @@
 <cfset cta[3]["url"] = "/give">
 
 <cfset ctaHTML = buildNav(cta, true, false)>
+
+
+
+<cfset stylesheets = loadCSS()>
+<cfset javascripts = loadJS()>

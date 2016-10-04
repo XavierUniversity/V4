@@ -1,7 +1,7 @@
 {
   "name": "xavier-template",
-  "version": "0.1.0",
-  "homepage": "https://bitbucket.org/XavierUniv/v4-template/",
+  "version": "4.1.0",
+  "homepage": "http://www.xavier.edu",
   "private": true,
   "ignore": [
     "**/.*",
@@ -21,7 +21,8 @@
     "fancybox": "~2.1.5",
     "jquery-ui": "jquery.ui#~1.11.4",
     "animate.scss": "animate-scss#~1.2.1",
-    "aos": "^2.0.4"
+    "aos": "^2.0.4",
+    "nestable": "*"
   },
   "devDependencies": {}
 }
