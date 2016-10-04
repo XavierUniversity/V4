@@ -9,7 +9,7 @@
 		<div id="subnav" class="subnav-container">
 			<a class="nav-jump scroll" href="#content">Back To Top <span class="fa fa-angle-up fa-lg" aria-hidden="true"></span></a>
 			
-			<cfif (pageType is "secondaryPg" OR pageType is "full") and isDefined("sideNav")>
+			<cfif (pageType is "secondaryPg" OR pageType is "full") <!--- and isDefined("sideNav") --->>
 				<div class="col-md-3 col-md-pull-9">
 					<div class="subnav">
 						<cfset secondaryNav()>
