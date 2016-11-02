@@ -1,0 +1,32 @@
+/* ----------------------
+	Configuration
+	 Setup of the basic components (fonts/colors/etc)
+   ---------------------- */
+   @import 'base/variables';
+   @import 'base/typography';
+   @import 'base/foundation';
+
+/* ----------------------
+	Section 1 - Header
+	
+	Includes accessibility; header search; main navigation bars
+   ---------------------- */
+   
+   @import 'base/header-search';
+   @import 'base/header-accessibility-link';
+   @import 'base/header-campus-alerts';
+   @import 'base/header-layout';
+   @import 'base/header-main-navigation';
+   @import 'base/audience-navigation';
+   @import 'base/header-secondary-navigation';
+   
+// When content area gets focus, figure out a callout to it. 
+
+/* ----------------------
+	Section 2 - Footer
+   ---------------------- */
+
+
+/* ----------------------
+	Section 3 - 
+   ---------------------- */

@@ -1,0 +1,23 @@
+$path: "/Templates/temp-v41/";
+@if compass-env() == "development"{
+	$path: "../";
+}
+@else if compass-env() == "production" {
+	$path: "/Templates/temp-v41/";
+}
+
+$font-stack: 'Frutiger W01', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+$color-blue-zodiac: #0c2340;
+$color-granny-smith: #9ea2a2;
+$color-pacific-blue: #0099cc;
+$color-white: #ffffff;
+
+
+$brand-xavier-primary: $color-blue-zodiac;
+$brand-xavier-secondary: $color-granny-smith;
+$brand-xavier-tertiary: $color-pacific-blue;
+
+$base-footer: lighten($brand-xavier-secondary, 25%);
+

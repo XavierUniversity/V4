@@ -1,0 +1,105 @@
+.site-header{
+	background-color: rgba($brand-xavier-primary, 0.9);
+	color: $color-white;
+	height: 8.4rem;
+	position: absolute;
+	 top: 0;
+	width: 100vw;
+	z-index: 100;
+}
+   
+.show-nav, .search-icon{
+	display: inline-block;
+	height:8.4rem;
+	text-align: center;
+	padding-top: 2.7rem;
+	position:absolute;
+	top:0;
+	width:8.4rem;
+}
+
+.show-nav{
+	left:0;
+
+	@media screen and (min-width:1070px){
+		display:none;
+	}
+}
+
+.search-icon{
+	padding-top:0.8rem;
+	right:0;
+}
+
+.site-logo{
+	display: block;
+	text-align: center;
+	height:5rem;
+	margin:1.4rem auto;
+	width:5rem;
+
+	@media screen and (min-width: 1070px){
+		height: 5.5rem;
+		margin-left: 4rem;
+		text-align: left;
+		width: 21rem;
+	}
+
+	#xavier{
+		display: none;
+
+		@media screen and (min-width: 1070px){
+			display: block;
+		}
+	}
+}
+
+#nav-icon {
+	display: block;
+	width: 30px;
+	height: 40px;
+	margin:0 auto;
+	position: relative;
+	transform: rotate(0deg);
+	transition: .5s ease-in-out;
+	cursor: pointer;
+	span {
+		display: inline-block;
+		position: absolute;
+		height: 4px;
+		width: 100%;
+		background: white;
+		opacity: 1;
+		left: 0;
+		transform: rotate(0deg);
+		transition: .25s ease-in-out;
+
+		&:nth-child(1) {
+			top: 8px;
+		}
+
+		&:nth-child(2), &:nth-child(3) {
+			top: 16px;
+		}
+
+		&:nth-child(4) {
+			top: 24px;
+		}
+	}
+
+	&.open span {
+		&:nth-child(1), &:nth-child(4) {
+			top: 16px;
+			width: 0%;
+			left: 50%;
+		}
+
+		&:nth-child(2) {
+			transform: rotate(45deg);
+		}
+
+		&:nth-child(3) {
+			transform: rotate(-45deg);
+		}
+	}
+}

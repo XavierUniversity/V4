@@ -1,0 +1,35 @@
+.secondary-nav{
+	position:absolute;
+	top:8.4rem;
+	text-align: center;
+	z-index: 1;
+	width:100vw;
+	
+	ul{
+		background-color: rgba($color-white, 0.9);
+		display: inline-block;
+		height:4.8rem;
+		line-height: 4.8rem;
+		list-style-type: none;
+		margin: 0;
+		padding:0 2rem;
+	}
+	
+	li {
+		display: inline;
+		margin:0; 
+		padding:0;
+	}
+	
+	a{
+		color: $brand-xavier-primary;
+		font-size: 1.6rem;
+		font-weight: 200;
+		padding:0 2rem;
+		text-decoration: none;
+	   
+		&:hover, &:focus, &:active{
+			color:$brand-xavier-secondary;
+		}
+	}
+}

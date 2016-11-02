@@ -1,0 +1,82 @@
+.navigation{
+	background-color: $brand-xavier-primary;
+	border-top: 1px solid lighten($brand-xavier-primary, 10%);
+	height: 0px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	top: 84px;
+	width: 100vw;
+	
+	&.show{
+		height: auto;
+		max-height: 1070px;
+		overflow: visible;
+	}
+	&.hide{
+		height: 0;
+	}
+	
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+	
+	li{
+		margin: 0;
+		padding: 0;
+	}
+	
+	@media screen and (min-width:1070px){
+		background-color: transparent;
+		bottom: 0;
+		border: none;
+		height: auto;
+		left: 250px;
+		overflow: visible;
+		right: 90px;
+		top: 0.3rem;
+		width: auto;
+	}
+	
+	@media screen and (min-width:1230px){
+		right: 250px;
+	}
+}
+
+.main-navigation{
+	font-weight: 100;
+	text-align: center;
+	margin: 3.25rem 0;
+
+	a{
+		border-bottom: solid 3px transparent;
+		color: $color-white;
+		display: inline-block;
+		line-height: 1.25;
+		padding: 0.5rem;
+		font-size: 3rem;
+		text-decoration: none;
+
+		&:hover, &:focus, &:active{
+			border-bottom-color: $brand-xavier-tertiary;
+		}
+		// Smaller font size to accommodate smaller browser not in responsive yet
+		@media (min-width:1070px) {
+			font-size: 1.8rem;
+		}
+		@media screen and (min-width: 1240px){
+			font-size: 2.2rem;
+		}
+	}
+
+	@media screen and (min-width: 1070px){
+		margin: 2rem;
+
+		li {
+			display: inline-block;
+			margin: 0 1rem;
+		}
+	}
+}

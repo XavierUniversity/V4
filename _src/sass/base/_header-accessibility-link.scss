@@ -1,0 +1,30 @@
+.skip-link{	
+	background: $brand-xavier-primary;
+	color: $color-white;
+	text-align: center;
+	display: block;
+	// Hide it from visual flow
+	position:absolute; 
+	left:-10000px;
+	top:auto; 
+	width:1px; 
+	height:1px; 
+ 	overflow:hidden;
+	z-index: 1000;
+	
+	&:focus, &:hover, &:active{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100vw;
+		height:46px;
+		text-align: center;
+		padding: 1rem;
+		
+		+ .site-heading{
+			position:absolute;
+			top:126px;
+		}
+	}
+}
