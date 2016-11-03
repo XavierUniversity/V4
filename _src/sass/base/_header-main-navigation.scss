@@ -1,21 +1,19 @@
 .navigation{
 	background-color: $brand-xavier-primary;
-	border-top: 1px solid lighten($brand-xavier-primary, 10%);
-	height: 0px;
+	border-top: 0.1rem solid lighten($brand-xavier-primary, 10%);
+	height: 0rem;
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
 	position: absolute;
-	top: 84px;
+	top: 8.4rem;
+	transition: height 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
 	width: 100vw;
 	
 	&.show{
+		display: block;
 		height: auto;
-		max-height: 1070px;
 		overflow: visible;
-	}
-	&.hide{
-		height: 0;
 	}
 	
 	ul{

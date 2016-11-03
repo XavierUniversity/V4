@@ -103,3 +103,15 @@
 		}
 	}
 }
+
+#close-main-nav{
+	display: block;
+	padding: 0.5rem 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+	
+	@media screen and ( min-width:1070px ){
+		display: none;
+	}
+}

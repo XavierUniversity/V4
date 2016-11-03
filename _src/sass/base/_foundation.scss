@@ -9,16 +9,17 @@ html {
 }
 
 body {
-	-moz-osx-font-smoothing:grayscale;
-	-webkit-font-smoothing:antialiased;
+// 	-moz-osx-font-smoothing:grayscale;
+// 	-webkit-font-smoothing:antialiased;
 	font-family: $font-stack;
 	font-size:1.6rem;
+	font-weight: 200;
 	height: 100%;
 	line-height:1.6875;
 	margin:0;
 }
 
-h1,h2,h3,h4,p,blockquote,figure,ol,ul {
+h1,h2,h3,h4,h5,h6,p,blockquote,figure,ol,ul {
 	margin:0;
 	padding:0;
 }
@@ -29,7 +30,7 @@ main,li {
 	padding:0;
 }
 
-h1,h2,h3,h4 {
+h1,h2,h3,h4,h5,h6 {
 	font-size:inherit;
 }
 
@@ -39,6 +40,7 @@ strong {
 
 a,button {
 	color:inherit;
+	transition: 300ms;
 }
 
 button {

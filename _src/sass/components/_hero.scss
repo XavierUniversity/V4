@@ -1,0 +1,67 @@
+.hero{
+	align-items: center;
+	background-attachment: scroll;
+	background-color: $brand-xavier-primary;
+	background-image: url('/images/hero/homepage-hero.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	position: relative;
+	
+	@media screen and (min-width: 1070px){
+		height: calc(100vh - 7.4rem);
+	}
+	
+	.hero-box{
+		background-color: rgba($color-white, 0.75);
+		justify-content: space-around;
+		padding: 2rem;
+		
+		@media screen and (min-width: 1070px){
+			padding: 2rem 5rem;
+		}
+	}
+	
+	h1 {
+		color: $brand-xavier-primary;
+		font-size: 2.4rem;
+		font-weight: 600;
+		line-height: 1.1;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+		
+		@media screen and (min-width:1070px){
+			font-size: 4.8rem;
+		}
+	}
+	
+	#hfind{
+		border:none;
+		padding: 0;
+		margin: 0;
+		font-size: 1.6rem;
+		font-weight: 200;
+		height: 4rem;
+		width: 20rem;
+		padding: 0 .8rem;
+		@media screen and (min-width:1070px){
+			font-size: 2.4rem;
+			height: 5rem;
+			padding: 0 1.6rem;
+			width: 45rem;
+		}
+	}
+	.homepage-search-button{
+		@extend #hfind;
+		background: $brand-xavier-tertiary;
+		width: 6rem;
+		@media screen and (min-width:1070px){
+			width: 12rem;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.social-icons{
+   padding-bottom: 2rem;
+}
+
+.social-icon{
+   border: solid 0.2rem $brand-xavier-primary;
+   color: $brand-xavier-primary;
+   display: inline-block;
+   height: 4.2rem;
+   margin: 0 0.25rem;
+   padding: 0.6rem;
+   text-decoration: none;
+   width: 4.2rem;
+   
+   .fa{
+	   font-size: 2.75rem;
+   }
+   
+   &:hover, &:focus, &:active{
+	   background: $brand-xavier-primary;
+	   color: $color-white;
+   }
+}

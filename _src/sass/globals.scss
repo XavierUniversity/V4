@@ -25,8 +25,41 @@
 /* ----------------------
 	Section 2 - Footer
    ---------------------- */
-
-
+   #site-footer{
+	   background: lighten($brand-xavier-secondary, 25%);
+	   color: $brand-xavier-primary;
+	   font-weight: 300;
+	   padding: 3rem 0 10rem;
+	   width:100vw;
+	   text-align: center;
+	   
+	   .address{
+			margin: 0;
+			> span{
+				display: block;
+				
+				@media screen and (min-width:1070px){
+					display: inline;
+					padding:0 1rem;
+					&:not(:last-child){
+						border-right: solid 1px $brand-xavier-primary;
+					}
+				}
+				
+			}
+		}
+	   
+	   .org {
+		   font-weight: 400;
+		   text-transform: uppercase;
+	   }
+   }
+   
+   
 /* ----------------------
-	Section 3 - 
+	Section 3 - Components
    ---------------------- */
+   @import 'components/accessibility';
+   @import 'components/social-icons';
+   
+   @import 'components/hero';

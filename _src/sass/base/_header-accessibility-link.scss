@@ -10,6 +10,7 @@
 	width:1px; 
 	height:1px; 
  	overflow:hidden;
+ 	transition: 0;
 	z-index: 1000;
 	
 	&:focus, &:hover, &:active{
@@ -21,10 +22,18 @@
 		height:46px;
 		text-align: center;
 		padding: 1rem;
-		
-		+ .site-heading{
-			position:absolute;
-			top:126px;
-		}
 	}
+}
+
+@keyframes highlight-fade {
+  0% {
+    background: rgba($brand-xavier-secondary, 0.75);
+  }
+  100% {
+    background: transparent;
+  }
+}
+
+.accessible-highlight {
+  animation: highlight-fade 2s ease-out;
 }
