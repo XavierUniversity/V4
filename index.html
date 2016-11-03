@@ -11,23 +11,29 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<link href="stylesheets/globals.css" type="text/css" rel="stylesheet" />
 		
-<!-- 		<meta name="robots" content="noindex, nofollow, noarchive"> -->
 		
-<!--         <link rel="apple-touch-icon" href="#"> -->
-        <!-- Place favicon.ico in the root directory -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#0c2340">
+		<meta name="apple-mobile-web-app-title" content="Xavier">
+		<meta name="application-name" content="Xavier">
+		<meta name="theme-color" content="#0c2340">
+		
+		<!-- <meta name="robots" content="noindex, nofollow, noarchive"> -->
+		<!-- <link rel="apple-touch-icon" href="#"> -->
         <!--- Grunt should LOOK for modernizr needs
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>--->
-        <style>
-	        
-	        
-	        
-        </style>
+        
+		<!-- Temporary Include-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     </head>
     <!-- end HEAD -->
 	<body>
-	    <a href="#" class="skip-link">Skip to main content</a>
+	    <a href="#main-content" class="skip-link">Skip to main content</a>
 	    
-	    <div class="search-container">
+	    <div id="header-search" class="search-container">
 		    <form id="header-search-form">
 			    <div class="search-box">
 				    <label for="header-search-box">Find programs, activities and more...</label>
@@ -37,30 +43,33 @@
 		    </form>
 	    </div>
     	
-<!--
+		<!--
     	<div class="campus-alert">
 			<p>
 				<strong>Campus Closed on {ALERT DATE}.</strong><br />
 				{ALERT DETAILS}
 			</p>
 		</div>
--->
+		-->
 		
 	    <div class="page">
 	    	
 		    <header class="site-header">
 			    <div class="show-nav">
-			    <button id="nav-icon" aria-label="toggle navigation">
-				    <span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-			    </button>
+				    <button id="nav-icon" class="nav-toggle" aria-label="toggle navigation">
+					    <span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+				    </button>
 			    </div>
+			    <button id="search-toggle" class="search-icon">
+				    <img src="images/search.svg" alt="toggle search bar" />
+			    </button>
 			    <div class="site-logo">
-				    <a href="#" title="Xavier University Home">
+				    <a href="#" title="Xavier University Homepage">
 						<svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 535.361 139.786">
-							<title>Xavier University</title>
+							<title>Xavier University Wordmark</title>
 							<g id="xavier">
 								<path fill="#FFFFFF" d="M154.032,72.913c4.477,0.182,8.953-2.104,11.905-5.529l18.477-21.047
 									l-15.716-19.622c-5.332-6.66-7.046-7.523-14.666-7.905v-2.572h32.764v2.572c-5.332,0-7.81,0.578-7.81,2.956
@@ -174,27 +183,22 @@
 				    </a>
 			    </div>
 			    
-			    <button class="search-icon">
-				    <img src="images/search.svg" alt="toggle search bar" />
-			    </button>
-			    
 			    <div class="navigation">
-				    <nav class="main-navigation" aria-label="">
+				    <nav class="main-navigation" aria-label="Main Navigation">
 						<ul role="menubar">
-							<li><a href="#" role="menuitem">Admissions</a></li>
+							<li><a href="#" role="menuitem">Admission</a></li>
 							<li><a href="#" role="menuitem">Academics</a></li>
 							<li><a href="#" role="menuitem">Life at Xavier</a></li>
 							<li><a href="#" role="menuitem">Athletics</a></li>
-							<li><a href="#" role="menuitem">About Xavier</a></li>
+							<li><a href="#" role="button">About Xavier</a></li>
 						</ul>
 				    </nav>
 				    <div class="audience-navigation">
-			    
-					    <a href="#" class="sticky-logo">
-						    <img src="images/xu-shield.svg" alt="Xavier University Homepage" />
+					    <a href="#" class="sticky-logo" title="Xavier University Homepage">
+						    <img src="images/xu-shield.svg" alt="Xavier University Logo" />
 						</a>
 					    
-					    <nav class="audience" aria-label="audience navigational items">
+					    <nav class="audience" aria-label="resource links">
 						    <ul role="menubar">
 							    <li><a class="audience" href="#" role="menuitem">Current Students</a></li>
 							    <li><a class="audience" href="#" role="menuitem">Alumni</a></li>
@@ -206,7 +210,7 @@
 								<li><a href="#" role="menuitem">Employment</a></li>
 							</ul>
 						</nav>
-						<nav class="cta" aria-label="action items">
+						<nav class="cta" aria-label="quick links">
 							<ul role="menubar">
 								<li><a href="#" role="menuitem">Visit</a></li>
 								<li><a href="#" role="menuitem">Apply</a></li>
@@ -214,26 +218,65 @@
 							</ul>
 					    </nav>
 				    </div>
-			   </div>
-			    
+				    <button id="close-main-nav" class="nav-toggle">close menu</button>
+				</div>
 		    </header>
-		    
-		    <div class="secondary-nav">			    
-				<ul>
-					<li><a href="#">Campus Map</a></li>
-					<li><a href="#">A – Z Indez</a></li>
+	    	<nav class="secondary-nav" aria-label="Site Specific Navigation">
+			    <button id="main-secondary-button" class="toggle-secondary">
+			    	Section Menu
+			    </button>
+				<ul class="secondary-nav-menubar" role="menubar">
+					<li><a href="#" role="menuitem">Homepage</a></li>
+					<li><a href="#" role="menuitem">Second Tier</a></li>
+					<li><a href="#" role="menuitem">Second Tier with Nav</a></li>
+					<li><a href="#" role="menuitem">Third Tier</a></li>
+					<li><a href="#" role="menuitem" class="toggle-secondary">Close Menu</a></li>
 				</ul>
-		    </div>
-		    
+		    </nav>
 			<main id="main-content" tabindex="-1">
 			<!--- End header --->	
-			
-			
-			
+				<section class="hero">
+					<div class="hero-box">
+						<h1 id="homepage-search-label">See where Xavier<br />will take you</h1>
+						<form id="homepage-search" action="/search/search-results.cfm">
+							<input class="form-input" type="hfind" id="hfind" name="q" placeholder="e.g. undergraduate admission" autocomplete="off" aria-labelledby="homepage-search-label" /><button type="submit" class="homepage-search-button">Search</button>
+						</form>
+					</div>					
+				</section>
+							
 			<!--- Start Footer --->
 			</main>
 			
-			
+			<footer id="site-footer">
+				<div class="social-icons">
+					<a class="social-icon" href="http://www.facebook.com/XavierUniversity" target="_blank" title="Xavier University on Facebook">
+						<span class="fa fa-facebook"></span> <span class="sr-only">Facebook</span>
+					</a>
+					<a class="social-icon" href="http://twitter.com/XavierUniv" target="_blank" title="at Xavier Univ on Twitter">
+						<span class="fa fa-twitter"></span> <span class="sr-only">Twitter</span>
+					</a>
+					<a class="social-icon" href="https://www.linkedin.com/groups?gid=65551&amp;trk=hb_side_g" target="_blank" title="Xavier University LinkedIn Group">
+						<span class="fa fa-linkedin"></span> <span class="sr-only">LinkedIn</span>
+					</a>
+					<a class="social-icon" href="https://www.youtube.com/user/xavieruniversity" target="_blank" title="Xavier University YouTube Channel">
+						<span class="fa fa-youtube"></span> <span class="sr-only">YouTube</span>
+					</a>
+					<a class="social-icon" href="http://instagram.com/xavieruniversity" target="_blank" title="Xavier University on Instagram">
+						<span class="fa fa-instagram"></span> <span class="sr-only">Instagram</span>
+					</a>					
+				</div>
+				
+				<div id="colophon" itemscope="" itemtype="http://schema.org/EducationalOrganization">
+					<p class="org" itemprop="name">Xavier University</p>
+					<p class="address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+						<span itemprop="streetAddress">3800 Victory Parkway</span>
+						<span><span itemprop="addressLocality">Cincinnati</span>, <span itemprop="addressRegion">OH</span> <span itemprop="postalCode">45207</span></span>	
+						<span itemprop="telephone">513-745-3000</span>
+					</p>
+					<p class="legal">&copy; 2016 Xavier University</p>
+				</div>
+				
+			</footer>
 			
 			<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 			<script src="javascripts/base.js"></script>
