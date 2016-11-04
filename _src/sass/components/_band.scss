@@ -1,0 +1,44 @@
+.band{
+	// Fonts can be any size with Navy; 15.789 (Passes AAA)
+	// Fonts can be any size with Fiord; 7.564 (Passes AAA)
+	// Pacific Blue above 18pt or 14pt AND bold (AA)
+	// No other brand colors are acceptable
+	background-color: $color-white;
+	color: $brand-xavier-navy;
+	padding: 3rem; 
+	
+	&.navy, &.primary{
+		// Fonts can be any size with White; 15.789 (Passes AAA)
+		// Fonts can be any size with Silver; 6.123 (Passes AA)
+		// Fonts can be any size with Pacific Blue; 4.833 (Passes AA)
+		// Fonts can be any size with Viking; 7.337 (Passes AAA)
+		background-color: $brand-xavier-navy;
+		color: $color-white;
+	}
+	&.silver, &.secondary, &.grey, &.gray{
+		// Fonts can be any size with Navy; 6.123 (Passes AA)
+		// No other brand colors are acceptable
+		background-color: $brand-xavier-silver;
+	}
+	&.viking, &.tertiary{ 
+		// Fonts can be any size with Navy; 7.337 (Passes AAA)
+		// Fiord above 18pt or 14pt AND bold (AA)
+		// No other brand colors are acceptable
+		background-color: $brand-xavier-viking;
+		color: $brand-xavier-navy;
+	}
+	&.pacific-blue{ 
+		// Fonts can be any size with Navy; 4.833 (Passes AA)
+		// White above 18pt or 14pt AND bold (AA)
+		// No other brand colors are acceptable
+		background-color: $brand-xavier-pacific-blue;
+		color: $brand-xavier-navy;
+	}
+	&.fiord{
+		// Fonts can be any size with White; 7.564 (Passes AAA)
+		// Viking is acceptable if above 18pt or 14pt AND bold (AA)
+		// No other brand colors are acceptable
+		background-color: $brand-xavier-fiord;
+		color: $color-white;
+	}
+}

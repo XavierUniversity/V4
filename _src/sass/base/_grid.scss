@@ -1,0 +1,142 @@
+.container{
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	@media screen and (min-width: 768px){
+		width: 75rem;
+	}
+	@media screen and (min-width: 992px){
+		width: 97rem;
+	}
+	@media screen and (min-width: 1200px){
+		width: 117rem;
+	}
+	
+	&:after{
+		clear:both;
+	}
+}
+
+.row {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	@media screen and (min-width: 992px){
+		flex-flow: wrap;
+		flex-direction: row;
+	}
+	
+	&.nowrap{
+		flex-flow: nowrap;
+		flex-direction: row;
+	}
+	
+	&.demo{ // Remove or pull out to a different import level
+		margin: 0.5rem auto;
+		> div {
+			background-color: #e8e8e8; color: #333;
+			&:not(:first-child){
+				border-top: solid 1px $brand-xavier-silver;
+				@media screen and (min-width:992px){
+					border-top: none;
+					border-left: solid 1px $brand-xavier-silver;	
+				}
+			}
+		}
+	}
+	
+}
+.col {
+	flex: 1;
+	padding: 2rem;
+	position: relative;
+	min-height: 0.1rem;
+}
+
+.col-md-1{
+	@extend .col;
+	
+	@media screen and (min-width: 992px){
+		flex: none;
+		width: calc((100% / 12) * 1);
+	}
+}
+.col-md-2{
+	@extend .col;
+	@media screen and (min-width: 992px){
+		flex: none;
+		width: calc((100% / 12) * 2);
+	}
+}
+.col-md-3{
+	@extend .col;
+	@media screen and (min-width: 992px){
+		flex:none;
+		width: calc((100% / 12) * 3);
+	}
+}
+.col-md-4{
+	@extend .col;
+	@media screen and (min-width: 992px){
+		flex:none;
+		width: calc((100% / 12) * 4);
+	}
+}
+.col-md-5{
+	@extend .col;
+	@media screen and (min-width: 992px){
+		flex:none;
+		width: calc((100% / 12) * 5);
+	}
+}
+.col-md-6{
+	@extend .col;
+	@media screen and (min-width: 992px){
+		flex:none;
+		width: calc((100% / 12) * 6);
+	}
+}
+.col-md-7{
+	@extend .col;
+	@media screen and (min-width: 992px){
+		flex:none;
+		width: calc((100% / 12) * 7);
+	}
+}
+.col-md-8{
+	@extend .col;
+	@media screen and (min-width: 992px){
+		flex:none;
+		width: calc((100% / 12) * 8);
+	}
+}
+.col-md-9{
+	@extend .col;
+	@media screen and (min-width: 992px){
+		flex:none;
+		width: calc((100% / 12) * 9);
+	}
+}
+.col-md-10{
+	@extend .col;
+	@media screen and (min-width: 992px){
+		flex:none;
+		width: calc((100% / 12) * 10);
+	}
+}
+.col-md-11{
+	@extend .col;
+	@media screen and (min-width: 992px){
+		flex:none;
+		width: calc((100% / 12) * 11);
+	}
+}
+.col-md-12{
+	@extend .col;
+	@media screen and (min-width: 992px){
+		flex:none;
+		width: 100%;
+	}
+}

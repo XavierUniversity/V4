@@ -1,7 +1,7 @@
 .hero{
 	align-items: center;
 	background-attachment: scroll;
-	background-color: $brand-xavier-primary;
+	background-color: $brand-xavier-navy;
 	background-image: url('/images/hero/homepage-hero.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -21,13 +21,13 @@
 		justify-content: space-around;
 		padding: 2rem;
 		
-		@media screen and (min-width: 1070px){
+		@media screen and (min-width: 992px){
 			padding: 2rem 5rem;
 		}
 	}
 	
 	h1 {
-		color: $brand-xavier-primary;
+		color: $brand-xavier-navy;
 		font-size: 2.4rem;
 		font-weight: 600;
 		line-height: 1.1;
@@ -58,7 +58,7 @@
 	}
 	.homepage-search-button{
 		@extend #hfind;
-		background: $brand-xavier-tertiary;
+		background: $brand-xavier-viking;
 		width: 6rem;
 		@media screen and (min-width:1070px){
 			width: 12rem;

@@ -27,7 +27,7 @@
 	}
 	
 	li {
-		border-top:solid 0.1px rgba($brand-xavier-secondary, 0.75);
+		border-top:solid 0.1px rgba($brand-xavier-silver, 0.75);
 		display: block;
 		margin:0; 
 		padding:0;
@@ -41,14 +41,15 @@
 	}
 	
 	a{
-		color: $brand-xavier-primary;
+		color: $brand-xavier-navy;
 		font-size: 1.8rem;
 		font-weight: 200;
 		padding:0 2rem;
 		text-decoration: none;
 	   
 		&:hover, &:focus, &:active{
-			color:$brand-xavier-tertiary;
+			color:$brand-xavier-pacific-blue;
+			text-decoration: underline;
 		}
 	}
 	

@@ -1,5 +1,5 @@
 .skip-link{	
-	background: $brand-xavier-primary;
+	background: $brand-xavier-navy;
 	color: $color-white;
 	text-align: center;
 	display: block;
@@ -27,7 +27,7 @@
 
 @keyframes highlight-fade {
   0% {
-    background: rgba($brand-xavier-secondary, 0.75);
+    background: rgba($brand-xavier-silver, 0.75);
   }
   100% {
     background: transparent;
@@ -36,4 +36,5 @@
 
 .accessible-highlight {
   animation: highlight-fade 2s ease-out;
+  z-index: 1001;
 }

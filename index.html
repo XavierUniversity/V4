@@ -9,9 +9,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<link href="stylesheets/globals.css" type="text/css" rel="stylesheet" />
-		
-		
+		<link href="/stylesheets/globals.css" type="text/css" rel="stylesheet" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
 		<link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
@@ -21,13 +19,16 @@
 		<meta name="application-name" content="Xavier">
 		<meta name="theme-color" content="#0c2340">
 		
-		<!-- <meta name="robots" content="noindex, nofollow, noarchive"> -->
-		<!-- <link rel="apple-touch-icon" href="#"> -->
         <!--- Grunt should LOOK for modernizr needs
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>--->
         
 		<!-- Temporary Include-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        
+        
+        <!-- May need at some point to not index
+			<meta name="robots" content="noindex, nofollow, noarchive"> 
+	    -->
     </head>
     <!-- end HEAD -->
 	<body>
@@ -218,9 +219,10 @@
 							</ul>
 					    </nav>
 				    </div>
-				    <button id="close-main-nav" class="nav-toggle">close menu</button>
+				    <button id="close-main-nav" class="nav-toggle">Close Menu</button>
 				</div>
 		    </header>
+		    
 	    	<nav class="secondary-nav" aria-label="Site Specific Navigation">
 			    <button id="main-secondary-button" class="toggle-secondary">
 			    	Section Menu
@@ -233,20 +235,250 @@
 					<li><a href="#" role="menuitem" class="toggle-secondary">Close Menu</a></li>
 				</ul>
 		    </nav>
+
 			<main id="main-content" tabindex="-1">
-			<!--- End header --->	
+			<!--- End header --->
 				<section class="hero">
 					<div class="hero-box">
 						<h1 id="homepage-search-label">See where Xavier<br />will take you</h1>
 						<form id="homepage-search" action="/search/search-results.cfm">
 							<input class="form-input" type="hfind" id="hfind" name="q" placeholder="e.g. undergraduate admission" autocomplete="off" aria-labelledby="homepage-search-label" /><button type="submit" class="homepage-search-button">Search</button>
 						</form>
-					</div>					
+					</div>
 				</section>
-							
+				
+				<section class="billboard" style="background-image: url('/images/bands/about-title-cover.jpg')">
+					<div class="billboard-box">
+						<h1 class="billboard-title">Xavier University</h1>
+						<div class="billboard-half-title">
+							<h2 class="billboard-subtitle">Fast Facts</h2>
+						</div>
+					</div>
+				</section>
+				<section class="band viking">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<p>Color: Viking</p>
+							</div>
+						</div>	
+					</div>
+				</section>
+				<section class="band navy">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<p>Color: Navy</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="band silver">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<p>Color: Silver</p>
+							</div>
+						</div>	
+					</div>
+				</section>
+				<section class="band">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<p>Color: None (new default is white)</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="band fiord">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<p>Color: Fiord</p>
+							</div>
+						</div>	
+					</div>
+				</section>
+				<section class="band pacific-blue">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<p>Color: Pacific-Blue (to be used rarely as a band)</p>
+							</div>
+						</div>	
+					</div>
+				</section>
+				
+				<section class="band">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<h2>Grid Example</h2>
+								<p>Below is a demo of all of the grid classes available for use. Naming conventions were matched up with the Bootstrap names to provide ease of transition. However, there is (currently) only one column size, medium.</p>
+								
+								<p>The medium column is the most used across Xavier.edu which is why it was selected.</p>
+								
+								<p>There is also a <code>.nowrap</code> class that can be applied to a row to ensure the columns do not wrap (in process).</p>
+								
+								<p>This demo uses background colors and borders to distinguish the various columns. The demo row also includes a margin that is not in real-time code. Gutters are built into the columns, there is not whitespce between columns.</p>
+								<p>Finally, there is a flexible <code>.col</code> column that does not take size parameters but will conform to the space and number of columns automatically. This would be best utilized in a 50/50 or 100% container column.</p>
+							</div>
+						</div>
+						<div class="row demo">
+							<div class="col-md-1">
+								<code>.col-md-1</code>
+							</div>
+							<div class="col-md-1">
+								<code>.col-md-1</code>
+							</div>
+							<div class="col-md-1">
+								<code>.col-md-1</code>
+							</div>
+							<div class="col-md-1">
+								<code>.col-md-1</code>
+							</div>
+							<div class="col-md-1">
+								<code>.col-md-1</code>
+							</div>
+							<div class="col-md-1">
+								<code>.col-md-1</code>
+							</div>
+							<div class="col-md-1">
+								<code>.col-md-1</code>
+							</div>
+							<div class="col-md-1">
+								<code>.col-md-1</code>
+							</div>
+							<div class="col-md-1">
+								<code>.col-md-1</code>
+							</div>
+							<div class="col-md-1">
+								<code>.col-md-1</code>
+							</div>
+							<div class="col-md-1">
+								<code>.col-md-1</code>
+							</div>
+							<div class="col-md-1">
+								<code>.col-md-1</code>
+							</div>
+						</div>
+						<div class="row demo">
+							<div class="col-md-2">
+								<code>.col-md-2</code>
+							</div>
+							<div class="col-md-2">
+								<code>.col-md-2</code>
+							</div>
+							<div class="col-md-2">
+								<code>.col-md-2</code>
+							</div>
+							<div class="col-md-2">
+								<code>.col-md-2</code>
+							</div>
+							<div class="col-md-2">
+								<code>.col-md-2</code>
+							</div>
+							<div class="col-md-2">
+								<code>.col-md-2</code>
+							</div>
+						</div>
+						<div class="row demo">
+							<div class="col-md-3">
+								<code>.col-md-3</code>
+							</div>
+							<div class="col-md-3">
+								<code>.col-md-3</code>
+							</div>
+							<div class="col-md-3">
+								<code>.col-md-3</code>
+							</div>
+							<div class="col-md-3">
+								<code>.col-md-3</code>
+							</div>
+						</div>
+						<div class="row demo">
+							<div class="col-md-4">
+								<code>.col-md-4</code>
+							</div>
+							<div class="col-md-4">
+								<code>.col-md-4</code>
+							</div>
+							<div class="col-md-4">
+								<code>.col-md-4</code>
+							</div>
+						</div>
+						<div class="row demo">
+							<div class="col-md-5">
+								<code>.col-md-5</code>
+							</div>
+							<div class="col-md-7">
+								<code>.col-md-7</code>
+							</div>
+						</div>
+						<div class="row demo">
+							<div class="col-md-6">
+								<code>.col-md-6</code>
+							</div>
+							<div class="col-md-6">
+								<code>.col-md-6</code>
+							</div>
+						</div>
+						<div class="row demo">
+							<div class="col-md-7">
+								<code>.col-md-7</code>
+							</div>
+							<div class="col-md-5">
+								<code>.col-md-5</code>
+							</div>
+						</div>
+						<div class="row demo">
+							<div class="col-md-8">
+								<code>.col-md-8</code>
+							</div>
+							<div class="col-md-4">
+								<code>.col-md-4</code>
+							</div>
+						</div>
+						<div class="row demo">
+							<div class="col-md-9">
+								<code>.col-md-9</code>
+							</div>
+							<div class="col-md-3">
+								<code>.col-md-3</code>
+							</div>
+						</div>
+						<div class="row demo">
+							<div class="col-md-10">
+								<code>.col-md-10</code>
+							</div>
+							<div class="col-md-2">
+								<code>.col-md-2</code>
+							</div>
+						</div>
+						<div class="row demo">
+							<div class="col-md-11">
+								<code>.col-md-11</code>
+							</div>
+							<div class="col-md-1">
+								<code>.col-md-1</code>
+							</div>
+						</div>
+						<div class="row demo">
+							<div class="col-md-12">
+								<code>.col-md-12</code>
+							</div>
+						</div>
+						<div class="row demo">
+							<div class="col">
+								<code>.col</code>
+							</div>
+						</div>
+					</div>
+				</sectio>
 			<!--- Start Footer --->
 			</main>
-			
+
 			<footer id="site-footer">
 				<div class="social-icons">
 					<a class="social-icon" href="http://www.facebook.com/XavierUniversity" target="_blank" title="Xavier University on Facebook">
@@ -265,7 +497,7 @@
 						<span class="fa fa-instagram"></span> <span class="sr-only">Instagram</span>
 					</a>					
 				</div>
-				
+
 				<div id="colophon" itemscope="" itemtype="http://schema.org/EducationalOrganization">
 					<p class="org" itemprop="name">Xavier University</p>
 					<p class="address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
@@ -275,9 +507,8 @@
 					</p>
 					<p class="legal">&copy; 2016 Xavier University</p>
 				</div>
-				
 			</footer>
-			
+
 			<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 			<script src="javascripts/base.js"></script>
 	    </div><!-- page -->

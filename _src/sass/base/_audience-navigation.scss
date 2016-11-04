@@ -1,6 +1,6 @@
 .audience-navigation{
-	background-color:$brand-xavier-primary;
-	border-top: 1px solid lighten($brand-xavier-primary, 10%);
+	background-color:$brand-xavier-navy;
+	border-top: 1px solid lighten($brand-xavier-navy, 10%);
 	position: relative;
 	width: 100vw;
 	z-index: 999;
@@ -47,11 +47,11 @@
 			text-transform: uppercase;
 		
 			&.audience {
-				color: $brand-xavier-tertiary;
+				color: $brand-xavier-pacific-blue;
 			}
 		
 			@media screen and (min-width: 1070px){
-				color: $brand-xavier-tertiary;
+				color: $brand-xavier-pacific-blue;
 				font-size: 1.4rem;
 				&.audience{
 					color: $color-white;
@@ -63,14 +63,15 @@
 			}
 		
 			&:hover, &:focus, &:active{
-				color: $brand-xavier-secondary;
+				color: $brand-xavier-silver;
+				text-decoration: underline;
 			}
 		}
 	}
 	
 	.cta{
-		background: $brand-xavier-tertiary;
-		color: $brand-xavier-primary;
+		background: $brand-xavier-pacific-blue;
+		color: $brand-xavier-navy;
 		text-align: center;
 		font-weight: 600;
 		padding: 2rem;
@@ -108,7 +109,7 @@
 		}
 
 		a{
-			color:$brand-xavier-primary;
+			color:$brand-xavier-navy;
 			display: inline-block;
 			font-size: 2.1rem;
 			text-decoration: none;
@@ -121,6 +122,7 @@
 			
 			&:hover, &:focus, &:active{
 				color: $color-white;
+				text-decoration: underline;
 			}
 		}
 	}

@@ -19,15 +19,15 @@
    @import 'base/header-main-navigation';
    @import 'base/audience-navigation';
    @import 'base/header-secondary-navigation';
-   
+   @import 'base/grid';
 // When content area gets focus, figure out a callout to it. 
 
 /* ----------------------
 	Section 2 - Footer
    ---------------------- */
    #site-footer{
-	   background: lighten($brand-xavier-secondary, 25%);
-	   color: $brand-xavier-primary;
+	   background: lighten($brand-xavier-silver, 25%);
+	   color: $brand-xavier-navy;
 	   font-weight: 300;
 	   padding: 3rem 0 10rem;
 	   width:100vw;
@@ -42,7 +42,7 @@
 					display: inline;
 					padding:0 1rem;
 					&:not(:last-child){
-						border-right: solid 1px $brand-xavier-primary;
+						border-right: solid 1px $brand-xavier-navy;
 					}
 				}
 				
@@ -63,3 +63,5 @@
    @import 'components/social-icons';
    
    @import 'components/hero';
+   @import 'components/billboard';
+   @import 'components/band';

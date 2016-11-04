@@ -1,6 +1,6 @@
 .navigation{
-	background-color: $brand-xavier-primary;
-	border-top: 0.1rem solid lighten($brand-xavier-primary, 10%);
+	background-color: $brand-xavier-navy;
+	border-top: 0.1rem solid lighten($brand-xavier-navy, 10%);
 	height: 0rem;
 	margin: 0;
 	overflow: hidden;
@@ -53,12 +53,12 @@
 		color: $color-white;
 		display: inline-block;
 		line-height: 1.25;
-		padding: 0.5rem;
+		padding: 0.5rem 0.5rem 0;
 		font-size: 3rem;
 		text-decoration: none;
 
 		&:hover, &:focus, &:active{
-			border-bottom-color: $brand-xavier-tertiary;
+			border-bottom-color: $brand-xavier-pacific-blue;
 		}
 		// Smaller font size to accommodate smaller browser not in responsive yet
 		@media (min-width:1070px) {
