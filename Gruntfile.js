@@ -18,7 +18,7 @@ module.exports = function (grunt) {
 			styles: {
 				files: '_src/sass/**/*.scss',
 				tasks: [
-					'compass:dev'
+					'compass:dev', 'postcss'
 				]
 			},
 			images: {
@@ -42,6 +42,18 @@ module.exports = function (grunt) {
 					environment: 'development',
 					outputStyle: 'nested'
 				}
+			}
+		},
+		postcss: {
+			options: {
+				processors: [
+					require('autoprefixer')({
+						browsers: ['last 2 versions']
+					})
+				]
+			},
+			dist: {
+				src: 'stylesheets/**/*.css'
 			}
 		},
 		imagemin: {
@@ -74,6 +86,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-compass');
+	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
