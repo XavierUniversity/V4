@@ -23,6 +23,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	margin: 0 -1.5rem;
 	@media screen and (min-width: 992px){
 		flex-flow: wrap;
 		flex-direction: row;
@@ -32,21 +33,6 @@
 		flex-flow: nowrap;
 		flex-direction: row;
 	}
-	
-	&.demo{ // Remove or pull out to a different import level
-		margin: 0.5rem auto;
-		> div {
-			background-color: #e8e8e8; color: #333;
-			&:not(:first-child){
-				border-top: solid 1px $brand-xavier-silver;
-				@media screen and (min-width:992px){
-					border-top: none;
-					border-left: solid 1px $brand-xavier-silver;	
-				}
-			}
-		}
-	}
-	
 }
 .col {
 	flex: 1;

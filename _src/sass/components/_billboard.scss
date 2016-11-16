@@ -37,9 +37,12 @@
 	
 	.billboard-title{
 		font-size: 3.0rem;
-		font-style: normal;
-		font-weight: 600;
+		line-height: 1.1;
 		margin: 0 0 12px;
+		text-transform: none;
+		@media screen and (min-width: 1070px){
+			font-size: 4.8rem;
+		}
 	}
 	
 	.billboard-half-title{
@@ -59,6 +62,7 @@
 		font-weight: 400;
 		font-style: normal;
 		font-size: 1.8rem;
+		margin: 0;
 		padding: 0 15px;
 	}
 }

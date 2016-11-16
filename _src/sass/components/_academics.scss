@@ -1,0 +1,97 @@
+.academic-header{
+	background-attachment: scroll;
+	background-image: url('../images/academic-header.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+	display: block;
+	padding: 6rem 0 3rem;
+	position: relative;
+	overflow: hidden
+}
+
+.academic-header-content{
+	margin: 0 auto;
+	width: calc( (100% / 12) * 10);
+	
+	@media screen and (min-width:1070px){
+		font-size: 2.2rem;
+		padding: 0 1.5rem 2rem;
+			
+	}
+}
+
+.academic-header-title{
+	color: $color-white;
+	font-size: 2.2rem;
+	
+	@media screen and (min-width:1070px){
+		font-size: 4.0rem;
+	}
+}
+
+.degree{
+	color: $brand-xavier-navy;
+	display: block;
+	font-size: 1.6rem;
+	font-weight: 200;
+	padding: 3.1rem 0 0 0;
+	text-align: center;
+	width: 100%;
+	
+	@media screen and (min-width:1070px){
+		text-align: right;	
+	}
+	
+	&:after{
+		display: inline-block;
+		position: relative;
+		top: -0.75rem;
+		padding: 1.125rem 2rem;
+		background: rgba(255, 255, 255, 0.8)
+	}
+	
+	&.bs:after{
+		content: "Undergraduate Program (BS)";
+	}
+
+}
+
+.button {
+	border: solid 2px $color-white;
+	display: block;
+	font-size: 1.8rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding:1rem;
+	width:100%;
+	
+	&.active{
+		background: $brand-xavier-pacific-blue;
+		border-color: $brand-xavier-pacific-blue; 
+	}
+	
+	&:hover, &:focus, &:active{
+		background: $color-white;
+		border-color: $color-white; 
+		color: $brand-xavier-navy;
+	}
+}
+
+#details{
+	padding:0;
+	margin:0;
+}
+.details-item{
+	display: none;
+	
+	&.active{
+		display: block;
+	}
+}
+
+h3:focus{
+	
+}
