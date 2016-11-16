@@ -223,6 +223,7 @@
 				</div>
 		    </header>
 		    
+<!--
 	    	<nav class="secondary-nav" aria-label="Site Specific Navigation">
 			    <button id="main-secondary-button" class="toggle-secondary">
 			    	Section Menu
@@ -235,9 +236,11 @@
 					<li><a href="#" role="menuitem" class="toggle-secondary">Close Menu</a></li>
 				</ul>
 		    </nav>
+-->
 
 			<main id="main-content" tabindex="-1">
 			<!--- End header --->
+<!--
 				<section class="hero">
 					<div class="hero-box">
 						<h1 id="homepage-search-label">See where Xavier<br />will take you</h1>
@@ -246,15 +249,99 @@
 						</form>
 					</div>
 				</section>
+-->
 				
+<!--
 				<section class="billboard" style="background-image: url('/images/bands/about-title-cover.jpg')">
 					<div class="billboard-box">
-						<h1 class="billboard-title">Xavier University</h1>
+						<h1 class="billboard-title">Page Heading</h1>
 						<div class="billboard-half-title">
-							<h2 class="billboard-subtitle">Fast Facts</h2>
+							<h2 class="billboard-subtitle">Subheading</h2>
 						</div>
 					</div>
 				</section>
+-->
+				<section class="academic-header">
+					<div class="academic-header-content">
+						<p class="degree bs"></p>
+						<h1 class="academic-header-title">Lorem Ipsum</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam diam vitae tellus porttitor, consectetur faucibus elit luctus. Quisque sit amet consectetur nunc. Maecenas a finibus nibh. In lobortis quam tincidunt finibus interdum. Mauris porta semper lacus, nec pretium turpis fringilla et. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque aliquet metus sit amet massa vestibulum tristique.</p>
+						<div id="academic-header-buttons" class="row">
+							<div class="col">
+								<a href="#" data-content="#sequence" class="button">Course Sequence</a>
+							</div>
+							<div class="col">
+								<a href="#" data-content="#courses" class="button">Lorem Courses</a>
+							</div>
+							<div class="col">
+								<a href="#" data-content="#related" class="button">Related Majors &amp; Minors</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<section class="band" id="details" aria-alert="polite">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 details-item" id="sequence">
+								<h3 tabindex="-1">Course Sequence</h3>
+								<table class="striped">
+									<thead>
+										<tr>
+											<th>First Semester</th>
+											<th><abbr title="semester">Sem.</abbr> <abbr title="hours">Hrs.</abbr></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												BIOLOGY 160: General Biology I</td>
+											<td class="text-center">
+												3</td>
+										</tr>
+										<tr>
+											<td>
+												BIOLOGY 161: General Biology I Lab</td>
+											<td class="text-center">
+												1</td>
+										</tr>
+										<tr>
+											<td>
+												CHEMISTRY 160: General Chemistry I</td>
+											<td class="text-center">
+												3</td>
+										</tr>
+										<tr>
+											<td>
+												CHEMISTRY 161: General Chemistry I Lab</td>
+											<td class="text-center">
+												1</td>
+										</tr>
+										<tr>
+											<td>
+												ENGLISH 101: English Composition</td>
+											<td class="text-center">
+												3</td>
+										</tr>
+										<tr>
+											<td>
+												First Year Seminar</td>
+											<td class="text-center">
+												3</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="col-md-12 details-item" id="courses">
+								<h3 tabindex="-1">Sample Courses</h3>	
+							</div>
+							<div class="col-md-12 details-item" id="related">
+								<h3 tabindex="-1">Related Majors and Minors</h3>	
+							</div>
+						</div>
+					</div>
+				</section>
+				
 				<section class="band viking">
 					<div class="container">
 						<div class="row">
@@ -475,7 +562,7 @@
 							</div>
 						</div>
 					</div>
-				</sectio>
+				</section>
 			<!--- Start Footer --->
 			</main>
 
@@ -511,6 +598,17 @@
 
 			<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 			<script src="javascripts/base.js"></script>
+			<script>
+				$('.button').on('click', function(e){
+					e.preventDefault();
+					var el = $(this);
+					var content = $(this).data('content');
+					$('.button.active, .details-item.active').removeClass('active');
+					el.addClass('active');
+					$(content).addClass('active');
+					$(content + " h3").focus();
+				});
+			</script>
 	    </div><!-- page -->
 	</body>
 </html>
