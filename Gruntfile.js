@@ -11,7 +11,7 @@ module.exports = function (grunt) {
 		concat:{
 			main: {
 				src: ['_src/javascripts/**/*.js'],
-				dest: 'javascripts/base.js'
+				dest: 'dist/javascripts/base.js'
 			}
 		},
 		watch: {
@@ -32,16 +32,33 @@ module.exports = function (grunt) {
 				tasks: [
 					'jshint', 'concat'
 				]
+			},
+			html: {
+				files: ['_src/includes/**/*.html', '_src/*.html'],
+				tasks: [
+					'includes'
+				]
 			}
 		},
 		compass: {
 			dev: {
 				options: {
 					sassDir: '_src/sass',
-					cssDir: 'stylesheets',
+					cssDir: 'dist/stylesheets',
 					environment: 'development',
 					outputStyle: 'nested'
 				}
+			}
+		},
+		includes: {
+			files: {
+			    src: ['_src/*.html'], // Source files
+			    dest: 'dist', // Destination directory
+			    cwd: '.',
+			    flatten: true,
+			    options: {
+			    	silent: true
+			    }
 			}
 		},
 		postcss: {
@@ -53,7 +70,7 @@ module.exports = function (grunt) {
 				]
 			},
 			dist: {
-				src: 'stylesheets/**/*.css'
+				src: 'dist/stylesheets/**/*.css'
 			}
 		},
 		imagemin: {
@@ -62,7 +79,7 @@ module.exports = function (grunt) {
 					expand: true,
 					cwd: '_src/images',
 					src: ['**/*.{png,jpg,gif,svg}'],
-					dest: 'images/'
+					dest: 'dist/images/'
 				}]
 			}
 		},
@@ -70,13 +87,14 @@ module.exports = function (grunt) {
 			dev: {
 				bsFiles: {
 					src: [
-						'stylesheets/*.css',
-						'javascripts/*.js'
+						'dist/stylesheets/*.css',
+						'dist/javascripts/*.js',
+						'dist/*.html'
 					]
 				},
 				options: {
 					watchTask:true,
-					server: './'
+					server: './dist'
 				}
 			}
 		}
@@ -89,6 +107,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-includes');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	
     // define default task

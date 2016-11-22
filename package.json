@@ -17,6 +17,7 @@
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
+    "grunt-includes": "^1.0.0",
     "grunt-modernizr": "^1.0.1",
     "grunt-newer": "^1.2.0",
     "grunt-postcss": "^0.6.0",
