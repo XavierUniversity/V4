@@ -10,17 +10,18 @@
 	    <div class="page">
 		    
 		    include "includes/header.html"
-		    
-			include "includes/secondary-navigation.html"
+		    include "includes/breadcrumbs.html"
 			
 			<main id="main-content" tabindex="-1">
-
-				include "includes/content/billboard.html"
-				
-				<!-- Demo content -->
-				include "includes/demo/bands.html"
-				include "includes/demo/grid.html"
-				
+				<div class="container">
+					<div class="row">
+						
+						<div class="col" id="content-wrap">
+							<p>This is a full-width page. Navigation isn't something we're worried about here.</p>
+						</div>
+						
+					</div>
+				</div>
 			</main>
 
 			include "includes/footer.html"

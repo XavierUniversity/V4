@@ -1,6 +1,7 @@
 .navigation{
 	background-color: $brand-xavier-navy;
 	border-top: 0.1rem solid lighten($brand-xavier-navy, 10%);
+	display: none;
 	height: 0rem;
 	margin: 0;
 	overflow: hidden;
@@ -30,6 +31,7 @@
 		background-color: transparent;
 		bottom: 0;
 		border: none;
+		display: block;
 		height: auto;
 		left: 250px;
 		overflow: visible;

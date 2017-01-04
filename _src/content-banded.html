@@ -10,17 +10,16 @@
 	    <div class="page">
 		    
 		    include "includes/header.html"
-		    
-			include "includes/secondary-navigation.html"
-			
+		    include "includes/breadcrumbs.html"
+			include "includes/content-header-nav.html"
 			<main id="main-content" tabindex="-1">
-
-				include "includes/content/billboard.html"
+				<div class="row">
+					<div class="col" id="content-wrap">
+						<p>This is page isn't contained. It can be used for "banded" style layouts.</p>
+					</div>
+				</div>
 				
-				<!-- Demo content -->
 				include "includes/demo/bands.html"
-				include "includes/demo/grid.html"
-				
 			</main>
 
 			include "includes/footer.html"

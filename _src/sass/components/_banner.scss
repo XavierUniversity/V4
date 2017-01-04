@@ -1,0 +1,48 @@
+.banner{
+	position: relative;
+	height: 240px;
+	
+	.banner-main{
+		align-items: center;
+		background-image: linear-gradient(rgba($color-white, .85) 0%, rgba($color-white, .85) 100%);
+		bottom:0;
+		display: flex;
+		height: 156px;
+		justify-content: center;
+		padding:0 1.5rem;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+	}
+	
+	.crumbs{
+		border-bottom: 2px solid rgba($brand-xavier-silver, 0.5);
+		display: inline-block;
+		padding: 0 3rem 1rem;
+		font-weight: 400;
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		a{
+			color: $brand-xavier-navy;
+			text-decoration: none;
+			&:hover, &:focus, &:active{}
+			
+			&:not(:last-child):after{
+				content: "\00a0\/\00a0";
+				padding:0 0.5rem;
+			}
+		}
+	}
+	
+	.page-title{
+		color: $brand-xavier-navy;
+		font-size: 2.2rem;
+		line-height: 1.1;
+		margin:0;
+		padding:1rem 1rem 0;
+		
+		@media screen and (min-width:1070px){
+			font-size: 4.0rem;
+		}
+	}
+}

@@ -9,8 +9,8 @@ html {
 }
 
 body {
-// 	-moz-osx-font-smoothing:grayscale;
-// 	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	-webkit-font-smoothing:antialiased;
 	font-family: $font-stack;
 	font-size:1.6rem;
 	font-weight: 200;
@@ -32,7 +32,6 @@ main,li {
 }
 
 h1, h2, h3, h4, h5, h6{
-	color: $brand-xavier-navy;
 	font-style: normal;
 	margin: 2rem 0 1rem;
 }

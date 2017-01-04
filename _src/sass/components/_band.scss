@@ -42,3 +42,12 @@
 		color: $color-white;
 	}
 }
+
+.cover{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: scroll;
+	background-size: cover;
+	display: block;
+	overflow: hidden
+}

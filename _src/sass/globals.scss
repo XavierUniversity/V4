@@ -24,6 +24,7 @@
    @import 'base/audience-navigation';
    @import 'base/header-secondary-navigation';
    @import 'base/grid';
+   @import 'base/content-pages';
 // When content area gets focus, figure out a callout to it. 
 
 /* ----------------------
@@ -72,3 +73,8 @@
    @import 'components/band';
    
    @import 'components/table';
+   
+   
+   // Content pages
+   @import 'components/banner';
+   @import 'components/content-header-nav';

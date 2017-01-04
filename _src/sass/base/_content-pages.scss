@@ -1,0 +1,76 @@
+#content-wrap{
+	margin-top:2rem;
+	margin-bottom:2rem;
+	@media screen and (min-width:992px){
+		
+	}
+}
+
+#sidebar-wrap{
+	margin-top:2rem;
+	margin-bottom:2rem;
+	@media screen and (min-width:992px){
+		display: block;
+	}
+}
+
+#show-subnav{
+	color: $brand-xavier-navy;
+	display: block;
+	width:100%;
+	border-bottom: solid 0.1rem $brand-xavier-silver;
+	border-top: solid 0.1rem $brand-xavier-silver;
+	text-align: center;
+	padding: 0.5rem 0;
+	
+	@media screen and (min-width:992px){
+		display: none;
+	}
+	
+	&:hover, &:active{
+		color: $brand-xavier-pacific-blue;
+	}
+}
+
+.side-nav{
+	display: none;
+	border-radius: 0 0 0.2rem 0.2rem;
+	&.active{
+		display: block;
+	}
+	
+	@media screen and (min-width: 992px){
+		display: block;
+	}
+	
+	li{
+		padding:1rem 0;
+		
+		&:not(:first-child){
+			border-top: solid 0.1rem lighten($brand-xavier-silver, 20%);
+		}
+		
+		&.active a{
+			color: $brand-xavier-pacific-blue;
+		}
+		
+		ul{ 
+			border-left: 4px solid #f5f7f9;
+			font-size: 1.4rem;
+			font-style: italic;
+			margin: 0.5rem 0 0;
+			padding: 0 0 0 1rem;
+		}
+	}
+	
+	a{
+		color:$brand-xavier-navy;
+		display: block;
+		text-decoration: none;
+		
+		&:hover, &:focus, &:active{
+			color: $brand-xavier-pacific-blue;
+			text-decoration: underline;
+		}
+	}
+}

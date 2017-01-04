@@ -1,13 +1,13 @@
 <header class="site-header">
     <div class="show-nav">
-	    <button id="nav-icon" class="nav-toggle" aria-label="toggle navigation">
+	    <button id="nav-icon" class="nav-toggle" aria-label="toggle navigation" aria-haspopup="true" aria-controls="main-navigation">
 		    <span></span>
 			<span></span>
 			<span></span>
 			<span></span>
 	    </button>
     </div>
-    <button id="search-toggle" class="search-icon">
+    <button id="search-toggle" class="search-icon" aria-haspopup="true" aria-controls="header-search">
 	    <img src="images/search.svg" alt="toggle search bar" />
     </button>
     <div class="site-logo">
@@ -71,8 +71,8 @@
 	    </a>
     </div>
     
-    <div class="navigation">
-	    <nav class="main-navigation" aria-label="Main Navigation">
+    <div id="main-navigation" class="navigation">
+	    <nav class="main-navigation" aria-label="Global Site Navigation">
 			<ul role="menubar">
 				<li><a href="#" role="menuitem">Admission</a></li>
 				<li><a href="#" role="menuitem">Academics</a></li>
@@ -86,7 +86,7 @@
 			    <img src="images/logo.svg" alt="Xavier University Logo" />
 			</a>
 		    
-		    <nav class="audience" aria-label="resource links">
+		    <nav class="audience" aria-label="Resources">
 			    <ul role="menubar">
 				    <li><a class="audience" href="#" role="menuitem">Current Students</a></li>
 				    <li><a class="audience" href="#" role="menuitem">Alumni</a></li>
@@ -98,7 +98,7 @@
 					<li><a href="#" role="menuitem">Employment</a></li>
 				</ul>
 			</nav>
-			<nav class="cta" aria-label="quick links">
+			<nav class="cta" aria-label="Quick Links">
 				<ul role="menubar">
 					<li><a href="#" role="menuitem">Visit</a></li>
 					<li><a href="#" role="menuitem">Apply</a></li>
@@ -106,6 +106,6 @@
 				</ul>
 		    </nav>
 	    </div>
-	    <button id="close-main-nav" class="nav-toggle">Close Menu</button>
+	    <button id="close-main-nav" class="nav-toggle sr-only">Close Menu</button>
 	</div>
 </header>

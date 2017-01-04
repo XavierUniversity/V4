@@ -22,3 +22,15 @@ $('.toggle-secondary').on('click', function(e){
 		$("#main-secondary-button").focus();
 	}
 });
+
+$(".toggle-content-header-nav").on('click', function(e){
+	e.preventDefault();
+	
+	$("#content-header-navigation").toggleClass('active');
+	
+	if ( $("#content-header-navigation").hasClass('active') ) {
+		$('#content-header-navigation li:first-child a' ).focus();
+	} else {
+		$(".toggle-content-header-nav").focus();	
+	}
+});

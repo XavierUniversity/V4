@@ -36,9 +36,10 @@
 }
 .col {
 	flex: 1;
-	padding: 2rem;
-	position: relative;
 	min-height: 0.1rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	position: relative;
 }
 
 .col-md-1{

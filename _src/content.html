@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="">
     
     include "includes/head.html"
     
@@ -10,17 +10,21 @@
 	    <div class="page">
 		    
 		    include "includes/header.html"
-		    
-			include "includes/secondary-navigation.html"
+		    include "includes/breadcrumbs.html"
 			
 			<main id="main-content" tabindex="-1">
-
-				include "includes/content/billboard.html"
-				
-				<!-- Demo content -->
-				include "includes/demo/bands.html"
-				include "includes/demo/grid.html"
-				
+				<div class="container">
+					<div class="row">
+						
+						include "includes/sidebar-navigation.html"
+						
+						
+						<div class="col-md-9" id="content-wrap">
+							<p>Default page layout. Includes left-hand navigational items.</p>
+						</div>
+						
+					</div>
+				</div>
 			</main>
 
 			include "includes/footer.html"

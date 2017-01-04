@@ -29,7 +29,7 @@
 		}
 	}
 	
-	input[type=text]{
+	input[type=text], input[type=search]{
     	background-color: $brand-xavier-navy;
     	border:solid 0.2rem transparent;
 		border-bottom-color: $brand-xavier-pacific-blue;
