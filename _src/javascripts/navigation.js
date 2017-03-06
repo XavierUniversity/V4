@@ -1,3 +1,5 @@
+
+
 $(".nav-toggle").on('click', function(e){
 	e.preventDefault();
 	$('#nav-icon').toggleClass('open');
@@ -8,6 +10,18 @@ $(".nav-toggle").on('click', function(e){
 		$('.main-navigation li:first-child a').focus();	
 	} else {
 		$('#nav-icon').focus();
+	}
+});
+
+$("#show-subnav").on('click', function(e){
+	e.preventDefault();
+	
+	$("#subnav").toggleClass('active');
+	
+	if ( $("#subnav").hasClass('active') ) {
+		$('#subnav li:first-child a' ).focus();
+	} else {
+		$("#show-subnav").focus();	
 	}
 });
 
@@ -34,3 +48,5 @@ $(".toggle-content-header-nav").on('click', function(e){
 		$(".toggle-content-header-nav").focus();	
 	}
 });
+
+

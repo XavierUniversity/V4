@@ -49,3 +49,5 @@ Thumbs.db
 # Ignore compiled files in the repo #
 #####################################
 dist/*
+
+.travis.yml
