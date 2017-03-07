@@ -83,6 +83,16 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
+		copy: {
+  		main: {
+    		files: [{
+      		expand: true,
+      		flatten: true,
+      		src: ['_src/fonts/*'],
+      		dest: 'dist/fonts'
+    		}]
+      }
+		},
 		browserSync: {
 			dev: {
 				bsFiles: {
@@ -109,7 +119,9 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-includes');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	
-    // define default task
-    grunt.registerTask('default', ['browserSync', 'watch']);
+	grunt.registerTask('setup', ['jshint','concat', 'compass:dev', 'postcss', 'imagemin', 'copy']);
+  // define default task
+  grunt.registerTask('default', ['setup', 'browserSync', 'watch']);
 };
