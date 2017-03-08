@@ -1183,7 +1183,7 @@ abbr {
         font-size: 4.8rem; } }
   /* line 48, ../../_src/sass/components/_billboard.scss */
   .billboard .billboard-half-title {
-    background: url("/images/bands/bg-half-title.png") repeat-x left center;
+    background: url("images/bands/bg-half-title.png") repeat-x left center;
     display: inline-block;
     margin: 0 auto;
     padding: 0 3rem;
@@ -1205,7 +1205,7 @@ abbr {
 /* line 1, ../../_src/sass/components/_academics.scss */
 .academic-header {
   background-attachment: scroll;
-  background-image: url("../images/academic-header.jpg");
+  background-image: url("images/academic-header.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
