@@ -1080,7 +1080,7 @@ abbr {
     top: 0;
     left: 0;
     background-color: #0c2340;
-    background-image: url("/images/hero/homepage-hero.jpg");
+    background-image: url("images/hero/homepage-hero.jpg");
     background-size: cover;
     will-change: transform;
     z-index: -1; }
