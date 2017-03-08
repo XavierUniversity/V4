@@ -58,26 +58,21 @@
 
 }
 
-.button {
-	border: solid 2px $color-white;
-	display: block;
-	font-size: 1.8rem;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	padding:1rem;
-	width:100%;
-	
-	&.active{
-		background: $brand-xavier-navy;
-		border-color: $brand-xavier-navy; 
-	}
-	
-	&:hover, &:focus, &:active{
-		background: $color-white;
-		border-color: $color-white; 
-		color: $brand-xavier-navy;
-	}
+#academic-header-buttons{
+  .button {
+  	border-color: $color-white;
+  	
+  	&.active{
+  		background: $brand-xavier-navy;
+  		border-color: $brand-xavier-navy; 
+  	}
+  	
+  	&:hover, &:focus, &:active{
+  		background: $color-white;
+  		border-color: $color-white; 
+  		color: $brand-xavier-navy;
+  	}
+  }
 }
 
 #details{

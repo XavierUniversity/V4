@@ -1,80 +1,74 @@
 /* ----------------------
-	Configuration
-	 Setup of the basic components (fonts/colors/etc)
-   ---------------------- */
-   @import 'base/variables';
-   @import 'base/typography';
-   @import 'base/foundation';
+  Configuration
+  Setup of the basic components (fonts/colors/etc)
+  ---------------------- */
+  @import 'base/variables';
+  @import 'base/typography';
+  @import 'base/foundation';
 
 
-   // Demo code
-	@import 'components/demo';
+  // Demo code
+  @import 'components/demo';
 
 /* ----------------------
-	Section 1 - Header
-	
-	Includes accessibility; header search; main navigation bars
-   ---------------------- */
+  Section 1 - Header
+  Includes accessibility; header search; main navigation bars
+  ---------------------- */
+  @import 'base/header-search';
+  @import 'base/header-accessibility-link';
+  @import 'base/header-campus-alerts';
+  @import 'base/header-layout';
+  @import 'base/header-main-navigation';
+  @import 'base/audience-navigation';
+  @import 'base/header-secondary-navigation';
+  @import 'base/grid';
+  @import 'base/content-pages';
+  // When content area gets focus, figure out a callout to it. 
+
+/* ----------------------
+  Section 2 - Footer
+  ---------------------- */
+  @import 'base/footer';
+
+
+/* ----------------------
+  Section 3 - Components
+  ---------------------- */
+  @import 'components/accessibility';
+  @import 'components/social-icons';
+  @import 'components/hero';
+    @import 'components/program-listing';
   
-   @import 'base/header-search';
-   @import 'base/header-accessibility-link';
-   @import 'base/header-campus-alerts';
-   @import 'base/header-layout';
-   @import 'base/header-main-navigation';
-   @import 'base/audience-navigation';
-   @import 'base/header-secondary-navigation';
-   @import 'base/grid';
-   @import 'base/content-pages';
-// When content area gets focus, figure out a callout to it. 
+  @import 'components/billboard';
+  @import 'components/academics';
+  @import 'components/band';
+  @import 'components/icon-link';
+  @import 'components/table';
+
+  // Content pages
+  @import 'components/banner';
+  @import 'components/content-header-nav';
+
 
 /* ----------------------
-	Section 2 - Footer
-   ---------------------- */
-   #site-footer{
-	   background: lighten($brand-xavier-silver, 25%);
-	   color: $brand-xavier-navy;
-	   font-weight: 300;
-	   padding: 3rem 0 10rem;
-	   width:100vw;
-	   text-align: center;
-	   
-	   .address{
-			margin: 0;
-			> span{
-				display: block;
-				
-				@media screen and (min-width:1070px){
-					display: inline;
-					padding:0 1rem;
-					&:not(:last-child){
-						border-right: solid 1px $brand-xavier-navy;
-					}
-				}
-				
-			}
-		}
-	   
-	   .org {
-		   font-weight: 400;
-		   text-transform: uppercase;
-	   }
-   }
-   
-   
-/* ----------------------
-	Section 3 - Components
-   ---------------------- */
-   @import 'components/accessibility';
-   @import 'components/social-icons';
-   
-   @import 'components/hero';
-   @import 'components/billboard';
-   @import 'components/academics';
-   @import 'components/band';
-   
-   @import 'components/table';
-   
-   
-   // Content pages
-   @import 'components/banner';
-   @import 'components/content-header-nav';
+  Section 4 - Shame!!!
+  for putting stuff in that needs to find a new home; Don't do it often
+  ---------------------- */
+  hr {
+    border:none;
+    background: rgba(255,255,255,0.5);
+    height:0.2rem;
+    margin: 2rem auto;
+    &.dark{
+      background: rgba(0,0,0,0.25);  
+    }
+    &.width-75{
+      width:75%;
+    }
+    &.width-50{
+      width:50%;
+    }
+    &.width-25{
+      width:25%;
+    }
+  }

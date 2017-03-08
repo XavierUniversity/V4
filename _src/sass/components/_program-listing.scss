@@ -1,0 +1,97 @@
+#show-programs{
+  color: $brand-xavier-pacific-blue;
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  span{
+    color: $color-white;
+  }
+  
+  @media (min-width: 992px){
+    font-size: 3.4rem;
+  }
+}
+
+.programs-list{
+  background-color: $color-white;
+  
+  .button{
+    display: block;
+    border-color: $brand-xavier-navy;
+    
+    &:hover, &:active{
+      background: $brand-xavier-navy;
+      color: $color-white;
+    } 
+  }
+  
+  .major-buttons{
+    display: none;
+    
+    &.active{
+      display: block;
+    }
+  }
+}
+
+.program-categories{
+  margin: 1rem 0;
+}
+
+ul.program-categories{
+  background: lighten($brand-xavier-silver, 25%);
+  display: none;
+  
+  li{
+    display: inline-block;
+    font-weight: 300;
+    text-transform: uppercase;
+    
+    &.active{
+      a{
+        background: $brand-xavier-navy;
+        color: $color-white;
+      }
+    }
+    
+    a{
+      text-decoration: none;
+      padding:1rem 1.5rem; 
+      &:hover, &:active{
+        background: $brand-xavier-silver;
+        color: $brand-xavier-navy;
+      }
+    }
+  }
+  @media (min-width: 992px){
+    display: block;
+  }
+}
+
+select.program-categories{
+  display: block;
+  width: 100%;
+  @media (min-width: 992px){
+    display: none;
+  }
+}
+
+.major-list{
+  
+  
+  a{
+    border-left: solid 4px $brand-xavier-pacific-blue;
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    
+    &:hover, &:active{
+      border-left-color: darken($brand-xavier-pacific-blue, 15%);
+    }
+  }
+  
+  @media (min-width: 768px){
+    column-count: 3;
+  }
+}

@@ -1,7 +1,9 @@
 /* ----------------------
-	Configuration
-	 Setup of the basic components (fonts/colors/etc)
-   ---------------------- */
+  Configuration
+  Setup of the basic components (fonts/colors/etc)
+  ---------------------- */
+/* Generated color names */
+/* Brand Name colors */
 /*
 This CSS resource incorporates links to font software which is the valuable copyrighted
 property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
@@ -169,9 +171,10 @@ strong {
 /* line 79, ../../_src/sass/base/_foundation.scss */
 a, button {
   color: inherit;
+  display: inline-block;
   transition: 300ms; }
 
-/* line 84, ../../_src/sass/base/_foundation.scss */
+/* line 85, ../../_src/sass/base/_foundation.scss */
 button {
   -webkit-font-smoothing: inherit;
   background: none;
@@ -183,27 +186,50 @@ button {
   padding: 0;
   overflow: visible; }
 
-/* line 96, ../../_src/sass/base/_foundation.scss */
+/* line 97, ../../_src/sass/base/_foundation.scss */
+.button {
+  border: solid 2px;
+  display: block;
+  font-size: 1.8rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem;
+  width: 100%; }
+
+/* line 108, ../../_src/sass/base/_foundation.scss */
 ::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-/* line 101, ../../_src/sass/base/_foundation.scss */
+/* line 113, ../../_src/sass/base/_foundation.scss */
 img {
   border: 0;
   height: auto;
   max-width: 100%; }
 
-/* line 107, ../../_src/sass/base/_foundation.scss */
+/* line 119, ../../_src/sass/base/_foundation.scss */
 input, textarea, keygen, select, button, isindex, meter, progress {
   font-family: inherit; }
 
-/* line 113, ../../_src/sass/base/_foundation.scss */
+/* line 125, ../../_src/sass/base/_foundation.scss */
 .page {
   height: 100%;
   margin: 0;
   padding: 0;
   position: relative; }
+
+/* line 134, ../../_src/sass/base/_foundation.scss */
+.text-center {
+  text-align: center; }
+
+/* line 138, ../../_src/sass/base/_foundation.scss */
+.text-left {
+  text-align: left; }
+
+/* line 142, ../../_src/sass/base/_foundation.scss */
+.text-right {
+  text-align: right; }
 
 /* line 3, ../../_src/sass/components/_demo.scss */
 .row.demo {
@@ -230,10 +256,9 @@ code {
   padding: 0 0.5rem; }
 
 /* ----------------------
-	Section 1 - Header
-	
-	Includes accessibility; header search; main navigation bars
-   ---------------------- */
+  Section 1 - Header
+  Includes accessibility; header search; main navigation bars
+  ---------------------- */
 /* line 1, ../../_src/sass/base/_header-search.scss */
 .search-container {
   background: #0c2340;
@@ -445,8 +470,11 @@ code {
       /* line 48, ../../_src/sass/base/_header-layout.scss */
       .site-logo #xavierUniv {
         display: block; } }
+  /* line 56, ../../_src/sass/base/_header-layout.scss */
+  .site-logo #logo {
+    height: 47px; }
 
-/* line 57, ../../_src/sass/base/_header-layout.scss */
+/* line 61, ../../_src/sass/base/_header-layout.scss */
 #nav-icon {
   display: block;
   width: 30px;
@@ -456,7 +484,7 @@ code {
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer; }
-  /* line 66, ../../_src/sass/base/_header-layout.scss */
+  /* line 70, ../../_src/sass/base/_header-layout.scss */
   #nav-icon span {
     display: inline-block;
     position: absolute;
@@ -467,28 +495,28 @@ code {
     left: 0;
     transform: rotate(0deg);
     transition: .25s ease-in-out; }
-    /* line 77, ../../_src/sass/base/_header-layout.scss */
+    /* line 81, ../../_src/sass/base/_header-layout.scss */
     #nav-icon span:nth-child(1) {
       top: 8px; }
-    /* line 81, ../../_src/sass/base/_header-layout.scss */
+    /* line 85, ../../_src/sass/base/_header-layout.scss */
     #nav-icon span:nth-child(2), #nav-icon span:nth-child(3) {
       top: 16px; }
-    /* line 85, ../../_src/sass/base/_header-layout.scss */
+    /* line 89, ../../_src/sass/base/_header-layout.scss */
     #nav-icon span:nth-child(4) {
       top: 24px; }
-  /* line 91, ../../_src/sass/base/_header-layout.scss */
+  /* line 95, ../../_src/sass/base/_header-layout.scss */
   #nav-icon.open span:nth-child(1), #nav-icon.open span:nth-child(4) {
     top: 16px;
     width: 0%;
     left: 50%; }
-  /* line 97, ../../_src/sass/base/_header-layout.scss */
+  /* line 101, ../../_src/sass/base/_header-layout.scss */
   #nav-icon.open span:nth-child(2) {
     transform: rotate(45deg); }
-  /* line 101, ../../_src/sass/base/_header-layout.scss */
+  /* line 105, ../../_src/sass/base/_header-layout.scss */
   #nav-icon.open span:nth-child(3) {
     transform: rotate(-45deg); }
 
-/* line 107, ../../_src/sass/base/_header-layout.scss */
+/* line 111, ../../_src/sass/base/_header-layout.scss */
 #close-main-nav {
   display: block;
   padding: 0.5rem 0;
@@ -496,7 +524,7 @@ code {
   text-transform: uppercase;
   width: 100%; }
   @media screen and (min-width: 1070px) {
-    /* line 107, ../../_src/sass/base/_header-layout.scss */
+    /* line 111, ../../_src/sass/base/_header-layout.scss */
     #close-main-nav {
       display: none; } }
 
@@ -986,9 +1014,9 @@ code {
       text-decoration: underline; }
 
 /* ----------------------
-	Section 2 - Footer
-   ---------------------- */
-/* line 33, ../../_src/sass/globals.scss */
+  Section 2 - Footer
+  ---------------------- */
+/* line 1, ../../_src/sass/base/_footer.scss */
 #site-footer {
   background: #dfe0e0;
   color: #0c2340;
@@ -996,28 +1024,28 @@ code {
   padding: 3rem 0 10rem;
   width: 100vw;
   text-align: center; }
-  /* line 41, ../../_src/sass/globals.scss */
+  /* line 9, ../../_src/sass/base/_footer.scss */
   #site-footer .address {
     margin: 0; }
-    /* line 43, ../../_src/sass/globals.scss */
+    /* line 11, ../../_src/sass/base/_footer.scss */
     #site-footer .address > span {
       display: block; }
       @media screen and (min-width: 1070px) {
-        /* line 43, ../../_src/sass/globals.scss */
+        /* line 11, ../../_src/sass/base/_footer.scss */
         #site-footer .address > span {
           display: inline;
           padding: 0 1rem; }
-          /* line 49, ../../_src/sass/globals.scss */
+          /* line 17, ../../_src/sass/base/_footer.scss */
           #site-footer .address > span:not(:last-child) {
             border-right: solid 1px #0c2340; } }
-  /* line 57, ../../_src/sass/globals.scss */
+  /* line 24, ../../_src/sass/base/_footer.scss */
   #site-footer .org {
     font-weight: 400;
     text-transform: uppercase; }
 
 /* ----------------------
-	Section 3 - Components
-   ---------------------- */
+  Section 3 - Components
+  ---------------------- */
 /* line 1, ../../_src/sass/components/_accessibility.scss */
 .sr-only {
   position: absolute;
@@ -1133,6 +1161,93 @@ abbr {
       /* line 69, ../../_src/sass/components/_hero.scss */
       .hero .homepage-search-button {
         width: 12rem; } }
+
+/* line 1, ../../_src/sass/components/_program-listing.scss */
+#show-programs {
+  color: #0099cc;
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase; }
+  /* line 7, ../../_src/sass/components/_program-listing.scss */
+  #show-programs span {
+    color: #ffffff; }
+  @media (min-width: 992px) {
+    /* line 1, ../../_src/sass/components/_program-listing.scss */
+    #show-programs {
+      font-size: 3.4rem; } }
+
+/* line 16, ../../_src/sass/components/_program-listing.scss */
+.programs-list {
+  background-color: #ffffff; }
+  /* line 19, ../../_src/sass/components/_program-listing.scss */
+  .programs-list .button {
+    display: block;
+    border-color: #0c2340; }
+    /* line 23, ../../_src/sass/components/_program-listing.scss */
+    .programs-list .button:hover, .programs-list .button:active {
+      background: #0c2340;
+      color: #ffffff; }
+  /* line 29, ../../_src/sass/components/_program-listing.scss */
+  .programs-list .major-buttons {
+    display: none; }
+    /* line 32, ../../_src/sass/components/_program-listing.scss */
+    .programs-list .major-buttons.active {
+      display: block; }
+
+/* line 38, ../../_src/sass/components/_program-listing.scss */
+.program-categories {
+  margin: 1rem 0; }
+
+/* line 42, ../../_src/sass/components/_program-listing.scss */
+ul.program-categories {
+  background: #dfe0e0;
+  display: none; }
+  /* line 46, ../../_src/sass/components/_program-listing.scss */
+  ul.program-categories li {
+    display: inline-block;
+    font-weight: 300;
+    text-transform: uppercase; }
+    /* line 52, ../../_src/sass/components/_program-listing.scss */
+    ul.program-categories li.active a {
+      background: #0c2340;
+      color: #ffffff; }
+    /* line 58, ../../_src/sass/components/_program-listing.scss */
+    ul.program-categories li a {
+      text-decoration: none;
+      padding: 1rem 1.5rem; }
+      /* line 61, ../../_src/sass/components/_program-listing.scss */
+      ul.program-categories li a:hover, ul.program-categories li a:active {
+        background: #9ea2a2;
+        color: #0c2340; }
+  @media (min-width: 992px) {
+    /* line 42, ../../_src/sass/components/_program-listing.scss */
+    ul.program-categories {
+      display: block; } }
+
+/* line 72, ../../_src/sass/components/_program-listing.scss */
+select.program-categories {
+  display: block;
+  width: 100%; }
+  @media (min-width: 992px) {
+    /* line 72, ../../_src/sass/components/_program-listing.scss */
+    select.program-categories {
+      display: none; } }
+
+/* line 83, ../../_src/sass/components/_program-listing.scss */
+.major-list a {
+  border-left: solid 4px #0099cc;
+  display: block;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem; }
+  /* line 89, ../../_src/sass/components/_program-listing.scss */
+  .major-list a:hover, .major-list a:active {
+    border-left-color: #006080; }
+@media (min-width: 768px) {
+  /* line 80, ../../_src/sass/components/_program-listing.scss */
+  .major-list {
+    -moz-column-count: 3;
+         column-count: 3; } }
 
 /* line 1, ../../_src/sass/components/_billboard.scss */
 .billboard {
@@ -1258,35 +1373,28 @@ abbr {
   .degree.bs:after {
     content: "Undergraduate Program (BS)"; }
 
-/* line 61, ../../_src/sass/components/_academics.scss */
-.button {
-  border: solid 2px #ffffff;
-  display: block;
-  font-size: 1.8rem;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 1rem;
-  width: 100%; }
-  /* line 71, ../../_src/sass/components/_academics.scss */
-  .button.active {
+/* line 62, ../../_src/sass/components/_academics.scss */
+#academic-header-buttons .button {
+  border-color: #ffffff; }
+  /* line 65, ../../_src/sass/components/_academics.scss */
+  #academic-header-buttons .button.active {
     background: #0c2340;
     border-color: #0c2340; }
-  /* line 76, ../../_src/sass/components/_academics.scss */
-  .button:hover, .button:focus, .button:active {
+  /* line 70, ../../_src/sass/components/_academics.scss */
+  #academic-header-buttons .button:hover, #academic-header-buttons .button:focus, #academic-header-buttons .button:active {
     background: #ffffff;
     border-color: #ffffff;
     color: #0c2340; }
 
-/* line 83, ../../_src/sass/components/_academics.scss */
+/* line 78, ../../_src/sass/components/_academics.scss */
 #details {
   padding: 0;
   margin: 0; }
 
-/* line 87, ../../_src/sass/components/_academics.scss */
+/* line 82, ../../_src/sass/components/_academics.scss */
 .details-item {
   display: none; }
-  /* line 90, ../../_src/sass/components/_academics.scss */
+  /* line 85, ../../_src/sass/components/_academics.scss */
   .details-item.active {
     display: block; }
 
@@ -1323,6 +1431,15 @@ abbr {
   background-size: cover;
   display: block;
   overflow: hidden; }
+
+/* line 1, ../../_src/sass/components/_icon-link.scss */
+.icon-link {
+  text-decoration: none;
+  text-align: center;
+  display: inline-block; }
+  /* line 6, ../../_src/sass/components/_icon-link.scss */
+  .icon-link img {
+    margin: 0 auto; }
 
 /* line 1, ../../_src/sass/components/_table.scss */
 table {
@@ -1457,3 +1574,26 @@ table {
     /* line 68, ../../_src/sass/components/_content-header-nav.scss */
     .content-header-nav a:hover {
       background: #dfe0e0; }
+
+/* ----------------------
+  Section 4 - Shame!!!
+  for putting stuff in that needs to find a new home; Don't do it often
+  ---------------------- */
+/* line 57, ../../_src/sass/globals.scss */
+hr {
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  height: 0.2rem;
+  margin: 2rem auto; }
+  /* line 62, ../../_src/sass/globals.scss */
+  hr.dark {
+    background: rgba(0, 0, 0, 0.25); }
+  /* line 65, ../../_src/sass/globals.scss */
+  hr.width-75 {
+    width: 75%; }
+  /* line 68, ../../_src/sass/globals.scss */
+  hr.width-50 {
+    width: 50%; }
+  /* line 71, ../../_src/sass/globals.scss */
+  hr.width-25 {
+    width: 25%; }

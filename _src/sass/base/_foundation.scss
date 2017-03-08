@@ -78,6 +78,7 @@ strong {
 
 a,button {
 	color:inherit;
+	display: inline-block;
 	transition: 300ms;
 }
 
@@ -91,6 +92,17 @@ button {
 	margin:0;
 	padding:0;
 	overflow:visible;
+}
+
+.button {
+	border: solid 2px;
+	display: block;
+	font-size: 1.8rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding:1rem;
+	width:100%;
 }
 
 ::-moz-focus-inner {
@@ -115,4 +127,18 @@ input, textarea, keygen, select, button, isindex, meter, progress {
 	margin:0;
 	padding:0;
 	position: relative;
+}
+
+// Alignment classes
+
+.text-center{
+  text-align: center;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-right{
+  text-align: right;
 }

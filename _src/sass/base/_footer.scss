@@ -1,0 +1,28 @@
+#site-footer{
+  background: lighten($brand-xavier-silver, 25%);
+  color: $brand-xavier-navy;
+  font-weight: 300;
+  padding: 3rem 0 10rem;
+  width:100vw;
+  text-align: center;
+
+  .address{
+    margin: 0;
+    > span{
+      display: block;
+
+      @media screen and (min-width:1070px){
+        display: inline;
+        padding:0 1rem;
+        &:not(:last-child){
+          border-right: solid 1px $brand-xavier-navy;
+        }
+      }
+    }
+  }
+
+  .org {
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
