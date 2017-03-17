@@ -78,7 +78,6 @@ strong {
 
 a,button {
 	color:inherit;
-	display: inline-block;
 	transition: 300ms;
 }
 
@@ -141,4 +140,18 @@ input, textarea, keygen, select, button, isindex, meter, progress {
 
 .text-right{
   text-align: right;
+}
+
+// Color modifiers
+.text-white{
+  color: white;
+}
+
+.text-uppercase{
+  text-transform: uppercase;
+}
+
+.center-block{
+  display: block;
+  margin:0 auto;
 }

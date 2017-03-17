@@ -2,7 +2,11 @@
 <html class="no-js" lang="en">
     
   include "includes/head.html"
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
+  <style>
     
+  </style>
 	<body>
     include "includes/search.html"
 		<!-- include "includes/campus-alert.html" -->
@@ -54,8 +58,39 @@
         	</div>
         </section>
 				
+        <!-- Program Listing dropdown -->
 				include "includes/content/programs.html"
-				
+				<!-- CDN Band, slider -->
+				include "includes/content/cdn-slider.html"
+				<!-- Video band -->
+				<section class="band" style="background-image: url('http://xavier.edu/images/cover-deeper.jpg');" aria-labelledby="four-year-headline">
+  				<div class="container">
+    				<div class="row">
+      				<div class="col-md-4">
+        				<h2 id="four-year-headline" class="text-white text-uppercase">Four years that will change your life</h2>
+        				<h3>Our mission is to change the world for the better. Let's do it together.</h3>
+        				<p><a href="http://www.xavier.edu/life-at-xavier/" class="button">Explore Xavier &raquo;</a></p>
+      				</div>
+      				<div class="col-md-8">
+        				<div class="flex-video widescreen">
+          				<iframe src="https://www.youtube.com/embed/C3jIjcy1nF8?rel=0&amp;showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+        				</div>
+      				</div>
+    				</div>
+  				</div>
+				</section>
+			  <section class="band photo fixed" style="background-image: url('http://www.xavier.edu/images/graduation-rate.jpg');">
+        	<div class="container">
+        		<div class="row">
+        			 <div class="col-md-8 col-offset-2">
+                  <img src="http://www.xavier.edu/images/placement-rate.svg" alt="97% Placement Rate" class="img-responsive center-block"><br>
+                  <div class="panel dark">
+                    <p class="text-white text-center">97% of Xavier graduates are employed, enrolled in a full-time graduate program or volunteering within 6 months of graduation. </p>
+                </div><!-- /panel -->
+              </div><!-- /col -->
+        		</div><!-- /row -->
+        	</div><!-- /container -->
+        </section>	
 				<!-- Demo content -->
         <!-- 				include "includes/demo/bands.html" -->
         <!-- 				include "includes/demo/grid.html" -->
@@ -64,6 +99,21 @@
 
 			include "includes/footer.html"
 			include "includes/scripts.html"
+			
+			
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+			<script>
+  			$('.owl-carousel').owlCarousel({
+    			items: 1,
+    			center: true,
+    			nav: true,
+    			navText: [
+          '<span class="fa fa-chevron-left trackdis" data-category="carousel" data-label="previous" aria-label="previous story"></span>',
+          '<span class="fa fa-chevron-right trackdis" data-category="carousel" data-label="next" aria-label="next story"></span>'
+          ]
+  			});
+  			
+			</script>
     </div><!-- page -->
   </body>
 </html>

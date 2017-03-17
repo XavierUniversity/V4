@@ -1,0 +1,8 @@
+.panel{
+  background: rgba($color-white, .95);
+  padding: 1rem;
+  
+  &.dark{
+    background: rgba($color-black, .80);
+  }
+}

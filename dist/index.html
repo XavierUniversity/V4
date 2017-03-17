@@ -22,7 +22,11 @@
     	<!-- Temporary Include-->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
+  <style>
     
+  </style>
 	<body>
     <div id="header-search" class="search-container">
         <form id="header-search-form">
@@ -216,282 +220,255 @@
         	</div>
         </section>
 				
-				<section class="band programs-list" style="display: block;" aria-labelledby="program-search-label">
+        <!-- Program Listing dropdown -->
+				<section class="band programs-list active" aria-labelledby="program-search-label">
 				    <h2 id="program-search-label" class="sr-only">Search for Programs at Xavier</h2>
 				    <div class="container">
-				        <div class="row program-buttons">
-				            <div class="col">
-				                <a id="index.cfm--undergrad-button"
-				                     href="#"
-				                     data-category="undergraduate"
-				                     title="View Undergraduate Programs"
-				                     class="button">Undergraduate</a>
+				      <div class="row program-buttons">
+				        <div class="col">
+				          <a href="#" data-category="undergraduate" title="View Undergraduate Programs" class="button">Undergraduate</a>
+				        </div>
+				        <div class="col">
+				          <a href="#" data-category="graduate" title="View Graduate Programs" class="button">Graduate</a>
+				        </div>
+				      </div>
+				      <div class="row">
+				        <div class="col">
+				          <div class="major-buttons" id="undergraduate">
+				            <select title="Select an Undergraduate Category" class="program-categories">
+				              <option value="u-cat" data-category="">- Undergraduate Categories -</option>
+				                <option value="u-all" data-category="all">
+				                  All
+				                </option>
+				                <option value="u-art" data-category="arts">
+				                  Arts
+				                </option>
+				                <option value="u-bus" data-category="business">
+				                  Business
+				                </option>
+				                <option value="u-comm" data-category="communication">
+				                  Communication
+				                </option>
+				                <option value="u-ed" data-category="education">
+				                  Education
+				                </option>
+				                <option value="u-health" data-category="health">
+				                  Health
+				                </option>
+				                <option value="u-people"
+				                            data-category="people">
+				                  People
+				                </option>
+				                <option value="u-science"
+				                            data-category="science">
+				                  Science
+				                </option>
+				                <option value="u-tech"
+				                        data-category="technology">
+				                  Technology
+				                </option>
+				                <option value="u-undecided"
+				                          data-category="undecided">
+				                  Exploratory
+				                </option>
+				              </select>
+				                <ul class="program-categories">
+				                    <li role="presentation" class="active">
+				                        <a
+				                            href="#"
+				                            title="View All Undergraduate Programs"
+				                            data-category="all">All</a>
+				                    </li>
+				                    <li role="presentation">
+				                        <a
+				                            href="#"
+				                            title="View Art Programs"
+				                            data-category="arts">Arts</a>
+				                    </li>
+				                    <li role="presentation">
+				                        <a
+				                            href="#"
+				                            title="View Business Programs"
+				                            data-category="business">Business</a>
+				                    </li>
+				                    <li role="presentation">
+				                        <a
+				                            href="#"
+				                            title="View Communication Programs"
+				                            data-category="communication">Communication</a>
+				                    </li>
+				                    <li role="presentation">
+				                        <a
+				                            href="#"
+				                            title="View Education Programs"
+				                            data-category="education">Education</a>
+				                    </li>
+				                    <li role="presentation">
+				                        <a
+				                            href="#"
+				                            title="View Health Programs"
+				                            data-category="health">Health</a>
+				                    </li>
+				                    <li role="presentation">
+				                        <a
+				                            href="#"
+				                            title="View People Programs"
+				                            data-category="people">People</a>
+				                    </li>
+				                    <li role="presentation">
+				                        <a
+				                            href="#"
+				                            title="View Science Programs"
+				                            data-category="science">Science</a>
+				                    </li>
+				                    <li role="presentation">
+				                        <a
+				                            href="#"
+				                            title="View Technology Programs"
+				                            data-category="technology">Technology</a>
+				                    </li>
+				                    <li role="presentation">
+				                        <a
+				                            href="#"
+				                            title="View Exploratory Programs"
+				                            data-category="undecided">Exploratory</a>
+				                    </li>
+				                </ul>
 				            </div>
-				            <div class="col">
-				                <a id="index.cfm--grad-button"
-				                     href="#"
-				                     data-category="graduate"
-				                     title="View Graduate Programs"
-				                     class="button">Graduate</a>
+				            <div class="major-buttons" id="graduate">
+				                <select title="Select a Graduate Category" class="program-categories">
+				                    <option value="g-cat" data-category="">
+				                        - Graduate Categories -
+				                    </option>
+				                    <option value="g-all"
+				                            data-category="all">
+				                        All
+				                    </option>
+				                    <option value="g-art"
+				                            data-category="arts">
+				                        Arts
+				                    </option>
+				                    <option value="g-bus"
+				                            data-category="business">
+				                        Business
+				                    </option>
+				                    <option value="g-criminal"
+				                            data-category="criminal-justice">
+				                        Criminal Justice
+				                    </option>
+				                    <option value="g-doc"
+				                            data-category="doctoral">
+				                        Doctoral
+				                    </option>
+				                    <option value="g-ed"
+				                            data-category="education">
+				                        Education
+				                    </option>
+				                    <option value="g-ft"
+				                            data-category="full-time">
+				                        Full-Time
+				                    </option>
+				                    <option value="g-health"
+				                            data-category="health">
+				                        Health
+				                    </option>
+				                    <option value="g-online"
+				                            data-category="online-degrees">
+				                        Online
+				                    </option>
+				                    <option value="g-pt"
+				                            data-category="part-time">
+				                        Part-Time
+				                    </option>
+				                    <option value="g-psych"
+				                            data-category="psychology">
+				                        Psychology
+				                    </option>
+				                    <option value="g-sport"
+				                            data-category="sport-studies">
+				                        Sport Studies
+				                    </option>
+				                </select>
+				                        <ul class="program-categories">
+				                            <li role="presentation">
+				                                <a
+				                                    href="#"
+				                                    title="View All Graduate Programs"
+				                                    data-category="all">All</a>
+				                            </li>
+				                            <li role="presentation">
+				                                <a
+				                                    href="#"
+				                                    title="View Graduate Arts Programs"
+				                                    data-category="arts">Arts</a>
+				                            </li>
+				                            <li role="presentation">
+				                                <a
+				                                    href="#"
+				                                    title="View Graduate Business Programs"
+				                                    data-category="business">Business</a>
+				                            </li>
+				                            <li role="presentation">
+				                                <a
+				                                    href="#"
+				                                    title="View Graduate Criminal Justice Programs"
+				                                    data-category="criminal-justice">Criminal Justice</a>
+				                            </li>
+				                            <li role="presentation">
+				                                <a
+				                                    href="#"
+				                                    title="View Doctoral Programs"
+				                                    data-category="doctoral">Doctoral</a>
+				                            </li>
+				                            <li role="presentation">
+				                                <a
+				                                    href="#"
+				                                    title="View Graduate Education Programs"
+				                                    data-category="education">Education</a>
+				                            </li>
+				                            <li role="presentation">
+				                                <a
+				                                    href="#"
+				                                    title="View Full-Time Programs"
+				                                    data-category="full-time">Full-Time</a>
+				                            </li>
+				                            <li role="presentation">
+				                                <a
+				                                    href="#"
+				                                    title="View Graduate Health Programs"
+				                                    data-category="health">Health</a>
+				                            </li>
+				                            
+				                            <li role="presentation">
+				                                <a
+				                                    href="#"
+				                                    title="View Online Graduate Programs"
+				                                    data-category="online-degrees">Online</a>
+				                            </li>
+				                            <li role="presentation">
+				                                <a
+				                                    href="#"
+				                                    title="View Part-Time Graduate Programs"
+				                                    data-category="part-time">Part-Time</a>
+				                            </li>
+				                            <li role="presentation">
+				                                <a
+				                                    href="#"
+				                                    title="View Graduate Psychology Programs"
+				                                    data-category="psychology">Psychology</a>
+				                            </li>
+				                            <li role="presentation">
+				                                <a
+				                                    href="#"
+				                                    title="View Graduate Sport Studies Programs"
+				                                    data-category="sport-studies">Sport Studies</a>
+				                            </li>
+				                        </ul>
 				            </div>
 				        </div>
+				      </div>
 				        <div class="row">
-				            <div class="col-md-12">
-				                <div class="major-buttons active"
-				                     id="undergraduate">
-				                    <select title="Select an Undergraduate Category"
-				                         class="program-categories">
-				                        <option value="u-cat"
-				                                data-category="">
-				                            - Undergraduate Categories -
-				                        </option>
-				                        <option value="u-all"
-				                                data-category="all">
-				                            All
-				                        </option>
-				                        <option value="u-art"
-				                                data-category="arts">
-				                            Arts
-				                        </option>
-				                        <option value="u-bus"
-				                                data-category="business">
-				                            Business
-				                        </option>
-				                        <option value="u-comm"
-				                                data-category="communication">
-				                            Communication
-				                        </option>
-				                        <option value="u-ed"
-				                                data-category="education">
-				                            Education
-				                        </option>
-				                        <option value="u-health"
-				                                data-category="health">
-				                            Health
-				                        </option>
-				                        <option value="u-people"
-				                                data-category="people">
-				                            People
-				                        </option>
-				                        <option value="u-science"
-				                                data-category="science">
-				                            Science
-				                        </option>
-				                        <option value="u-tech"
-				                                data-category="technology">
-				                            Technology
-				                        </option>
-				                        <option value="u-undecided"
-				                                data-category="undecided">
-				                            Exploratory
-				                        </option>
-				                    </select>
-				                    <ul class="program-categories">
-				                        <li role="presentation" class="active">
-				                            <a id="index.cfm--undergrad-all-button"
-				                                href="#"
-				                                title="View All Undergraduate Programs"
-				                                data-category="all">All</a>
-				                        </li>
-				                        <li role="presentation">
-				                            <a id="index.cfm--undergrad-arts-button"
-				                                href="#"
-				                                title="View Art Programs"
-				                                data-category="arts">Arts</a>
-				                        </li>
-				                        <li role="presentation">
-				                            <a id="index.cfm--undergrad-business-button"
-				                                href="#"
-				                                title="View Business Programs"
-				                                data-category="business">Business</a>
-				                        </li>
-				                        <li role="presentation">
-				                            <a id="index.cfm--undergrad-communication-button"
-				                                href="#"
-				                                title="View Communication Programs"
-				                                data-category="communication">Communication</a>
-				                        </li>
-				                        <li role="presentation">
-				                            <a id="index.cfm--undergrad-education-button"
-				                                href="#"
-				                                title="View Education Programs"
-				                                data-category="education">Education</a>
-				                        </li>
-				                        <li role="presentation">
-				                            <a id="index.cfm--undergrad-health-button"
-				                                href="#"
-				                                title="View Health Programs"
-				                                data-category="health">Health</a>
-				                        </li>
-				                        <li role="presentation">
-				                            <a id="index.cfm--undergrad-people-button"
-				                                href="#"
-				                                title="View People Programs"
-				                                data-category="people">People</a>
-				                        </li>
-				                        <li role="presentation">
-				                            <a id="index.cfm--undergrad-science-button"
-				                                href="#"
-				                                title="View Science Programs"
-				                                data-category="science">Science</a>
-				                        </li>
-				                        <li role="presentation">
-				                            <a id="index.cfm--undergrad-technology-button"
-				                                href="#"
-				                                title="View Technology Programs"
-				                                data-category="technology">Technology</a>
-				                        </li>
-				                        <li role="presentation">
-				                            <a id="index.cfm--undergrad-undecided-button"
-				                                href="#"
-				                                title="View Exploratory Programs"
-				                                data-category="undecided">Exploratory</a>
-				                        </li>
-				                    </ul>
-				                </div>
-				                <div class="major-buttons "
-				                     id="graduate">
-				                    <select title="Select a Graduate Category"
-				                         class="program-categories">
-				                        <option value="g-cat"
-				                                data-category="">
-				                            - Graduate Categories -
-				                        </option>
-				                        <option value="g-all"
-				                                data-category="all">
-				                            All
-				                        </option>
-				                        <option value="g-art"
-				                                data-category="arts">
-				                            Arts
-				                        </option>
-				                        <option value="g-bus"
-				                                data-category="business">
-				                            Business
-				                        </option>
-				                        <option value="g-criminal"
-				                                data-category="criminal-justice">
-				                            Criminal Justice
-				                        </option>
-				                        <option value="g-doc"
-				                                data-category="doctoral">
-				                            Doctoral
-				                        </option>
-				                        <option value="g-ed"
-				                                data-category="education">
-				                            Education
-				                        </option>
-				                        <option value="g-ft"
-				                                data-category="full-time">
-				                            Full-Time
-				                        </option>
-				                        <option value="g-health"
-				                                data-category="health">
-				                            Health
-				                        </option>
-				                        <option value="g-online"
-				                                data-category="online-degrees">
-				                            Online
-				                        </option>
-				                        <option value="g-pt"
-				                                data-category="part-time">
-				                            Part-Time
-				                        </option>
-				                        <option value="g-psych"
-				                                data-category="psychology">
-				                            Psychology
-				                        </option>
-				                        <option value="g-sport"
-				                                data-category="sport-studies">
-				                            Sport Studies
-				                        </option>
-				                    </select>
-				                    <div class="row">
-				                        <div class="col-md-12">
-				                            <ul class="program-categories">
-				                                <li role="presentation">
-				                                    <a id="index.cfm--grad-all-button"
-				                                        href="#"
-				                                        title="View All Graduate Programs"
-				                                        data-category="all">All</a>
-				                                </li>
-				                                <li role="presentation">
-				                                    <a id="index.cfm--grad-arts-button"
-				                                        href="#"
-				                                        title="View Graduate Arts Programs"
-				                                        data-category="arts">Arts</a>
-				                                </li>
-				                                <li role="presentation">
-				                                    <a id="index.cfm--grad-business-button"
-				                                        href="#"
-				                                        title="View Graduate Business Programs"
-				                                        data-category="business">Business</a>
-				                                </li>
-				                                <li role="presentation">
-				                                    <a id="index.cfm--grad-criminal-justice-button"
-				                                        href="#"
-				                                        title="View Graduate Criminal Justice Programs"
-				                                        data-category="criminal-justice">Criminal Justice</a>
-				                                </li>
-				                                <li role="presentation">
-				                                    <a id="index.cfm--grad-doctoral-button"
-				                                        href="#"
-				                                        title="View Doctoral Programs"
-				                                        data-category="doctoral">Doctoral</a>
-				                                </li>
-				                                <li role="presentation">
-				                                    <a id="index.cfm--grad-education-button"
-				                                        href="#"
-				                                        title="View Graduate Education Programs"
-				                                        data-category="education">Education</a>
-				                                </li>
-				                                <li role="presentation">
-				                                    <a id="index.cfm--grad-full-time-button"
-				                                        href="#"
-				                                        title="View Full-Time Programs"
-				                                        data-category="full-time">Full-Time</a>
-				                                </li>
-				                                <li role="presentation">
-				                                    <a id="index.cfm--grad-health-button"
-				                                        href="#"
-				                                        title="View Graduate Health Programs"
-				                                        data-category="health">Health</a>
-				                                </li>
-				                            </ul>
-				                        </div>
-				                        <div class="col-md-12">
-				                            <ul class="nav nav-pills hidden-xs hidden-sm">
-				                                <li role="presentation">
-				                                    <a id="index.cfm--grad-online-degrees-button"
-				                                        href="#"
-				                                        title="View Online Graduate Programs"
-				                                        data-category="online-degrees">Online</a>
-				                                </li>
-				                                <li role="presentation">
-				                                    <a id="index.cfm--grad-part-time-button"
-				                                        href="#"
-				                                        title="View Part-Time Graduate Programs"
-				                                        data-category="part-time">Part-Time</a>
-				                                </li>
-				                                <li role="presentation">
-				                                    <a id="index.cfm--grad-psychology-button"
-				                                        href="#"
-				                                        title="View Graduate Psychology Programs"
-				                                        data-category="psychology">Psychology</a>
-				                                </li>
-				                                <li role="presentation">
-				                                    <a id="index.cfm--grad-sport-studies-button"
-				                                        href="#"
-				                                        title="View Graduate Sport Studies Programs"
-				                                        data-category="sport-studies">Sport Studies</a>
-				                                </li>
-				                            </ul>
-				                        </div>
-				                    </div>
-				                </div>
-				            </div>
-				        </div>
-				        <div class="col-md-12">
+				          <div class="col">
 				            <ul class="major-list">
 				                <li data-program="undergraduate"
 				                    class="health">
@@ -1452,20 +1429,130 @@
 				                        href="http://www.xavier.edu/urban-sustainability-and-resilience/"
 				                        dataid="136">Urban Sustainability and Resilience</a>
 				                </li>
-				                <li data-program="undergraduate"
-				                    class="undecided">
-				                    <div class="panel"
-				                         style="margin:0.75rem auto; width: 75%; background:#fff; border:solid 1px #ccc;">
-				                        <p>
-				                            Haven't decided on a major yet? No worries. Nearly half of our incoming freshmen declare their major as "Exploratory." During your first year here, you'll get time to <a href="/exploratory">explore your options and discover your passions within our core curriculum</a>.
-				                        </p>
-				                    </div>
+				                <li data-program="undergraduate" class="undecided">
+				                  Haven't decided on a major yet? No worries. Nearly half of our incoming freshmen declare their major as "Exploratory." During your first year here, you'll get time to <a href="/exploratory">explore your options and discover your passions within our core curriculum</a>.
 				                </li>
 				            </ul>
 				        </div>
+				        </div>
 				    </div>
 				</section>
-				
+				<!-- CDN Band, slider -->
+				<section class="band" aria-labelledby="cdn-story-headline">
+				  <h2 class="sr-only" id="cdn-story-headline">Storytellers</h2>
+				  <div class="container">
+				    <div class="owl-carousel">
+				      <div class="item">
+				        <div class="row">
+				          <div class="col-md-6">
+				            <img style="background: #0c2340;" src="images/demo-icon.svg" alt="" />
+				          </div>
+				          <div class="col-md-6">
+				            <h3>Headline Filler</h3>
+				            <p>This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text</p>
+				            <p><a href="#readmore">Readmore</a></p>
+				          </div>
+				        </div>
+				      </div>
+				      
+				      <div class="item">
+				        <div class="row">
+				          <div class="col-md-6">
+				            <img style="background: #0c2340;" src="images/demo-icon.svg" alt="" />
+				          </div>
+				          <div class="col-md-6">
+				            <h3>Headline Filler</h3>
+				            <p>This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text</p>
+				            <p><a href="#readmore">Readmore</a></p>
+				          </div>
+				        </div>
+				      </div>
+				      
+				      <div class="item">
+				        <div class="row">
+				          <div class="col-md-6">
+				            <img style="background: #0c2340;" src="images/demo-icon.svg" alt="" />
+				          </div>
+				          <div class="col-md-6">
+				            <h3>Headline Filler</h3>
+				            <p>This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text</p>
+				            <p><a href="#readmore">Readmore</a></p>
+				          </div>
+				        </div>
+				      </div>
+				      
+				      <div class="item">
+				        <div class="row">
+				          <div class="col-md-6">
+				            <img style="background: #0c2340;" src="images/demo-icon.svg" alt="" />
+				          </div>
+				          <div class="col-md-6">
+				            <h3>Headline Filler</h3>
+				            <p>This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text</p>
+				            <p><a href="#readmore">Readmore</a></p>
+				          </div>
+				        </div>
+				      </div>
+				      
+				      <div class="item">
+				        <div class="row">
+				          <div class="col-md-6">
+				            <img style="background: #0c2340;" src="images/demo-icon.svg" alt="" />
+				          </div>
+				          <div class="col-md-6">
+				            <h3>Headline Filler</h3>
+				            <p>This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text</p>
+				            <p><a href="#readmore">Readmore</a></p>
+				          </div>
+				        </div>
+				      </div>
+
+				      <div class="item">
+				        <div class="row">
+				          <div class="col-md-6">
+				            <img style="background: #0c2340;" src="images/demo-icon.svg" alt="" />
+				          </div>
+				          <div class="col-md-6">
+				            <h3>Headline Filler</h3>
+				            <p>This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text</p>
+				            <p><a href="#readmore">Readmore</a></p>
+				          </div>
+				        </div>
+				      </div>
+				      
+				    </div>
+				  </div>
+				</section>
+
+				<!-- Video band -->
+				<section class="band" style="background-image: url('http://xavier.edu/images/cover-deeper.jpg');" aria-labelledby="four-year-headline">
+  				<div class="container">
+    				<div class="row">
+      				<div class="col-md-4">
+        				<h2 id="four-year-headline" class="text-white text-uppercase">Four years that will change your life</h2>
+        				<h3>Our mission is to change the world for the better. Let's do it together.</h3>
+        				<p><a href="http://www.xavier.edu/life-at-xavier/" class="button">Explore Xavier &raquo;</a></p>
+      				</div>
+      				<div class="col-md-8">
+        				<div class="flex-video widescreen">
+          				<iframe src="https://www.youtube.com/embed/C3jIjcy1nF8?rel=0&amp;showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+        				</div>
+      				</div>
+    				</div>
+  				</div>
+				</section>
+			  <section class="band photo fixed" style="background-image: url('http://www.xavier.edu/images/graduation-rate.jpg');">
+        	<div class="container">
+        		<div class="row">
+        			 <div class="col-md-8 col-offset-2">
+                  <img src="http://www.xavier.edu/images/placement-rate.svg" alt="97% Placement Rate" class="img-responsive center-block"><br>
+                  <div class="panel dark">
+                    <p class="text-white text-center">97% of Xavier graduates are employed, enrolled in a full-time graduate program or volunteering within 6 months of graduation. </p>
+                </div><!-- /panel -->
+              </div><!-- /col -->
+        		</div><!-- /row -->
+        	</div><!-- /container -->
+        </section>	
 				<!-- Demo content -->
         <!-- 				include "includes/demo/bands.html" -->
         <!-- 				include "includes/demo/grid.html" -->
@@ -1503,6 +1590,21 @@
 			</footer>
 			<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 			<script src="javascripts/base.js"></script>
+			
+			
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+			<script>
+  			$('.owl-carousel').owlCarousel({
+    			items: 1,
+    			center: true,
+    			nav: true,
+    			navText: [
+          '<span class="fa fa-chevron-left trackdis" data-category="carousel" data-label="previous" aria-label="previous story"></span>',
+          '<span class="fa fa-chevron-right trackdis" data-category="carousel" data-label="next" aria-label="next story"></span>'
+          ]
+  			});
+  			
+			</script>
     </div><!-- page -->
   </body>
 </html>

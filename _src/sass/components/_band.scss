@@ -41,13 +41,17 @@
 		background-color: $brand-xavier-fiord;
 		color: $color-white;
 	}
-}
-
-.cover{
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: scroll;
-	background-size: cover;
-	display: block;
-	overflow: hidden
+	
+	&.photo{
+  	background-repeat: no-repeat;
+  	background-position: center center;
+  	background-attachment: scroll;
+  	background-size: cover;
+  	display: block;
+  	overflow: hidden;
+  	
+  	&.fixed{
+      background-attachment: fixed;
+    }
+	}
 }
