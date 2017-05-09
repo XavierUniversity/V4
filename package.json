@@ -17,7 +17,7 @@
     "grunt-contrib-compass": "latest",
     "grunt-contrib-concat": "latest",
     "grunt-contrib-copy": "latest",
-    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
