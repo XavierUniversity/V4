@@ -20,16 +20,16 @@
 .programs-list{
   background-color: $color-white;
   display: none;
-  
-  &.active{
+  /* uncss:ignore */
+  &.show{
     display: block;
   }
   
   .button{
     display: block;
     border-color: $brand-xavier-navy;
-    
-    &:hover, &:active, &.active{
+    /* uncss:ignore */
+    &:hover, &:active, &.show{
       background: $brand-xavier-navy;
       color: $color-white;
     } 
@@ -37,8 +37,8 @@
   
   .major-buttons{
     display: none;
-    
-    &.active{
+    /* uncss:ignore */
+    &.show{
       display: block;
     }
   }
@@ -59,7 +59,8 @@ ul.program-categories{
     @media (min-width: 992px){
       display: inline-block;
     }
-    &.active{
+    /* uncss:ignore */
+    &.show{
       a{
         background: $brand-xavier-navy;
         color: $color-white;
@@ -99,7 +100,7 @@ select.program-categories{
     display: none;
     margin:0.75rem 0;
     
-    &.active{
+    &.show{
       display: block;
     }
     

@@ -35,7 +35,8 @@
 .side-nav{
 	display: none;
 	border-radius: 0 0 0.2rem 0.2rem;
-	&.active{
+	/* uncss:ignore */
+	&.show{
 		display: block;
 	}
 	
@@ -49,8 +50,8 @@
 		&:not(:first-child){
 			border-top: solid 0.1rem lighten($brand-xavier-silver, 20%);
 		}
-		
-		&.active a{
+		/* uncss:ignore */
+		&.show a{
 			color: darken($brand-xavier-pacific-blue, 15%);
 		}
 		

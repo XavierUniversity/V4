@@ -61,8 +61,8 @@
 #academic-header-buttons{
   .button {
   	border-color: $color-white;
-  	
-  	&.active{
+  	/* uncss:ignore */
+  	&.show{
   		background: $brand-xavier-navy;
   		border-color: $brand-xavier-navy; 
   	}
@@ -81,8 +81,8 @@
 }
 .details-item{
 	display: none;
-	
-	&.active{
+	/* uncss:ignore */
+	&.show{
 		display: block;
 	}
 }

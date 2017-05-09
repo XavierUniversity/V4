@@ -26,8 +26,8 @@
 		@media screen and (min-width: 992px){
 			display: block;
 		}
-		
-		&.active{
+		/* uncss:ignore */
+		&.show{
 			display: block;
 		}
 	}

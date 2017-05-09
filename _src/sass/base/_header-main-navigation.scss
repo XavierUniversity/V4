@@ -10,7 +10,7 @@
 	top: 8.4rem;
 	transition: height 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
 	width: 100vw;
-	
+	/* uncss:ignore */
 	&.show{
 		display: block;
 		height: auto;

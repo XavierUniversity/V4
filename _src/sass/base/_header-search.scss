@@ -5,6 +5,7 @@
 	transition: height 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795), visibility 2s;
 	overflow: hidden;
 	visibility: hidden;
+  	/* uncss:ignore */
     &.show{
 	    height:8.4rem;
 	    visibility: visible;

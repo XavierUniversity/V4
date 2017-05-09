@@ -22,7 +22,21 @@
     	<!-- Temporary Include-->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
-    
+  <style>
+    .quick-links{
+      list-style: none;
+      margin:0 auto;
+      text-align: center;
+    }
+    .quick-links li {
+      display: inline-block;
+    }
+    .quick-links a {
+      color: #0c2340;
+      padding:0 0.5rem;
+      font-size: 1.8rem;
+    }
+  </style>
 	<body>
     <div id="header-search" class="search-container">
         <form id="header-search-form">
@@ -35,13 +49,13 @@
     </div>
 		<!-- include "includes/campus-alert.html" -->
 			
-    <div class="page">
-		    
+    <div class="page">		    
 	    <header>
 	      <a href="#main-content" class="skip-link">Skip to main content</a>
 	      
 	      <div class="site-header">
 	      
+	    <!--
 	        <div class="show-nav">
 	    	    <button id="nav-icon" class="nav-toggle" data-target="#global-nav" data-focus=".main-nav li:first-child a" aria-label="toggle navigation" aria-haspopup="true" aria-controls="main-navigation">
 	    		    <span></span>
@@ -50,9 +64,12 @@
 	      			<span></span>
 	    	    </button>
 	        </div>
+	    -->
+	    <!--
 	        <button id="search-toggle" class="search-icon" data-target="#header-search" data-focus="#header-search-box" aria-haspopup="true" aria-controls="header-search">
 	    	    <img src="images/search.svg" alt="toggle search bar" />
 	        </button>
+	    -->
 	        <div class="site-logo">
 	    	    <a href="#" title="Xavier University Homepage">
 	    		    <svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550 150">
@@ -113,6 +130,7 @@
 	    	    </a>
 	        </div>
 	        
+	    <!--
 	        <div id="main-navigation" class="navigation">
 	    	    <nav class="main-navigation" aria-label="Global Site Navigation">
 	    			<ul role="menubar">
@@ -150,151 +168,28 @@
 	    	    </div>
 	    	    <button id="close-main-nav" class="toggle sr-only" data-target="#header-search" data-focus="#navi-icon">Close Menu</button>
 	        </div>
+	    -->
 	      </div>
 	    </header>
-	    <div class="banner cover" style="background-image: url(http://www.xavier.edu/marketing-and-communications/images/dept-header-graphic.jpg);">
-	    	<div class="banner-main">
-	    		<div class="row">
-	    			<div class="col">
-	    				<nav aria-label="You are here:">
-	    					<div class="crumbs">
-	    						<a href="#">Home</a>
-	    						<a href="#">Department</a>
-	    					</div>
-	    					<h1 class="page-title">Demo Page Title</h1>
-	    				</nav>
-	    			</div>
-	    		</div>
-	    	</div>
-	    </div>
-			<section class="content-header-nav">
-				<nav class="col">
-					<button class="toggle-content-header-nav" aria-haspopup="true" aria-controls="content-header-navigation">
-					Header Navigation
-					</button>
-					<ul id="content-header-navigation" class="nav-bar">
-						<li><a href="#">Item 1</a></li>        
-						<li><a href="#">Item 2</a></li>
-			            <li><a href="#">Item 3</a></li>
-			            <li><a href="#">Item 4</a></li>
-					</ul>
-				</nav>
-			</section>
+<!-- 			include "includes/secondary-navigation.html" -->
+			
 			<main id="main-content" tabindex="-1">
-				<div class="container">
-					<div class="row">
-						
-						<div class="col-md-3" id="sidebar-wrap">
-							
-							<a href="#" id="show-subnav" role="button" aria-controls="subnav">Navigation</a>
-							
-						    <ul class="side-nav" id="subnav">
-								<li class="active"><a href="#">Home</a></li>
-								<li><a href="/content.html">With Nav</a></li>
-								<li><a href="/content-full.html">Full Width</a></li>
-								<li><a href="/content-banded.html">Banded Content</a></li>
-								<li>
-									<a href="#">Sample Heirachy</a>
-									<ul>
-										<li><a href="#">Child</a>
-											<ul>
-												<li><a href="#">Grand child</a>
-													<ul>
-														<li><a href="#">Great-grand child</a></li>
-													</ul>
-												</li>
-												<li><a href="#">Grand child</a>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li><a href="/index.html">Hero (Index)</a></li>
-								<li><a href="/billboard.html">Billboard</a></li>
-								<li><a href="/academic.html">Academic Pages</a></li>
-						    </ul>
-						</div>
-
-						<div class="col-md-9" id="content-wrap">
-						
-  						<p class="email-address"> 
-                <script language="JavaScript" type="text/javascript">
-                	document.write("<a href='mailto:");
-                	document.write("mcmulleng");
-                	document.write("\100");
-                	document.write("xavier.edu");
-                	document.write("'>");          
-                	document.write("Send a message");					
-                	document.write("</a>");
-                </script>
-            	</p>
-  						
-  						<div class="namecoach">
-    						<a href="#" class="play"></a>
-    						<audio id="namecoach" style="display:none;"></audio>
-  						</div>
-    						
-							<p>Default page layout. Includes left-hand navigational items.</p>
+				<section class="hero" aria-labelledby="homepage-search-label">
+					<div class="hero-box">
+						<h1 id="homepage-search-label" style="font-size: 3rem;">We are experiencing technical issues.<br /> Below are some frequently used links</h1>
+						<div class="quick-links">
+				  		<ul>
+				    		<li><a href="https://ssomgr.xavier.edu:7007/ssomanager/c/SSB">Self-Service</a></li>
+				    		<li><a href="http://mail.xavier.edu">Email</a></li>
+				    		<li><a href="http://canvas.xavier.edu">Canvas</a></li>
+				    		<li><a href="http://goxavier.com">GoXavier.com</a></li>
+				    		<li><a href="http://www.facebook.com/XavierUniversity">Facebook</a></li>
+				  		</ul>
 						</div>
 					</div>
-				</div>
-			</main>
-
-			<footer id="site-footer">
-				<div class="social-icons">
-					<a class="social-icon" href="http://www.facebook.com/XavierUniversity" target="_blank" title="Xavier University on Facebook">
-						<span class="fa fa-facebook"></span> <span class="sr-only">Facebook</span>
-					</a>
-					<a class="social-icon" href="http://twitter.com/XavierUniv" target="_blank" title="at Xavier Univ on Twitter">
-						<span class="fa fa-twitter"></span> <span class="sr-only">Twitter</span>
-					</a>
-					<a class="social-icon" href="https://www.linkedin.com/groups?gid=65551&amp;trk=hb_side_g" target="_blank" title="Xavier University LinkedIn Group">
-						<span class="fa fa-linkedin"></span> <span class="sr-only">LinkedIn</span>
-					</a>
-					<a class="social-icon" href="https://www.youtube.com/user/xavieruniversity" target="_blank" title="Xavier University YouTube Channel">
-						<span class="fa fa-youtube"></span> <span class="sr-only">YouTube</span>
-					</a>
-					<a class="social-icon" href="http://instagram.com/xavieruniversity" target="_blank" title="Xavier University on Instagram">
-						<span class="fa fa-instagram"></span> <span class="sr-only">Instagram</span>
-					</a>					
-				</div>
-
-				<div id="colophon" itemscope="" itemtype="http://schema.org/EducationalOrganization">
-					<p class="org" itemprop="name">Xavier University</p>
-					<p class="address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-						<span itemprop="streetAddress">3800 Victory Parkway</span>
-						<span><span itemprop="addressLocality">Cincinnati</span>, <span itemprop="addressRegion">OH</span> <span itemprop="postalCode">45207</span></span>	
-						<span itemprop="telephone">513-745-3000</span>
-					</p>
-					<p class="legal">&copy; 2017 Xavier University</p>
-				</div>
-			</footer>
-			<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-			<script src="javascripts/base.js"></script>
-			<script>
-        var email = ( $(".email-address a") ? $(".email-address a").attr("href").substring(7) : "" );
-        var audio = document.getElementById("namecoach");
-        if (email) {
-          $.ajax({
-          	url: 'https://name-coach.com/api/private/v3/name',
-          	data: { auth_token: "C-JyZjtGhy1-u-sNPyg5", email: email },
-          	success: function(d){
-            	console.log(d.data);
-            	$('#namecoach').attr('src', d.data.recording_link);
-            	$('.namecoach .play').append('<span class="fa fa-volume-up"></span><span class="sr-only">Name Proununciation for' + d.data.first_name + " " + d.data.last_name + '"</span>');
-          	}
-          });  
-        }
-        
-        $(".namecoach .play").on('click', function(e){
-          e.preventDefault();
-          if (!audio.paused) {
-        			audio.pause();
-        	} else {
-        		audio.volume = 0.75;
-        		audio.play();
-        	}
-        });
-      </script>
+				</section>
+				
+				
     </div><!-- page -->
-	</body>
+  </body>
 </html>

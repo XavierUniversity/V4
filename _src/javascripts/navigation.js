@@ -16,9 +16,9 @@ $(".nav-toggle").on('click', function(e){
 $("#show-subnav").on('click', function(e){
 	e.preventDefault();
 	
-	$("#subnav").toggleClass('active');
+	$("#subnav").toggleClass('show');
 	
-	if ( $("#subnav").hasClass('active') ) {
+	if ( $("#subnav").hasClass('show') ) {
 		$('#subnav li:first-child a' ).focus();
 	} else {
 		$("#show-subnav").focus();	
@@ -40,9 +40,9 @@ $('.toggle-secondary').on('click', function(e){
 $(".toggle-content-header-nav").on('click', function(e){
 	e.preventDefault();
 	
-	$("#content-header-navigation").toggleClass('active');
+	$("#content-header-navigation").toggleClass('show');
 	
-	if ( $("#content-header-navigation").hasClass('active') ) {
+	if ( $("#content-header-navigation").hasClass('show') ) {
 		$('#content-header-navigation li:first-child a' ).focus();
 	} else {
 		$(".toggle-content-header-nav").focus();	

@@ -25,29 +25,29 @@ window.mobilecheck = function() {
 $('#show-programs').on('click', function(e){
   e.preventDefault();
   $('#show-programs span').toggleClass('fa-rotate-180');
-  $('.programs-list').toggleClass('active');
+  $('.programs-list').toggleClass('show');
 });
 	
 $('.program-buttons a').on('click', function(e){
   e.preventDefault();
-  // Clear 'active' classes on items, clear select box on switch
-  $('.program-buttons a, .major-buttons li, .major-buttons').removeClass('active');
+  // Clear 'show' classes on items, clear select box on switch
+  $('.program-buttons a, .major-buttons li, .major-buttons').removeClass('show');
   $('.major-buttons select option').prop('selected', false);
-  $(this).addClass('active');
+  $(this).addClass('show');
   
   list = $('.major-list > li');
-  $(list).removeClass('active');
+  $(list).removeClass('show');
   
   level = $(this).data('category');
   
-  $('[id='+level+']').addClass('active');
+  $('[id='+level+']').addClass('show');
 });
 
 $('.major-buttons a, .major-buttons select').on('click change', function(e){
   e.preventDefault();
   
-  $('.major-buttons li').removeClass('active');
-  $(this).parent('li').addClass('active');
+  $('.major-buttons li').removeClass('show');
+  $(this).parent('li').addClass('show');
   
   if ( !level ){
     level = $(this).parents('.major-buttons').attr('id');
@@ -67,17 +67,17 @@ $('.major-buttons a, .major-buttons select').on('click change', function(e){
 
 
 function filterMajors(value, progLevel, list){
-	$(list).removeClass('active');
+	$(list).removeClass('show');
 	if (value == 'all') {
 		$(".major-list").find("li").each(function (i){
 			if($(this).data("program") === progLevel && $(this).text().indexOf("Licensure") < 0 && $(this).text().indexOf("Endorsement") < 0 && !$(this).hasClass("undecided")) {
-				$(this).addClass("active");
+				$(this).addClass("show");
 			}
 		});
 	} else { 
 		$(".major-list").find("li[class*="+value+"]").each(function (i){
 			if($(this).data("program") === progLevel){
-				$(this).addClass("active");	
+				$(this).addClass("show");	
 			}
 		});
 	}
@@ -136,9 +136,9 @@ $(".nav-toggle").on('click', function(e){
 $("#show-subnav").on('click', function(e){
 	e.preventDefault();
 	
-	$("#subnav").toggleClass('active');
+	$("#subnav").toggleClass('show');
 	
-	if ( $("#subnav").hasClass('active') ) {
+	if ( $("#subnav").hasClass('show') ) {
 		$('#subnav li:first-child a' ).focus();
 	} else {
 		$("#show-subnav").focus();	
@@ -160,9 +160,9 @@ $('.toggle-secondary').on('click', function(e){
 $(".toggle-content-header-nav").on('click', function(e){
 	e.preventDefault();
 	
-	$("#content-header-navigation").toggleClass('active');
+	$("#content-header-navigation").toggleClass('show');
 	
-	if ( $("#content-header-navigation").hasClass('active') ) {
+	if ( $("#content-header-navigation").hasClass('show') ) {
 		$('#content-header-navigation li:first-child a' ).focus();
 	} else {
 		$(".toggle-content-header-nav").focus();	
