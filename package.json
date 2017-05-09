@@ -7,7 +7,7 @@
   "author": "Greg McMullen",
   "license": "MIT",
   "scripts": {
-    "start": "grunt"
+    "grunt": "grunt"
   },
   "devDependencies": {
     "autoprefixer": "latest",
