@@ -6,10 +6,14 @@
   "main": "index.html",
   "author": "Greg McMullen",
   "license": "MIT",
+  "scripts": {
+    "start": "grunt"
+  },
   "devDependencies": {
     "autoprefixer": "latest",
     "grunt": "latest",
     "grunt-browser-sync": "latest",
+    "grunt-cli": "^1.2.0",
     "grunt-contrib-compass": "latest",
     "grunt-contrib-concat": "latest",
     "grunt-contrib-copy": "latest",
