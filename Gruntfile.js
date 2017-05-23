@@ -48,6 +48,14 @@ module.exports = function (grunt) {
 					environment: 'development',
 					outputStyle: 'nested'
 				}
+			},
+			prod: {
+  			options: {
+    			sassDir: '_src/sass',
+    			cssDir: 'dist/stylesheets',
+    			environment: 'production',
+    			outputStyle: 'compressed'
+  			}
 			}
 		},
 		includes: {
@@ -107,7 +115,19 @@ module.exports = function (grunt) {
 					server: './dist'
 				}
 			}
-		}
+		},
+		cascadeDeploy: {
+      'default': {
+        options: {
+          url: 'https://cascade.xavier.edu',
+          site: 'Xavier University'
+        },
+        files: [
+          {src: ['dist/javascripts/*'], site: 'Xavier Dev', dest: '_files/js', type: 'file', rewriteLinks: true, maintainAbsoluteLinks: true},
+          {src: ['dist/stylesheets/*'], site: 'Xavier Dev', dest: '_files/css', type: 'file', rewriteLinks: true, maintainAbsoluteLinks: true}
+        ]
+      }
+    }
 	});
 	
 	// load npm tasks
@@ -120,8 +140,10 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-includes');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-cascade-deploy');
 	
 	grunt.registerTask('setup', ['jshint','concat', 'compass:dev', 'postcss', 'imagemin', 'copy']);
   // define default task
   grunt.registerTask('default', ['setup', 'browserSync', 'watch']);
+  grunt.registerTask('deploy', ['jshint', 'concat', 'compass:prod', 'postcss', 'imagemin', 'copy', 'cascadeDeploy']);
 };

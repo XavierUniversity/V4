@@ -13,6 +13,7 @@
     "autoprefixer": "latest",
     "grunt": "latest",
     "grunt-browser-sync": "latest",
+    "grunt-cascade-deploy": "^0.2.3",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-compass": "latest",
     "grunt-contrib-concat": "latest",
