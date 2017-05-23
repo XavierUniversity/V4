@@ -123,8 +123,8 @@ module.exports = function (grunt) {
           site: 'Xavier University'
         },
         files: [
-          {src: ['dist/javascripts/*'], site: 'Xavier Dev', dest: '_files/js', type: 'file', rewriteLinks: true, maintainAbsoluteLinks: true},
-          {src: ['dist/stylesheets/*'], site: 'Xavier Dev', dest: '_files/css', type: 'file', rewriteLinks: true, maintainAbsoluteLinks: true}
+          {src: ['dist/javascripts/*'], site: '', dest: '_files/js', type: 'file', rewriteLinks: true, maintainAbsoluteLinks: true},
+          {src: ['dist/stylesheets/*'], site: '', dest: '_files/css', type: 'file', rewriteLinks: true, maintainAbsoluteLinks: true}
         ]
       }
     }
