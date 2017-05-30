@@ -1781,7 +1781,7 @@ table {
   #icon-cta h2 {
     font-size: 3.4rem;
     color: #0c2340;
-    bottom-margin: 5rem; }
+    margin-bottom: 5rem; }
   /* line 15, ../../_src/sass/components/_icon-cta.scss */
   #icon-cta .icon-link .icon, #icon-cta a.icon-link .icon {
     background-color: #279dc4;
@@ -1795,8 +1795,11 @@ table {
     display: inline-block;
     -webkit-transition: border-radius 500ms ease-in-out;
     transition: border-radius 500ms ease-in-out; }
-  /* line 30, ../../_src/sass/components/_icon-cta.scss */
-  #icon-cta p.text-uppercase {
+    /* line 29, ../../_src/sass/components/_icon-cta.scss */
+    #icon-cta .icon-link .icon:hover, #icon-cta .icon-link .icon:focus, #icon-cta a.icon-link .icon:hover, #icon-cta a.icon-link .icon:focus {
+      border-radius: 10px; }
+  /* line 33, ../../_src/sass/components/_icon-cta.scss */
+  #icon-cta p {
     font-size: 1.8rem;
     font-weight: 700; }
 

@@ -10,7 +10,7 @@
 	h2 {
     font-size: 3.4rem;
 	color: #0c2340;
-	bottom-margin: 5rem;
+	margin-bottom: 5rem;
 	}
 	.icon-link .icon, a.icon-link .icon {
     background-color: #279dc4;
@@ -26,8 +26,11 @@
     -moz-transition: border-radius 500ms ease-in-out;
     -o-transition: border-radius 500ms ease-in-out;
     transition: border-radius 500ms ease-in-out;
+		&:hover, &:focus{
+		border-radius: 10px;
+		}
 	}
-	p.text-uppercase {
+	p{
     font-size: 1.8rem;
     font-weight: 700;
 	}
