@@ -1,8 +1,20 @@
 #content-wrap{
-	margin-top:2rem;
+	margin-top:0rem;
 	margin-bottom:2rem;
+	img.right, img.left{
+		margin: 0 auto;
+		display: block;
+	}
 	@media screen and (min-width:992px){
-		
+		margin-top: 2rem;
+		img.right {
+			float: right;
+			margin: 0 0 2rem 2rem;
+		}
+			img.left {
+			float: left;
+			margin: 0 2rem 2rem 0;
+		}
 	}
 }
 
