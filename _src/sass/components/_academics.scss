@@ -82,7 +82,7 @@
 .details-item{
 	display: none;
 	/* uncss:ignore */
-	&.show{
+	&.active{
 		display: block;
 	}
 }
