@@ -1118,7 +1118,6 @@ code {
       font-size: 1.5rem;
       font-weight: 700;
       padding: 20px 10px;
-      -webkit-transition: background 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out;
       transition: background 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out; }
       /* line 117, ../../_src/sass/base/_content-pages.scss */
       #content-wrap .dept-aside .dept-aside-wrap .button:focus, #content-wrap .dept-aside .dept-aside-wrap .button:hover {
