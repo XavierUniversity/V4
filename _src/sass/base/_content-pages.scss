@@ -1,8 +1,20 @@
 #content-wrap{
-	margin-top:2rem;
+	margin-top:0rem;
 	margin-bottom:2rem;
+	img.right, img.left{
+		margin: 0 auto;
+		display: block;
+	}
 	@media screen and (min-width:992px){
-		
+		margin-top: 2rem;
+		img.right {
+			float: right;
+			margin: 0 0 2rem 2rem;
+		}
+			img.left {
+			float: left;
+			margin: 0 2rem 2rem 0;
+		}
 	}
 }
 
@@ -72,6 +84,40 @@
 		&:hover, &:focus, &:active{
 			color: darken($brand-xavier-pacific-blue, 15%);
 			text-decoration: underline;
+		}
+	}
+}
+
+/* 2 COLUMN STYLES */
+
+#content-wrap .dept-aside{
+	background-color: #dee5e9;
+    color: #49595e;
+    padding: 0 0 30px 0;
+	img {
+		margin: 0 auto;
+		max-width: 100%;
+	}
+	.dept-aside-wrap{
+		padding: 0 20px;
+		p {
+			line-height: 1.25;
+			margin-bottom: 20px;
+		}
+		.button {
+			border-color: #49595e;
+			color: #49595e;
+			font-size: 1.5rem;
+			font-weight: 700;
+			padding: 20px 10px;
+			-webkit-transition: background 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out;
+			-moz-transition: background 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out;
+			-o-transition: background 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out;
+			 transition: background 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out;
+			 &:focus, &:hover{
+				background-color: #49595e;
+				color: #fff;
+			 }
 		}
 	}
 }

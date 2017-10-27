@@ -1010,19 +1010,35 @@ code {
 
 /* line 1, ../../_src/sass/base/_content-pages.scss */
 #content-wrap {
-  margin-top: 2rem;
+  margin-top: 0rem;
   margin-bottom: 2rem; }
+  /* line 4, ../../_src/sass/base/_content-pages.scss */
+  #content-wrap img.right, #content-wrap img.left {
+    margin: 0 auto;
+    display: block; }
+  @media screen and (min-width: 992px) {
+    /* line 1, ../../_src/sass/base/_content-pages.scss */
+    #content-wrap {
+      margin-top: 2rem; }
+      /* line 10, ../../_src/sass/base/_content-pages.scss */
+      #content-wrap img.right {
+        float: right;
+        margin: 0 0 2rem 2rem; }
+      /* line 14, ../../_src/sass/base/_content-pages.scss */
+      #content-wrap img.left {
+        float: left;
+        margin: 0 2rem 2rem 0; } }
 
-/* line 9, ../../_src/sass/base/_content-pages.scss */
+/* line 21, ../../_src/sass/base/_content-pages.scss */
 #sidebar-wrap {
   margin-top: 2rem;
   margin-bottom: 2rem; }
   @media screen and (min-width: 992px) {
-    /* line 9, ../../_src/sass/base/_content-pages.scss */
+    /* line 21, ../../_src/sass/base/_content-pages.scss */
     #sidebar-wrap {
       display: block; } }
 
-/* line 17, ../../_src/sass/base/_content-pages.scss */
+/* line 29, ../../_src/sass/base/_content-pages.scss */
 #show-subnav {
   color: #0c2340;
   display: block;
@@ -1032,51 +1048,82 @@ code {
   text-align: center;
   padding: 0.5rem 0; }
   @media screen and (min-width: 992px) {
-    /* line 17, ../../_src/sass/base/_content-pages.scss */
+    /* line 29, ../../_src/sass/base/_content-pages.scss */
     #show-subnav {
       display: none; } }
-  /* line 30, ../../_src/sass/base/_content-pages.scss */
+  /* line 42, ../../_src/sass/base/_content-pages.scss */
   #show-subnav:hover, #show-subnav:active {
     color: #0099cc; }
 
-/* line 35, ../../_src/sass/base/_content-pages.scss */
+/* line 47, ../../_src/sass/base/_content-pages.scss */
 .side-nav {
   display: none;
   border-radius: 0 0 0.2rem 0.2rem;
   /* uncss:ignore */ }
-  /* line 39, ../../_src/sass/base/_content-pages.scss */
+  /* line 51, ../../_src/sass/base/_content-pages.scss */
   .side-nav.show {
     display: block; }
   @media screen and (min-width: 992px) {
-    /* line 35, ../../_src/sass/base/_content-pages.scss */
+    /* line 47, ../../_src/sass/base/_content-pages.scss */
     .side-nav {
       display: block; } }
-  /* line 47, ../../_src/sass/base/_content-pages.scss */
+  /* line 59, ../../_src/sass/base/_content-pages.scss */
   .side-nav li {
     padding: 1rem 0;
     /* uncss:ignore */ }
-    /* line 50, ../../_src/sass/base/_content-pages.scss */
+    /* line 62, ../../_src/sass/base/_content-pages.scss */
     .side-nav li:not(:first-child) {
       border-top: solid 0.1rem #d2d4d4; }
-    /* line 54, ../../_src/sass/base/_content-pages.scss */
+    /* line 66, ../../_src/sass/base/_content-pages.scss */
     .side-nav li.show a {
       color: #006080; }
-    /* line 58, ../../_src/sass/base/_content-pages.scss */
+    /* line 70, ../../_src/sass/base/_content-pages.scss */
     .side-nav li ul {
       border-left: 4px solid #f5f7f9;
       font-size: 1.4rem;
       font-style: italic;
       margin: 0.5rem 0 0;
       padding: 0 0 0 1rem; }
-  /* line 67, ../../_src/sass/base/_content-pages.scss */
+  /* line 79, ../../_src/sass/base/_content-pages.scss */
   .side-nav a {
     color: #0c2340;
     display: block;
     text-decoration: none; }
-    /* line 72, ../../_src/sass/base/_content-pages.scss */
+    /* line 84, ../../_src/sass/base/_content-pages.scss */
     .side-nav a:hover, .side-nav a:focus, .side-nav a:active {
       color: #006080;
       text-decoration: underline; }
+
+/* 2 COLUMN STYLES */
+/* line 93, ../../_src/sass/base/_content-pages.scss */
+#content-wrap .dept-aside {
+  background-color: #dee5e9;
+  color: #49595e;
+  padding: 0 0 30px 0; }
+  /* line 97, ../../_src/sass/base/_content-pages.scss */
+  #content-wrap .dept-aside img {
+    margin: 0 auto;
+    max-width: 100%; }
+  /* line 101, ../../_src/sass/base/_content-pages.scss */
+  #content-wrap .dept-aside .dept-aside-wrap {
+    padding: 0 20px; }
+    /* line 103, ../../_src/sass/base/_content-pages.scss */
+    #content-wrap .dept-aside .dept-aside-wrap p {
+      line-height: 1.25;
+      margin-bottom: 20px; }
+    /* line 107, ../../_src/sass/base/_content-pages.scss */
+    #content-wrap .dept-aside .dept-aside-wrap .button {
+      border-color: #49595e;
+      color: #49595e;
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding: 20px 10px;
+      -webkit-transition: background 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out;
+      transition: background 500ms ease-in-out, border 500ms ease-in-out, color 500ms ease-in-out; }
+      /* line 117, ../../_src/sass/base/_content-pages.scss */
+      #content-wrap .dept-aside .dept-aside-wrap .button:focus, #content-wrap .dept-aside .dept-aside-wrap .button:hover {
+        background-color: #49595e;
+        color: #fff; }
 
 /* ----------------------
   Section 2 - Footer
