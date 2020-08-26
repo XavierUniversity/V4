@@ -1,3 +1,5 @@
+This repository is no longer part of the Xavier development lifecycle and has been archived.
+
 # Xavier University Template
 
 This template is a baseline for developing the Xavier University template.
